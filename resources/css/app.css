@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+    scroll-behavior: auto;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #535456;
+    background-clip: content-box;
+}
+
+.hidde-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+

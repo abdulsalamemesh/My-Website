@@ -13,6 +13,17 @@
         @routes
         @vite('resources/js/app.js')
         @inertiaHead
+        <style>
+            @font-face {
+                font-family: JetBrainsMono-Medium;
+                src: url("{{asset('JetBrainsMono-Medium.ttf')}}");
+            }
+
+            .font-custom {
+                font-family: "JetBrainsMono-Medium" !important;
+            }
+
+        </style>
     </head>
     <body class="font-sans antialiased">
         @inertia
