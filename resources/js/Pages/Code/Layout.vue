@@ -145,8 +145,8 @@ onMounted(() => {
 
             <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;div</p>
-                <p class="text-[#a9b1b3]">&nbsp;class </p>
-                <p class="text-[#a7bb7c]">"font-sans text-gray-900 antialiased"</p>
+                <p class="text-[#a9b1b3]">&nbsp;class</p>
+                <p class="text-[#a7bb7c]">="font-sans text-gray-900 antialiased bg-gray-100"</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
 

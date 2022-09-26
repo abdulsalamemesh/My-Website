@@ -38,16 +38,16 @@ onMounted(() => {
             </div>
             <div class="flex" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;h1</p>
-                 <p class="text-[#a9b1b3]">&nbsp;class </p>
-                <p class="text-[#a7bb7c]">"font-bold text-lg text-indigo-500 uppercase"</p>
+                 <p class="text-[#a9b1b3]">&nbsp;class</p>
+                <p class="text-[#a7bb7c]">="font-bold text-lg text-indigo-500 uppercase"</p>
                 <p class="text-[#dfc087]">&gt;</p>
                 <p class="text-[#a9b1b3]">Abdulsalam Emesh</p>
                 <p class="text-[#dfc087]">&lt;/h1&gt;</p>
             </div>
             <div class="flex" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;h2</p>
-                <p class="text-[#a9b1b3]">&nbsp;class </p>
-                <p class="text-[#a7bb7c]">"font-bold text-base text-gray-700 uppercase"</p>
+                <p class="text-[#a9b1b3]">&nbsp;class</p>
+                <p class="text-[#a7bb7c]">="font-bold text-base text-gray-700 uppercase"</p>
                 <p class="text-[#dfc087]">&gt;</p>
                 <p class="text-[#a9b1b3]">{{ __('Software Developer') }}</p>
                 <p class="text-[#dfc087]">&lt;/h2&gt;</p>
