@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -15,9 +14,19 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Me');
-});
+Route::redirect('/', 'index');
+Route::get('loading', fn() => Inertia::render('Code/Loading'))->name('loading');
+Route::get('index', fn() => Inertia::render('Code/Index'))->name('index');
+Route::get('me', fn() => Inertia::render('Code/Me'))->name('me');
+Route::get('work', fn() => Inertia::render('Code/Work'))->name('work');
+Route::get('web', fn() => Inertia::render('Code/Web'))->name('web');
+Route::get('layout', fn() => Inertia::render('Code/Layout'))->name('layout');
+Route::get('language/{language}', function ($language) {
+    Session()->put('locale', $language);
+
+    return redirect()->back();
+})->name('language');
+
 
 Route::middleware([
     'auth:sanctum',
