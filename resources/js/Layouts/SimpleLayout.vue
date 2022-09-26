@@ -2,10 +2,11 @@
 import {Head, Link} from '@inertiajs/inertia-vue3';
 import Folder from '@/Icons/Folder.vue';
 import Blade from '@/Icons/Blade.vue';
+import DotFile from '@/Icons/DotFile.vue';
 import PHP from '@/Icons/PHP.vue';
 import {computed, onMounted, ref} from "vue";
 import LangaugeSelector from '@/Layouts/LangaugeSelector.vue'
-let icon = ref('Blade')
+let icon = ref(Blade)
 let showViews = ref(false)
 let showRoutes = ref(false)
 
@@ -30,36 +31,39 @@ const name = computed(() => {
     switch (route().current()) {
         case "index":
             showViews.value = true
-            icon.value = 'Blade'
+            icon.value = Blade
             return 'index.blade.php'
         case "me":
             showViews.value = true
-            icon.value = 'Blade'
+            icon.value = Blade
             return 'me.blade.php'
         case "work":
             showViews.value = true
-            icon.value = 'Blade'
+            icon.value = Blade
             return 'work.blade.php'
         case "education":
             showViews.value = true
-            icon.value = 'Blade'
+            icon.value = Blade
             return 'education.blade.php'
         case "skill":
             showViews.value = true
-            icon.value = 'Blade'
+            icon.value = Blade
             return 'skill.blade.php'
         case "other-information":
             showViews.value = true
-            icon.value = 'Blade'
+            icon.value = Blade
             return 'other-information.blade.php'
         case "layout":
             showViews.value = true
-            icon.value = 'Blade'
+            icon.value = Blade
             return 'layout.blade.php'
         case "web":
             showRoutes.value = true
-            icon.value = 'PHP'
+            icon.value = PHP
             return 'web.php'
+        case "env":
+            icon.value = DotFile
+            return '.env'
     }
 })
 
@@ -71,81 +75,87 @@ function message() {
 <template>
     <div>
         <Head title="Abdulsalam Emesh"/>
-        <div class="h-screen w-screen bg-[#2b2b2b] font-custom flex">
+        <div class="h-screen w-screen bg-[#2b2b2b] font-custom text-sm flex">
             <div class="bg-[#3c3f41] min-w-[250px] border-r-[1px] border-black/30 text-xs flex flex-col">
                 <div class="h-7 flex items-center border-b-[1px] border-black/30 px-2">
                     <p class="text-[#adb5b8]">Project</p>
                 </div>
-                <div class="grow border-b-[1px] border-black/30 ">
-                    <div class="text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full cursor-pointer">
-                        <span class="text-base">&#8964;</span>
-                        <Folder/>
+                <div class="grow border-b-[1px] border-black/30 space-y-0.5">
+                    <div class="text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-sm">&#8964;</span>
+                        <Folder classes="h-4 w-4"/>
                         <span>me</span>
                     </div>
                     <!--         Views           -->
-                    <div @click="showViews = ! showViews" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full cursor-pointer">
+                    <div @click="showViews = ! showViews" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
                     <span>
-                        <span v-show="showViews" class="text-base">&#8964;</span>
-                        <span v-show="!showViews" class="text-base">&#x203A;</span>
+                        <span v-show="showViews" class="text-sm">&#8964;</span>
+                        <span v-show="!showViews" class="text-sm">&#x203A;</span>
                     </span>
-                        <Folder/>
+                        <Folder classes="h-4 w-4"/>
                         <span>views</span>
                     </div>
                     <Link v-show="showViews" :href="route('index')" :class="[route().current('index') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
-                        <Blade/>
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <Blade classes="h-4 w-4"/>
                         <span>index.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('me')" :class="[route().current('me') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
-                        <Blade/>
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <Blade classes="h-4 w-4"/>
                         <span>me.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('work')" :class="[route().current('work') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
-                        <Blade/>
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <Blade classes="h-4 w-4"/>
                         <span>work.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('education')" :class="[route().current('education') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
-                        <Blade/>
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <Blade classes="h-4 w-4"/>
                         <span>education.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('skill')" :class="[route().current('skill') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
-                        <Blade/>
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <Blade classes="h-4 w-4"/>
                         <span>skill.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('other-information')" :class="[route().current('other-information') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-max">
-                        <Blade/>
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-max">
+                        <Blade classes="h-4 w-4"/>
                         <span>other-information.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('layout')" :class="[route().current('layout') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
-                        <Blade/>
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <Blade classes="h-4 w-4"/>
                         <span>layout.blade.php</span>
                     </Link>
                     <!--         Routes           -->
-                    <div @click="showRoutes = ! showRoutes" class=" pl-8 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full cursor-pointer">
+                    <div @click="showRoutes = ! showRoutes" class=" pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
                     <span>
-                        <span v-show="showRoutes" class="text-base">&#8964;</span>
-                        <span v-show="!showRoutes" class="text-base">&#x203A;</span>
+                        <span v-show="showRoutes" class="text-sm">&#8964;</span>
+                        <span v-show="!showRoutes" class="text-sm">&#x203A;</span>
                     </span>
-                        <Folder/>
+                        <Folder classes="h-4 w-4"/>
                         <span>routs</span>
                     </div>
                     <Link v-show="showRoutes" :href="route('web')" :class="[route().current('web') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <PHP/>
                         <span>web.php</span>
+                    </Link>
+                    <!--         .env           -->
+                    <Link :href="route('env')" :class="[route().current('env') ? 'bg-[#4b6eaf]' : '']"
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <DotFile classes="h-4 w-4"/>
+                        <span>.env</span>
                     </Link>
                 </div>
             </div>
             <div class="flex flex-col grow">
                 <div class="bg-[#3c3f41] border-b-[1px] border-black/30 h-7 text-xs flex items-center justify-between">
                     <div class="w-max h-full bg-[#4e5254] flex justify-between items-center text-[#adb5b8] px-2 py-1 space-x-2">
-                        <Blade/>
+                        <component :is="icon" :classes="'h-4 w-4'"/>
                         <span>{{ name }}</span>
                         <div @click="message()" class="cursor-pointer">x</div>
                     </div>
