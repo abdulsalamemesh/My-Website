@@ -55,18 +55,18 @@ onMounted(() => {
                 <p class="text-[#a7bb7c]">"</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;head</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;meta</p>
                 <p class="text-[#a9b1b3]">&nbsp;</p>
                 <p class="text-[#a9b1b3]">charset</p>
                 <p class="text-[#a7bb7c]">="utf-8"</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;meta</p>
                 <p class="text-[#a9b1b3]">&nbsp;</p>
                 <p class="text-[#a9b1b3]">name</p>
@@ -76,7 +76,7 @@ onMounted(() => {
                 <p class="text-[#a7bb7c]">="width=device-width, initial-scale=1"</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;meta</p>
                 <p class="text-[#a9b1b3]">&nbsp;</p>
                 <p class="text-[#a9b1b3]">name</p>
@@ -92,7 +92,7 @@ onMounted(() => {
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
             <div>&nbsp;</div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;title</p>
                 <p class="text-[#dfc087]">&gt;</p>
                 <p class="text-[#a9b1b3]">{</p>
@@ -107,7 +107,7 @@ onMounted(() => {
                 <div>-- Fonts --</div>
                 <div>&gt;</div>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;link</p>
                 <p class="text-[#a9b1b3]">&nbsp;</p>
                 <p class="text-[#a9b1b3]">rel</p>
@@ -124,8 +124,7 @@ onMounted(() => {
                 <div>&gt;</div>
             </div>
 
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+            <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;script</p>
                 <p class="text-[#a9b1b3]">&nbsp;</p>
                 <p class="text-[#a9b1b3]">src</p>
@@ -134,17 +133,17 @@ onMounted(() => {
                 <p class="text-[#dfc087]">&lt;/script&gt;</p>
             </div>
 
-            <div class="flex">&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;/head</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
 
-            <div class="flex">&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;body</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
 
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;div</p>
                 <p class="text-[#a9b1b3]">&nbsp;class </p>
                 <p class="text-[#a7bb7c]">"font-sans text-gray-900 antialiased"</p>
@@ -152,7 +151,7 @@ onMounted(() => {
             </div>
 
 
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(3)">
                 <p class="text-[#a9b1b3]">{</p>
                 <p class="text-[#a9b1b3]">{&nbsp;</p>
                 <p class="text-[#86698a]">$slot</p>
@@ -162,7 +161,7 @@ onMounted(() => {
                 &lt;/div&gt;
             </div>
 
-            <div class="flex">&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;/body</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>

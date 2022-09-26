@@ -9,5 +9,16 @@ export default {
             });
             return translation
         },
+
+        paddingLevel(number) {
+            return {
+                1: 'pl-[2rem]',
+                2: 'pl-[4rem]',
+                3: 'pl-[6rem]',
+                4: 'pl-[8rem]',
+                5: 'pl-[10rem]',
+                6: 'pl-[12rem]',
+            }[number];
+        }
     },
 }

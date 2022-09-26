@@ -4,6 +4,10 @@ import {ref, onMounted} from "vue";
 
 let count = ref([])
 
+defineProps({
+    experiences: Object
+})
+
 onMounted(() => {
     count.value = Array.from(Array(document.getElementById('count')?.childElementCount + 1).keys());
     const elems = document.getElementsByClassName("scroll-js");
@@ -36,7 +40,7 @@ onMounted(() => {
                 <p class="text-[#dfc087]">&lt;x-layout</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;
+            <div class="flex" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;h1</p>
                 <p class="text-[#a9b1b3]">&nbsp;class </p>
                 <p class="text-[#a7bb7c]">"font-bold text-lg text-indigo-500 uppercase"</p>
@@ -45,104 +49,69 @@ onMounted(() => {
                 <p class="text-[#dfc087]">&lt;/h1&gt;</p>
             </div>
 
-            <div>&nbsp;</div>
-
-            <div class="flex">&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;div</p>
-                <p class="text-[#a9b1b3]">&nbsp;class </p>
-                <p class="text-[#a7bb7c]">"space-y-2 my-2"</p>
-                <p class="text-[#dfc087]">&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;p</p>
-                <p class="text-[#a9b1b3]">&nbsp;class </p>
-                <p class="text-[#a7bb7c]">"font-bold"</p>
-                <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('Software Developer') }}</p>
-                <p class="text-[#dfc087]">&lt;/p&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;p</p>
-                <p class="text-[#a9b1b3]">&nbsp;class </p>
-                <p class="text-[#a7bb7c]">"font-bold"</p>
-                <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">LASE PeCo Systemtechnik GmbH</p>
-                <p class="text-[#dfc087]">&lt;/p&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;p</p>
-                <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('From 2021-09-01 until today') }}</p>
-                <p class="text-[#dfc087]">&lt;/p&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;p</p>
-                <p class="text-[#dfc087]">&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#a9b1b3]">{{ __('In addition to my education, I have been freelancing in the field of website development and online hosting,') }}</p>
-                <p class="text-[#dfc087]">&lt;/br&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#a9b1b3]">{{ __('for a couple of restaurants in Wesel.') }}</p>
-                <p class="text-[#dfc087]">&lt;/br&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#a9b1b3]">{{ __('I also created a program for ordering and storage, with the employees.') }}</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;/p&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;/div&gt;</p>
-            </div>
-
-            <div>&nbsp;</div>
-
-            <div class="flex">&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;div</p>
-                <p class="text-[#a9b1b3]">&nbsp;class </p>
-                <p class="text-[#a7bb7c]">"space-y-2 my-2"</p>
-                <p class="text-[#dfc087]">&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;p</p>
-                <p class="text-[#a9b1b3]">&nbsp;class </p>
-                <p class="text-[#a7bb7c]">"font-bold"</p>
-                <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('Freelancer') }}</p>
-                <p class="text-[#dfc087]">&lt;/p&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;p</p>
-                <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('From 2019 until today') }}</p>
-                <p class="text-[#dfc087]">&lt;/p&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;p</p>
-                <p class="text-[#dfc087]">&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#a9b1b3]">{{ __('In addition to my education, I have been freelancing in the field of website development and online hosting,') }}</p>
-                <p class="text-[#dfc087]">&lt;/br&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#a9b1b3]">{{ __('for a couple of restaurants in Wesel.') }}</p>
-                <p class="text-[#dfc087]">&lt;/br&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#a9b1b3]">{{ __('I also created a program for ordering and storage, with the employees.') }}</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;/p&gt;</p>
-            </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;
-                <p class="text-[#dfc087]">&lt;/div&gt;</p>
-            </div>
+            <template v-for="experience in experiences">
+                <div>&nbsp;</div>
+                <div :class="paddingLevel(1)" class="flex">
+                    <p class="text-[#dfc087]">&lt;div</p>
+                    <p class="text-[#a9b1b3]">&nbsp;class </p>
+                    <p class="text-[#a7bb7c]">"space-y-2 my-2"</p>
+                    <p class="text-[#dfc087]">&gt;</p>
+                </div>
+                <div class="flex" v-if="experience.title" :class="paddingLevel(2)">
+                    <p class="text-[#dfc087]">&lt;p</p>
+                    <p class="text-[#a9b1b3]">&nbsp;class </p>
+                    <p class="text-[#a7bb7c]">"font-bold"</p>
+                    <p class="text-[#dfc087]">&gt;</p>
+                    <p class="text-[#a9b1b3]">{{ experience.title }}</p>
+                    <p class="text-[#dfc087]">&lt;/p&gt;</p>
+                </div>
+                <div class="flex" v-if="experience.workplace" :class="paddingLevel(2)">
+                    <p class="text-[#dfc087]">&lt;address</p>
+                    <p class="text-[#a9b1b3]">&nbsp;class </p>
+                    <p class="text-[#a7bb7c]">"font-bold"</p>
+                    <p class="text-[#dfc087]">&gt;</p>
+                    <p class="text-[#a9b1b3]">{{ experience.workplace }}</p>
+                    <p class="text-[#dfc087]">&lt;/address&gt;</p>
+                </div>
+                <div class="flex" v-if="experience.date" :class="paddingLevel(2)">
+                    <p class="text-[#dfc087]">&lt;p</p>
+                    <p class="text-[#dfc087]">&gt;</p>
+                    <p class="text-[#a9b1b3]">{{ experience.date }}</p>
+                    <p class="text-[#dfc087]">&lt;/p&gt;</p>
+                </div>
+                <div class="flex" v-if="experience.text.length > 0" :class="paddingLevel(2)">
+                    <p class="text-[#dfc087]">&lt;p</p>
+                    <p class="text-[#dfc087]">&gt;</p>
+                </div>
+                <template v-for="(point,key) in experience.text" v-if="experience.text.length > 0">
+                    <div class="flex" :class="paddingLevel(3)">
+                        <p class="text-[#a9b1b3]">{{ point }}</p>
+                        <p class="text-[#dfc087]" v-if="key != Object.keys(experience.text).length - 1">&lt;/br&gt;</p>
+                    </div>
+                </template>
+                <div class="flex" v-if="experience.text.length > 0" :class="paddingLevel(2)">
+                    <p class="text-[#dfc087]">&lt;/p&gt;</p>
+                </div>
+                <div v-if="experience.pointBullets.length > 0" class="flex" :class="paddingLevel(2)">
+                    <p class="text-[#dfc087]">&lt;ul&gt;</p>
+                </div>
+                <template v-for="point in experience.pointBullets" v-if="experience.pointBullets.length > 0">
+                    <div class="flex" :class="paddingLevel(3)">
+                        <p class="text-[#dfc087]">&lt;li</p>
+                        <p class="text-[#dfc087]">&gt;</p>
+                        <p class="text-[#a9b1b3]">{{ point }}</p>
+                        <p class="text-[#dfc087]">&lt;li&gt;</p>
+                    </div>
+                </template>
+                <div v-if="experience.pointBullets.length > 0" class="flex" :class="paddingLevel(2)">
+                    <p class="text-[#dfc087]">&lt;/ul&gt;</p>
+                </div>
+                <div class="flex" :class="paddingLevel(1)">
+                    <p class="text-[#dfc087]">&lt;/div&gt;</p>
+                </div>
+            </template>
 
             <div>&nbsp;</div>
-
             <div class="flex">
                 <p class="text-[#dfc087]">&lt;/x-layout</p>
                 <p class="text-[#dfc087]">&gt;</p>

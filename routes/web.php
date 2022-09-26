@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WorkExperienceController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -18,7 +19,7 @@ Route::redirect('/', 'index');
 Route::get('loading', fn() => Inertia::render('Code/Loading'))->name('loading');
 Route::get('index', fn() => Inertia::render('Code/Index'))->name('index');
 Route::get('me', fn() => Inertia::render('Code/Me'))->name('me');
-Route::get('work', fn() => Inertia::render('Code/Work'))->name('work');
+Route::get('work', WorkExperienceController::class)->name('work');
 Route::get('web', fn() => Inertia::render('Code/Web'))->name('web');
 Route::get('layout', fn() => Inertia::render('Code/Layout'))->name('layout');
 Route::get('language/{language}', function ($language) {
