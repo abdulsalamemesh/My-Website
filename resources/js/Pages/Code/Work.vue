@@ -36,7 +36,7 @@ onMounted(() => {
                 <p class="text-[#dfc087]">&lt;x-layout</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;h1</p>
                 <p class="text-[#a9b1b3]">&nbsp;class </p>
                 <p class="text-[#a7bb7c]">"font-bold text-lg text-indigo-500 uppercase"</p>
@@ -45,14 +45,15 @@ onMounted(() => {
                 <p class="text-[#dfc087]">&lt;/h1&gt;</p>
             </div>
 
+            <div>&nbsp;</div>
 
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;div</p>
                 <p class="text-[#a9b1b3]">&nbsp;class </p>
                 <p class="text-[#a7bb7c]">"space-y-2 my-2"</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;p</p>
                 <p class="text-[#a9b1b3]">&nbsp;class </p>
                 <p class="text-[#a7bb7c]">"font-bold"</p>
@@ -60,7 +61,7 @@ onMounted(() => {
                 <p class="text-[#a9b1b3]">{{ __('Software Developer') }}</p>
                 <p class="text-[#dfc087]">&lt;/p&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;p</p>
                 <p class="text-[#a9b1b3]">&nbsp;class </p>
                 <p class="text-[#a7bb7c]">"font-bold"</p>
@@ -68,42 +69,43 @@ onMounted(() => {
                 <p class="text-[#a9b1b3]">LASE PeCo Systemtechnik GmbH</p>
                 <p class="text-[#dfc087]">&lt;/p&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;p</p>
                 <p class="text-[#dfc087]">&gt;</p>
                 <p class="text-[#a9b1b3]">{{ __('From 2021-09-01 until today') }}</p>
                 <p class="text-[#dfc087]">&lt;/p&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;p</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#a9b1b3]">{{ __('In addition to my education, I have been freelancing in the field of website development and online hosting,') }}</p>
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#a9b1b3]">{{ __('for a couple of restaurants in Wesel.') }}</p>
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#a9b1b3]">{{ __('I also created a program for ordering and storage, with the employees.') }}</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;/p&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;/div&gt;</p>
             </div>
 
+            <div>&nbsp;</div>
 
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;div</p>
                 <p class="text-[#a9b1b3]">&nbsp;class </p>
                 <p class="text-[#a7bb7c]">"space-y-2 my-2"</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;p</p>
                 <p class="text-[#a9b1b3]">&nbsp;class </p>
                 <p class="text-[#a7bb7c]">"font-bold"</p>
@@ -111,34 +113,35 @@ onMounted(() => {
                 <p class="text-[#a9b1b3]">{{ __('Freelancer') }}</p>
                 <p class="text-[#dfc087]">&lt;/p&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;p</p>
                 <p class="text-[#dfc087]">&gt;</p>
                 <p class="text-[#a9b1b3]">{{ __('From 2019 until today') }}</p>
                 <p class="text-[#dfc087]">&lt;/p&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;p</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#a9b1b3]">{{ __('In addition to my education, I have been freelancing in the field of website development and online hosting,') }}</p>
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#a9b1b3]">{{ __('for a couple of restaurants in Wesel.') }}</p>
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#a9b1b3]">{{ __('I also created a program for ordering and storage, with the employees.') }}</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;/p&gt;</p>
             </div>
-            <div class="flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex">&nbsp;&nbsp;&nbsp;
                 <p class="text-[#dfc087]">&lt;/div&gt;</p>
             </div>
 
+            <div>&nbsp;</div>
 
             <div class="flex">
                 <p class="text-[#dfc087]">&lt;/x-layout</p>
