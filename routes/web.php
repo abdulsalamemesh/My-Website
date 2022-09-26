@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\OtherInformationController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\WorkExperienceController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,7 @@ Route::get('me', fn() => Inertia::render('Code/Me'))->name('me');
 Route::get('work', WorkExperienceController::class)->name('work');
 Route::get('education', EducationController::class)->name('education');
 Route::get('skill', SkillController::class)->name('skill');
+Route::get('other-information', OtherInformationController::class)->name('other-information');
 Route::get('web', fn() => Inertia::render('Code/Web'))->name('web');
 Route::get('layout', fn() => Inertia::render('Code/Layout'))->name('layout');
 Route::get('language/{language}', function ($language) {

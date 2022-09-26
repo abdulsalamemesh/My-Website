@@ -35,7 +35,7 @@ onMounted(() => {
             </template>
         </template>
 
-        <div class="pl-1 pt-1 grow space-y-0.5 overflow-y-scroll custom-scrollbar scroll-js pb-5" id="count">
+        <div class="pl-1 pt-1 grow space-y-0.5 overflow-y-scroll custom-scrollbar scroll-js pb-24" id="count">
             <div class="flex">
                 <p class="text-[#dfc087]">&lt;x-layout</p>
                 <p class="text-[#dfc087]">&gt;</p>

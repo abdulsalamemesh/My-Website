@@ -31,7 +31,7 @@ onMounted(() => {
                 </template>
         </template>
 
-        <div class="pl-1 pt-1 grow space-y-0.5 overflow-y-scroll custom-scrollbar scroll-js pb-5" id="count">
+        <div class="pl-1 pt-1 grow space-y-0.5 overflow-y-scroll custom-scrollbar scroll-js pb-24" id="count">
 
             <div class="flex">
                 <p class="text-[#c96f1b]">&lt;?php</p>
@@ -50,7 +50,7 @@ onMounted(() => {
                 <p class="text-[#a9b1b3]">(</p>
                 <p class="text-[#576950]">'/'</p>
                 <p class="text-[#c96f1b]">,</p>
-                <p class="text-[#576950]">'index'</p>
+                <p class="text-[#576950]">'index.balde.view'</p>
                 <p class="text-[#a9b1b3]">)</p>
                 <p class="text-[#c96f1b]">;</p>
                 <div>&nbsp;</div>

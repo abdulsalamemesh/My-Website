@@ -14,6 +14,7 @@
     "In views/work.blade.php you can read about my work experience.": "In views/work.blade.php kannst du über meine Berufserfahrung lesen.",
     "In views/education.blade.php you can read about my education.": "In views/education.blade.php kannst du über meine Bildung lesen.",
     "In skills/education.blade.php you can find out what I can do.": "In skills/education.blade.php kannst du erfahren, was ich kann.",
+    "In other-information/education.blade.php you can find out what I do in my free time and did I accomplish.": "In other-information/education.blade.php kannst du herausfinden, was ich in meiner Freizeit mache und was ich erreicht habe.",
 
 
 
@@ -73,10 +74,25 @@
     "from 2011 to 2013": "Von 2011 Bis 2013",
 
     "Skills": "Fähigkeiten",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Swimming": "Schwimmen",
+    "Music": "Musik",
+    "Fitness": "Fitness",
+    "Programming": "Programmieren",
+    "Cycling": "Fahrradfahren",
+    "Archery": "Bogenschießen",
+    "Achievements": "Achievements",
+    "Hobbies": "Hobbies",
+    "Driving license": "Führerschein",
+    "Graduation project": "Abschlussprojekt",
+    "Trainee management system": "Azubis Verwaltungssystem",
+    "Trainees in different training areas can use the system": "Azubis in unterschiedlichen Ausbildungsbereiche können durch das System",
+    "to keep and manage their training-report portfolio.": "ihr Berichtsheft führen und verwalten.",
+    "The report books can be checked and signed by trainers.": "Die Berichtshefte können von Ausbilder überprüft, kontrolliert und unterschrieben werden.",
+    "Class B": "Klasse B",
+
+    "References": "Referenzen",
+    "Meier AG / Software Developer": "Meier AG / Softwareentwickler",
+    "Kochlöffel GmbH/ Branch Manager": "Kochlöffel GmbH / Filialleiterin",
     "": "",
     "": "",
     "": ""

@@ -48,6 +48,10 @@ const name = computed(() => {
             showViews.value = true
             icon.value = 'Blade'
             return 'skill.blade.php'
+        case "other-information":
+            showViews.value = true
+            icon.value = 'Blade'
+            return 'other-information.blade.php'
         case "layout":
             showViews.value = true
             icon.value = 'Blade'
@@ -112,6 +116,11 @@ function message() {
                         <Blade/>
                         <span>skill.blade.php</span>
                     </Link>
+                    <Link v-show="showViews" :href="route('other-information')" :class="[route().current('other-information') ? 'bg-[#4b6eaf]' : '']"
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-max">
+                        <Blade/>
+                        <span>other-information.blade.php</span>
+                    </Link>
                     <Link v-show="showViews" :href="route('layout')" :class="[route().current('layout') ? 'bg-[#4b6eaf]' : '']"
                           class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
                         <Blade/>
@@ -135,7 +144,7 @@ function message() {
             </div>
             <div class="flex flex-col grow">
                 <div class="bg-[#3c3f41] border-b-[1px] border-black/30 h-7 text-xs flex items-center justify-between">
-                    <div class="w-min h-full bg-[#4e5254] flex justify-between items-center text-[#adb5b8] px-2 py-1 space-x-2">
+                    <div class="w-max h-full bg-[#4e5254] flex justify-between items-center text-[#adb5b8] px-2 py-1 space-x-2">
                         <Blade/>
                         <span>{{ name }}</span>
                         <div @click="message()" class="cursor-pointer">x</div>
@@ -147,7 +156,7 @@ function message() {
                 <div class="flex grow overflow-hidden">
                     <!-- Page Heading -->
                     <header v-if="$slots.header"
-                            class="bg-[#313335] pl-2 pr-4 pt-1 space-y-0.5 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js h-full pb-5">
+                            class="bg-[#313335] pl-2 pr-4 pt-1 space-y-0.5 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js h-full pb-24">
                         <slot name="header"/>
                     </header>
 
