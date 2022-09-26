@@ -40,6 +40,14 @@ const name = computed(() => {
             showViews.value = true
             icon.value = 'Blade'
             return 'work.blade.php'
+        case "education":
+            showViews.value = true
+            icon.value = 'Blade'
+            return 'education.blade.php'
+        case "skill":
+            showViews.value = true
+            icon.value = 'Blade'
+            return 'skill.blade.php'
         case "layout":
             showViews.value = true
             icon.value = 'Blade'
@@ -93,6 +101,16 @@ function message() {
                           class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
                         <Blade/>
                         <span>work.blade.php</span>
+                    </Link>
+                    <Link v-show="showViews" :href="route('education')" :class="[route().current('education') ? 'bg-[#4b6eaf]' : '']"
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
+                        <Blade/>
+                        <span>education.blade.php</span>
+                    </Link>
+                    <Link v-show="showViews" :href="route('skill')" :class="[route().current('skill') ? 'bg-[#4b6eaf]' : '']"
+                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">
+                        <Blade/>
+                        <span>skill.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('layout')" :class="[route().current('layout') ? 'bg-[#4b6eaf]' : '']"
                           class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-2 px-2 w-full">

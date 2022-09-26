@@ -10,9 +10,10 @@
 
     "Hallo dear programmer": "Hallo liebe/r Programmierer/in",
     "This is made for you. Have fun!!": "Das ist für dich gemacht. Viel Spaß!!",
-    "Start with views/me.blade.php to get to know me": "Beginne mit views/me.blade.php, um mich kennen zu lernen",
-    "In views/work.blade.php you can read about my work experience": "In views/work.blade.php kannst du über meine Berufserfahrung lesen",
-    "In views/education.blade.php you can read about my education": "In views/education.blade.php kannst du über meine Bildung lesen",
+    "Start with views/me.blade.php to get to know me.": "Beginne mit views/me.blade.php, um mich kennen zu lernen.",
+    "In views/work.blade.php you can read about my work experience.": "In views/work.blade.php kannst du über meine Berufserfahrung lesen.",
+    "In views/education.blade.php you can read about my education.": "In views/education.blade.php kannst du über meine Bildung lesen.",
+    "In skills/education.blade.php you can find out what I can do.": "In skills/education.blade.php kannst du erfahren, was ich kann.",
 
 
 
@@ -59,6 +60,25 @@
     "Establish contact with the various customers.": "Kontakt mit den verschiedenen Kunden aufzunehmen.",
     "Responsible for gathering necessary information for projects.": "Zuständig für die Informationssammlung, die für ein Projekt notwendig sind.",
     "Analysis of the collected information.": "Analyse der gesammelten Informationen.",
+
+    "Education": "Bildung",
+    "Training as IT Specialist For Application Development": "Ausbildung zum Fachinformatiker für Anwendungsentwicklung",
+    "C1 language course": "C1 Sprackurs",
+    "Language courses up to B2 level": "Sprachkurse bis B2 Nivea",
+    "Business study": "Wirtschaftsstudium",
+    "from 2018 to 2021": "Von 2018 Bis 2021",
+    "from 2017 to 2018": "Von 2017 Bis 2018",
+    "from 2016 to 2017": "Von 2016 Bis 2017",
+    "from 2013 to 2015": "Von 2013 Bis 2015",
+    "from 2011 to 2013": "Von 2011 Bis 2013",
+
+    "Skills": "Fähigkeiten",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
     "": ""
 
 }
