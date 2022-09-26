@@ -28,6 +28,7 @@ Route::get('skill', SkillController::class)->name('skill');
 Route::get('other-information', OtherInformationController::class)->name('other-information');
 Route::get('web', fn() => Inertia::render('Code/Web'))->name('web');
 Route::get('layout', fn() => Inertia::render('Code/Layout'))->name('layout');
+Route::get('env', fn() => Inertia::render('Code/Env'))->name('env');
 Route::get('language/{language}', function ($language) {
     Session()->put('locale', $language);
 
