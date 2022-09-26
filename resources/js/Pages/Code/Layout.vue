@@ -102,7 +102,7 @@ onMounted(() => {
                 <p class="text-[#dfc087]">&lt;/title&gt;</p>
             </div>
             <div>&nbsp;</div>
-            <div class="flex text-[#505759]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex text-[#505759]" :class="paddingLevel(2)">
                 <div>&lt;!</div>
                 <div>-- Fonts --</div>
                 <div>&gt;</div>
@@ -118,9 +118,9 @@ onMounted(() => {
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
             <div>&nbsp;</div>
-            <div class="flex text-[#505759]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="flex text-[#505759]" :class="paddingLevel(2)">
                 <div>&lt;!</div>
-                <div>-- Scripts --</div>
+                <div>-- tailwindcss jit scripts --</div>
                 <div>&gt;</div>
             </div>
 
@@ -146,20 +146,31 @@ onMounted(() => {
             <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;div</p>
                 <p class="text-[#a9b1b3]">&nbsp;class</p>
-                <p class="text-[#a7bb7c]">="font-sans text-gray-900 antialiased bg-gray-100"</p>
+                <p class="text-[#a7bb7c]">="font-sans text-gray-900 antialiased bg-gray-100 h-screen overview-y-auto"</p>
+                <p class="text-[#dfc087]">&gt;</p>
+            </div>
+            <div class="flex" :class="paddingLevel(3)">
+                <p class="text-[#dfc087]">&lt;div</p>
+                <p class="text-[#a9b1b3]">&nbsp;class</p>
+                <p class="text-[#a7bb7c]">="container mx-auto sm:px-4 md:px-6 lg:px-8"</p>
+                <p class="text-[#dfc087]">&gt;</p>
+            </div>
+            <div class="flex" :class="paddingLevel(4)">
+                <p class="text-[#dfc087]">&lt;div</p>
+                <p class="text-[#a9b1b3]">&nbsp;class</p>
+                <p class="text-[#a7bb7c]">="py-8"</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
 
-
-            <div class="flex" :class="paddingLevel(3)">
+            <div class="flex" :class="paddingLevel(5)">
                 <p class="text-[#a9b1b3]">{</p>
                 <p class="text-[#a9b1b3]">{&nbsp;</p>
                 <p class="text-[#86698a]">$slot</p>
                 <p class="text-[#a9b1b3]">&nbsp;}}</p>
             </div>
-            <div class="text-[#dfc087]">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &lt;/div&gt;
-            </div>
+            <div class="text-[#dfc087]" :class="paddingLevel(4)">&lt;/div&gt;</div>
+            <div class="text-[#dfc087]" :class="paddingLevel(3)">&lt;/div&gt;</div>
+            <div class="text-[#dfc087]" :class="paddingLevel(2)">&lt;/div&gt;</div>
 
             <div class="flex" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;/body</p>

@@ -51,7 +51,7 @@ onMounted(() => {
             <div :class="paddingLevel(1)" v-if="skills.length >0" class="flex">
                 <p class="text-[#dfc087]">&lt;ul</p>
                 <p class="text-[#a9b1b3]">&nbsp;class</p>
-                <p class="text-[#a7bb7c]">="flex flex-row list-disc space-x-2 my-2"</p>
+                <p class="text-[#a7bb7c]">="list-disc space-y-1 my-2"</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
             <template v-for="skill in skills">
