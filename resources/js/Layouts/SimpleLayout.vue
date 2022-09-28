@@ -12,9 +12,9 @@ import JSONFile from '@/Icons/JSONFile.vue';
 import TestUnitFile from '@/Icons/TestUnitFile.vue';
 import JSFile from '@/Icons/JSFile.vue';
 import Markdown from '@/Icons/Markdown.vue';
-import {computed, onMounted, ref} from "vue";
+import {computed, onMounted, ref, shallowRef} from "vue";
 import LangaugeSelector from '@/Layouts/LangaugeSelector.vue'
-let icon = ref(Blade)
+let icon = shallowRef(Blade)
 let showResources = ref(false)
 let showViews = ref(false)
 let showRoutes = ref(false)
