@@ -36,11 +36,11 @@ onMounted(() => {
         </template>
 
         <div class="pl-1 pt-1 grow space-y-0.5 overflow-y-scroll custom-scrollbar scroll-js pb-24" id="count">
-            <div class="flex">
+            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#dfc087]">&lt;x-layout</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex" :class="paddingLevel(1)">
+            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;h1</p>
                 <p class="text-[#a9b1b3]">&nbsp;class</p>
                 <p class="text-[#a7bb7c]">="font-bold text-lg text-indigo-500 uppercase"</p>
@@ -48,14 +48,14 @@ onMounted(() => {
                 <p class="text-[#a9b1b3]">{{ __('Skills') }}</p>
                 <p class="text-[#dfc087]">&lt;/h1&gt;</p>
             </div>
-            <div :class="paddingLevel(1)" v-if="skills.length >0" class="flex">
+            <div :class="paddingLevel(1)" v-if="skills.length >0" class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#dfc087]">&lt;ul</p>
                 <p class="text-[#a9b1b3]">&nbsp;class</p>
                 <p class="text-[#a7bb7c]">="list-disc space-y-1 my-2"</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
             <template v-for="skill in skills">
-                <div class="flex" :class="paddingLevel(2)">
+                <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(2)">
                     <p class="text-[#dfc087]">&lt;li</p>
                     <p class="text-[#a9b1b3]">&nbsp;class</p>
                     <p class="text-[#a7bb7c]">="font-semibold"</p>
@@ -64,11 +64,11 @@ onMounted(() => {
                     <p class="text-[#dfc087]">&lt;/li&gt;</p>
                 </div>
             </template>
-            <div class="flex" :class="paddingLevel(1)" v-if="skills.length >0">
+            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(1)" v-if="skills.length >0">
                 <p class="text-[#dfc087]">&lt;/ul&gt;</p>
             </div>
 
-            <div class="flex">
+            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#dfc087]">&lt;/x-layout</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>

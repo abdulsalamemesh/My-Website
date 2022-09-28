@@ -33,18 +33,18 @@ onMounted(() => {
 
         <div class="pl-1 pt-1 grow space-y-0.5 overflow-y-scroll custom-scrollbar scroll-js pb-24" id="count">
 
-            <div class="flex">
+            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#c96f1b]">&lt;?php</p>
             </div>
             <div>&nbsp; </div>
-            <div class="flex">
+            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#c96f1b]">&lt;use&nbsp;</p>
                 <p class="text-[#a9b1b3]">Illuminate\Support\Facades\Route</p>
                 <p class="text-[#c96f1b]">;</p>
                 <div>&nbsp; </div>
             </div>
             <div>&nbsp; </div>
-            <div class="flex">
+            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#a9b1b3]">Route::</p>
                 <p class="text-[#c96f1b]">view</p>
                 <p class="text-[#a9b1b3]">(</p>

@@ -91,12 +91,12 @@ function message() {
 <template>
     <div>
         <Head title="Abdulsalam Emesh"/>
-        <div class="h-screen w-screen bg-[#2b2b2b] font-custom text-sm flex">
+        <div class="md:h-screen w-screen bg-[#2b2b2b] font-custom text-sm flex flex-col md:flex-row">
             <div class="bg-[#3c3f41] min-w-[250px] border-r-[1px] border-black/30 text-xs flex flex-col">
                 <div class="h-7 flex items-center border-b-[1px] border-black/30 px-2">
                     <p class="text-[#adb5b8]">Project</p>
                 </div>
-                <div class="grow border-b-[1px] border-black/30 space-y-1">
+                <div class="grow border-b-[1px] border-black/30 space-y-1 overflow-hidden py-2 sm:py-0">
                     <div class="text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
                         <span class="text-xs">&#8964;</span>
                         <Folder classes="h-4 w-4"/>
@@ -202,7 +202,7 @@ function message() {
                         <span>layout.blade.php</span>
                     </Link>
                     <!--         Routes           -->
-                    <div @click="showRoutes = ! showRoutes" class=" pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                    <div @click="showRoutes = ! showRoutes" class=" pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 w-full cursor-pointer">
                     <span>
                         <span v-show="showRoutes" class="text-xs">&#8964;</span>
                         <span v-show="!showRoutes" class="text-xs">&#x203A;</span>
@@ -298,10 +298,10 @@ function message() {
                         <LangaugeSelector/>
                     </div>
                 </div>
-                <div class="flex grow overflow-hidden">
+                <div class="flex grow md:overflow-hidden">
                     <!-- Page Heading -->
                     <header v-if="$slots.header"
-                            class="bg-[#313335] pl-2 pr-4 pt-1 space-y-0.5 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js h-full pb-24">
+                            class="bg-[#313335] pl-2 pr-4 pt-1 space-y-0.5 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-24">
                         <slot name="header"/>
                     </header>
 
