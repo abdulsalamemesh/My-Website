@@ -61,31 +61,31 @@ onMounted(() => {
             <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;li</p>
                 <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('Start with views/me.blade.php to get to know me.') }}</p>
+                <p class="text-[#a9b1b3]">{{ __('Start with resources/views/me.blade.php to get to know me.') }}</p>
                 <p class="text-[#dfc087]">&lt;/li&gt;</p>
             </div>
             <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;li</p>
                 <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('In views/work.blade.php you can read about my work experience.') }}</p>
+                <p class="text-[#a9b1b3]">{{ __('In resources/views/work.blade.php you can read about my work experience.') }}</p>
                 <p class="text-[#dfc087]">&lt;/li&gt;</p>
             </div>
             <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;li</p>
                 <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('In views/education.blade.php you can read about my education.') }}</p>
+                <p class="text-[#a9b1b3]">{{ __('In resources/views/education.blade.php you can read about my education.') }}</p>
                 <p class="text-[#dfc087]">&lt;/li&gt;</p>
             </div>
             <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;li</p>
                 <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('In skills/education.blade.php you can find out what I can do.') }}</p>
+                <p class="text-[#a9b1b3]">{{ __('In resources/views/skills.blade.php you can find out what I can do.') }}</p>
                 <p class="text-[#dfc087]">&lt;/li&gt;</p>
             </div>
             <div class="flex" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;li</p>
                 <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('In other-information/education.blade.php you can find out what I do in my free time and did I accomplish.') }}</p>
+                <p class="text-[#a9b1b3]">{{ __('In resources/views/other-information.blade.php you can find out what I do in my free time and did I accomplish.') }}</p>
                 <p class="text-[#dfc087]">&lt;/li&gt;</p>
             </div>
             <div class="flex" :class="paddingLevel(1)">
