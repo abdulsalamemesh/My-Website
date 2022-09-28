@@ -1,12 +1,21 @@
 <script setup>
 import {Head, Link} from '@inertiajs/inertia-vue3';
+import SourceRoot from '@/Icons/SourceRoot.vue';
+import ResourceRoot from '@/Icons/ResourceRoot.vue';
+import TestRoot from '@/Icons/TestRoot.vue';
+import ExcludeRoot from '@/Icons/ExcludeRoot.vue';
 import Folder from '@/Icons/Folder.vue';
 import Blade from '@/Icons/Blade.vue';
 import DotFile from '@/Icons/DotFile.vue';
 import PHP from '@/Icons/PHP.vue';
+import JSONFile from '@/Icons/JSONFile.vue';
+import TestUnitFile from '@/Icons/TestUnitFile.vue';
+import JSFile from '@/Icons/JSFile.vue';
+import Markdown from '@/Icons/Markdown.vue';
 import {computed, onMounted, ref} from "vue";
 import LangaugeSelector from '@/Layouts/LangaugeSelector.vue'
 let icon = ref(Blade)
+let showResources = ref(false)
 let showViews = ref(false)
 let showRoutes = ref(false)
 
@@ -30,30 +39,37 @@ onMounted(() => {
 const name = computed(() => {
     switch (route().current()) {
         case "index":
+            showResources.value = true
             showViews.value = true
             icon.value = Blade
             return 'index.blade.php'
         case "me":
+            showResources.value = true
             showViews.value = true
             icon.value = Blade
             return 'me.blade.php'
         case "work":
+            showResources.value = true
             showViews.value = true
             icon.value = Blade
             return 'work.blade.php'
         case "education":
+            showResources.value = true
             showViews.value = true
             icon.value = Blade
             return 'education.blade.php'
         case "skill":
+            showResources.value = true
             showViews.value = true
             icon.value = Blade
             return 'skill.blade.php'
         case "other-information":
+            showResources.value = true
             showViews.value = true
             icon.value = Blade
             return 'other-information.blade.php'
         case "layout":
+            showResources.value = true
             showViews.value = true
             icon.value = Blade
             return 'layout.blade.php'
@@ -80,76 +96,195 @@ function message() {
                 <div class="h-7 flex items-center border-b-[1px] border-black/30 px-2">
                     <p class="text-[#adb5b8]">Project</p>
                 </div>
-                <div class="grow border-b-[1px] border-black/30 space-y-0.5">
+                <div class="grow border-b-[1px] border-black/30 space-y-1">
                     <div class="text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
-                        <span class="text-sm">&#8964;</span>
+                        <span class="text-xs">&#8964;</span>
                         <Folder classes="h-4 w-4"/>
                         <span>me</span>
                     </div>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <SourceRoot classes="h-4 w-4"/>
+                        <span>app</span>
+                    </div>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <Folder classes="h-4 w-4"/>
+                        <span>bootstrap</span>
+                    </div>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <Folder classes="h-4 w-4"/>
+                        <span>config</span>
+                    </div>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <ResourceRoot classes="h-4 w-4"/>
+                        <span>database</span>
+                    </div>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <Folder classes="h-4 w-4"/>
+                        <span>lang</span>
+                    </div>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <ExcludeRoot classes="h-4 w-4"/>
+                        <span>node_modules</span>
+                    </div>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <ExcludeRoot classes="h-4 w-4"/>
+                        <span>public</span>
+                    </div>
+                    <div @click="showResources = ! showResources" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <ResourceRoot classes="h-4 w-4"/>
+                        <span>resources</span>
+                    </div>
+                    <div v-show="showResources" @click="message()"  class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <Folder classes="h-4 w-4"/>
+                        <span>css</span>
+                    </div>
+                    <div v-show="showResources" @click="message()"  class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <Folder classes="h-4 w-4"/>
+                        <span>js</span>
+                    </div>
+                    <div v-show="showResources" @click="message()"  class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <Folder classes="h-4 w-4"/>
+                        <span>markdown</span>
+                    </div>
                     <!--         Views           -->
-                    <div @click="showViews = ! showViews" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                    <div v-show="showResources" @click="showViews = ! showViews" class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
                     <span>
-                        <span v-show="showViews" class="text-sm">&#8964;</span>
-                        <span v-show="!showViews" class="text-sm">&#x203A;</span>
+                        <span v-show="showViews" class="text-xs">&#8964;</span>
+                        <span v-show="!showViews" class="text-xs">&#x203A;</span>
                     </span>
                         <Folder classes="h-4 w-4"/>
                         <span>views</span>
                     </div>
                     <Link v-show="showViews" :href="route('index')" :class="[route().current('index') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>index.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('me')" :class="[route().current('me') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>me.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('work')" :class="[route().current('work') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>work.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('education')" :class="[route().current('education') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>education.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('skill')" :class="[route().current('skill') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>skill.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('other-information')" :class="[route().current('other-information') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-max">
+                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-max">
                         <Blade classes="h-4 w-4"/>
                         <span>other-information.blade.php</span>
                     </Link>
                     <Link v-show="showViews" :href="route('layout')" :class="[route().current('layout') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>layout.blade.php</span>
                     </Link>
                     <!--         Routes           -->
                     <div @click="showRoutes = ! showRoutes" class=" pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
                     <span>
-                        <span v-show="showRoutes" class="text-sm">&#8964;</span>
-                        <span v-show="!showRoutes" class="text-sm">&#x203A;</span>
+                        <span v-show="showRoutes" class="text-xs">&#8964;</span>
+                        <span v-show="!showRoutes" class="text-xs">&#x203A;</span>
                     </span>
                         <Folder classes="h-4 w-4"/>
                         <span>routs</span>
                     </div>
                     <Link v-show="showRoutes" :href="route('web')" :class="[route().current('web') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                          class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <PHP/>
                         <span>web.php</span>
                     </Link>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <ExcludeRoot classes="h-4 w-4"/>
+                        <span>storage</span>
+                    </div>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <TestRoot classes="h-4 w-4"/>
+                        <span>tests</span>
+                    </div>
+                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                        <span class="text-xs">&#x203A;</span>
+                        <Folder classes="h-4 w-4"/>
+                        <span>vendor</span>
+                    </div>
                     <!--         .env           -->
                     <Link :href="route('env')" :class="[route().current('env') ? 'bg-[#4b6eaf]' : '']"
-                          class="pl-12 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <DotFile classes="h-4 w-4"/>
                         <span>.env</span>
                     </Link>
+                    <!--         Fakes           -->
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <DotFile classes="h-4 w-4"/>
+                        <span>.env.example</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <DotFile classes="h-4 w-4"/>
+                        <span>.gitignore</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <PHP classes="h-4 w-4"/>
+                        <span>artisan</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <JSONFile classes="h-4 w-4"/>
+                        <span>composer.json</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <JSONFile classes="h-4 w-4"/>
+                        <span>composer.lock</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <JSONFile classes="h-4 w-4"/>
+                        <span>package.json</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <JSONFile classes="h-4 w-4"/>
+                        <span>package-lock.json</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <TestUnitFile classes="h-4 w-4"/>
+                        <span>phpunit.xml</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <JSFile classes="h-4 w-4"/>
+                        <span>postcss.config.js</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <Markdown classes="h-4 w-4"/>
+                        <span>README.md</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <JSFile classes="h-4 w-4"/>
+                        <span>tailwind.config.js</span>
+                    </div>
+                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <JSFile classes="h-4 w-4"/>
+                        <span>vite.config.js</span>
+                    </div>
                 </div>
             </div>
             <div class="flex flex-col grow">
