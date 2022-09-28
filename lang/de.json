@@ -10,11 +10,11 @@
 
     "Hallo dear programmer": "Hallo liebe/r Programmierer/in",
     "This is made for you. Have fun!!": "Das ist für dich gemacht. Viel Spaß!!",
-    "Start with views/me.blade.php to get to know me.": "Beginne mit views/me.blade.php, um mich kennen zu lernen.",
-    "In views/work.blade.php you can read about my work experience.": "In views/work.blade.php kannst du über meine Berufserfahrung lesen.",
-    "In views/education.blade.php you can read about my education.": "In views/education.blade.php kannst du über meine Bildung lesen.",
-    "In skills/education.blade.php you can find out what I can do.": "In skills/education.blade.php kannst du erfahren, was ich kann.",
-    "In other-information/education.blade.php you can find out what I do in my free time and did I accomplish.": "In other-information/education.blade.php kannst du herausfinden, was ich in meiner Freizeit mache und was ich erreicht habe.",
+    "Start with resources/views/me.blade.php to get to know me.": "Beginne mit resources/views/me.blade.php, um mich kennen zu lernen.",
+    "In resources/views/work.blade.php you can read about my work experience.": "In resources/views/work.blade.php kannst du über meine Berufserfahrung lesen.",
+    "In resources/views/education.blade.php you can read about my education.": "In resources/views/education.blade.php kannst du über meine Bildung lesen.",
+    "In resources/views/skills.blade.php you can find out what I can do.": "In resources/views/skills.blade.php kannst du erfahren, was ich kann.",
+    "In resources/views/other-information.blade.php you can find out what I do in my free time and did I accomplish.": "In resources/views/other-information.blade.php kannst du herausfinden, was ich in meiner Freizeit mache und was ich erreicht habe.",
 
 
 
