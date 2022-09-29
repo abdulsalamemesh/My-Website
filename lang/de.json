@@ -9,6 +9,7 @@
 
 
     "Hallo dear programmer": "Hallo liebe/r Programmierer/in",
+    "I just wanted to have some fun and create the website in your well-known environment": "Ich wollte nur ein bisschen Spaß haben und die Website in deiner bekannten Umgebung erstellen",
     "This is made for you. Have fun!!": "Das ist für dich gemacht. Viel Spaß!!",
     "Start with resources/views/me.blade.php to get to know me.": "Beginne mit resources/views/me.blade.php, um mich kennen zu lernen.",
     "In resources/views/work.blade.php you can read about my work experience.": "In resources/views/work.blade.php kannst du über meine Berufserfahrung lesen.",
