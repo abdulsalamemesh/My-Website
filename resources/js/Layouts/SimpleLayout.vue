@@ -91,7 +91,7 @@ function message() {
 <template>
     <div>
         <Head title="Abdulsalam Emesh"/>
-        <div class="md:h-screen w-screen bg-[#2b2b2b] font-custom text-sm flex flex-col md:flex-row">
+        <div class="md:h-screen w-screen bg-[#2b2b2b] font-custom text-sm flex flex-col md:flex-row overflow-hidden">
             <div class="bg-[#3c3f41] min-w-[250px] border-r-[1px] border-black/30 text-xs flex flex-col">
                 <div class="h-7 flex items-center border-b-[1px] border-black/30 px-2">
                     <p class="text-[#adb5b8]">Project</p>
@@ -287,7 +287,7 @@ function message() {
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col grow">
+            <div class="flex flex-col grow text-xs">
                 <div class="bg-[#3c3f41] border-b-[1px] border-black/30 h-7 text-xs flex items-center justify-between">
                     <div class="w-max h-full bg-[#4e5254] flex justify-between items-center text-[#adb5b8] px-2 py-1 space-x-2">
                         <component :is="icon" :classes="'h-4 w-4'"/>
@@ -298,10 +298,10 @@ function message() {
                         <LangaugeSelector/>
                     </div>
                 </div>
-                <div class="flex grow md:overflow-hidden">
+                <div class="flex grow md:overflow-x-hidden md:overflow-y-auto bg-[#2b2b2b]">
                     <!-- Page Heading -->
                     <header v-if="$slots.header"
-                            class="bg-[#313335] pl-2 pr-4 pt-1 space-y-0.5 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-24">
+                            class="bg-[#313335] pl-2 pr-4 pt-1 space-y-0.5 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-2 text-xs">
                         <slot name="header"/>
                     </header>
 
