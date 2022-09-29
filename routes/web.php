@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EducationController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OtherInformationController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\WorkExperienceController;
@@ -18,7 +19,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::redirect('/', 'index');
+Route::get('/', HomeController::class);
 Route::get('loading', fn() => Inertia::render('Code/Loading'))->name('loading');
 Route::get('index', fn() => Inertia::render('Code/Index'))->name('index');
 Route::get('me', fn() => Inertia::render('Code/Me'))->name('me');
