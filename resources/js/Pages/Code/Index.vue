@@ -49,6 +49,14 @@ onMounted(() => {
                  <p class="text-[#a9b1b3]">&nbsp;class</p>
                 <p class="text-[#a7bb7c]">="font-bold text-md text-indigo-500"</p>
                 <p class="text-[#dfc087]">&gt;</p>
+                <p class="text-[#a9b1b3]">{{ __('I just wanted to have some fun and create the website in your well-known environment') +' 😉' }}</p>
+                <p class="text-[#dfc087]">&lt;/h2&gt;</p>
+            </div>
+            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(1)">
+                <p class="text-[#dfc087]">&lt;h2</p>
+                 <p class="text-[#a9b1b3]">&nbsp;class</p>
+                <p class="text-[#a7bb7c]">="font-bold text-md text-indigo-500"</p>
+                <p class="text-[#dfc087]">&gt;</p>
                 <p class="text-[#a9b1b3]">{{ __('This is made for you. Have fun!!') }}</p>
                 <p class="text-[#dfc087]">&lt;/h2&gt;</p>
             </div>

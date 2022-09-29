@@ -25,7 +25,7 @@
 
         </style>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-custom antialiased @if(request()->routeIs('home'))overflow-hidden @endif">
         @inertia
     </body>
 </html>

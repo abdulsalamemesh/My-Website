@@ -84,7 +84,7 @@ const name = computed(() => {
 })
 
 function message() {
-    alert('I know you are programmer but this is still a website and not and IDE :)')
+    alert('I know you are programmer but this is still a website and not and IDE 😉')
 }
 </script>
 
