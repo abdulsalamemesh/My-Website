@@ -84,6 +84,12 @@
 }
 
 @font-face {
+    font-family: La Belle Aurore;
+    font-weight: 400;
+    src: url('fonts/La_Belle_Aurore/LaBelleAurore-Regular.ttf');
+}
+
+@font-face {
     font-family: JetBrainsMono-Medium;
     src: url('JetBrainsMono-Medium.ttf');
 }
@@ -93,6 +99,9 @@
 
 .font-montserrat {
     font-family: 'montserrat',sans-serif !important;
+}
+.font-aurore {
+    font-family: 'La Belle Aurore',cursive !important;
 }
 *{
     scroll-behavior: auto;

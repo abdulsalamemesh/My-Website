@@ -19,17 +19,22 @@ const deTitles = [
 
 <template>
     <AppLayout>
-        <div class="h-[calc(100vh-5rem)] md:h-screen flex flex-col justify-center bg-slate-100 dark:bg-black" id="home">
-            <div class="w-full h-full flex flex-col justify-between items-center px-6 md:px-8">
+        <div class="h-[calc(100vh-5rem)] md:h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 " id="home">
+            <div class="w-full h-full flex flex-col justify-between items-center py-6 px-6 md:px-8">
+                <div class="text-lg dark:text-hot-700 font-light font-aurore w-full">&lt;html></div>
+                <div class="text-lg dark:text-hot-700 font-light font-aurore w-full">&lt;body></div>
+
                 <div class="grow flex flex-col items-center md:items-start justify-center w-full sm:max-w-3xl">
-                    <div class="md:space-y-3 sm:max-w-sm md:max-w-none md:w-full">
-                        <!--                        <div class="md:text-lg dark:text-yellow-500 font-light font-[Kalam]">&#x201C;&lt;div>&#x201E;</div>-->
-                        <p class="text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold">{{ __('Hi') }} <span class="wave">&#128075;</span>, </p>
-                        <p class="ml-6 md:ml-12 text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">{{ __('My name is') }}</p>
-                        <p class="text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold">Abdulsalam Emesh</p>
-                        <!--                        <p class="ml-12 v dark:text-yellow-400 font-light font-[Kalam] my-2">&#x201C;&lt;br>&#x201E;</p>-->
+                    <div class="sm:max-w-sm md:max-w-none md:w-full">
+                        <div class="text-lg dark:text-hot-700 font-light font-aurore">&lt;div></div>
+                        <p class="text-lg ml-2 dark:text-hot-700 font-light font-aurore ">&lt;h1></p>
+                        <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold">{{ __('Hi') }} <span class="wave">&#128075;</span>,I'm </p>
+                        <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold">Abdulsalam Emesh</p>
+                        <p class="text-lg ml-2 dark:text-hot-700 font-light font-aurore ">&lt;br></p>
                         <VueWriter :array="selectableLocale === 'en'? enTitles : deTitles" :start="2000" :eraseSpeed="25" :typeSpeed="100"/>
-                        <!--                        <div class="md:text-lg dark:text-yellow-500 font-light font-[Kalam]">&#x201C;&lt;/div>&#x201E;</div>-->
+                        <p class="text-lg ml-2 dark:text-hot-700 font-light font-aurore">&lt;/h1></p>
+
+                        <div class="text-lg dark:text-hot-700 font-light font-aurore">&lt;/div></div>
                     </div>
                 </div>
                 <div class="p-6 md:px-12 md:pb-12 md:pt-0  w-full flex justify-center md:justify-end">
@@ -77,7 +82,7 @@ const deTitles = [
 <style lang="postcss">
 .is-typed {
     font-family: 'montserrat', sans-serif !important;
-    @apply text-2xl md:text-5xl lg:text-6xl font-bold text-hot-500 dark:text-indigo-600 ml-6 md:ml-12 break-words;
+    @apply text-2xl md:text-5xl lg:text-6xl font-bold text-hot-500 dark:text-indigo-600 ml-2 break-words;
 }
 
 .is-typed span.cursor {
