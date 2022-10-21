@@ -4,37 +4,46 @@ import VueWriter from 'vue-writer'
 import ScrollArrow from "@/Components/ScrollArrow.vue";
 import {computed} from "vue";
 import {usePage} from "@inertiajs/inertia-vue3";
+import {useDark} from "@vueuse/core";
 
+const isDark = useDark()
 const selectableLocale = computed(() => {
     return usePage().props.value.locale
 })
 
 const enTitles = [
-    'I build things for the web.',
+    ' am a Fullstack Developer.',
+    ' build things for the web.',
+    ' enjoy solving problems.',
+    ' love to work in team.',
 ];
 const deTitles = [
-    'Ich liebe es, mit anderen Programmierern zusammenzuarbeiten.',
+    ' bin Fullstack-Entwickler.',
+    ' entwickle Dinge für die Web.',
+    ' löse gerne Probleme.',
+    ' arbeite gerne im Team.',
 ];
 </script>
 
 <template>
     <AppLayout>
-        <div class="h-[calc(100vh-5rem)] md:h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 " id="home">
-            <div class="w-full h-full flex flex-col justify-between items-center py-6 px-6 md:px-8">
-                <div class="text-lg dark:text-hot-700 font-light font-aurore w-full">&lt;html></div>
-                <div class="text-lg dark:text-hot-700 font-light font-aurore w-full">&lt;body></div>
+        <div class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center bg-slate-100 dark:bg-slate-900 " id="home">
+            <div class="grow flex flex-col justify-between items-center md:py-6 px-6 md:px-8">
+                <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;html></div>
+                <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;body></div>
 
-                <div class="grow flex flex-col items-center md:items-start justify-center w-full sm:max-w-3xl">
+                <div class="grow flex flex-col items-center md:items-start justify-center w-full sm:max-w-4xl">
                     <div class="sm:max-w-sm md:max-w-none md:w-full">
-                        <div class="text-lg dark:text-hot-700 font-light font-aurore">&lt;div></div>
-                        <p class="text-lg ml-2 dark:text-hot-700 font-light font-aurore ">&lt;h1></p>
-                        <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold">{{ __('Hi') }} <span class="wave">&#128075;</span>,I'm </p>
-                        <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold">Abdulsalam Emesh</p>
-                        <p class="text-lg ml-2 dark:text-hot-700 font-light font-aurore ">&lt;br></p>
-                        <VueWriter :array="selectableLocale === 'en'? enTitles : deTitles" :start="2000" :eraseSpeed="25" :typeSpeed="100"/>
-                        <p class="text-lg ml-2 dark:text-hot-700 font-light font-aurore">&lt;/h1></p>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;h1></p>
+                        <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold mb-2 lg:leading-tight">
+                            {{ __('Hi') }} <span class="wave">&#128075;</span>, {{ __("I'm") }}
+                            <br>
+                            Abdulsalam Emesh</p>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;br></p>
+                        <VueWriter :array="selectableLocale === 'en'? enTitles : deTitles" :start="2000" :eraseSpeed="25" :typeSpeed="100">{{ __('I') }}</VueWriter>
 
-                        <div class="text-lg dark:text-hot-700 font-light font-aurore">&lt;/div></div>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h1></p>
+
                     </div>
                 </div>
                 <div class="p-6 md:px-12 md:pb-12 md:pt-0  w-full flex justify-center md:justify-end">
@@ -42,11 +51,11 @@ const deTitles = [
                 </div>
             </div>
         </div>
-        <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-black">
-            <div class="border-b-2 border-gray-300 dark:border-white"></div>
+        <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-slate-900">
+            <div class="border-b-2 border-slate-200 dark:border-white"></div>
         </div>
-        <div class="h-screen flex flex-col justify-center bg-slate-100 dark:bg-black" id="about-me">
-            <div class="max-w-7xl mx-auto grow flex justify-center items-center md:space-x-4 px-6 md:px-12">
+        <div class="h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900" id="about">
+            <div class="max-w-7xl mx-auto grow flex flex-col md:flex-row justify-center items-center md:space-x-4 px-6 md:px-12">
 
                 <div class="min-w-max rounded-full p-2 bg-gradient-to-b from-hot-300 to-hot-500 dark:from-indigo-300 dark:to-indigo-600">
                     <img src="/me.jpeg" class="rounded-full h-64 w-64 object-cover" alt="">
@@ -82,23 +91,23 @@ const deTitles = [
 <style lang="postcss">
 .is-typed {
     font-family: 'montserrat', sans-serif !important;
-    @apply text-2xl md:text-5xl lg:text-6xl font-bold text-hot-500 dark:text-indigo-600 ml-2 break-words;
+    @apply text-3xl md:text-5xl lg:text-6xl font-bold text-hot-500 dark:text-indigo-600 ml-2 break-words lg:leading-tight;
 }
 
 .is-typed span.cursor {
     font-family: 'montserrat', sans-serif !important;
-    @apply h-[2px] md:h-[4px] lg:h-[6px] text-indigo-500 dark:text-white inline-flex items-end animate-[blink_1s_infinite];
+    @apply h-[2px] md:h-[4px] lg:h-[6px] bg-black dark:bg-white inline-flex items-end animate-[blink_1s_infinite];
 }
 
 @keyframes blink {
     49% {
-        background-color: black;
+        background-color: v-bind(isDark ? 'white': 'black');
     }
     50% {
-        background-color: transparent;
+        background-color: v-bind(isDark ? '#0f172a': '#f1f5f9');;
     }
     99% {
-        background-color: transparent;
+        background-color: v-bind(isDark ? '#0f172a': '#f1f5f9');;
     }
 }
 
