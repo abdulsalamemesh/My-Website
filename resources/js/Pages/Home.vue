@@ -2,11 +2,10 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import VueWriter from 'vue-writer'
 import ScrollArrow from "@/Components/ScrollArrow.vue";
-import {computed} from "vue";
+import {computed, onMounted} from "vue";
 import {usePage} from "@inertiajs/inertia-vue3";
-import {useDark} from "@vueuse/core";
+import {currentLocation, isDark} from "../store";
 
-const isDark = useDark()
 const selectableLocale = computed(() => {
     return usePage().props.value.locale
 })
@@ -23,61 +22,102 @@ const deTitles = [
     ' löse gerne Probleme.',
     ' arbeite gerne im Team.',
 ];
+onMounted(() => {
+
+    const content = document.getElementById('content');
+    const home = document.getElementById('home');
+    const about = document.getElementById('about');
+    const experience = document.getElementById('experience');
+
+    content.addEventListener('scroll', function (e) {
+        if (e.currentTarget.scrollTop >= home.offsetTop && e.currentTarget.scrollTop < about.offsetTop - 50) {
+            currentLocation.value = 'home'
+        } else if (e.currentTarget.scrollTop > about.offsetTop - 50 && e.currentTarget.scrollTop < experience.offsetTop - 50) {
+            currentLocation.value = 'about'
+        } else {
+            currentLocation.value = 'experience'
+        }
+    });
+})
 </script>
 
 <template>
     <AppLayout>
         <div class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center bg-slate-100 dark:bg-slate-900 " id="home">
-            <div class="grow flex flex-col justify-between items-center md:py-6 px-6 md:px-8">
+            <div class="grow flex flex-col justify-between items-center px-4 md:p-6 md:px-8">
                 <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;html></div>
                 <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;body></div>
 
-                <div class="grow flex flex-col items-center md:items-start justify-center w-full sm:max-w-4xl">
-                    <div class="sm:max-w-sm md:max-w-none md:w-full">
+                <div class="grow flex flex-col items-center md:items-start justify-center w-full sm:max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
+                    <div class="w-full">
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;h1></p>
-                        <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold mb-2 lg:leading-tight">
+                        <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
                             {{ __('Hi') }} <span class="wave">&#128075;</span>, {{ __("I'm") }}
                             <br>
-                            Abdulsalam Emesh</p>
+                            Abdulsalam Emesh
+                        </p>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;br></p>
                         <VueWriter :array="selectableLocale === 'en'? enTitles : deTitles" :start="2000" :eraseSpeed="25" :typeSpeed="100">{{ __('I') }}</VueWriter>
 
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h1></p>
-
                     </div>
                 </div>
                 <div class="p-6 md:px-12 md:pb-12 md:pt-0  w-full flex justify-center md:justify-end">
-                    <ScrollArrow/>
+                    <ScrollArrow id="about"/>
                 </div>
             </div>
         </div>
         <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-slate-900">
-            <div class="border-b-2 border-slate-200 dark:border-white"></div>
+            <div class="border-b-2 border-slate-200 dark:border-slate-600"></div>
         </div>
         <div class="h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900" id="about">
-            <div class="max-w-7xl mx-auto grow flex flex-col md:flex-row justify-center items-center md:space-x-4 px-6 md:px-12">
+            <div class="max-w-7xl mx-auto grow flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-x-4 px-4 md:px-6 lg:px-12">
 
-                <div class="min-w-max rounded-full p-2 bg-gradient-to-b from-hot-300 to-hot-500 dark:from-indigo-300 dark:to-indigo-600">
-                    <img src="/me.jpeg" class="rounded-full h-64 w-64 object-cover" alt="">
+                <div class="min-w-max rounded-full p-1 lg:p-2 bg-gradient-to-b from-hot-300 to-hot-500 dark:from-indigo-300 dark:to-indigo-600">
+                    <img src="/me.jpeg" class="rounded-full h-52 w-52 lg:h-72 lg:w-72 object-cover" alt="">
+                </div>
+                <div class="px-4 md:px-6 lg:px-12">
+
+                    <div>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;h2></p>
+                        <p class="ml-2 text-2xl md:text-4xl lg:text-6xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
+                            Me, Myself & I
+                        </p>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
+                    </div>
+
+                    <div>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;p></p>
+                        <div class="ml-2">
+                            <p class="md:text-xl dark:text-white">
+                                I have been on this earth for about {{new Date().getFullYear() - 1992}} years and started my journey in <span class="text-hot-500 dark:text-indigo-600 font-semibold">Aleppo, Syria</span>. I
+                                have been living in my second home <span class="text-hot-500 dark:text-indigo-600 font-semibold">Xanten, Germany</span> for {{new Date().getFullYear() - 2016}} years now. I am one of the lucky ones
+                                who turned their hobby and passion into a <span class="text-hot-500 dark:text-indigo-600 font-semibold"> profession</span>. I love structure and order and I also
+                                stand for quality. I also like to work in a team, where I learn a lot and quickly. <br> As the saying goes: <span
+                                class="text-hot-500 dark:text-indigo-600 font-semibold">  "Alone you are strong, together unbeatable"</span>.
+                            </p>
+                        </div>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/p></p>
+                    </div>
+                    <div class="p-6 md:px-12 md:pb-12 md:pt-0  w-full flex justify-center md:justify-end">
+                        <ScrollArrow id="experience"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-slate-900">
+            <div class="border-b-2 border-slate-200 dark:border-slate-600"></div>
+        </div>
+        <div class="h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900" id="experience">
+            <div class="max-w-7xl mx-auto grow flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-x-4 px-4 md:px-6 lg:px-12">
+
+                <div class="min-w-max rounded-full p-1 lg:p-2 bg-gradient-to-b from-hot-300 to-hot-500 dark:from-indigo-300 dark:to-indigo-600">
+                    <img src="/me.jpeg" class="rounded-full h-52 w-52 lg:h-64 lg:w-64 object-cover" alt="">
                 </div>
                 <div>
                     <p class="text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">
                         I have been on this earth for about 30 years and started my journey in Aleppo, Syria.
-                    </p>
-                    <p class="text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">
-                        Right now I live in second home Xanten, Germany
-                    </p>
-                    <p class="text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">
-                        Right now I live in second home Xanten, Germany
-                    </p>
-                    <p class="text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">
-                        Right now I live in second home Xanten, Germany
-                    </p>
-                    <p class="text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">
-                        Right now I live in second home Xanten, Germany
-                    </p>
-                    <p class="text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">
-                        Right now I live in second home Xanten, Germany
                     </p>
                     <p class="text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">
                         Right now I live in second home Xanten, Germany
@@ -91,8 +131,10 @@ const deTitles = [
 <style lang="postcss">
 .is-typed {
     font-family: 'montserrat', sans-serif !important;
-    @apply text-3xl md:text-5xl lg:text-6xl font-bold text-hot-500 dark:text-indigo-600 ml-2 break-words lg:leading-tight;
+    @apply text-3xl md:text-5xl lg:text-6xl font-bold text-hot-500 dark:text-indigo-600 ml-2 break-words lg:leading-tight cursor-default transition-all duration-300;
+
 }
+
 
 .is-typed span.cursor {
     font-family: 'montserrat', sans-serif !important;
@@ -146,6 +188,303 @@ const deTitles = [
     /* Reset for the last half to pause */
     100% {
         transform: rotate(0.0deg)
+    }
+}
+
+.text-shadow {
+    text-shadow: none
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .text-shadow:hover {
+        text-shadow: -0.15rem -0.15rem v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+
+    .is-typed:hover {
+        text-shadow: -0.15rem -0.15rem v-bind(isDark ? 'white': 'black')
+    }
+
+}
+
+
+@media only screen and (min-width: 1201px) {
+    .text-shadow:hover {
+        text-shadow: -0.2rem -0.2rem v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+
+    .is-typed:hover {
+        text-shadow: -0.2rem -0.2rem v-bind(isDark ? 'white': 'black')
+    }
+
+}
+
+/*.text-flicker-in-glow-1 {*/
+/*    -webkit-animation: text-flicker-in-glow 2s linear both;*/
+/*    animation: text-flicker-in-glow 2s linear both;*/
+/*}*/
+
+/*.text-flicker-in-glow-2 {*/
+/*    -webkit-animation: text-flicker-in-glow 2s linear 300ms both;*/
+/*    animation: text-flicker-in-glow 2s linear 300ms both;*/
+/*}*/
+
+/*.text-flicker-in-glow-3 {*/
+/*    -webkit-animation: text-flicker-in-glow 2s linear 600ms both;*/
+/*    animation: text-flicker-in-glow 2s linear 600ms both;*/
+/*}*/
+
+@-webkit-keyframes text-flicker-in-glow {
+    0% {
+        opacity: 0;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    10% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    10.1% {
+        opacity: 1;
+        text-shadow: none;
+    }
+    10.2% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    20% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    20.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    20.6% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    30% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    30.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    30.5% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    30.6% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    45% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    45.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    50% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    55% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    55.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    57% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    57.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    60% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    60.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    65% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    65.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    75% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    75.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    77% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    77.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    85% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    85.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    86% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    86.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    100% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+}
+
+@keyframes text-flicker-in-glow {
+    0% {
+        opacity: 0;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    10% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    10.1% {
+        opacity: 1;
+        text-shadow: none;
+    }
+    10.2% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    20% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    20.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    20.6% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    30% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    30.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    30.5% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    30.6% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    45% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    45.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    50% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    55% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    55.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    57% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    57.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    60% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    60.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    65% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    65.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    75% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    75.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    77% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    77.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    85% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    85.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    86% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    86.1% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    }
+    100% {
+        opacity: 1;
+        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
     }
 }
 

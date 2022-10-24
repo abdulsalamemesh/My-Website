@@ -1,5 +1,13 @@
+<script setup>
+defineProps({
+    id: {
+        type: String,
+        default: 'home'
+    },
+})
+</script>
 <template>
-    <a href="#about-me"  class="flex justify-center items-center relative">
+    <a :href="'#' + id" class="flex justify-center items-center relative">
         <div
             class="w-[80px] h-[80px] scale-0 opacity-100 border-8 border-hot-500 dark:border-indigo-600 rounded-full absolute animate-[grow_2.5s_linear_infinite]"
             style="animation-delay: 1.3s">
