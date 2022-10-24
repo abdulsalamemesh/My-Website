@@ -43,85 +43,120 @@ onMounted(() => {
 
 <template>
     <AppLayout>
-        <div class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center bg-slate-100 dark:bg-slate-900 " id="home">
-            <div class="grow flex flex-col justify-between items-center px-4 md:p-6 md:px-8">
-                <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;html></div>
-                <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;body></div>
-
-                <div class="grow flex flex-col items-center md:items-start justify-center w-full sm:max-w-7xl mx-auto px-4 md:px-6 lg:px-12">
-                    <div class="w-full">
-                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;h1></p>
+        <!--Home-->
+        <div class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-6" id="home">
+            <div class="grow flex flex-col">
+                <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;html></div>
+                <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;body></div>
+                <div class="grow w-full sm:max-w-7xl mx-auto flex flex-col items-center md:items-start justify-center">
+                    <div>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;h1></p>
                         <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
                             {{ __('Hi') }} <span class="wave">&#128075;</span>, {{ __("I'm") }}
                             <br>
                             Abdulsalam Emesh
                         </p>
-                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;br></p>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;br></p>
                         <VueWriter :array="selectableLocale === 'en'? enTitles : deTitles" :start="2000" :eraseSpeed="25" :typeSpeed="100">{{ __('I') }}</VueWriter>
 
-                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h1></p>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;/h1></p>
                     </div>
                 </div>
-                <div class="p-6 md:px-12 md:pb-12 md:pt-0  w-full flex justify-center md:justify-end">
+                <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
+                    <p class="text-hot-500 dark:text-indigo-600">About</p>
                     <ScrollArrow id="about"/>
                 </div>
             </div>
         </div>
+
+
         <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-slate-900">
             <div class="border-b-2 border-slate-200 dark:border-slate-600"></div>
         </div>
-        <div class="h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900" id="about">
-            <div class="max-w-7xl mx-auto grow flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-x-4 px-4 md:px-6 lg:px-12">
 
-                <div class="min-w-max rounded-full p-1 lg:p-2 bg-gradient-to-b from-hot-300 to-hot-500 dark:from-indigo-300 dark:to-indigo-600">
-                    <img src="/me.jpeg" class="rounded-full h-52 w-52 lg:h-72 lg:w-72 object-cover" alt="">
-                </div>
-                <div class="px-4 md:px-6 lg:px-12">
 
+        <!--About-->
+        <div class="min-h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-6" id="about">
+            <div class="grow flex flex-col">
+                <div class="max-w-7xl mx-auto grow flex flex-col lg:flex-row justify-center items-center lg:space-x-12">
+                    <div class="min-w-max rounded-full p-1 lg:p-2 bg-gradient-to-b from-hot-300 to-hot-500 dark:from-indigo-300 dark:to-indigo-600 mb-6">
+                        <img src="/me.jpeg" class="rounded-full h-52 w-52 lg:h-72 lg:w-72 object-cover" alt="">
+                    </div>
                     <div>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;h2></p>
-                        <p class="ml-2 text-2xl md:text-4xl lg:text-6xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
+                        <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
                             Me, Myself & I
-                        </p>
+                        </h2>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
-                    </div>
-
-                    <div>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;p></p>
-                        <div class="ml-2">
-                            <p class="md:text-xl dark:text-white">
-                                I have been on this earth for about {{new Date().getFullYear() - 1992}} years and started my journey in <span class="text-hot-500 dark:text-indigo-600 font-semibold">Aleppo, Syria</span>. I
-                                have been living in my second home <span class="text-hot-500 dark:text-indigo-600 font-semibold">Xanten, Germany</span> for {{new Date().getFullYear() - 2016}} years now. I am one of the lucky ones
-                                who turned their hobby and passion into a <span class="text-hot-500 dark:text-indigo-600 font-semibold"> profession</span>. I love structure and order and I also
-                                stand for quality. I also like to work in a team, where I learn a lot and quickly. <br> As the saying goes: <span
-                                class="text-hot-500 dark:text-indigo-600 font-semibold">  "Alone you are strong, together unbeatable"</span>.
-                            </p>
-                        </div>
+                        <p class="ml-2 md:text-xl dark:text-white">
+                            I have been on this earth for about {{ new Date().getFullYear() - 1992 }} years and started my journey in <span
+                            class="text-hot-500 dark:text-indigo-600 font-semibold">Aleppo, Syria</span>. I
+                            have been living in my second home <span class="text-hot-500 dark:text-indigo-600 font-semibold">Xanten, Germany</span> for
+                            {{ new Date().getFullYear() - 2016 }} years now. I am one of the lucky ones
+                            who turned their hobby and passion into a <span class="text-hot-500 dark:text-indigo-600 font-semibold"> profession</span>. I love structure and
+                            order and I also
+                            stand for quality. I also like to work in a team, where I learn a lot and quickly. <br> As the saying goes: <span
+                            class="text-hot-500 dark:text-indigo-600 font-semibold">  "Alone you are strong, together unbeatable"</span>.
+                        </p>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/p></p>
                     </div>
-                    <div class="p-6 md:px-12 md:pb-12 md:pt-0  w-full flex justify-center md:justify-end">
-                        <ScrollArrow id="experience"/>
-                    </div>
                 </div>
-
+                <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
+                    <p class="text-hot-500 dark:text-indigo-600">Experinces</p>
+                    <ScrollArrow id="experience"/>
+                </div>
             </div>
         </div>
+
+
         <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-slate-900">
             <div class="border-b-2 border-slate-200 dark:border-slate-600"></div>
         </div>
-        <div class="h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900" id="experience">
-            <div class="max-w-7xl mx-auto grow flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-x-4 px-4 md:px-6 lg:px-12">
 
-                <div class="min-w-max rounded-full p-1 lg:p-2 bg-gradient-to-b from-hot-300 to-hot-500 dark:from-indigo-300 dark:to-indigo-600">
-                    <img src="/me.jpeg" class="rounded-full h-52 w-52 lg:h-64 lg:w-64 object-cover" alt="">
+
+        <!--Experience-->
+        <div class="min-h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-6" id="experience">
+            <div class="grow flex flex-col">
+                <div class="max-w-7xl grow mx-auto flex flex-col justify-center items-center">
+                    <div>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;h2></p>
+                        <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
+                            A summary of My Experiences
+                        </h2>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
+                    </div>
                 </div>
-                <div>
-                    <p class="text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">
-                        I have been on this earth for about 30 years and started my journey in Aleppo, Syria.
-                    </p>
-                    <p class="text-xl md:text-2xl lg:text-3xl dark:text-white font-semibold">
-                        Right now I live in second home Xanten, Germany
-                    </p>
+                <div class="w-full max-w-7xl grow mx-auto flex flex-col justify-center">
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;section></p>
+                    <div class="ml-4 w-full flex flex-col md:flex-row justify-between">
+                        <div class="w-1/2 border-l-4 border-hot-500 dark:border-indigo-600 py-4 px-6 dark:text-white divide-y divide-slate-200 dark:divide-slate-600">
+                            <div class="py-4">
+                                <p class="text-2xl font-semibold">Master in Computer Engineering</p>
+                                <p class="text-xl  mt-2">Master in Computer Engineering</p>
+                                <p class="mt-4 text-slate-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dicta excepturi facere impedit, in iusto odio praesentium
+                                    ratione reprehenderit vel. Adipisci amet beatae cumque est, libero nihil rem! Fugiat, nostrum.</p>
+                            </div>
+                            <div class="py-4">
+                                <p class="text-2xl font-semibold">Master in Computer Engineering</p>
+                                <p class="text-xl  mt-2">Master in Computer Engineering</p>
+                                <p class="mt-4 text-slate-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dicta excepturi facere impedit, in iusto odio praesentium
+                                    ratione reprehenderit vel. Adipisci amet beatae cumque est, libero nihil rem! Fugiat, nostrum.</p>
+                            </div>
+                        </div>
+                        <div class="w-1/2 border-l-2 border-hot-500 dark:border-indigo-600 p-2 dark:text-white">
+                            <p class="text-2xl font-semibold">Master in Computer Engineering</p>
+                            <p class="text-xl font-semibold">Master in Computer Engineering</p>
+                            <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dicta excepturi facere impedit, in iusto odio praesentium ratione
+                                reprehenderit vel. Adipisci amet beatae cumque est, libero nihil rem! Fugiat, nostrum.</p>
+
+                        </div>
+                    </div>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;section></p>
+                </div>
+                <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
+                    <p class="text-hot-500 dark:text-indigo-600">Education</p>
+                    <ScrollArrow id="education"/>
                 </div>
             </div>
         </div>

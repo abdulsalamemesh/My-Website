@@ -78,35 +78,35 @@ const selectableLocale = computed(() => {
             </div>
             <!--Desktop Navigations-->
             <div
-                class="hidden md:flex flex-col divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-600 dark:border-slate-600 transition-all delay-75 duration-300">
+                class="hidden md:flex flex-col divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-600 dark:border-slate-600">
                 <a href="#home"
                    :class="[currentLocation === 'home' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition delay-75 duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Home
                 </a>
                 <a href="#about"
                    :class="[currentLocation === 'about' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition delay-75 duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     About
                 </a>
                 <a href="#experience"
                    :class="[currentLocation === 'experience' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition delay-75 duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Experience
                 </a>
                 <a href="#education"
                    :class="[currentLocation === 'education' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition delay-75 duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Education
                 </a>
                 <a href="#contact"
                    :class="[currentLocation === 'contact' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition delay-75 duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Contact
                 </a>
                 <Link :href="route('loading')"
                       :class="[currentLocation === 'loading' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                      class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition delay-75 duration-300 text-center whitespace-nowrap">
+                      class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     For Programmers
                 </Link>
             </div>
