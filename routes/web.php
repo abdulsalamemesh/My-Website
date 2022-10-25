@@ -32,17 +32,16 @@ Route::get('layout', fn() => Inertia::render('Code/Layout'))->name('layout');
 Route::get('env', fn() => Inertia::render('Code/Env'))->name('env');
 Route::get('language/{language}', function ($language) {
     Session()->put('locale', $language);
-
     return redirect()->back();
 })->name('language');
 
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
-});
+//Route::middleware([
+//    'auth:sanctum',
+//    config('jetstream.auth_session'),
+//    'verified',
+//])->group(function () {
+//    Route::get('/dashboard', function () {
+//        return Inertia::render('Dashboard');
+//    })->name('dashboard');
+//});

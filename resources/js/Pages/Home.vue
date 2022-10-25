@@ -3,7 +3,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import VueWriter from 'vue-writer'
 import ScrollArrow from "@/Components/ScrollArrow.vue";
 import {computed, defineProps, onMounted} from "vue";
-import {usePage} from "@inertiajs/inertia-vue3";
+import {useForm, usePage} from "@inertiajs/inertia-vue3";
 import {currentLocation, isDark} from "../store";
 
 const selectableLocale = computed(() => {
@@ -34,6 +34,7 @@ onMounted(() => {
     const about = document.getElementById('about');
     const skills = document.getElementById('skills');
     const resume = document.getElementById('resume');
+    const contact = document.getElementById('contact');
 
     content.addEventListener('scroll', function (e) {
         if (e.currentTarget.scrollTop >= home.offsetTop && e.currentTarget.scrollTop <= (about.offsetTop - 50)) {
@@ -42,8 +43,10 @@ onMounted(() => {
             currentLocation.value = 'about'
         } else if (e.currentTarget.scrollTop > (skills.offsetTop - 50) && e.currentTarget.scrollTop < (resume.offsetTop - 50)) {
             currentLocation.value = 'skills'
-        } else {
+        } else if (e.currentTarget.scrollTop > (resume.offsetTop - 50) && e.currentTarget.scrollTop < (contact.offsetTop - 50)) {
             currentLocation.value = 'resume'
+        } else {
+            currentLocation.value = 'contact'
         }
     });
 })
@@ -140,8 +143,9 @@ onMounted(() => {
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;section></p>
                 <template v-for="(skillGroup,index) in skills">
                     <div v-if="index !== 'other'" class="ml-2 my-6">
-                        <div class="col-span-1 md:col-span-2 lg:col-span-3 dark:text-white underline md:text-xl font-bold">{{ skillGroup.name }}</div>
-                        <div class="grid gap-y-6 gap-x-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-slate-200 dark:bg-slate-800 p-4 mt-2">
+                        <div class="col-span-1 md:col-span-2 lg:col-span-3 dark:text-white md:text-xl font-bold">{{ skillGroup.name }}</div>
+                        <div
+                            class="grid gap-y-6 gap-x-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-slate-200 dark:bg-slate-800 p-4 mt-2 border border-slate-400 dark:border-slate-600 rounded">
                             <template v-for="(skill,index) in skillGroup.skills">
                                 <div class="col-span-1">
                                     <p class="dark:text-white text-sm md:text-base font-semibold mb-1">{{ index }}</p>
@@ -155,8 +159,8 @@ onMounted(() => {
                         </div>
                     </div>
                     <div v-else class="ml-2 my-6">
-                        <div class="col-span-1 md:col-span-2 lg:col-span-3 dark:text-white underline md:text-xl font-bold">{{ skillGroup.name }}</div>
-                        <div class="grid gap-y-6 gap-x-4 grid-cols-2 md:grid-cols-4 mt-2 bg-slate-200 dark:bg-slate-800 p-4">
+                        <div class="col-span-1 md:col-span-2 lg:col-span-3 dark:text-white md:text-xl font-bold">{{ skillGroup.name }}</div>
+                        <div class="grid gap-y-6 gap-x-4 grid-cols-2 md:grid-cols-4 mt-2 bg-slate-200 dark:bg-slate-800 p-4 border border-slate-400 dark:border-slate-600 rounded">
                             <template v-for="skill in skillGroup.skills">
                                 <div class="col-span-1 flex items-center space-x-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-current text-hot-500 dark:text-indigo-600">
@@ -331,6 +335,78 @@ onMounted(() => {
                 <ScrollArrow id="contact"/>
             </div>
         </section>
+        <!--Separator-->
+        <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-slate-900">
+            <div class="border-b-2 border-slate-200 dark:border-slate-600"></div>
+        </div>
+
+        <!--Contact-->
+        <section class="min-h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-12" id="contact">
+
+            <div class="max-w-7xl w-full mx-auto flex flex-col justify-center">
+                <div>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
+                    <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
+                        Contact me
+                    </h2>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
+                </div>
+            </div>
+            <div class="max-w-7xl w-full mx-auto my-6">
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full mb-6">&lt;section></p>
+
+                <div class="ml-2 p-4 flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/3"></div>
+                    <div class="w-full md:w-2/3 ">
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full ">&lt;form></p>
+                        <form class="ml-2 bg-slate-200 dark:bg-slate-800 p-6 rounded space-y-4 my-2 border border-slate-400 dark:border-slate-600">
+                            <div>
+                                <h2 class="text-2xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
+                                    Contact me
+                                </h2>
+                            </div>
+                            <div>
+                                <input
+                                    type="text"
+                                    class="block w-full font-medium border border-slate-400 focus:border-hot-500 dark:border-slate-600 focus:ring focus:ring-hot-500 dark:focus:ring-indigo-600 focus:bg-slate-200 dark:focus:bg-slate-700 rounded bg-slate-200 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm"
+                                    placeholder="Email"
+                                >
+                            </div>
+                            <div>
+                                <input
+                                    type="text"
+                                    class="block w-full font-medium border border-slate-400 focus:border-hot-500 dark:border-slate-600 focus:ring focus:ring-hot-500 dark:focus:ring-indigo-600 focus:bg-slate-200 dark:focus:bg-slate-700 rounded bg-slate-200 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm"
+                                    placeholder="Name"
+                                >
+                            </div>
+                            <div>
+                                <textarea
+                                    class="block w-full font-medium border border-slate-400 focus:border-hot-500 dark:border-slate-600 focus:ring focus:ring-hot-500 dark:focus:ring-indigo-600 focus:bg-slate-200 dark:focus:bg-slate-700 rounded bg-slate-200 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm"
+                                    rows="12"
+                                    placeholder="Your Message"
+                                ></textarea>
+                            </div>
+                            <div>
+                                <button type="submit"
+                                        class="inline-block py-2 px-4 my-2 rounded text-sm font-medium text-white bg-hot-500 dark:bg-indigo-600 hover:bg-hot-600 hover:dark:bg-indigo-700 focus:bg-hot-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white"
+                                >
+                                  Send
+                                </button>
+                            </div>
+                        </form>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full mb-6">&lt;form></p>
+
+                    </div>
+                </div>
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full mt-6">&lt;/section></p>
+            </div>
+            <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
+                <p class="text-hot-500 dark:text-indigo-600">Home</p>
+                <div class="rotate-180">
+                    <ScrollArrow id="home"/>
+                </div>
+            </div>
+        </section>
 
     </AppLayout>
 
@@ -342,7 +418,6 @@ onMounted(() => {
     @apply text-3xl md:text-5xl lg:text-6xl font-bold text-hot-500 dark:text-indigo-600 ml-2 break-words lg:leading-tight cursor-default transition-all duration-300;
 
 }
-
 
 .is-typed span.cursor {
     font-family: 'montserrat', sans-serif !important;
@@ -426,276 +501,4 @@ onMounted(() => {
     }
 
 }
-
-/*w-[80%]*/
-/*.text-flicker-in-glow-1 {*/
-/*    -webkit-animation: text-flicker-in-glow 2s linear both;*/
-/*    animation: text-flicker-in-glow 2s linear both;*/
-/*}*/
-
-/*.text-flicker-in-glow-2 {*/
-/*    -webkit-animation: text-flicker-in-glow 2s linear 300ms both;*/
-/*    animation: text-flicker-in-glow 2s linear 300ms both;*/
-/*}*/
-
-/*.text-flicker-in-glow-3 {*/
-/*    -webkit-animation: text-flicker-in-glow 2s linear 600ms both;*/
-/*    animation: text-flicker-in-glow 2s linear 600ms both;*/
-/*}*/
-
-@-webkit-keyframes text-flicker-in-glow {
-    0% {
-        opacity: 0;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    10% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    10.1% {
-        opacity: 1;
-        text-shadow: none;
-    }
-    10.2% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    20% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    20.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    20.6% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    30% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    30.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    30.5% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    30.6% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    45% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    45.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    50% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    55% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    55.1% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    57% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    57.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    60% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    60.1% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    65% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    65.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    75% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    75.1% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    77% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    77.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    85% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    85.1% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    86% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    86.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    100% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-}
-
-@keyframes text-flicker-in-glow {
-    0% {
-        opacity: 0;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    10% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    10.1% {
-        opacity: 1;
-        text-shadow: none;
-    }
-    10.2% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    20% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    20.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    20.6% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    30% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    30.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    30.5% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    30.6% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    45% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    45.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    50% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    55% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    55.1% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    57% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    57.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    60% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    60.1% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    65% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    65.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    75% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    75.1% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    77% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    77.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    85% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    85.1% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    86% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    86.1% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-    100% {
-        opacity: 1;
-        text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
-    }
-}
-
-
 </style>
