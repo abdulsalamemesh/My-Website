@@ -10,14 +10,10 @@
     @routes
     @vite('resources/js/app.js')
     @inertiaHead
-{{--    <link rel="preconnect" href="https://fonts.googleapis.com">--}}
-{{--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>--}}
-{{--    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">--}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body class="font-custom antialiased">
 @inertia
 </body>
+<!--this class are here to be processed form the jit-->
+<span class="w-[50%] w-[60%] w-[70%] w-[80%] w-[90%] w-[100%] w-[40%] w-[30%] hidden"></span>
 </html>

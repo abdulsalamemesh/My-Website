@@ -12,7 +12,8 @@ const selectableLocale = computed(() => {
 
 defineProps({
     educations: Object,
-    experiences: Object
+    experiences: Object,
+    skills: Object,
 })
 const enTitles = [
     ' am a Fullstack Developer.',
@@ -31,15 +32,18 @@ onMounted(() => {
     const content = document.getElementById('content');
     const home = document.getElementById('home');
     const about = document.getElementById('about');
-    const experience = document.getElementById('experience');
+    const skills = document.getElementById('skills');
+    const resume = document.getElementById('resume');
 
     content.addEventListener('scroll', function (e) {
-        if (e.currentTarget.scrollTop >= home.offsetTop && e.currentTarget.scrollTop < about.offsetTop - 50) {
+        if (e.currentTarget.scrollTop >= home.offsetTop && e.currentTarget.scrollTop <= (about.offsetTop - 50)) {
             currentLocation.value = 'home'
-        } else if (e.currentTarget.scrollTop > about.offsetTop - 50 && e.currentTarget.scrollTop < experience.offsetTop - 50) {
+        } else if (e.currentTarget.scrollTop > (about.offsetTop - 50) && e.currentTarget.scrollTop < (skills.offsetTop - 50)) {
             currentLocation.value = 'about'
+        } else if (e.currentTarget.scrollTop > (skills.offsetTop - 50) && e.currentTarget.scrollTop < (resume.offsetTop - 50)) {
+            currentLocation.value = 'skills'
         } else {
-            currentLocation.value = 'experience'
+            currentLocation.value = 'resume'
         }
     });
 })
@@ -107,8 +111,8 @@ onMounted(() => {
                     </div>
                 </div>
                 <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
-                    <p class="text-hot-500 dark:text-indigo-600">Resume</p>
-                    <ScrollArrow id="resume"/>
+                    <p class="text-hot-500 dark:text-indigo-600">Skills</p>
+                    <ScrollArrow id="skills"/>
                 </div>
             </div>
         </section>
@@ -119,10 +123,72 @@ onMounted(() => {
         </div>
 
 
+        <!--Skills-->
+        <section class="min-h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-12" id="skills">
+
+            <div class="max-w-7xl mx-auto w-full flex flex-col justify-center">
+                <div>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
+                    <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
+                        Skills
+                    </h2>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl grow w-full mx-auto mt-12">
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;section></p>
+                <template v-for="(skillGroup,index) in skills">
+                    <div v-if="index !== 'other'" class="ml-2 my-6">
+                        <div class="col-span-1 md:col-span-2 lg:col-span-3 dark:text-white underline md:text-xl font-bold">{{ skillGroup.name }}</div>
+                        <div class="grid gap-y-6 gap-x-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-slate-200 dark:bg-slate-800 p-4 mt-2">
+                            <template v-for="(skill,index) in skillGroup.skills">
+                                <div class="col-span-1">
+                                    <p class="dark:text-white text-sm md:text-base font-semibold mb-1">{{ index }}</p>
+                                    <div class="w-full h-5 bg-hot-200 dark:bg-indigo-200 relative">
+                                        <div :class="'w-['+skill+'%]'" class="h-full bg-hot-500 dark:bg-indigo-600">
+                                        </div>
+                                        <p class="absolute right-1/2 translate-x-1/2 inset-y-0 w-min text-white font-bold text-sm">{{ skill }}%</p>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <div v-else class="ml-2 my-6">
+                        <div class="col-span-1 md:col-span-2 lg:col-span-3 dark:text-white underline md:text-xl font-bold">{{ skillGroup.name }}</div>
+                        <div class="grid gap-y-6 gap-x-4 grid-cols-2 md:grid-cols-4 mt-2 bg-slate-200 dark:bg-slate-800 p-4">
+                            <template v-for="skill in skillGroup.skills">
+                                <div class="col-span-1 flex items-center space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-current text-hot-500 dark:text-indigo-600">
+                                        <path
+                                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
+                                    </svg>
+                                    <p class="dark:text-white font-semibold text-sm md:text-base">{{ skill }}</p>
+
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                </template>
+
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/section></p>
+            </div>
+            <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
+                <p class="text-hot-500 dark:text-indigo-600">Resume</p>
+                <ScrollArrow id="resume"/>
+            </div>
+        </section>
+
+        <!--Separator-->
+        <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-slate-900">
+            <div class="border-b-2 border-slate-200 dark:border-slate-600"></div>
+        </div>
+
         <!--Resume-->
         <section class="min-h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-12" id="resume">
 
-            <div class="max-w-7xl grow mx-auto flex flex-col justify-center">
+            <div class="max-w-7xl w-full mx-auto flex flex-col justify-center">
                 <div>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
                     <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
@@ -131,14 +197,26 @@ onMounted(() => {
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
                 </div>
             </div>
+            <div class="max-w-7xl w-full mx-auto flex flex-col justify-center mt-6">
+                <div>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;a download></p>
+                    <a href=""
+                       class="inline-block py-2 px-4 my-2 rounded text-sm font-medium text-white bg-hot-500 dark:bg-indigo-600 hover:bg-hot-600 hover:dark:bg-indigo-700 focus:bg-hot-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white"
+                       download
+                    >
+                        My Resume
+                    </a>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/a></p>
+                </div>
+            </div>
             <div class="max-w-7xl w-full mx-auto my-6">
-                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;section></p>
-                <!--Experiences-->
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full mb-6">&lt;section></p>
 
+                <!--Experiences-->
                 <div class="max-w-7xl mx-auto flex flex-nowrap lg:justify-center">
                     <div class="flex flex-col justify-center items-start lg:items-center px-6">
-                        <div class="rounded bg-hot-500 dark:bg-indigo-600 py-2 px-4 text-white ">
-                            EXPERIENCE
+                        <div class="rounded bg-hot-500 dark:bg-indigo-600 py-2 px-4 text-white font-medium">
+                            Experiences
                         </div>
                         <div class="border-r-2 border-hot-500 dark:border-indigo-600 h-12 hidden lg:block">
                         </div>
@@ -187,12 +265,12 @@ onMounted(() => {
                         </div>
                     </div>
                 </template>
-                <!--Education-->
 
+                <!--Education-->
                 <div class="max-w-7xl mx-auto flex flex-nowrap lg:justify-center">
                     <div class="flex flex-col justify-center items-start lg:items-center px-6">
-                        <div class="rounded bg-hot-500 dark:bg-indigo-600 py-2 px-4 text-white ">
-                            EDUCATION
+                        <div class="rounded bg-hot-500 dark:bg-indigo-600 py-2 px-4 text-white font-medium">
+                            Education
                         </div>
                         <div class="border-r-2 border-hot-500 dark:border-indigo-600 h-12 hidden lg:block">
                         </div>
@@ -217,7 +295,7 @@ onMounted(() => {
                                         d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/>
                                 </svg>
                             </div>
-                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow">
+                            <div v-if="index !== educations.length -1" class="border-r-2 border-hot-500 dark:border-indigo-600 grow">
 
                             </div>
                         </div>
@@ -236,26 +314,26 @@ onMounted(() => {
                                         d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/>
                                 </svg>
                             </div>
-                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow">
+                            <div v-if="index !== educations.length -1" class="border-r-2 border-hot-500 dark:border-indigo-600 grow">
                             </div>
                         </div>
                         <div class="w-full  flex flex-col justify-end items-start dark:text-white py-10">
                             <p class="text-xl md:text-2xl font-semibold w-full">{{ education.title }}</p>
                             <p v-if="education.ort" class="text-md md:text-xl w-full">{{ education.ort }}</p>
                             <p v-if="education.date" class="text-sm md:text-base dark:text-slate-300 w-full">{{ education.date }}</p>
-
                         </div>
                     </div>
                 </template>
-                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/section></p>
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full mt-6">&lt;/section></p>
             </div>
             <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
-                <p class="text-hot-500 dark:text-indigo-600">Education</p>
-                <ScrollArrow id="education"/>
+                <p class="text-hot-500 dark:text-indigo-600">Contact</p>
+                <ScrollArrow id="contact"/>
             </div>
-
         </section>
+
     </AppLayout>
+
 </template>
 
 <style lang="postcss">
@@ -349,6 +427,7 @@ onMounted(() => {
 
 }
 
+/*w-[80%]*/
 /*.text-flicker-in-glow-1 {*/
 /*    -webkit-animation: text-flicker-in-glow 2s linear both;*/
 /*    animation: text-flicker-in-glow 2s linear both;*/

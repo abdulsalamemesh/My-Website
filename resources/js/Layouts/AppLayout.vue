@@ -89,6 +89,11 @@ const selectableLocale = computed(() => {
                    class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     About
                 </a>
+                <a href="#skills"
+                   :class="[currentLocation === 'skills' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                    Skills
+                </a>
                 <a href="#resume"
                    :class="[currentLocation === 'resume' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
@@ -165,6 +170,12 @@ const selectableLocale = computed(() => {
                        class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
                         About
+                    </a>
+                    <a href="#skills" @click="showNav = false"
+                       :class="[currentLocation === 'skills' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                    >
+                        Skills
                     </a>
                     <a href="#resume" @click="showNav = false"
                        :class="[currentLocation === 'resume' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
