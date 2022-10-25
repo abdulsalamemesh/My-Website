@@ -16,7 +16,7 @@ const selectableLocale = computed(() => {
 <template>
     <div class="h-screen font-montserrat flex flex-col md:flex-row relative">
         <!--Desktop Menu-->
-        <div
+        <nav
             class="md:border-r md:border-slate-200 md:dark:border-slate-600 bg-slate-100 dark:bg-slate-900 md:py-4 h-16 md:h-full flex md:flex-col justify-end md:justify-between md:items-center">
             <!--Desktop buttons-->
             <div class="hidden md:flex justify-between space-x-4">
@@ -89,15 +89,10 @@ const selectableLocale = computed(() => {
                    class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     About
                 </a>
-                <a href="#experience"
-                   :class="[currentLocation === 'experience' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                <a href="#resume"
+                   :class="[currentLocation === 'resume' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    Experience
-                </a>
-                <a href="#education"
-                   :class="[currentLocation === 'education' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    Education
+                    Resume
                 </a>
                 <a href="#contact"
                    :class="[currentLocation === 'contact' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
@@ -118,7 +113,7 @@ const selectableLocale = computed(() => {
                     </svg>
                 </button>
             </div>
-        </div>
+        </nav>
         <!--Mobile Menu-->
         <transition
             enter-active-class="transition-all ease-in-out duration-500"
@@ -128,7 +123,7 @@ const selectableLocale = computed(() => {
             leave-from-class="transform opacity-100 "
             leave-to-class="transform opacity-0 "
         >
-            <div v-show="showNav" class="bg-slate-100 dark:bg-slate-900 md:hidden pb-1 absolute inset-0 z-50 flex flex-col justify-between items-center md:hidden">
+            <nav v-show="showNav" class="bg-slate-100 dark:bg-slate-900 md:hidden pb-1 absolute inset-0 z-50 flex flex-col justify-between items-center md:hidden">
                 <!--Mobile Buttons-->
                 <div class="flex justify-between w-full">
                     <button class="p-3 md:hidden" @click="toggleDark()">
@@ -171,17 +166,11 @@ const selectableLocale = computed(() => {
                     >
                         About
                     </a>
-                    <a href="#experience" @click="showNav = false"
-                       :class="[currentLocation === 'experience' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                    <a href="#resume" @click="showNav = false"
+                       :class="[currentLocation === 'resume' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
                        class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
-                        Experience
-                    </a>
-                    <a href="#education" @click="showNav = false"
-                       :class="[currentLocation === 'education' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                       class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
-                    >
-                        Education
+                        Resume
                     </a>
                     <a href="#contact" @click="showNav = false"
                        :class="[currentLocation === 'contact' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
@@ -195,13 +184,13 @@ const selectableLocale = computed(() => {
                         For Programmers
                     </Link>
                 </div>
-            </div>
+            </nav>
         </transition>
         <!--Content-->
-        <div class="grow overflow-y-auto scroll-smooth scrollbar bg-slate-100 dark:bg-slate-900" id="content" @click="showNav = false">
+        <main class="grow overflow-y-auto scroll-smooth scrollbar bg-slate-100 dark:bg-slate-900" id="content" @click="showNav = false">
             <!-- Page Content -->
             <slot/>
-        </div>
+        </main>
     </div>
 
 </template>

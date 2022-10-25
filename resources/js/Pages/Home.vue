@@ -2,7 +2,7 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import VueWriter from 'vue-writer'
 import ScrollArrow from "@/Components/ScrollArrow.vue";
-import {computed, onMounted} from "vue";
+import {computed, defineProps, onMounted} from "vue";
 import {usePage} from "@inertiajs/inertia-vue3";
 import {currentLocation, isDark} from "../store";
 
@@ -10,6 +10,10 @@ const selectableLocale = computed(() => {
     return usePage().props.value.locale
 })
 
+defineProps({
+    educations: Object,
+    experiences: Object
+})
 const enTitles = [
     ' am a Fullstack Developer.',
     ' build things for the web.',
@@ -44,13 +48,13 @@ onMounted(() => {
 <template>
     <AppLayout>
         <!--Home-->
-        <div class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-6" id="home">
+        <section class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-6" id="home">
             <div class="grow flex flex-col">
                 <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;html></div>
                 <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;body></div>
                 <div class="grow w-full sm:max-w-7xl mx-auto flex flex-col items-center md:items-start justify-center">
                     <div>
-                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;h1></p>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore  -mb-2">&lt;h1></p>
                         <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
                             {{ __('Hi') }} <span class="wave">&#128075;</span>, {{ __("I'm") }}
                             <br>
@@ -67,23 +71,23 @@ onMounted(() => {
                     <ScrollArrow id="about"/>
                 </div>
             </div>
-        </div>
+        </section>
 
-
+        <!--Separator-->
         <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-slate-900">
             <div class="border-b-2 border-slate-200 dark:border-slate-600"></div>
         </div>
 
 
         <!--About-->
-        <div class="min-h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-6" id="about">
+        <section class="min-h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-6" id="about">
             <div class="grow flex flex-col">
                 <div class="max-w-7xl mx-auto grow flex flex-col lg:flex-row justify-center items-center lg:space-x-12">
                     <div class="min-w-max rounded-full p-1 lg:p-2 bg-gradient-to-b from-hot-300 to-hot-500 dark:from-indigo-300 dark:to-indigo-600 mb-6">
                         <img src="/me.jpeg" class="rounded-full h-52 w-52 lg:h-72 lg:w-72 object-cover" alt="">
                     </div>
                     <div>
-                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;h2></p>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full  -mb-2">&lt;h2></p>
                         <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
                             Me, Myself & I
                         </h2>
@@ -103,63 +107,154 @@ onMounted(() => {
                     </div>
                 </div>
                 <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
-                    <p class="text-hot-500 dark:text-indigo-600">Experinces</p>
-                    <ScrollArrow id="experience"/>
+                    <p class="text-hot-500 dark:text-indigo-600">Resume</p>
+                    <ScrollArrow id="resume"/>
                 </div>
             </div>
-        </div>
+        </section>
 
-
+        <!--Separator-->
         <div class="mx-6 md:mx-12 bg-slate-100 dark:bg-slate-900">
             <div class="border-b-2 border-slate-200 dark:border-slate-600"></div>
         </div>
 
 
-        <!--Experience-->
-        <div class="min-h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-6" id="experience">
-            <div class="grow flex flex-col">
-                <div class="max-w-7xl grow mx-auto flex flex-col justify-center items-center">
-                    <div>
-                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;h2></p>
-                        <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
-                            A summary of My Experiences
-                        </h2>
-                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
+        <!--Resume-->
+        <section class="min-h-screen flex flex-col justify-center bg-slate-100 dark:bg-slate-900 px-4 md:px-6 py-12" id="resume">
+
+            <div class="max-w-7xl grow mx-auto flex flex-col justify-center">
+                <div>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
+                    <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-300">
+                        My Resume
+                    </h2>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
+                </div>
+            </div>
+            <div class="max-w-7xl w-full mx-auto my-6">
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;section></p>
+                <!--Experiences-->
+
+                <div class="max-w-7xl mx-auto flex flex-nowrap lg:justify-center">
+                    <div class="flex flex-col justify-center items-start lg:items-center px-6">
+                        <div class="rounded bg-hot-500 dark:bg-indigo-600 py-2 px-4 text-white ">
+                            EXPERIENCE
+                        </div>
+                        <div class="border-r-2 border-hot-500 dark:border-indigo-600 h-12 hidden lg:block">
+                        </div>
                     </div>
                 </div>
-                <div class="w-full max-w-7xl grow mx-auto flex flex-col justify-center">
-                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;section></p>
-                    <div class="ml-4 w-full flex flex-col md:flex-row justify-between">
-                        <div class="w-1/2 border-l-4 border-hot-500 dark:border-indigo-600 py-4 px-6 dark:text-white divide-y divide-slate-200 dark:divide-slate-600">
-                            <div class="py-4">
-                                <p class="text-2xl font-semibold">Master in Computer Engineering</p>
-                                <p class="text-xl  mt-2">Master in Computer Engineering</p>
-                                <p class="mt-4 text-slate-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dicta excepturi facere impedit, in iusto odio praesentium
-                                    ratione reprehenderit vel. Adipisci amet beatae cumque est, libero nihil rem! Fugiat, nostrum.</p>
+                <template v-for="(experience,index) in experiences">
+                    <!--index odd-->
+                    <div v-if="index % 2 > 0" class="max-w-7xl mx-auto flex flex-row-reverse lg:flex-row flex-nowrap justify-center">
+                        <div class="w-full flex flex-col justify-center items-start lg:items-end dark:text-white py-16">
+                            <p class="text-xl md:text-2xl font-semibold">{{ experience.title }}</p>
+                            <p v-if="experience.workplace" class="text-md md:text-xl lg:text-right">{{ experience.workplace }}</p>
+                            <p v-if="experience.date" class="text-sm md:text-base dark:text-slate-300 lg:text-right">{{ experience.date }}</p>
+                            <p v-if="experience.text" class="text-sm md:text-base dark:text-slate-300 lg:text-right">{{ experience.text }}</p>
+
+                        </div>
+                        <div class="flex flex-col justify-center items-center px-6">
+                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow"></div>
+                            <div class="rounded-full bg-hot-500 dark:bg-indigo-600 h-12 w-12 flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="fill-current dark:text-slate-200 text-slate-200 h-7 w-7">
+                                    <path
+                                        d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"/>
+                                </svg>
                             </div>
-                            <div class="py-4">
-                                <p class="text-2xl font-semibold">Master in Computer Engineering</p>
-                                <p class="text-xl  mt-2">Master in Computer Engineering</p>
-                                <p class="mt-4 text-slate-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dicta excepturi facere impedit, in iusto odio praesentium
-                                    ratione reprehenderit vel. Adipisci amet beatae cumque est, libero nihil rem! Fugiat, nostrum.</p>
+                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow"></div>
+                        </div>
+                        <div class="w-full hidden lg:block"></div>
+                    </div>
+                    <!--index even-->
+                    <div v-else class="max-w-7xl mx-auto flex flex-nowrap justify-center">
+                        <div class="w-full hidden lg:block"></div>
+                        <div class="flex flex-col justify-center items-center px-6">
+                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow"></div>
+                            <div class="rounded-full bg-hot-500 dark:bg-indigo-600 h-12 w-12 flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="fill-current dark:text-slate-200 text-slate-200 h-7 w-7">
+                                    <path
+                                        d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"/>
+                                </svg>
+                            </div>
+                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow"></div>
+                        </div>
+                        <div class="w-full  flex flex-col justify-end items-start dark:text-white py-16">
+                            <p class="text-xl md:text-2xl font-semibold w-full">{{ experience.title }}</p>
+                            <p v-if="experience.workplace" class="text-md md:text-xl w-full">{{ experience.workplace }}</p>
+                            <p v-if="experience.date" class="text-sm md:text-base dark:text-slate-300 w-full">{{ experience.date }}</p>
+                            <p v-if="experience.text" class="text-sm md:text-base dark:text-slate-300 w-full">{{ experience.text }}</p>
+                        </div>
+                    </div>
+                </template>
+                <!--Education-->
+
+                <div class="max-w-7xl mx-auto flex flex-nowrap lg:justify-center">
+                    <div class="flex flex-col justify-center items-start lg:items-center px-6">
+                        <div class="rounded bg-hot-500 dark:bg-indigo-600 py-2 px-4 text-white ">
+                            EDUCATION
+                        </div>
+                        <div class="border-r-2 border-hot-500 dark:border-indigo-600 h-12 hidden lg:block">
+                        </div>
+                    </div>
+                </div>
+                <template v-for="(education,index) in educations">
+                    <!--index odd-->
+                    <div v-if="index % 2 > 0" class="max-w-7xl mx-auto flex flex-row-reverse lg:flex-row flex-nowrap justify-center">
+                        <div class="w-full flex flex-col justify-center items-start lg:items-end dark:text-white py-10">
+                            <p class="text-xl md:text-2xl font-semibold lg:text-right">{{ education.title }}</p>
+                            <p v-if="education.ort" class="text-xl lg:text-right">{{ education.ort }}</p>
+                            <p v-if="education.date" class="dark:text-slate-300 lg:text-right">{{ education.date }}</p>
+
+                        </div>
+                        <div class="flex flex-col justify-center items-center px-6">
+                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow">
+
+                            </div>
+                            <div class="rounded-full bg-hot-500 dark:bg-indigo-600 h-12 w-12 flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="fill-current dark:text-slate-200 text-slate-200 h-7 w-7">
+                                    <path
+                                        d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/>
+                                </svg>
+                            </div>
+                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow">
+
                             </div>
                         </div>
-                        <div class="w-1/2 border-l-2 border-hot-500 dark:border-indigo-600 p-2 dark:text-white">
-                            <p class="text-2xl font-semibold">Master in Computer Engineering</p>
-                            <p class="text-xl font-semibold">Master in Computer Engineering</p>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dicta excepturi facere impedit, in iusto odio praesentium ratione
-                                reprehenderit vel. Adipisci amet beatae cumque est, libero nihil rem! Fugiat, nostrum.</p>
+                        <div class="w-full hidden lg:block"></div>
+                    </div>
+                    <!--index even-->
+                    <div v-else class="max-w-7xl mx-auto flex flex-nowrap justify-center">
+                        <div class="w-full hidden lg:block"></div>
+                        <div class="flex flex-col justify-center items-center px-6">
+                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow">
+
+                            </div>
+                            <div class="rounded-full bg-hot-500 dark:bg-indigo-600 h-12 w-12 flex justify-center items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="fill-current dark:text-slate-200 text-slate-200 h-7 w-7">
+                                    <path
+                                        d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/>
+                                </svg>
+                            </div>
+                            <div class="border-r-2 border-hot-500 dark:border-indigo-600 grow">
+                            </div>
+                        </div>
+                        <div class="w-full  flex flex-col justify-end items-start dark:text-white py-10">
+                            <p class="text-xl md:text-2xl font-semibold w-full">{{ education.title }}</p>
+                            <p v-if="education.ort" class="text-md md:text-xl w-full">{{ education.ort }}</p>
+                            <p v-if="education.date" class="text-sm md:text-base dark:text-slate-300 w-full">{{ education.date }}</p>
 
                         </div>
                     </div>
-                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;section></p>
-                </div>
-                <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
-                    <p class="text-hot-500 dark:text-indigo-600">Education</p>
-                    <ScrollArrow id="education"/>
-                </div>
+                </template>
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/section></p>
             </div>
-        </div>
+            <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
+                <p class="text-hot-500 dark:text-indigo-600">Education</p>
+                <ScrollArrow id="education"/>
+            </div>
+
+        </section>
     </AppLayout>
 </template>
 
