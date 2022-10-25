@@ -33,7 +33,7 @@ const selectableLocale = computed(() => {
                     <template v-else>
                         <!--Moon-->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                             class="h-5 w-5 text-black hover:text-hot-500 transition-all delay-75 duration-300 fill-current">
+                             class="h-5 w-5 text-black hover:text-blue-500 transition-all delay-75 duration-300 fill-current">
                             <path
                                 d="M421.6 379.9c-.6641 0-1.35 .0625-2.049 .1953c-11.24 2.143-22.37 3.17-33.32 3.17c-94.81 0-174.1-77.14-174.1-175.5c0-63.19 33.79-121.3 88.73-152.6c8.467-4.812 6.339-17.66-3.279-19.44c-11.2-2.078-29.53-3.746-40.9-3.746C132.3 31.1 32 132.2 32 256c0 123.6 100.1 224 223.8 224c69.04 0 132.1-31.45 173.8-82.93C435.3 389.1 429.1 379.9 421.6 379.9zM255.8 432C158.9 432 80 353 80 256c0-76.32 48.77-141.4 116.7-165.8C175.2 125 163.2 165.6 163.2 207.8c0 99.44 65.13 183.9 154.9 212.8C298.5 428.1 277.4 432 255.8 432z"/>
                         </svg>
@@ -80,39 +80,39 @@ const selectableLocale = computed(() => {
             <div
                 class="hidden md:flex flex-col divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-600 dark:border-slate-600">
                 <a href="#home"
-                   :class="[currentLocation === 'home' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   :class="[currentLocation === 'home' ? 'text-blue-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-blue-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Home
                 </a>
                 <a href="#about"
-                   :class="[currentLocation === 'about' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   :class="[currentLocation === 'about' ? 'text-blue-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-blue-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     About
                 </a>
                 <a href="#skills"
-                   :class="[currentLocation === 'skills' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   :class="[currentLocation === 'skills' ? 'text-blue-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-blue-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Skills
                 </a>
                 <a href="#resume"
-                   :class="[currentLocation === 'resume' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   :class="[currentLocation === 'resume' ? 'text-blue-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-blue-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Resume
                 </a>
                 <a href="#contact"
-                   :class="[currentLocation === 'contact' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   :class="[currentLocation === 'contact' ? 'text-blue-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-blue-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Contact
                 </a>
                 <Link :href="route('loading')"
-                      :class="[currentLocation === 'loading' ? 'text-hot-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                      class="py-2.5 px-3 text-sm font-medium hover:text-hot-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                      :class="[currentLocation === 'loading' ? 'text-blue-500 dark:text-indigo-600 bg-slate-200 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                      class="py-2.5 px-3 text-sm font-medium hover:text-blue-500 dark:hover:text-indigo-500 hover:bg-slate-200 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     For Programmers
                 </Link>
             </div>
             <div>
                 <button @click="showNav = !showNav" class="p-3 md:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6 w-6 text-hot-500 dark:text-indigo-600 fill-current">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6 w-6 text-blue-500 dark:text-indigo-600 fill-current">
                         <path
                             d="M416 224H31.1C14.33 224 0 238.3 0 256s14.33 32 31.1 32h384C433.7 288 448 273.7 448 256S433.7 224 416 224zM416 384H31.1C14.33 384 0 398.3 0 415.1S14.33 448 31.1 448h384C433.7 448 448 433.7 448 416S433.7 384 416 384zM416 64H31.1C14.33 64 0 78.33 0 95.1S14.33 128 31.1 128h384C433.7 128 448 113.7 448 96S433.7 64 416 64z"/>
                     </svg>
@@ -144,14 +144,14 @@ const selectableLocale = computed(() => {
                         <template v-else>
                             <!--Moon-->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                 class="h-6 w-6 text-hot-500 transition-all delay-75 duration-300 fill-current">
+                                 class="h-6 w-6 text-blue-500 transition-all delay-75 duration-300 fill-current">
                                 <path
                                     d="M421.6 379.9c-.6641 0-1.35 .0625-2.049 .1953c-11.24 2.143-22.37 3.17-33.32 3.17c-94.81 0-174.1-77.14-174.1-175.5c0-63.19 33.79-121.3 88.73-152.6c8.467-4.812 6.339-17.66-3.279-19.44c-11.2-2.078-29.53-3.746-40.9-3.746C132.3 31.1 32 132.2 32 256c0 123.6 100.1 224 223.8 224c69.04 0 132.1-31.45 173.8-82.93C435.3 389.1 429.1 379.9 421.6 379.9zM255.8 432C158.9 432 80 353 80 256c0-76.32 48.77-141.4 116.7-165.8C175.2 125 163.2 165.6 163.2 207.8c0 99.44 65.13 183.9 154.9 212.8C298.5 428.1 277.4 432 255.8 432z"/>
                             </svg>
                         </template>
                     </button>
                     <button @click="showNav = !showNav" class="p-3 md:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-6 w-6 text-hot-500 dark:text-indigo-600 fill-current">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-6 w-6 text-blue-500 dark:text-indigo-600 fill-current">
                             <path
                                 d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/>
                         </svg>
@@ -160,38 +160,38 @@ const selectableLocale = computed(() => {
                 <!--Mobile Navigations-->
                 <div class="grow flex flex-col justify-center items-center space-y-2 ">
                     <a href="#home" @click="showNav = false"
-                       :class="[currentLocation === 'home' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                       class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                       :class="[currentLocation === 'home' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
                         Home
                     </a>
                     <a href="#about" @click="showNav = false"
-                       :class="[currentLocation === 'about' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                       class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                       :class="[currentLocation === 'about' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
                         About
                     </a>
                     <a href="#skills" @click="showNav = false"
-                       :class="[currentLocation === 'skills' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                       class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                       :class="[currentLocation === 'skills' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
                         Skills
                     </a>
                     <a href="#resume" @click="showNav = false"
-                       :class="[currentLocation === 'resume' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                       class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                       :class="[currentLocation === 'resume' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
                         Resume
                     </a>
                     <a href="#contact" @click="showNav = false"
-                       :class="[currentLocation === 'contact' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                       class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                       :class="[currentLocation === 'contact' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
                         Contact
                     </a>
                     <Link :href="route('loading')"
-                          :class="[currentLocation === 'loading' ? 'text-hot-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                          class="py-2.5 px-3 font-medium hover:text-hot-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap">
+                          :class="[currentLocation === 'loading' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                          class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap">
                         For Programmers
                     </Link>
                 </div>
@@ -213,7 +213,7 @@ const selectableLocale = computed(() => {
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-    background-color: v-bind(isDark ? '#4f46e5': '#F9004D' );
+    background-color: v-bind(isDark ? '#4f46e5': '#3b82f6' );
     background-clip: padding-box;
 }
 
@@ -253,10 +253,10 @@ const selectableLocale = computed(() => {
 }
 
 .text-shadow {
-    text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#F9004D')
+    text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#3b82f6')
 }
 
 .text-shadow-lg {
-    text-shadow: -8px -3px v-bind(isDark ? '#4f46e5': '#F9004D')
+    text-shadow: -8px -3px v-bind(isDark ? '#4f46e5': '#3b82f6')
 }
 </style>

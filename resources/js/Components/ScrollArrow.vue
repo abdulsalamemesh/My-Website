@@ -9,13 +9,13 @@ defineProps({
 <template>
     <a :href="'#' + id" class="flex justify-center items-center relative">
         <div
-            class="w-[80px] h-[80px] scale-0 opacity-100 border-8 border-hot-500 dark:border-indigo-600 rounded-full absolute animate-[grow_2.5s_linear_infinite]"
+            class="w-[80px] h-[80px] scale-0 opacity-100 border-8 border-blue-500 dark:border-indigo-600 rounded-full absolute animate-[grow_2.5s_linear_infinite]"
             style="animation-delay: 1.3s">
         </div>
-        <div class="w-[80px] h-[80px] scale-0 opacity-100 border-8 border-hot-500 dark:border-indigo-600 rounded-full absolute animate-[grow_2.5s_linear_infinite]"
+        <div class="w-[80px] h-[80px] scale-0 opacity-100 border-8 border-blue-500 dark:border-indigo-600 rounded-full absolute animate-[grow_2.5s_linear_infinite]"
              style="animation-delay: 1.7s">
         </div>
-        <div class="w-[80px] h-[80px] scale-0 opacity-100 border-8 border-hot-500 dark:border-indigo-600 rounded-full absolute animate-[grow_2.5s_linear_infinite]"
+        <div class="w-[80px] h-[80px] scale-0 opacity-100 border-8 border-blue-500 dark:border-indigo-600 rounded-full absolute animate-[grow_2.5s_linear_infinite]"
              style="animation-delay: 2.1s">
         </div>
         <div class="relative top-0 w-[20px] h-[82px] overflow-hidden flex justify-center">
