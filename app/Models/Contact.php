@@ -18,6 +18,7 @@ class Contact extends Model
     ];
 
     protected $casts = [
-        'read_at' => 'datetime:Y-m-d H:i'
+        'read_at' => 'datetime:Y-m-d H:i',
+        'created_at' => 'datetime:Y-m-d H:i',
     ];
 }

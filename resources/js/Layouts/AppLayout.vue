@@ -1,15 +1,11 @@
 <script setup>
-import {isDark, toggleDark, showNav, currentLocation} from "../store";
-import {computed, onMounted} from "vue";
-import {usePage, Link} from '@inertiajs/inertia-vue3'
+import {isDark, toggleDark, showNav} from "../store";
+import {Link} from '@inertiajs/inertia-vue3'
+import {Inertia} from "@inertiajs/inertia";
 
-
-const selectableLocale = computed(() => {
-    if (usePage().props.value.locale == 'de') {
-        return 'en';
-    }
-    return 'de'
-})
+const logout = () => {
+    Inertia.post(route('logout'));
+};
 
 </script>
 
@@ -39,54 +35,22 @@ const selectableLocale = computed(() => {
                         </svg>
                     </template>
                 </button>
-                <Link :href="route('language', [selectableLocale])" class="rounded-full" preserve-scroll>
-                    <template v-if="selectableLocale === 'de'">
-                        <svg viewBox="0 0 512 512" class="h-5 w-5"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="256" cy="256" r="256" fill="#F0F0F0"/>
-                            <g fill="#0052B4">
-                                <path d="m52.92 100.14c-20.109 26.163-35.272 56.318-44.101 89.077h133.18l-89.077-89.077z"/>
-                                <path d="m503.18 189.22c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075 89.076h133.18z"/>
-                                <path d="m8.819 322.78c8.83 32.758 23.993 62.913 44.101 89.075l89.074-89.075h-133.18z"/>
-                                <path d="m411.86 52.921c-26.163-20.109-56.317-35.272-89.076-44.102v133.18l89.076-89.075z"/>
-                                <path d="m100.14 459.08c26.163 20.109 56.318 35.272 89.076 44.102v-133.18l-89.076 89.074z"/>
-                                <path d="M189.217,8.819c-32.758,8.83-62.913,23.993-89.075,44.101l89.075,89.075V8.819z"/>
-                                <path d="m322.78 503.18c32.758-8.83 62.913-23.993 89.075-44.101l-89.075-89.075v133.18z"/>
-                                <path d="m370 322.78l89.075 89.076c20.108-26.162 35.272-56.318 44.101-89.076h-133.18z"/>
-                            </g>
-                            <g fill="#D80027">
-                                <path
-                                    d="m509.83 222.61h-220.44v-220.44c-10.931-1.423-22.075-2.167-33.392-2.167-11.319 0-22.461 0.744-33.391 2.167v220.44h-220.44c-1.423 10.931-2.167 22.075-2.167 33.392 0 11.319 0.744 22.461 2.167 33.391h220.44v220.44c10.931 1.423 22.073 2.167 33.392 2.167 11.317 0 22.461-0.743 33.391-2.167v-220.44h220.44c1.423-10.931 2.167-22.073 2.167-33.392 0-11.317-0.744-22.461-2.167-33.391z"/>
-                                <path d="m322.78 322.78l114.24 114.24c5.254-5.252 10.266-10.743 15.048-16.435l-97.802-97.802h-31.482v1e-3z"/>
-                                <path d="m189.22 322.78h-2e-3l-114.24 114.24c5.252 5.254 10.743 10.266 16.435 15.048l97.802-97.804v-31.479z"/>
-                                <path d="m189.22 189.22v-2e-3l-114.24-114.24c-5.254 5.252-10.266 10.743-15.048 16.435l97.803 97.803h31.481z"/>
-                                <path d="m322.78 189.22l114.24-114.24c-5.252-5.254-10.743-10.266-16.435-15.047l-97.802 97.803v31.482z"/>
-                            </g>
-                        </svg>
-                    </template>
-                    <template v-else-if="selectableLocale === 'en'">
-                        <svg viewBox="0 0 512 512" class="h-5 w-5"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.923,345.043C52.094,442.527,145.929,512,256,512s203.906-69.473,240.077-166.957L256,322.783  L15.923,345.043z" fill="#FFDA44"/>
-                            <path d="M256,0C145.929,0,52.094,69.472,15.923,166.957L256,189.217l240.077-22.261C459.906,69.472,366.071,0,256,0z"/>
-                            <path
-                                d="M15.923,166.957C5.633,194.69,0,224.686,0,256s5.633,61.31,15.923,89.043h480.155  C506.368,317.31,512,287.314,512,256s-5.632-61.31-15.923-89.043H15.923z"
-                                fill="#D80027"/>
-                        </svg>
-                    </template>
-                </Link>
             </div>
             <!--Desktop Navigations-->
             <div
-                class="hidden md:flex flex-col divide-y divide-slate-300 border-y border-slate-300 dark:divide-slate-600 dark:border-slate-600">
-
+                class="hidden md:flex flex-col">
                 <Link :href="route('dashboard')"
-                      :class="[currentLocation === 'loading' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                      :class="[route().current() === 'dashboard' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                       class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Contacts
                 </Link>
             </div>
             <div class="flex justify-between items-center w-full">
+                <form @submit.prevent="logout" class="hidden md:block w-full">
+                    <button type="submit" class="w-full py-2.5 px-3 text-black dark:text-slate-200 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                        Log Out
+                    </button>
+                </form>
                 <button class="p-3 md:hidden" @click="toggleDark()">
                     <template v-if="isDark">
                         <!--Sun-->
@@ -135,11 +99,18 @@ const selectableLocale = computed(() => {
                 </div>
                 <!--Mobile Navigations-->
                 <div class="grow flex flex-col justify-center items-center space-y-2 ">
-                    <Link :href="route('dashboard')"
-                          :class="[currentLocation === 'loading' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                          class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap">
-                        Contacts
-                    </Link>
+                    <div @click="showNav = false">
+                        <Link :href="route('dashboard')"
+                              :class="[route().current() === 'dashboard' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                              class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap">
+                            Contacts
+                        </Link>
+                    </div>
+                    <form @submit.prevent="logout">
+                        <button type="submit" class="py-2.5 px-3 text-black dark:text-slate-200 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap">
+                            Log Out
+                        </button>
+                    </form>
                 </div>
             </nav>
         </transition>
@@ -151,3 +122,50 @@ const selectableLocale = computed(() => {
     </div>
 
 </template>
+<style>
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: v-bind(isDark ? '#0f172a': '#f8fafc');
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: v-bind(isDark ? '#4f46e5': '#3b82f6' );
+    background-clip: padding-box;
+}
+
+@media only screen and (max-width: 450px) {
+    .scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 1200px) {
+    .scrollbar::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        border-bottom: 5px transparent solid;
+        border-top: 5px transparent solid;
+        border-right: 5px transparent solid;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .scrollbar::-webkit-scrollbar {
+        width: 18px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        border-bottom: 6px transparent solid;
+        border-top: 6px transparent solid;
+        border-right: 6px transparent solid;
+    }
+}
+
+</style>
