@@ -460,7 +460,7 @@ onMounted(() => {
                                 Send
                             </button>
                         </form>
-                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;form></p>
+                        <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/form></p>
 
                     </div>
                 </div>
