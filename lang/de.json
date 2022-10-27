@@ -83,7 +83,6 @@
     "Archery": "Bogenschießen",
     "Achievements": "Achievements",
     "Hobbies": "Hobbies",
-    "Driving license": "Führerschein",
     "Graduation project": "Abschlussprojekt",
     "Trainee management system": "Azubis Verwaltungssystem",
     "Trainees in different training areas can use the system": "Azubis in unterschiedlichen Ausbildungsbereiche können durch das System",
@@ -98,6 +97,20 @@
     "I": "Ich",
     "I'm": "ich bin",
     "My name is": "Mein Name ist",
-    "My name is Abdulsalam Emesh and I am a software developer from Aleppo, Syria and I have been living in Xanten for 5 years. I am one of the lucky ones who made their hobby their profession. I love structure and order and I also stand for quality. I also like to work in a team where I learn a lot and quickly. As the saying goes: \"Alone you are strong together unbeatable\".": "Mein Name ist Abdulsalam Emesh und ich bin Software Developer aus Aleppo, Syrien und ich lebe seit 5 Jahren in Xanten. Ich bin einer der Glücklichen, die ihr Hobby zum Beruf gemacht haben. Ich liebe Struktur und Ordnung und ich stehe auch für Qualität. Außerdem arbeite ich gerne in einem Team, wo ich viel und schnell lerne. Wie das Sprichwort schon sagt: “Allein ist man stark gemeinsam unschlagbar”"
-
+    "Home": "Startseite",
+    "About": "Über mich",
+    "Resume": "Lebenslauf",
+    "For Programmers": "Für Programmierer/innen",
+    "Contact": "Kontakt",
+    "All rights reserved.": "Alle Rechte vorbehalten.",
+    "Me, Myself & I": "Meine Geschichte",
+    "Databases": "Datenbanken",
+    "Other technologies": "Andere Technologien",
+    "Other skills": "Andere Skills",
+    "German - C1": "Deutsch - C1",
+    "English - B2": "Englisch - B1",
+    "Arabic - Native language": "Arabisch - Muttersprache",
+    "Driving license": "Führerschein",
+    "My Resume": "Mein Lebenslauf",
+    "Experiences": "Erfahrung"
 }

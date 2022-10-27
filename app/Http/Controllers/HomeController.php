@@ -112,7 +112,7 @@ class HomeController extends Controller
                     ],
                 ],
                 'databases'  => [
-                    'name'   => __('DATABASES'),
+                    'name'   => __('Databases'),
                     'skills' => [
                         'MySQL',
                         'Datagrip',
@@ -135,10 +135,10 @@ class HomeController extends Controller
                 'languages' => [
                     'name'   => __('Other skills'),
                     'skills' => [
-                        'German - C1',
-                        'English - B2',
-                        'Arabic - Mother language',
-                        'Driving license',
+                        __('German - C1'),
+                        __('English - B2'),
+                        __('Arabic - Native language'),
+                        __('Driving license'),
                     ],
                 ],
             ]

@@ -1,6 +1,6 @@
 <script setup>
 import {isDark, toggleDark, showNav, currentLocation} from "../store";
-import {computed, onMounted} from "vue";
+import {computed} from "vue";
 import {usePage, Link} from '@inertiajs/inertia-vue3'
 
 
@@ -82,12 +82,12 @@ const selectableLocale = computed(() => {
                 <a href="#home"
                    :class="[currentLocation === 'home' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    Home
+                    {{__('Home')}}
                 </a>
                 <a href="#about"
                    :class="[currentLocation === 'about' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    About
+                    {{__('About')}}
                 </a>
                 <a href="#skills"
                    :class="[currentLocation === 'skills' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
@@ -97,17 +97,17 @@ const selectableLocale = computed(() => {
                 <a href="#resume"
                    :class="[currentLocation === 'resume' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    Resume
+                    {{ __('Resume') }}
                 </a>
                 <a href="#contact"
                    :class="[currentLocation === 'contact' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    Contact
+                    {{ __('Contact') }}
                 </a>
                 <Link :href="route('loading')"
                       :class="[currentLocation === 'loading' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                       class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    For Programmers
+                    {{ __('For Programmers') }}
                 </Link>
             </div>
             <div class="flex justify-between items-center w-full">
@@ -163,13 +163,13 @@ const selectableLocale = computed(() => {
                        :class="[currentLocation === 'home' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
                        class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
-                        Home
+                        {{ __('Home') }}
                     </a>
                     <a href="#about" @click="showNav = false"
                        :class="[currentLocation === 'about' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
                        class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
-                        About
+                        {{ __('About') }}
                     </a>
                     <a href="#skills" @click="showNav = false"
                        :class="[currentLocation === 'skills' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
@@ -181,18 +181,18 @@ const selectableLocale = computed(() => {
                        :class="[currentLocation === 'resume' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
                        class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
-                        Resume
+                        {{ __('Resume') }}
                     </a>
                     <a href="#contact" @click="showNav = false"
                        :class="[currentLocation === 'contact' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
                        class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
-                        Contact
+                        {{ __('Contact') }}
                     </a>
                     <Link :href="route('loading')"
                           :class="[currentLocation === 'loading' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
                           class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap">
-                        For Programmers
+                        {{ __('For Programmers') }}
                     </Link>
                 </div>
             </nav>
@@ -204,7 +204,7 @@ const selectableLocale = computed(() => {
             <div class="border-t border-slate-300 dark:border-slate-600 p-2 w-full text-center dark:text-white text-sm">
                 Copyright © {{ new Date().getFullYear() }} Abdulsalam Emesh
                 <br>
-                All rights reserved.
+                {{ __('All rights reserved.') }}
             </div>
         </main>
     </div>

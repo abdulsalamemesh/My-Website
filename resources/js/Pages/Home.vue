@@ -88,7 +88,7 @@ onMounted(() => {
                     </div>
                 </div>
                 <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
-                    <p class="text-blue-500 dark:text-indigo-600 font-medium">About</p>
+                    <p class="text-blue-500 dark:text-indigo-600 font-medium">{{ __('About') }}</p>
                     <ScrollArrow id="about"/>
                 </div>
             </div>
@@ -110,11 +110,11 @@ onMounted(() => {
                     <div>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full  -mb-2">&lt;h2></p>
                         <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
-                            Me, Myself & I
+                            {{ __('Me, Myself & I') }}
                         </h2>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;p></p>
-                        <p class="ml-2 md:text-xl dark:text-white">
+                        <p v-if="selectableLocale === 'en'" class="ml-2 md:text-xl dark:text-white">
                             I have been on this earth for about {{ new Date().getFullYear() - 1992 }} years and started my journey in <span
                             class="text-blue-500 dark:text-indigo-600 font-semibold">Aleppo, Syria</span>. I
                             have been living in my second home <span class="text-blue-500 dark:text-indigo-600 font-semibold">Xanten, Germany</span> for
@@ -122,8 +122,17 @@ onMounted(() => {
                             who turned their <span class="text-blue-500 dark:text-indigo-600 font-semibold">hobby and passion</span> into a <span
                             class="text-blue-500 dark:text-indigo-600 font-semibold"> profession</span>. I love structure and
                             order and I also
-                            stand for quality. I also like to work in a team, where I learn a lot and quickly. <br> As the saying goes: <span
+                            stand for quality. I also like to work in a team, where I learn a lot and quickly. <br> As the german saying goes: <span
                             class="text-blue-500 dark:text-indigo-600 font-semibold">  "Alone you are strong, together unbeatable"</span>.
+                        </p>
+                        <p v-else class="ml-2 md:text-xl dark:text-white">
+                            Ich bin seit etwa {{ new Date().getFullYear() - 1992 }} Jahren auf dieser Erde und habe meine Reise in <span
+                            class="text-blue-500 dark:text-indigo-600 font-semibold">Aleppo, Syrien,</span> begonnen. Seit 6 Jahren lebe ich in meiner zweiten Heimat
+                            <span class="text-blue-500 dark:text-indigo-600 font-semibold">Xanten, Deutschland</span>. Ich bin einer der Glücklichen, die ihr <span
+                            class="text-blue-500 dark:text-indigo-600 font-semibold">Hobby</span> und ihre <span class="text-blue-500 dark:text-indigo-600 font-semibold">Leidenschaft</span>
+                            zum <span class="text-blue-500 dark:text-indigo-600 font-semibold">Beruf</span> gemacht haben. Ich liebe Struktur und Ordnung und
+                            stehe auch für Qualität. Außerdem arbeite ich gerne im Team, wo ich viel und schnell lerne.
+                            Wie das Sprichwort schon sagt: <span class="text-blue-500 dark:text-indigo-600 font-semibold">"Alleine bist du stark, gemeinsam unschlagbar"</span>.
                         </p>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/p></p>
                     </div>
@@ -181,7 +190,7 @@ onMounted(() => {
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/section></p>
             </div>
             <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
-                <p class="text-blue-500 dark:text-indigo-600 font-medium">Resume</p>
+                <p class="text-blue-500 dark:text-indigo-600 font-medium">{{ __('Resume') }}</p>
                 <ScrollArrow id="resume"/>
             </div>
         </section>
@@ -198,7 +207,7 @@ onMounted(() => {
                 <div>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
                     <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
-                        My Resume
+                        {{ __('My Resume') }}
                     </h2>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
                 </div>
@@ -210,7 +219,7 @@ onMounted(() => {
                        class="inline-block py-2 px-4 my-2 rounded text-sm font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 hover:dark:bg-indigo-700 focus:bg-blue-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white"
                        download
                     >
-                        My Resume
+                        {{ __('My Resume') }}
                     </a>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/a></p>
                 </div>
@@ -222,7 +231,7 @@ onMounted(() => {
                 <div class="max-w-5xl mx-auto flex flex-nowrap lg:justify-center">
                     <div class="flex flex-col justify-center items-start lg:items-center lg:px-6">
                         <div class="rounded bg-blue-500 dark:bg-indigo-600 py-2 px-4 text-white font-medium">
-                            Experiences
+                            {{ __('Experiences') }}
                         </div>
                         <div class="border-r-2 border-blue-500 dark:border-indigo-600 hidden lg:block h-12">
                         </div>
