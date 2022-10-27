@@ -466,11 +466,7 @@ onMounted(() => {
             <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;/body></div>
             <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;/html></div>
         </section>
-        <div class="border-t border-slate-300 p-2 w-full text-center clas text-sm">
-            Copyright © {{ new Date().getFullYear() }} Abdulsalam Emesh
-            <br>
-            All rights reserved.
-        </div>
+
     </WebsiteLayout>
 
 </template>

@@ -201,6 +201,11 @@ const selectableLocale = computed(() => {
         <main class="grow overflow-y-auto scroll-smooth scrollbar bg-slate-50 dark:bg-slate-900" id="content" @click="showNav = false">
             <!-- Page Content -->
             <slot/>
+            <div class="border-t border-slate-300 dark:border-slate-600 p-2 w-full text-center dark:text-white text-sm">
+                Copyright © {{ new Date().getFullYear() }} Abdulsalam Emesh
+                <br>
+                All rights reserved.
+            </div>
         </main>
     </div>
 

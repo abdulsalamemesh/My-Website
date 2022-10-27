@@ -7,7 +7,7 @@ defineProps({contacts: Object});
 
 <template>
     <AppLayout>
-        <div class="w-full text-center p-2 dark:text-white bg-slate-100 dark:bg-slate-800 border-r dark:border-slate-600 font-medium">
+        <div class="w-full text-center py-6 dark:text-white border-b border-slate-300 dark:border-slate-600 font-medium">
            Contacts
         </div>
         <div class="py-12">
