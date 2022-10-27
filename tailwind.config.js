@@ -11,26 +11,6 @@ module.exports = {
         './resources/js/**/*.vue',
         './resources/js/*.js',
     ],
-    theme: {
-        extend: {
-            colors: {
-                hot: {
-                    DEFAULT: '#F9004D',
-                    50: '#FFE5EE',
-                    100: '#FFCCDC',
-                    200: '#FF99B9',
-                    300: '#FF6193',
-                    400: '#FF2E70',
-                    500: '#F9004D',
-                    600: '#C7003F',
-                    700: '#94002F',
-                    800: '#660020',
-                    900: '#330010'
-                }
-            },
-
-        },
-    },
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
 

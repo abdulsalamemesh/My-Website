@@ -79,11 +79,35 @@ const selectableLocale = computed(() => {
             <!--Desktop Navigations-->
             <div
                 class="hidden md:flex flex-col divide-y divide-slate-300 border-y border-slate-300 dark:divide-slate-600 dark:border-slate-600">
-
-                <Link :href="route('dashboard')"
+                <a href="#home"
+                   :class="[currentLocation === 'home' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                    Home
+                </a>
+                <a href="#about"
+                   :class="[currentLocation === 'about' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                    About
+                </a>
+                <a href="#skills"
+                   :class="[currentLocation === 'skills' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                    Skills
+                </a>
+                <a href="#resume"
+                   :class="[currentLocation === 'resume' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                    Resume
+                </a>
+                <a href="#contact"
+                   :class="[currentLocation === 'contact' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                    Contact
+                </a>
+                <Link :href="route('loading')"
                       :class="[currentLocation === 'loading' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                       class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    Contacts
+                    For Programmers
                 </Link>
             </div>
             <div class="flex justify-between items-center w-full">
@@ -135,10 +159,40 @@ const selectableLocale = computed(() => {
                 </div>
                 <!--Mobile Navigations-->
                 <div class="grow flex flex-col justify-center items-center space-y-2 ">
-                    <Link :href="route('dashboard')"
+                    <a href="#home" @click="showNav = false"
+                       :class="[currentLocation === 'home' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                    >
+                        Home
+                    </a>
+                    <a href="#about" @click="showNav = false"
+                       :class="[currentLocation === 'about' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                    >
+                        About
+                    </a>
+                    <a href="#skills" @click="showNav = false"
+                       :class="[currentLocation === 'skills' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                    >
+                        Skills
+                    </a>
+                    <a href="#resume" @click="showNav = false"
+                       :class="[currentLocation === 'resume' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                    >
+                        Resume
+                    </a>
+                    <a href="#contact" @click="showNav = false"
+                       :class="[currentLocation === 'contact' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                    >
+                        Contact
+                    </a>
+                    <Link :href="route('loading')"
                           :class="[currentLocation === 'loading' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
                           class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap">
-                        Contacts
+                        For Programmers
                     </Link>
                 </div>
             </nav>
@@ -151,3 +205,58 @@ const selectableLocale = computed(() => {
     </div>
 
 </template>
+
+<style>
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: v-bind(isDark ? '#0f172a': '#f8fafc');
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: v-bind(isDark ? '#4f46e5': '#3b82f6' );
+    background-clip: padding-box;
+}
+
+@media only screen and (max-width: 450px) {
+    .scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 1200px) {
+    .scrollbar::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        border-bottom: 5px transparent solid;
+        border-top: 5px transparent solid;
+        border-right: 5px transparent solid;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .scrollbar::-webkit-scrollbar {
+        width: 18px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        border-bottom: 6px transparent solid;
+        border-top: 6px transparent solid;
+        border-right: 6px transparent solid;
+    }
+}
+
+.text-shadow {
+    text-shadow: -5px -2px v-bind(isDark ? '#4f46e5': '#3b82f6')
+}
+
+.text-shadow-lg {
+    text-shadow: -8px -3px v-bind(isDark ? '#4f46e5': '#3b82f6')
+}
+</style>

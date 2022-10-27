@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ConfirmaitionMail;
+use App\Mail\SomeoneContactedYou;
+use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
@@ -111,7 +115,7 @@ class HomeController extends Controller
                     'name'   => __('DATABASES'),
                     'skills' => [
                         'MySQL',
-                        'Datagrip' => 90,
+                        'Datagrip',
                     ],
                 ],
 
@@ -143,7 +147,7 @@ class HomeController extends Controller
 
     public function contactForm(Request $request)
     {
-        $this->validate($request, [
+        $data = $this->validate($request, [
             'name'    => ['required'],
             'email'   => ['required', 'email'],
             'phone'   => ['required'],
@@ -157,8 +161,16 @@ class HomeController extends Controller
             'message.min'      => __('Your message should be longer than 20 characters'),
         ]);
 
-        return Redirect::route('home')->with([
-            'success' => 'success send the message'
+        $contact = Contact::query()->create([
+            'name'    => $data['name'],
+            'email'   => $data['email'],
+            'phone'   => $data['phone'],
+            'message' => $data['message'],
         ]);
+
+        Mail::to($contact->email)->send(new ConfirmaitionMail());
+        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new SomeoneContactedYou($data));
+
+        return Redirect::route('home');
     }
 }

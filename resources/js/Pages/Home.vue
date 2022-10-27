@@ -1,5 +1,5 @@
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue';
+import WebsiteLayout from '@/Layouts/WebsiteLayout.vue';
 import VueWriter from 'vue-writer'
 import ScrollArrow from "@/Components/ScrollArrow.vue";
 import {computed, defineProps, onMounted, ref} from "vue";
@@ -66,7 +66,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <AppLayout>
+    <WebsiteLayout>
         <!--Home-->
         <section class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center px-4 md:px-6 py-6" id="home">
             <div class="grow flex flex-col">
@@ -75,6 +75,7 @@ onMounted(() => {
                 <div class="grow w-full sm:max-w-7xl mx-auto flex flex-col items-center md:items-start justify-center">
                     <div>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore  -mb-2">&lt;h1></p>
+
                         <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
                             {{ __('Hi') }} <span class="wave">&#128075;</span>, {{ __("I'm") }}
                             <br>
@@ -167,7 +168,7 @@ onMounted(() => {
                                                 d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
                                         </svg>
                                     </div>
-                                    <p class="dark:text-white font-semibold text-sm md:text-base">{{ skill }}</p>
+                                    <p class="dark:text-white font-medium text-sm md:text-base">{{ skill }}</p>
 
                                 </div>
                             </template>
@@ -357,9 +358,9 @@ onMounted(() => {
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;section></p>
 
                 <div class="ml-2 p-4 flex flex-col lg:flex-row">
-                    <div class="w-full lg:w-1/3 h-full">
+                    <div class="w-full lg:w-5/12 h-full">
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full ">&lt;div></p>
-                        <div class="ml-2 pr-12 dark:text-slate-300 font-medium space-y-3 mb-2">
+                        <div class="ml-2 lg:pr-6 dark:text-slate-300 font-medium space-y-3 mb-2">
                             <h2 class="text-lg">
                                 I enjoy discussing new projects and design challenges. Please share as much info, as possible so we can get the most out of our first catch-up.
                             </h2>
@@ -373,7 +374,7 @@ onMounted(() => {
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full ">&lt;/div></p>
 
                         <p class="md:text-lg text-red-500 font-aurore w-full " v-if="Object.keys(form.errors).length > 0">&lt;errors></p>
-                        <div class="ml-2 lg:mr-12 text-red-500 font-medium mb-2 bg-red-100 border border-red-500 rounded p-2 flex justify-between"
+                        <div class="ml-2 lg:mr-6 text-red-500 font-medium mb-2 bg-red-100 ring ring-red-300 rounded p-2 flex justify-between"
                              v-if="Object.keys(form.errors).length > 0">
                             <div class="space-y-2">
                                 <p class="text-sm" v-for="error in form.errors" v-text="error"></p>
@@ -387,10 +388,10 @@ onMounted(() => {
                         <p class="md:text-lg text-red-500 font-aurore w-full " v-if="Object.keys(form.errors).length > 0">&lt;/errors></p>
 
                         <p class="md:text-lg text-green-500 font-aurore w-full " v-if="form.wasSuccessful">&lt;success></p>
-                        <div class="ml-2 mb-2  p-2 lg:mr-12 bg-green-100 border border-green-500 rounded  text-green-500 flex justify-between" v-if="form.wasSuccessful">
+                        <div class="ml-2 mb-2  p-2 lg:mr-6 bg-green-100 ring ring-green-300 rounded  text-green-500 flex justify-between" v-if="form.wasSuccessful">
                             <div>
-                                <p class="text-lg font-bold">Thank you For Contacting me!</p>
-                                <p class="font-medium">I will get back to you as soon as possible.</p>
+                                <p class="text-base font-bold">Thank you For Contacting me!</p>
+                                <p class="text-sm font-medium">I will get back to you as soon as possible.</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-5 w-5 text-green-500 fill-current cursor-pointer"
                                  @click="form.wasSuccessful = null">
@@ -400,7 +401,7 @@ onMounted(() => {
                         </div>
                         <p class="md:text-lg text-green-500 font-aurore w-full " v-if="form.wasSuccessful">&lt;/success></p>
                     </div>
-                    <div class="w-full lg:w-2/3">
+                    <div class="w-full lg:w-7/12">
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full ">&lt;form></p>
                         <form @submit.prevent="submit"
                               class="ml-2 bg-blue-100 dark:bg-slate-800 p-3 md:p-6 rounded space-y-3 md:space-y-4 my-2 border border-slate-300 dark:border-slate-600">
@@ -409,37 +410,43 @@ onMounted(() => {
                             </h2>
                             <input
                                 v-model="form.email"
-                                type="text"
+                                type="email"
                                 class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
                                 placeholder="Email"
-
-                                :class="[form.errors.email?'border-red-500':'']"
+                                @change="form.clearErrors('email')"
+                                :class="[form.errors.email?'border-red-500 dark:border-red-500':'']"
+                                required
                             >
                             <input
                                 v-model="form.name"
                                 type="text"
                                 class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
                                 placeholder="Name"
-
-                                :class="[form.errors.name?'border-red-500':'']"
+                                @change="form.clearErrors('name')"
+                                :class="[form.errors.name?'border-red-500 dark:border-red-500':'']"
+                                required
                             >
                             <input
                                 v-model="form.phone"
                                 type="Tel"
                                 class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
                                 placeholder="Phone"
-
-                                :class="[form.errors.phone?'border-red-500':'']"
+                                @change="form.clearErrors('phone')"
+                                :class="[form.errors.phone?'border-red-500 dark:border-red-500':'']"
+                                required
                             >
                             <textarea
                                 v-model="form.message"
                                 class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
                                 rows="12"
                                 placeholder="Your Message"
-                                :class="[form.errors.message?'border-red-500':'']"
+                                @change="form.clearErrors('message')"
+                                :class="[form.errors.message?'border-red-500 dark:border-red-500':'']"
+                                required
                             ></textarea>
                             <button type="submit"
-                                    class="inline-block py-2 px-4 my-2 rounded text-sm font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 hover:dark:bg-indigo-700 focus:bg-blue-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white"
+                                    :disabled="form.processing"
+                                    class="inline-block py-2 px-4 my-2 rounded text-sm font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 hover:dark:bg-indigo-700 focus:bg-blue-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white disabled:bg-gray-600 disabled:dark:bg-gray-600"
                             >
                                 Send
                             </button>
@@ -459,8 +466,12 @@ onMounted(() => {
             <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;/body></div>
             <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;/html></div>
         </section>
-
-    </AppLayout>
+        <div class="border-t border-slate-300 p-2 w-full text-center clas text-sm">
+            Copyright © {{ new Date().getFullYear() }} Abdulsalam Emesh
+            <br>
+            All rights reserved.
+        </div>
+    </WebsiteLayout>
 
 </template>
 
