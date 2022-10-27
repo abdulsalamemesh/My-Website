@@ -78,7 +78,7 @@ const selectableLocale = computed(() => {
             </div>
             <!--Desktop Navigations-->
             <div
-                class="hidden md:flex flex-col divide-y divide-slate-300 border-y border-slate-300 dark:divide-slate-600 dark:border-slate-600">
+                class="hidden md:flex flex-col">
                 <a href="#home"
                    :class="[currentLocation === 'home' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
