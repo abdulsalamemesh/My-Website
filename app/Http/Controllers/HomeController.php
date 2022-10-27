@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
 class HomeController extends Controller
@@ -10,10 +11,9 @@ class HomeController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param \Illuminate\Http\Request $request
      * @return \Inertia\Response
      */
-    public function __invoke(Request $request)
+    public function index()
     {
         return Inertia::render('Home', [
             'educations'  => [
@@ -74,48 +74,49 @@ class HomeController extends Controller
             ],
             'skills'      => [
                 'code'       => [
-                    'name'   => __('CODE'),
+                    'name'   => __('Code'),
                     'skills' => [
-                        'PHP'                  => 80,
-                        'Laravel'              => 80,
-                        'OOP'                  => 80,
-                        'PHPStrom'             => 80,
-                        'JavaScript'           => 70,
-                        'Vue'                  => 70,
-                        'Alpine.js & Livewire' => 80,
-                        'CSS'                  => 90,
-                        'Tailwind CSS'         => 90,
-                        'Bootstrap'            => 90,
+                        'PHP',
+                        'Laravel',
+                        'OOP',
+                        'PHPStrom',
+                        'JavaScript',
+                        'Vue',
+                        'Alpine.js & Livewire',
+                        'CSS',
+                        'Tailwind CSS',
+                        'Bootstrap',
                     ]
 
                 ],
                 'management' => [
-                    'name'   => __('MANAGEMENT'),
+                    'name'   => __('Management'),
                     'skills' => [
-                        'Git'               => 80,
-                        'Github'            => 80,
-                        'Bitbucket'         => 70,
-                        'Jira - SCRUM'      => 70,
-                        'Jira - Confluence' => 70,
+                        'Git',
+                        'Github',
+                        'Bitbucket',
+                        'Jira - SCRUM',
+                        'Jira - Confluence',
                     ],
                 ],
                 'testing'    => [
-                    'name'   => __('TESTING'),
+                    'name'   => __('Testing'),
                     'skills' => [
-                        'Coverage testing' => 80,
-                        'Unit testing'     => 80,
-                        'TDD'              => 80,
+                        'Coverage testing',
+                        'Unit testing',
+                        'TDD',
                     ],
                 ],
                 'databases'  => [
                     'name'   => __('DATABASES'),
                     'skills' => [
-                        'MySQL'    => 80,
+                        'MySQL',
                         'Datagrip' => 90,
                     ],
                 ],
-                'other'      => [
-                    'name'   => __('OTHER SKILLS'),
+
+                'other'     => [
+                    'name'   => __('Other technologies'),
                     'skills' => [
                         'MVC',
                         'NPM',
@@ -127,7 +128,37 @@ class HomeController extends Controller
                         'JSON',
                     ],
                 ],
+                'languages' => [
+                    'name'   => __('Other skills'),
+                    'skills' => [
+                        'German - C1',
+                        'English - B2',
+                        'Arabic - Mother language',
+                        'Driving license',
+                    ],
+                ],
             ]
+        ]);
+    }
+
+    public function contactForm(Request $request)
+    {
+        $this->validate($request, [
+            'name'    => ['required'],
+            'email'   => ['required', 'email'],
+            'phone'   => ['required'],
+            'message' => ['required', 'min:20'],
+        ], [
+            'name.required'    => __('Your name is required'),
+            'email.required'   => __('Your email is required'),
+            'email.email'      => __('Your email is not a real email'),
+            'phone.required'   => __('Your phone number is required'),
+            'message.required' => __('Your message is required'),
+            'message.min'      => __('Your message should be longer than 20 characters'),
+        ]);
+
+        return Redirect::route('home')->with([
+            'success' => 'success send the message'
         ]);
     }
 }

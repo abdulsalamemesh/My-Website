@@ -6,6 +6,21 @@
 
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
+    <script>
+        function UnCryptMailto(s) {
+            var n=0;
+            var r="";
+            for(var i=0; i < s.length; i++) {
+                n=s.charCodeAt(i);
+                if (n>=8364) {n = 128;}
+                r += String.fromCharCode(n-(1));
+            }
+            return r;
+        }
+        function linkTo_UnCryptMailto(s)	{
+            location.href=UnCryptMailto(s);
+        }
+    </script>
     <!-- Scripts -->
     @routes
     @vite('resources/js/app.js')
@@ -14,6 +29,4 @@
 <body class="font-custom antialiased">
 @inertia
 </body>
-<!--this class are here to be processed form the jit-->
-<span class="w-[50%] w-[60%] w-[70%] w-[80%] w-[90%] w-[100%] w-[40%] w-[30%] hidden"></span>
 </html>

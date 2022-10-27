@@ -19,7 +19,8 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', HomeController::class)->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('contact-form', [HomeController::class, 'contactForm'])->name('contact');
 Route::get('loading', fn() => Inertia::render('Code/Loading'))->name('loading');
 Route::get('index', fn() => Inertia::render('Code/Index'))->name('index');
 Route::get('me', fn() => Inertia::render('Code/Me'))->name('me');
