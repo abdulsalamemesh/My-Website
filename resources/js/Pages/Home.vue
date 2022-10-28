@@ -172,7 +172,7 @@ onMounted(() => {
                 <template v-for="skillGroup in skills">
                     <div class="ml-2 my-6">
                         <div class="col-span-1 md:col-span-2 lg:col-span-3 dark:text-white text-lg md:text-xl font-bold">{{ skillGroup.name }}</div>
-                        <div class="grid gap-y-6 gap-x-4 grid-cols-2 md:grid-cols-4 mt-2 bg-blue-100 dark:bg-slate-800 p-4 border border-slate-300 dark:border-slate-600 rounded">
+                        <div class="grid gap-y-6 gap-x-4 grid-cols-2 md:grid-cols-3 mt-2 bg-slate-200 dark:bg-slate-800 p-4 border border-slate-400 dark:border-slate-600 rounded">
                             <template v-for="skill in skillGroup.skills">
                                 <div class="col-span-1 flex items-center space-x-2">
                                     <div>
@@ -370,78 +370,100 @@ onMounted(() => {
             <div class="max-w-7xl w-full mx-auto">
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;section></p>
 
-                <div class="ml-2 p-4 flex flex-col lg:flex-wrap lg:flex-row w-full justify-center">
-                    <div class="p-2 w-1/3 flex">
-                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
-                            <h2 class="text-xl">
-                                {{ __('Dipos online shop') }}
-                            </h2>
-                            <p>{{
-                                    __('A custom-made multilingual online Shop where you can shop for your next screen protection foils for any device. The system has an admin area where the admin can upload weekly an over 500 MB CSV file with the new products and export the new orders.')
-                                }}</p>
-                            <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Export') }} #{{ __('Import') }} #{{ __('Orders') }}</p>
-                            <a href="https://shop.dipos.de/en" target="_blank"
-                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
-                                https://shop.dipos.de
-                            </a>
+                <div class="ml-2 flex flex-wrap flex-row w-full justify-center">
+                    <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
+                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                            <div>
+                                <h2 class="text-xl">
+                                    {{ __('Dipos online shop') }}
+                                </h2>
+                                <p class="mt-2">{{
+                                        __('A custom-made multilingual online Shop where you can shop for your next screen protection foils for any device. The system has an admin area where the admin can upload weekly an over 500 MB CSV file with the new products and export the new orders.')
+                                    }}</p>
+                            </div>
+                            <div class="border-t border-slate-400 pt-2">
+                                <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Export') }} #{{ __('Import') }} #{{ __('Orders') }}</p>
+                                <a href="https://shop.dipos.de/en" target="_blank"
+                                   class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                    shop.dipos.de
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-2 w-1/3 flex">
-                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
-                            <h2 class="text-xl">
-                                {{ __('Apprentices Management System') }}
-                            </h2>
-                            <p>{{
-                                    __('Trainees in different training areas can use the system to carry out, sign and manage their report books. The report books can be checked, controlled and signed by trainers.')
-                                }}</p>
-                            <p class="text-xs">#{{ __('Individual-work') }} #{{ __('Export') }} #PDF</p>
-                            <a href="https://shop.dipos.de/en" target="_blank"
-                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
-                                https://azubi.ideenkonzept.de
-                            </a>
+                    <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
+                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                            <div>
+                                <h2 class="text-xl">
+                                    {{ __('Apprentices Management System') }}
+                                </h2>
+                                <p class="mt-2">{{
+                                        __('Trainees in different training areas can use the system to carry out, sign and manage their report books. The report books can be checked, controlled and signed by trainers.')
+                                    }}</p>
+                            </div>
+                            <div class="border-t border-slate-400 pt-2">
+                                <p class="text-xs">#{{ __('Individual-work') }} #{{ __('Export') }} #PDF #{{ __('Permissions') }}</p>
+                                <a href="https://azubi.ideenkonzept.de" target="_blank"
+                                   class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                    azubi.ideenkonzept.de
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-2 w-1/3 flex">
-                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
-                            <h2 class="text-xl">
-                                Cloud LASE
-                            </h2>
-                            <p>{{
-                                    __('A Laravel multi tenancy cloud based platform with supervision area, where the Clients can connect their own Laser counting devices in an automated process. The platform is also responsible for the aggregation of the data and generating statistic.')
-                                }}</p>
-                            <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Data-aggregation')}} #{{ __('Multi-Tenancy')}} #{{ __('Statistics')}}</p>
-                            <a href="https://shop.dipos.de/en" target="_blank"
-                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
-                                https://cloud-lase.com
-                            </a>
+                    <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
+                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                            <div>
+                                <h2 class="text-xl">
+                                    Cloud LASE
+                                </h2>
+                                <p class="mt-2">{{
+                                        __('A Laravel multi tenancy cloud based platform with supervision area, where the Clients can connect their own Laser counting devices in an automated process. The platform is also responsible for the aggregation of the data and generating statistic.')
+                                    }}</p>
+                            </div>
+                            <div class="border-t border-slate-400 pt-2">
+                                <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Data-aggregation') }} #{{ __('Multi-Tenancy') }} #{{ __('Statistics') }} #{{ __('Permissions') }}</p>
+                                <a href="https://cloud-lase.com" target="_blank"
+                                   class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                    cloud-lase.com
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-2 w-1/3 flex">
-                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
-                            <h2 class="text-xl">
-                                My Portfolio
-                            </h2>
-                            <p>A online Shop für Schutzfolien.</p>
-                            <p class="text-xs">#Teamarbeit</p>
-                            <a href="https://shop.dipos.de/en" target="_blank"
-                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
-                                https://abdulsalam-emesh.me
-                            </a>
+                    <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
+                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                            <div>
+                                <h2 class="text-xl">
+                                    {{ __('My portfolio') }}
+                                </h2>
+                                <p class="mt-2">
+                                    {{ __('I built my portfolio with the following technologies: latest Laravel version and PHP version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss.') }}
+                                </p>
+                            </div>
+                            <div class="border-t border-slate-400 pt-2">
+                                <p class="text-xs">#{{ __('Individual-work') }} #{{ __('Custom') }}</p>
+                                <a href="https://abdulsalam-emesh.me" target="_blank"
+                                   class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                    abdulsalam-emesh.me
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-2 w-1/3 flex">
-                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
-                            <h2 class="text-xl">
-                                Rottbeck Immobilien
-                            </h2>
-                            <p> {{
-                                    __('An online real estate agent with a real estate filters. The API from ImmoScout24 was implemented to get the latest available real estate.')
-                                }}</p>
-                            <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }}</p>
-                            <a href="https://shop.dipos.de/en" target="_blank"
-                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
-                                https://www.rottbeck-immobilien.de
-                            </a>
+                    <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
+                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                            <div>
+                                <h2 class="text-xl">
+                                    Rottbeck Immobilien
+                                </h2>
+                                <p class="mt-2"> {{
+                                        __('An online real estate agent with a real estate filters. The API from ImmoScout24 was implemented to get the latest available real estate.')
+                                    }}</p>
+                            </div>
+                            <div class="border-t border-slate-400 pt-2">
+                                <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }}</p>
+                                <a href="https://rottbeck-immobilien.de" target="_blank"
+                                   class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                    rottbeck-immobilien.de
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -451,8 +473,6 @@ onMounted(() => {
                 <p class="text-blue-500 dark:text-indigo-600 font-medium">{{ __('Contact') }}</p>
                 <ScrollArrow id="contact"/>
             </div>
-            <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;/body></div>
-            <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;/html></div>
         </section>
 
         <!--Separator-->
@@ -522,14 +542,14 @@ onMounted(() => {
                     <div class="w-full lg:w-7/12">
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full ">&lt;form></p>
                         <form @submit.prevent="submit"
-                              class="ml-2 bg-blue-100 dark:bg-slate-800 p-3 md:p-6 rounded space-y-3 md:space-y-4 my-2 border border-slate-300 dark:border-slate-600">
+                              class="ml-2 bg-slate-200 dark:bg-slate-800 p-3 md:p-6 rounded space-y-3 md:space-y-4 my-2 border border-slate-400 dark:border-slate-600">
                             <h2 class="text-2xl dark:text-white font-semibold lg:leading-tight cursor-default">
                                 {{ __('Send me a message') }}
                             </h2>
                             <input
                                 v-model="form.email"
                                 type="email"
-                                class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
+                                class="block w-full px-3 py-1 font-medium border border-slate-400 focus:border-blue-500 dark:border-slate-600 focus:bg-slate-100 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm"
                                 :placeholder="__('Email')"
                                 @change="form.clearErrors('email')"
                                 :class="[form.errors.email?'border-red-500 dark:border-red-500':'']"
@@ -538,7 +558,7 @@ onMounted(() => {
                             <input
                                 v-model="form.name"
                                 type="text"
-                                class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
+                                class="block w-full px-3 py-1 font-medium border border-slate-400 focus:border-blue-500 dark:border-slate-600 focus:bg-slate-100 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm"
                                 :placeholder="__('First name, last name')"
                                 @change="form.clearErrors('name')"
                                 :class="[form.errors.name?'border-red-500 dark:border-red-500':'']"
@@ -547,7 +567,7 @@ onMounted(() => {
                             <input
                                 v-model="form.phone"
                                 type="Tel"
-                                class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
+                                class="block w-full px-3 py-1 font-medium border border-slate-400 focus:border-blue-500 dark:border-slate-600 focus:bg-slate-100 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm"
                                 :placeholder="__('Phone')"
                                 @change="form.clearErrors('phone')"
                                 :class="[form.errors.phone?'border-red-500 dark:border-red-500':'']"
@@ -555,7 +575,7 @@ onMounted(() => {
                             >
                             <textarea
                                 v-model="form.message"
-                                class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
+                                class="block w-full px-3 py-1 font-medium border border-slate-400 focus:border-blue-500 dark:border-slate-600 focus:bg-slate-100 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm"
                                 rows="12"
                                 :placeholder="__('Your Message')"
                                 @change="form.clearErrors('message')"

@@ -132,8 +132,9 @@
     "Multi-Tenancy": "Multi-Tenancy",
     "Statistics": "Statistik",
     "Individual-work": "Einzelarbeit",
-    "": "",
-    "": "",
-    "": "",
-    "": ""
+    "Projects": "Projekte",
+    "I built my portfolio with the following technologies: latest Laravel version and PHP version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss.": "Ich habe mein Portfolio mit den folgenden Technologien gebaut: aktuellsten Laravel Version und PHP Version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss",
+    "Custom": "Individuell",
+    "My portfolio": "Mein Portfolio",
+    "Permissions": "Berechtigungen"
 }
