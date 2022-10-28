@@ -6,8 +6,6 @@
     "I love structure and order and I also stand for quality.": "Ich liebe Struktur und Ordnung und ich stehe auch für Qualität.",
     "I also enjoy working in a team where I learn a lot and quickly": "Außerdem arbeite ich gerne in einem Team, wo ich viel und schnell lerne.",
     "As the saying goes, „Alone you are strong, together you are unbeatable.“": "Wie das Sprichwort schon sagt: „Allein ist man stark, gemeinsam unschlagbar“.",
-
-
     "Hallo dear programmer": "Hallo liebe/r Programmierer/in",
     "I just wanted to have some fun and create the website in your well-known environment": "Ich wollte nur ein bisschen Spaß haben und die Website in deiner bekannten Umgebung erstellen",
     "This is made for you. Have fun!!": "Das ist für dich gemacht. Viel Spaß!!",
@@ -16,19 +14,15 @@
     "In resources/views/education.blade.php you can read about my education.": "In resources/views/education.blade.php kannst du über meine Bildung lesen.",
     "In resources/views/skills.blade.php you can find out what I can do.": "In resources/views/skills.blade.php kannst du erfahren, was ich kann.",
     "In resources/views/other-information.blade.php you can find out what I do in my free time and did I accomplish.": "In resources/views/other-information.blade.php kannst du herausfinden, was ich in meiner Freizeit mache und was ich erreicht habe.",
-
-
-
     "Work experience": "Berufserfahrung",
     "Freelancer": "Freelancer",
     "From 2019 until today": "Von 2019 bis Heute",
+    "From 2020 until today": "Von 2020 bis Heute",
     "In addition to my education, I have been freelancing in the field": "Neben der Ausbildung habe ich freiberuflich im Bereich",
     "of website development and online hosting,": "der Webseiten Entwicklung und online Hosting,",
     "for a couple of restaurants in Wesel.": "für ein paar Restaurants in Wesel gearbeitet.",
     "I also created a program for ordering and storage, with the employees.": "Auch habe ich ein Programm für Bestellung und Lagerung, mit den Mitarbeitern erstellt.",
     "From 2021-09-01 until today": "Von 01.09.2021 bis Heute",
-
-
     "Assistant (salesman)": "Aushilfe (Verkäufer)",
     "From 2018 to 2019": "Von 2018 bis 2019",
     "In the first year of my apprenticeship as an IT specialist": "Im ersten Ausbildungsjahr zum Fachinformatiker für Anwendungsentwicklung",
@@ -36,15 +30,12 @@
     "Responsible for the registration of the acceptance and recording of the goods in the warehouse.": "Zuständig für die Eintragung der Abnahme und Aufnahmen der Waren Im Lager",
     "Purchase orders for goods.": "Bestellungen von Waren.",
     "Cashier and friendly customer service": "Kassierer und freundliche Bedienung der Kunden",
-
     "From 2017 to 2018": "Von 2017 bis 2018",
     "While I was taking part in various German courses,": "From 2017 until 2018",
     "I worked as a temporary as a temp at Extrablatt.": "arbeitete ich als Aushilfe beim Extrablatt.",
     "My duties included the following activities:": "Mein Aufgabenbereich umfasste die folgenden Tätigkeiten:",
     "Safety measures for the equipment in the facility.": "Sicherheitsmaßnahmen für die Geräte im Betrieb.",
     "Friendly service to customers.": "Freundliche Bedienung der Kunden",
-
-
     "Project Management": "Projektmanagement",
     "Datasoft, Kairo, Ägypten": "Datasoft, Cairo, Egypt",
     "From 2013 to 2015": "Von 2013 bis 2015",
@@ -54,7 +45,6 @@
     "Leading a team consisting of three people.": "Anleitung eines aus drei Personen bestehenden Teams.",
     "Planning and organizing projects.": "Planung und Organisation von Projekten.",
     "Supervision during project implementation.": "Aufsicht bei der Projektdurchführung.",
-
     "From 2011 to 2013": "Von 2011 bis 2013",
     "During the first two years of my business studies,": "In den ersten zwei Jahren meines Wirtschaftsstudiums",
     "I had a part-time part-time job as a temp at Syriansoft.": "hatte ich eine Nebenbeschäftigung als Aushilfe bei Syriansoft.",
@@ -62,8 +52,6 @@
     "Establish contact with the various customers.": "Kontakt mit den verschiedenen Kunden aufzunehmen.",
     "Responsible for gathering necessary information for projects.": "Zuständig für die Informationssammlung, die für ein Projekt notwendig sind.",
     "Analysis of the collected information.": "Analyse der gesammelten Informationen.",
-
-    "Education": "Bildung",
     "Training as IT Specialist For Application Development": "Ausbildung zum Fachinformatiker für Anwendungsentwicklung",
     "C1 language course": "C1 Sprackurs",
     "Language courses up to B2 level": "Sprachkurse bis B2 Nivea",
@@ -73,7 +61,6 @@
     "from 2016 to 2017": "Von 2016 Bis 2017",
     "from 2013 to 2015": "Von 2013 Bis 2015",
     "from 2011 to 2013": "Von 2011 Bis 2013",
-
     "Skills": "Fähigkeiten",
     "Swimming": "Schwimmen",
     "Music": "Musik",
@@ -89,7 +76,6 @@
     "to keep and manage their training-report portfolio.": "ihr Berichtsheft führen und verwalten.",
     "The report books can be checked and signed by trainers.": "Die Berichtshefte können von Ausbilder überprüft, kontrolliert und unterschrieben werden.",
     "Class B": "Klasse B",
-
     "References": "Referenzen",
     "Meier AG / Software Developer": "Meier AG / Softwareentwickler",
     "Kochlöffel GmbH/ Branch Manager": "Kochlöffel GmbH / Filialleiterin",
@@ -112,5 +98,42 @@
     "Arabic - Native language": "Arabisch - Muttersprache",
     "Driving license": "Führerschein",
     "My Resume": "Mein Lebenslauf",
-    "Experiences": "Erfahrung"
+    "Experiences": "Erfahrung",
+    "Education": "Bildung",
+    "Let's get in touch": "lassen Sie uns in Kontakt treten",
+    "I enjoy discussing new opportunities. Please share as much info, as possible, so we can get the most out of our first catch-up.": "Ich freue mich darauf, neue Möglichkeiten zu entdecken. Bitte teilen Sie mir so viele Informationen wie möglich mit, damit wir das Beste aus unserem ersten Treffen machen können.",
+    "First name, last name": "Vorname, Nachname",
+    "Phone": "Telefon",
+    "Your Message": "Ihre Nachricht",
+    "Email": "E-Mail",
+    "I will get back to you as soon as possible.": "Ich werde mich bei Ihnen schnellstmöglich zurückmeldend",
+    "Send": "Senden",
+    "Send me a message": "Senden Sie mir eine Nachricht",
+    "In my first year of apprenticeship as an IT specialist for application development, I worked as a temp at Kochlöffel. And I was responsible for entering the data and admission of the goods in the warehouse. Also ordering goods and help on the cashier and be friendly service of the customers.": "In meinem ersten Ausbildungsjahr zum Fachinformatiker für Anwendungsentwicklung habe ich als Aushilfe bei Kochlöffel gearbeitet. Dort war ich für die Datenerfassung und den Wareneingang im Lager zuständig. Außerdem habe ich Warenbestellungen durchgeführt und an der Kasse geholfen und die Kunden freundlich bedient.",
+    "While I was taking part in various German courses, I worked as a temporary as a temp at Extrablatt. My duties included the following activities: Responsible for the registration of the acceptance and recording of the goods in the warehouse. Safety measures for the equipment in the facility. Friendly service to customers. ": "Während ich an verschiedenen Deutschkursen teilnahm, arbeitete ich als Aushilfskraft beim Extrablatt. Zu meinen Aufgaben gehörten die folgenden Tätigkeiten: Verantwortlich für die Registrierung der Annahme und Erfassung der Waren im Lager. Sicherheitsmaßnahmen für die Geräte in der Einrichtung. Freundliche Bedienung der Kunden. ",
+    "In addition to my education, I have been freelancing in the field of website development and online hosting, for a couple of restaurants and small start-up companies in Wesel. I also created a program for ordering and storage, with the employees.": "Zusätzlich zu meiner Ausbildung habe ich als Freelancer im Bereich Website-Entwicklung und Online-Hosting für einige Restaurants und kleine Startup-Unternehmen in Wesel gearbeitet. Außerdem habe ich mit den Mitarbeitern ein Programm für die Bestellung und Lagerung erstellt.",
+    "Business Technical College / Duisburg-Mitte": "Kaufmännisches Berufskolleg / Duisburg-Mitte",
+    "Business Technical Germany": "Deutschland/ Duisburg-Mitte",
+    "During my apprenticeship and employment, I implemented many one-pager websites for various clients from different industries. I also worked with the team on various custom online shops and platforms using Laravel and Vue. I was responsible for planning the database structure, implementation, web user interfaces of various API interfaces (Paypal - ImmoScout24 - Coinbase - etc.).": "Während meiner Ausbildung und Festanstellung habe ich viele One-Pager-Websites für verschiedene Kunden aus unterschiedlichen Branchen umgesetzt. Darüber hinaus habe ich mit dem Team an verschiedenen kundenspezifischen Online-Shops und Plattformen unter Verwendung von Laravel und Vue gearbeitet. Ich war verantwortlich für die Planung der Datenbankstruktur, die Implementierung und die Web-User-Interfaces verschiedener API-Schnittstellen (Paypal - ImmoScout24 - Coinbase - etc.).",
+    "In addition to my main job at LASE PeCo, I support and consult my old colleague at Meier AG with the planning and organisation of several projects.": "Neben meiner Haupttätigkeit bei LASE PeCo unterstütze und berate ich meine alte Arbeitskollegin bei der Meier AG bei der Planung und Organisation von verschiedenen Projekten.",
+    "My area of responsibility is: Test driven development (TDD), planing, implementation and maintenance of two (Laravel und Vue) cloud based platforms as well as connecting and implementing the API of various types of new and old laser-counting devices to the clouds. Configuration and installation of a local server on a local PC for a laser scanner device and connecting it to the Internet. Aggregating and saving the data of the laser scanner devices and generating statistics from the data and displaying it in various implementations in the clouds (Excel, diagrams, pivot tables)": "Mein Aufgabenbereich ist: Testorientierte Entwicklung (TDD), Planung, Implementierung und Pflege von zwei (Laravel und Vue) cloudbasierten Plattformen sowie die Anbindung und Implementierung der API von verschiedenen Typen neuer und alter Laserzählgeräte an die Clouds. Konfiguration und Installation eines lokalen Servers auf einem lokalen PC für ein Laserscannergerät und dessen Anbindung an das Internet. Aggregieren und Speichern der Daten der Laserscanner-Geräte und Erstellen von Statistiken aus den Daten und deren Darstellung in verschiedenen Implementierungen in den Clouds (Excel, Diagramme, Pivot-Tabellen).",
+    "Mid-Level Software Developer": "Mid-Level Software-Entwickler",
+    "Apprentices Management System": "Azubis Verwaltungssystem",
+    "Dipos online shop": "Dipos-Onlineshop",
+    "A custom-made multilingual online Shop where you can shop for your next screen protection foils for any device. The system has an admin area where the admin can upload weekly an over 500 MB CSV file with the new products and export the new orders.": "Ein kundenspezifischer mehrsprachiger Online Shop, in dem Sie Ihre nächsten Displayschutzfolien für jedes Gerät kaufen können. Das System hat einen Admin-Bereich, wo der Admin wöchentlich eine über 500 MB große CSV-Datei mit den neuen Produkten hochladen und die neuen Bestellungen exportieren kann.",
+    "Teamwork": "Teamarbeit",
+    "Orders": "Bestellungen",
+    "Export": "Exportieren",
+    "Import": "Importieren",
+    "Trainees in different training areas can use the system to carry out, sign and manage their report books. The report books can be checked, controlled and signed by trainers.": "Azubis in unterschiedlichen Ausbildungsbereiche können durch das System ihr Berichtsheft führen, unterschreiben und verwalten. Die Berichtshefte können von Ausbilder überprüft, kontrolliert und unterschrieben werden.",
+    "A Laravel multi tenancy cloud based platform with supervision area, where the Clients can connect their own Laser counting devices in an automated process. The platform is also responsible for the aggregation of the data and generating statistic.": "Eine cloudbasierte Laravel-Plattform mit Multi-Tenancy und einem Verwaltungsbereich, in dem die Kunden ihre eigenen Laserzählgeräte in einem automatisierten Prozess anschließen können. Die Plattform ist auch für die Aggregation der Daten und die Erstellung von Statistiken zuständig.",
+    "An online real estate agent with a real estate filters. The API from ImmoScout24 was implemented to get the latest available real estate.": "Ein Online-Immobilienmakler mit einem Immobilienfilter. Die API von ImmoScout24 wurde implementiert, um die neuesten verfügbaren Immobilien zu erhalten.",
+    "Data-aggregation": "Datenaggregation",
+    "Multi-Tenancy": "Multi-Tenancy",
+    "Statistics": "Statistik",
+    "Individual-work": "Einzelarbeit",
+    "": "",
+    "": "",
+    "": "",
+    "": ""
 }

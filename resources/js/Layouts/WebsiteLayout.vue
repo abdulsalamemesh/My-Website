@@ -17,7 +17,7 @@ const selectableLocale = computed(() => {
     <div class="h-screen font-montserrat flex flex-col md:flex-row relative">
         <!--Desktop Menu-->
         <nav
-            class="md:border-r md:border-slate-300 md:dark:border-slate-600 bg-slate-50 dark:bg-slate-900 md:py-4 h-16 md:h-full flex md:flex-col justify-end md:justify-between md:items-center">
+            class="md:border-r md:border-slate-300 md:dark:border-slate-600 bg-slate-50 dark:bg-slate-900 md:py-4 h-16 md:h-full flex md:flex-col justify-end md:justify-between md:items-center lg:min-w-[250px]">
             <!--Desktop buttons-->
             <div class="hidden md:flex justify-between space-x-4">
                 <button @click="toggleDark()">
@@ -33,7 +33,7 @@ const selectableLocale = computed(() => {
                     <template v-else>
                         <!--Moon-->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                             class="h-5 w-5 text-black hover:text-white transition-all delay-75 duration-300 fill-current">
+                             class="h-5 w-5 text-black hover:text-blue-500 transition-all delay-75 duration-300 fill-current">
                             <path
                                 d="M421.6 379.9c-.6641 0-1.35 .0625-2.049 .1953c-11.24 2.143-22.37 3.17-33.32 3.17c-94.81 0-174.1-77.14-174.1-175.5c0-63.19 33.79-121.3 88.73-152.6c8.467-4.812 6.339-17.66-3.279-19.44c-11.2-2.078-29.53-3.746-40.9-3.746C132.3 31.1 32 132.2 32 256c0 123.6 100.1 224 223.8 224c69.04 0 132.1-31.45 173.8-82.93C435.3 389.1 429.1 379.9 421.6 379.9zM255.8 432C158.9 432 80 353 80 256c0-76.32 48.77-141.4 116.7-165.8C175.2 125 163.2 165.6 163.2 207.8c0 99.44 65.13 183.9 154.9 212.8C298.5 428.1 277.4 432 255.8 432z"/>
                         </svg>
@@ -82,12 +82,12 @@ const selectableLocale = computed(() => {
                 <a href="#home"
                    :class="[currentLocation === 'home' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    {{__('Home')}}
+                    {{ __('Home') }}
                 </a>
                 <a href="#about"
                    :class="[currentLocation === 'about' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    {{__('About')}}
+                    {{ __('About') }}
                 </a>
                 <a href="#skills"
                    :class="[currentLocation === 'skills' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
@@ -98,6 +98,11 @@ const selectableLocale = computed(() => {
                    :class="[currentLocation === 'resume' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Resume') }}
+                </a>
+                <a href="#projects"
+                   :class="[currentLocation === 'projects' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                    {{ __('Projects') }}
                 </a>
                 <a href="#contact"
                    :class="[currentLocation === 'contact' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
@@ -138,6 +143,7 @@ const selectableLocale = computed(() => {
                 </button>
             </div>
         </nav>
+
         <!--Mobile Menu-->
         <transition
             enter-active-class="transition-all ease-in-out duration-500"
@@ -182,6 +188,12 @@ const selectableLocale = computed(() => {
                        class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
                         {{ __('Resume') }}
+                    </a>
+                    <a href="#projects" @click="showNav = false"
+                       :class="[currentLocation === 'projects' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
+                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
+                    >
+                        {{ __('Projects') }}
                     </a>
                     <a href="#contact" @click="showNav = false"
                        :class="[currentLocation === 'contact' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"

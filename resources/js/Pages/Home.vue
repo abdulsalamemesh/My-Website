@@ -25,7 +25,7 @@ const enTitles = [
 ];
 const deTitles = [
     ' bin Fullstack-Entwickler.',
-    ' entwickle Dinge für die Web.',
+    ' entwickle Dinge für das Internet.',
     ' löse gerne Probleme.',
     ' arbeite gerne im Team.',
 ];
@@ -47,6 +47,7 @@ onMounted(() => {
     const about = document.getElementById('about');
     const skills = document.getElementById('skills');
     const resume = document.getElementById('resume');
+    const projects = document.getElementById('projects');
     const contact = document.getElementById('contact');
 
     content.addEventListener('scroll', function (e) {
@@ -56,8 +57,10 @@ onMounted(() => {
             currentLocation.value = 'about'
         } else if (e.currentTarget.scrollTop > (skills.offsetTop - 50) && e.currentTarget.scrollTop < (resume.offsetTop - 50)) {
             currentLocation.value = 'skills'
-        } else if (e.currentTarget.scrollTop > (resume.offsetTop - 50) && e.currentTarget.scrollTop < (contact.offsetTop - 50)) {
+        } else if (e.currentTarget.scrollTop > (resume.offsetTop - 50) && e.currentTarget.scrollTop < (projects.offsetTop - 50)) {
             currentLocation.value = 'resume'
+        } else if (e.currentTarget.scrollTop > (projects.offsetTop - 50) && e.currentTarget.scrollTop < (contact.offsetTop - 50)) {
+            currentLocation.value = 'projects'
         } else {
             currentLocation.value = 'contact'
         }
@@ -103,7 +106,7 @@ onMounted(() => {
         <!--About-->
         <section class="min-h-screen flex flex-col justify-center px-4 md:px-6 py-6" id="about">
             <div class="grow flex flex-col">
-                <div class="max-w-5xl mx-auto grow flex flex-col lg:flex-row justify-center items-center lg:space-x-12">
+                <div class="max-w-7xl mx-auto grow flex flex-col lg:flex-row justify-center items-center lg:space-x-12">
                     <div class="min-w-max rounded-full p-1 lg:p-2 bg-gradient-to-b from-blue-300 to-blue-500 dark:from-indigo-300 dark:to-indigo-600 mb-6">
                         <img src="/me.jpeg" class="rounded-full h-52 w-52 lg:h-72 lg:w-72 object-cover" alt="">
                     </div>
@@ -127,7 +130,8 @@ onMounted(() => {
                         </p>
                         <p v-else class="ml-2 md:text-xl dark:text-white">
                             Ich bin seit etwa {{ new Date().getFullYear() - 1992 }} Jahren auf dieser Erde und habe meine Reise in <span
-                            class="text-blue-500 dark:text-indigo-600 font-semibold">Aleppo, Syrien,</span> begonnen. Seit 6 Jahren lebe ich in meiner zweiten Heimat
+                            class="text-blue-500 dark:text-indigo-600 font-semibold">Aleppo, Syrien,</span> begonnen. Seit {{ new Date().getFullYear() - 2016 }} Jahren lebe ich in
+                            meiner zweiten Heimat
                             <span class="text-blue-500 dark:text-indigo-600 font-semibold">Xanten, Deutschland</span>. Ich bin einer der Glücklichen, die ihr <span
                             class="text-blue-500 dark:text-indigo-600 font-semibold">Hobby</span> und ihre <span class="text-blue-500 dark:text-indigo-600 font-semibold">Leidenschaft</span>
                             zum <span class="text-blue-500 dark:text-indigo-600 font-semibold">Beruf</span> gemacht haben. Ich liebe Struktur und Ordnung und
@@ -153,7 +157,7 @@ onMounted(() => {
         <!--Skills-->
         <section class="min-h-screen flex flex-col justify-center px-4 md:px-6 py-6" id="skills">
 
-            <div class="max-w-5xl mx-auto w-full flex flex-col justify-center">
+            <div class="max-w-7xl mx-auto w-full flex flex-col justify-center">
                 <div>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
                     <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
@@ -163,7 +167,7 @@ onMounted(() => {
                 </div>
             </div>
 
-            <div class="max-w-5xl grow w-full mx-auto">
+            <div class="max-w-7xl grow w-full mx-auto">
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;section></p>
                 <template v-for="skillGroup in skills">
                     <div class="ml-2 my-6">
@@ -178,7 +182,6 @@ onMounted(() => {
                                         </svg>
                                     </div>
                                     <p class="dark:text-white font-medium text-sm md:text-base">{{ skill }}</p>
-
                                 </div>
                             </template>
                         </div>
@@ -203,7 +206,7 @@ onMounted(() => {
         <!--Resume-->
         <section class="min-h-screen flex flex-col justify-center px-4 md:px-6 py-6" id="resume">
 
-            <div class="max-w-5xl w-full mx-auto flex flex-col justify-center">
+            <div class="max-w-7xl w-full mx-auto flex flex-col justify-center">
                 <div>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
                     <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
@@ -212,7 +215,7 @@ onMounted(() => {
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
                 </div>
             </div>
-            <div class="max-w-5xl w-full mx-auto flex flex-col justify-center">
+            <div class="max-w-7xl w-full mx-auto flex flex-col justify-center">
                 <div>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;a download></p>
                     <a href=""
@@ -224,11 +227,11 @@ onMounted(() => {
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/a></p>
                 </div>
             </div>
-            <div class="max-w-5xl w-full mx-auto">
+            <div class="max-w-7xl w-full mx-auto">
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full mb-6">&lt;section></p>
 
                 <!--Experiences-->
-                <div class="max-w-5xl mx-auto flex flex-nowrap lg:justify-center">
+                <div class="max-w-7xl mx-auto flex flex-nowrap lg:justify-center">
                     <div class="flex flex-col justify-center items-start lg:items-center lg:px-6">
                         <div class="rounded bg-blue-500 dark:bg-indigo-600 py-2 px-4 text-white font-medium">
                             {{ __('Experiences') }}
@@ -239,7 +242,7 @@ onMounted(() => {
                 </div>
                 <template v-for="(experience,index) in experiences">
                     <!--index odd-->
-                    <div v-if="index % 2 > 0" class="max-w-5xl mx-auto flex flex-row-reverse lg:flex-row flex-nowrap justify-center">
+                    <div v-if="index % 2 > 0" class="max-w-7xl mx-auto flex flex-row-reverse lg:flex-row flex-nowrap justify-center">
                         <div class="w-full flex flex-col justify-center items-start lg:items-end dark:text-white py-6 lg:py-4">
                             <p class="text-xl md:text-2xl font-semibold lg:text-right">{{ experience.title }}</p>
                             <p v-if="experience.workplace" class="text-md md:text-xl font-medium lg:text-right">{{ experience.workplace }}</p>
@@ -259,7 +262,7 @@ onMounted(() => {
                         <div class="w-full hidden lg:block"></div>
                     </div>
                     <!--index even-->
-                    <div v-else class="max-w-5xl mx-auto flex flex-nowrap justify-center">
+                    <div v-else class="max-w-7xl mx-auto flex flex-nowrap justify-center">
                         <div class="w-full hidden lg:block"></div>
                         <div class="flex flex-col justify-center items-center pr-6 lg:px-6">
                             <div class="border-r-2 border-blue-500 dark:border-indigo-600 grow"></div>
@@ -281,12 +284,12 @@ onMounted(() => {
                 </template>
 
                 <!--Education-->
-                <div class="max-w-5xl mx-auto flex flex-nowrap lg:justify-center">
+                <div class="max-w-7xl mx-auto flex flex-nowrap lg:justify-center">
                     <div class="flex flex-col justify-center items-start lg:items-center lg:px-6">
                         <div class="border-r-2 border-blue-500 dark:border-indigo-600 hidden lg:block h-12">
                         </div>
                         <div class="rounded bg-blue-500 dark:bg-indigo-600 py-2 px-4 text-white font-medium">
-                            Education
+                            {{ __('Education') }}
                         </div>
                         <div class="border-r-2 border-blue-500 dark:border-indigo-600 hidden lg:block h-12">
                         </div>
@@ -294,7 +297,7 @@ onMounted(() => {
                 </div>
                 <template v-for="(education,index) in educations">
                     <!--index odd-->
-                    <div v-if="index % 2 > 0" class="max-w-5xl mx-auto flex flex-row-reverse lg:flex-row flex-nowrap justify-center">
+                    <div v-if="index % 2 > 0" class="max-w-7xl mx-auto flex flex-row-reverse lg:flex-row flex-nowrap justify-center">
                         <div class="w-full flex flex-col justify-center items-start lg:items-end dark:text-white py-6 lg:py-4">
                             <p class="text-xl md:text-2xl font-semibold lg:text-right">{{ education.title }}</p>
                             <p v-if="education.ort" class="text-md md:text-xl font-medium lg:text-right">{{ education.ort }}</p>
@@ -317,7 +320,7 @@ onMounted(() => {
                         <div class="w-full hidden lg:block"></div>
                     </div>
                     <!--index even-->
-                    <div v-else class="max-w-5xl mx-auto flex flex-nowrap justify-center">
+                    <div v-else class="max-w-7xl mx-auto flex flex-nowrap justify-center">
                         <div class="w-full hidden lg:block"></div>
                         <div class="flex flex-col justify-center items-center pr-6 lg:px-6">
                             <div class="border-r-2 border-blue-500 dark:border-indigo-600 grow">
@@ -342,10 +345,116 @@ onMounted(() => {
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full mt-6">&lt;/section></p>
             </div>
             <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
-                <p class="text-blue-500 dark:text-indigo-600 font-medium">Contact</p>
-                <ScrollArrow id="contact"/>
+                <p class="text-blue-500 dark:text-indigo-600 font-medium">{{ __('Projects') }}</p>
+                <ScrollArrow id="projects"/>
             </div>
         </section>
+
+        <!--Separator-->
+        <div class="mx-6 md:mx-12">
+            <div class="border-b-2 border-slate-300 dark:border-slate-600"></div>
+        </div>
+
+        <!--Projects-->
+        <section class="min-h-screen flex flex-col justify-center px-4 md:px-6 py-6" id="projects">
+
+            <div class="max-w-7xl w-full mx-auto flex flex-col justify-center">
+                <div>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
+                    <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
+                        {{ __('Projects') }}
+                    </h2>
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
+                </div>
+            </div>
+            <div class="max-w-7xl w-full mx-auto">
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;section></p>
+
+                <div class="ml-2 p-4 flex flex-col lg:flex-wrap lg:flex-row w-full justify-center">
+                    <div class="p-2 w-1/3 flex">
+                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
+                            <h2 class="text-xl">
+                                {{ __('Dipos online shop') }}
+                            </h2>
+                            <p>{{
+                                    __('A custom-made multilingual online Shop where you can shop for your next screen protection foils for any device. The system has an admin area where the admin can upload weekly an over 500 MB CSV file with the new products and export the new orders.')
+                                }}</p>
+                            <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Export') }} #{{ __('Import') }} #{{ __('Orders') }}</p>
+                            <a href="https://shop.dipos.de/en" target="_blank"
+                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                https://shop.dipos.de
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-2 w-1/3 flex">
+                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
+                            <h2 class="text-xl">
+                                {{ __('Apprentices Management System') }}
+                            </h2>
+                            <p>{{
+                                    __('Trainees in different training areas can use the system to carry out, sign and manage their report books. The report books can be checked, controlled and signed by trainers.')
+                                }}</p>
+                            <p class="text-xs">#{{ __('Individual-work') }} #{{ __('Export') }} #PDF</p>
+                            <a href="https://shop.dipos.de/en" target="_blank"
+                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                https://azubi.ideenkonzept.de
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-2 w-1/3 flex">
+                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
+                            <h2 class="text-xl">
+                                Cloud LASE
+                            </h2>
+                            <p>{{
+                                    __('A Laravel multi tenancy cloud based platform with supervision area, where the Clients can connect their own Laser counting devices in an automated process. The platform is also responsible for the aggregation of the data and generating statistic.')
+                                }}</p>
+                            <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Data-aggregation')}} #{{ __('Multi-Tenancy')}} #{{ __('Statistics')}}</p>
+                            <a href="https://shop.dipos.de/en" target="_blank"
+                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                https://cloud-lase.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-2 w-1/3 flex">
+                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
+                            <h2 class="text-xl">
+                                My Portfolio
+                            </h2>
+                            <p>A online Shop für Schutzfolien.</p>
+                            <p class="text-xs">#Teamarbeit</p>
+                            <a href="https://shop.dipos.de/en" target="_blank"
+                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                https://abdulsalam-emesh.me
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-2 w-1/3 flex">
+                        <div class="grow p-4 rounded dark:text-slate-300 font-medium space-y-3 dark:bg-slate-800 border border-slate-600">
+                            <h2 class="text-xl">
+                                Rottbeck Immobilien
+                            </h2>
+                            <p> {{
+                                    __('An online real estate agent with a real estate filters. The API from ImmoScout24 was implemented to get the latest available real estate.')
+                                }}</p>
+                            <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }}</p>
+                            <a href="https://shop.dipos.de/en" target="_blank"
+                               class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
+                                https://www.rottbeck-immobilien.de
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/section></p>
+            </div>
+            <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
+                <p class="text-blue-500 dark:text-indigo-600 font-medium">{{ __('Contact') }}</p>
+                <ScrollArrow id="contact"/>
+            </div>
+            <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;/body></div>
+            <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;/html></div>
+        </section>
+
         <!--Separator-->
         <div class="mx-6 md:mx-12">
             <div class="border-b-2 border-slate-300 dark:border-slate-600"></div>
@@ -354,16 +463,16 @@ onMounted(() => {
         <!--Contact-->
         <section class="min-h-screen flex flex-col justify-center px-4 md:px-6 py-6" id="contact">
 
-            <div class="max-w-5xl w-full mx-auto flex flex-col justify-center">
+            <div class="max-w-7xl w-full mx-auto flex flex-col justify-center">
                 <div>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
                     <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
-                        Let's get in touch
+                        {{ __('Let\'s get in touch') }}
                     </h2>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
                 </div>
             </div>
-            <div class="max-w-5xl w-full mx-auto">
+            <div class="max-w-7xl w-full mx-auto">
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;section></p>
 
                 <div class="ml-2 p-4 flex flex-col lg:flex-row">
@@ -371,13 +480,13 @@ onMounted(() => {
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full ">&lt;div></p>
                         <div class="ml-2 lg:pr-6 dark:text-slate-300 font-medium space-y-3 mb-2">
                             <h2 class="text-lg">
-                                I enjoy discussing new projects and design challenges. Please share as much info, as possible so we can get the most out of our first catch-up.
+                                {{ __('I enjoy discussing new opportunities. Please share as much info, as possible, so we can get the most out of our first catch-up.') }}
                             </h2>
                             <a href="tel:+491726081149" class="block text-sm md:text-base">
-                                Phone: <span class="hover:text-blue-500 dark:hover:text-indigo-600 transition duration-150 encrypt-email">94 118 06 271 94+</span>
+                                {{ __('Phone') }}: <span class="hover:text-blue-500 dark:hover:text-indigo-600 transition duration-150 encrypt-email">94 118 06 271 94+</span>
                             </a>
                             <a href="javascript:linkTo_UnCryptMailto('nbjmup;bcevmtbmbn/fnfti/xpslAhnbjm/dpn');" class="block text-sm md:text-base">
-                                Email: <span class="hover:text-blue-500 dark:hover:text-indigo-600 transition duration-150 encrypt-email">moc.liamg@krow.hseme.malasludba</span>
+                                {{ __('Email') }}: <span class="hover:text-blue-500 dark:hover:text-indigo-600 transition duration-150 encrypt-email">moc.liamg@krow.hseme.malasludba</span>
                             </a>
                         </div>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full ">&lt;/div></p>
@@ -399,8 +508,8 @@ onMounted(() => {
                         <p class="md:text-lg text-green-500 font-aurore w-full " v-if="form.wasSuccessful">&lt;success></p>
                         <div class="ml-2 mb-2  p-2 lg:mr-6 bg-green-100 ring ring-green-300 rounded  text-green-500 flex justify-between" v-if="form.wasSuccessful">
                             <div>
-                                <p class="text-base font-bold">Thank you For Contacting me!</p>
-                                <p class="text-sm font-medium">I will get back to you as soon as possible.</p>
+                                <p class="text-base font-bold">{{ __('Thank you For Contacting me!') }}</p>
+                                <p class="text-sm font-medium">{{ __('I will get back to you as soon as possible.') }}</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-5 w-5 text-green-500 fill-current cursor-pointer"
                                  @click="form.wasSuccessful = null">
@@ -415,13 +524,13 @@ onMounted(() => {
                         <form @submit.prevent="submit"
                               class="ml-2 bg-blue-100 dark:bg-slate-800 p-3 md:p-6 rounded space-y-3 md:space-y-4 my-2 border border-slate-300 dark:border-slate-600">
                             <h2 class="text-2xl dark:text-white font-semibold lg:leading-tight cursor-default">
-                                Send a message
+                                {{ __('Send me a message') }}
                             </h2>
                             <input
                                 v-model="form.email"
                                 type="email"
                                 class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
-                                placeholder="Email"
+                                :placeholder="__('Email')"
                                 @change="form.clearErrors('email')"
                                 :class="[form.errors.email?'border-red-500 dark:border-red-500':'']"
                                 required
@@ -430,7 +539,7 @@ onMounted(() => {
                                 v-model="form.name"
                                 type="text"
                                 class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
-                                placeholder="Name"
+                                :placeholder="__('First name, last name')"
                                 @change="form.clearErrors('name')"
                                 :class="[form.errors.name?'border-red-500 dark:border-red-500':'']"
                                 required
@@ -439,7 +548,7 @@ onMounted(() => {
                                 v-model="form.phone"
                                 type="Tel"
                                 class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
-                                placeholder="Phone"
+                                :placeholder="__('Phone')"
                                 @change="form.clearErrors('phone')"
                                 :class="[form.errors.phone?'border-red-500 dark:border-red-500':'']"
                                 required
@@ -448,7 +557,7 @@ onMounted(() => {
                                 v-model="form.message"
                                 class="block w-full px-3 py-1 font-medium border border-slate-300 focus:border-blue-500 dark:border-slate-600  focus:bg-blue-50 dark:focus:bg-slate-700 rounded bg-slate-50 dark:bg-slate-800 text-black dark:text-white placeholder-black dark:placeholder-white placeholder:text-sm autofill:bg-yellow-200"
                                 rows="12"
-                                placeholder="Your Message"
+                                :placeholder="__('Your Message')"
                                 @change="form.clearErrors('message')"
                                 :class="[form.errors.message?'border-red-500 dark:border-red-500':'']"
                                 required
@@ -457,7 +566,7 @@ onMounted(() => {
                                     :disabled="form.processing"
                                     class="inline-block py-2 px-4 my-2 rounded text-sm font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 hover:dark:bg-indigo-700 focus:bg-blue-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white disabled:bg-gray-600 disabled:dark:bg-gray-600"
                             >
-                                Send
+                                {{ __('Send') }}
                             </button>
                         </form>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/form></p>
@@ -467,7 +576,7 @@ onMounted(() => {
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/section></p>
             </div>
             <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
-                <p class="text-blue-500 dark:text-indigo-600 font-medium">Home</p>
+                <p class="text-blue-500 dark:text-indigo-600 font-medium">{{ __('Home') }}</p>
                 <div class="rotate-180">
                     <ScrollArrow id="home"/>
                 </div>
