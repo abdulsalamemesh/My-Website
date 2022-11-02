@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OtherInformationController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\WorkExperienceController;
 use Illuminate\Support\Facades\Route;
@@ -34,6 +35,7 @@ Route::get('web', fn() => Inertia::render('Code/Web'))->name('web');
 Route::get('layout', fn() => Inertia::render('Code/Layout'))->name('layout');
 Route::get('env', fn() => Inertia::render('Code/Env'))->name('env');
 Route::get('env-example', fn() => Inertia::render('Code/EnvExample'))->name('env-example');
+Route::get('project', ProjectController::class)->name('project');
 
 
 

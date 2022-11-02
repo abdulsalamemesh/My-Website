@@ -68,6 +68,11 @@ const name = computed(() => {
             showViews.value = true
             icon.value = Blade
             return 'other-information.blade.php'
+        case "project":
+            showResources.value = true
+            showViews.value = true
+            icon.value = Blade
+            return 'project.blade.php'
         case "layout":
             showResources.value = true
             showViews.value = true
@@ -194,6 +199,11 @@ function message() {
                         <Blade classes="h-4 w-4"/>
                         <span>skill.blade.php</span>
                     </Link>
+                    <Link v-show="showViews" :href="route('project')" :class="[route().current('project') ? 'bg-[#4b6eaf]' : '']"
+                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                        <Blade classes="h-4 w-4"/>
+                        <span>project.blade.php</span>
+                    </Link>
                     <Link v-show="showViews" :href="route('other-information')" :class="[route().current('other-information') ? 'bg-[#4b6eaf]' : '']"
                           class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-max">
                         <Blade classes="h-4 w-4"/>
@@ -301,7 +311,7 @@ function message() {
                         <LangaugeSelector/>
                     </div>
                 </div>
-                <div class="flex grow md:overflow-x-hidden md:overflow-y-auto bg-[#2b2b2b]">
+                <div class="flex grow overflow-x-hidden md:overflow-y-auto bg-[#2b2b2b]">
                     <!-- Page Heading -->
                     <header
                             class="bg-[#313335] pl-2 pr-4 pt-1 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-2 text-xs">
