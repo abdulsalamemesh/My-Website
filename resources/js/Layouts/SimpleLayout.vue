@@ -14,27 +14,14 @@ import JSFile from '@/Icons/JSFile.vue';
 import Markdown from '@/Icons/Markdown.vue';
 import {computed, onMounted, ref, shallowRef} from "vue";
 import LangaugeSelector from '@/Layouts/LangaugeSelector.vue'
+import {setActiveFiles, activeFilesList,removeFromActiveFilesList} from "../store";
+
 let icon = shallowRef(Blade)
 let showResources = ref(false)
 let showViews = ref(false)
 let showRoutes = ref(false)
 
-onMounted(() => {
-    const elems = document.getElementsByClassName("scroll-js");
 
-    function foo() {
-        let top = this.scrollTop;
-
-        for (let i = 0; i < elems.length; i++) {
-            elems[i].scrollTop = top;
-        }
-    }
-
-    for (let i = 0; i < elems.length; i++) {
-        elems[i].addEventListener("scroll", foo);
-    }
-
-})
 
 const name = computed(() => {
     switch (route().current()) {
@@ -150,17 +137,17 @@ function message() {
                         <ResourceRoot classes="h-4 w-4"/>
                         <span>resources</span>
                     </div>
-                    <div v-show="showResources" @click="message()"  class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                    <div v-show="showResources" @click="message()" class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
                         <span class="text-xs">&#x203A;</span>
                         <Folder classes="h-4 w-4"/>
                         <span>css</span>
                     </div>
-                    <div v-show="showResources" @click="message()"  class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                    <div v-show="showResources" @click="message()" class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
                         <span class="text-xs">&#x203A;</span>
                         <Folder classes="h-4 w-4"/>
                         <span>js</span>
                     </div>
-                    <div v-show="showResources" @click="message()"  class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
+                    <div v-show="showResources" @click="message()" class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
                         <span class="text-xs">&#x203A;</span>
                         <Folder classes="h-4 w-4"/>
                         <span>markdown</span>
@@ -174,27 +161,27 @@ function message() {
                         <Folder classes="h-4 w-4"/>
                         <span>views</span>
                     </div>
-                    <Link v-show="showViews" :href="route('index')" :class="[route().current('index') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="showViews" :href="route('index')" :class="[route().current('index') ? 'bg-[#4b6eaf]' : '']"  @click="setActiveFiles('index')"
                           class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>index.blade.php</span>
                     </Link>
-                    <Link v-show="showViews" :href="route('me')" :class="[route().current('me') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="showViews" :href="route('me')" :class="[route().current('me') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('me')"
                           class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>me.blade.php</span>
                     </Link>
-                    <Link v-show="showViews" :href="route('work')" :class="[route().current('work') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="showViews" :href="route('work')" :class="[route().current('work') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('work')"
                           class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>work.blade.php</span>
                     </Link>
-                    <Link v-show="showViews" :href="route('education')" :class="[route().current('education') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="showViews" :href="route('education')" :class="[route().current('education') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('education')"
                           class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>education.blade.php</span>
                     </Link>
-                    <Link v-show="showViews" :href="route('skill')" :class="[route().current('skill') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="showViews" :href="route('skill')" :class="[route().current('skill') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('skill')"
                           class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <Blade classes="h-4 w-4"/>
                         <span>skill.blade.php</span>
@@ -244,13 +231,14 @@ function message() {
                         <span>vendor</span>
                     </div>
                     <!--         .env           -->
-                    <Link :href="route('env')" :class="[route().current('env') ? 'bg-[#4b6eaf]' : '']"
+                    <Link :href="route('env')" :class="[route().current('env') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('env')"
                           class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <DotFile classes="h-4 w-4"/>
                         <span>.env</span>
                     </Link>
                     <!--         Fakes           -->
-                    <Link :href="route('env-example')" :class="[route().current('env-example') ? 'bg-[#4b6eaf]' : '']" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <Link :href="route('env-example')" :class="[route().current('env-example') ? 'bg-[#4b6eaf]' : '']"
+                          class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <DotFile classes="h-4 w-4"/>
                         <span>.env.example</span>
                     </Link>
@@ -301,20 +289,25 @@ function message() {
                 </div>
             </div>
             <div class="flex flex-col grow text-xs">
-                <div class="bg-[#3c3f41] border-b-[1px] border-black/30 h-7 text-xs flex items-center justify-between">
-                    <div class="w-max h-full bg-[#4e5254] flex justify-between items-center text-[#adb5b8] px-2 py-1 space-x-2">
-                        <component :is="icon" :classes="'h-4 w-4'"/>
-                        <span>{{ name }}</span>
-                        <div @click="message()" class="cursor-pointer">x</div>
+                <div class="bg-[#3c3f41] border-b-[1px] border-black/30 min-h-[1.75rem] text-xs flex items-center justify-between max-w-full">
+                    <div class="flex">
+                        <template v-for="file in activeFilesList">
+                            <!--                            -->
+                            <div class="w-max h-full flex justify-center items-center text-[#adb5b8] px-2 py-1 space-x-1" :class="[route().current(file.link) ? 'bg-[#4e5254] border-b border-blue-200':'border-b border-transparent' ]">
+                                <component :is="file.icon" :classes="'h-3 w-3'"/>
+                                <Link :href="route(file.link)">{{ file.name }}</Link>
+                                <div @click.self="removeFromActiveFilesList(file.link)" class="cursor-pointer">x</div>
+                            </div>
+                        </template>
                     </div>
-                    <div class="mr-4">
+                    <div class="mr-4 grow justify-end flex min-w-fit">
                         <LangaugeSelector/>
                     </div>
                 </div>
                 <div class="flex grow overflow-x-hidden md:overflow-y-auto bg-[#2b2b2b]">
                     <!-- Page Heading -->
                     <header
-                            class="bg-[#313335] pl-2 pr-4 pt-1 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-2 text-xs">
+                        class="bg-[#313335] pl-2 pr-4 pt-1 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-2 text-xs">
                         <template v-for="number in 150">
                             <div class="text-[#5f6364] leading-5">{{ number }}</div>
                         </template>
