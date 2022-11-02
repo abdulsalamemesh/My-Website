@@ -66,7 +66,13 @@ onMounted(() => {
             <div class="flex flex-wrap" :class="paddingLevel(2)">
                 <p class="text-[#dfc087]">&lt;li</p>
                 <p class="text-[#dfc087]">&gt;</p>
-                <p class="text-[#a9b1b3]">{{ __('In resources/views/skills.blade.php you can find out what I can do.') }}</p>
+                <p class="text-[#a9b1b3]">{{ __('In resources/views/skill.blade.php you can find out what I can do.') }}</p>
+                <p class="text-[#dfc087]">&lt;/li&gt;</p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-[#dfc087]">&lt;li</p>
+                <p class="text-[#dfc087]">&gt;</p>
+                <p class="text-[#a9b1b3]">{{ __('In resources/views/project.blade.php you can find out what I build.') }}</p>
                 <p class="text-[#dfc087]">&lt;/li&gt;</p>
             </div>
             <div class="flex flex-wrap" :class="paddingLevel(2)">
