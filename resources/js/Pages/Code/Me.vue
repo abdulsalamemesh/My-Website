@@ -1,42 +1,20 @@
 <script setup>
 import SimpleLayout from '@/Layouts/SimpleLayout.vue';
-import {ref, onMounted} from "vue";
-import {selectableLocale} from '../../store.js'
-
-let count = ref([])
-
+import {onMounted} from "vue";
+import {selectableLocale, syncScroll} from '../../store.js'
 onMounted(() => {
-    count.value = Array.from(Array(document.getElementById('count')?.childElementCount + 1).keys());
-    const elems = document.getElementsByClassName("scroll-js");
-
-    function foo() {
-        let top = this.scrollTop;
-
-        for (let i = 0; i < elems.length; i++) {
-            elems[i].scrollTop = top;
-        }
-    }
-
-    for (let i = 0; i < elems.length; i++) {
-        elems[i].addEventListener("scroll", foo);
-    }
+    syncScroll()
 })
 </script>
 
 <template>
     <SimpleLayout title="Abdulsalam Emesh">
-        <template #header>
-            <template v-for="(number, key) in count">
-                <div class="text-[#5f6364]" v-if="key !== 0">{{ number }}</div>
-            </template>
-        </template>
-
-        <div class="pl-1 pt-1 grow space-y-0.5 overflow-y-scroll custom-scrollbar scroll-js pb-2" id="count">
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
+        <div class="pl-1 py-1 grow leading-5 overflow-y-scroll custom-scrollbar scroll-js">
+            <div class="flex flex-nowrap md:flex-wrap">
                 <p class="text-[#dfc087]">&lt;x-layout</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(1)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;h1</p>
                 <p class="text-[#a9b1b3]">&nbsp;class</p>
                 <p class="text-[#a7bb7c]">="font-bold text-lg text-indigo-500 uppercase"</p>
@@ -44,7 +22,7 @@ onMounted(() => {
                 <p class="text-[#a9b1b3]">Abdulsalam Emesh</p>
                 <p class="text-[#dfc087]">&lt;/h1&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(1)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;h2</p>
                 <p class="text-[#a9b1b3]">&nbsp;class</p>
                 <p class="text-[#a7bb7c]">="font-bold text-base text-gray-700 uppercase"</p>
@@ -52,10 +30,10 @@ onMounted(() => {
                 <p class="text-[#a9b1b3]">{{ __('Software Developer') }}</p>
                 <p class="text-[#dfc087]">&lt;/h2&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(1)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;p&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(2)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(2)">
                 <p class="text-[#a9b1b3]" v-if="selectableLocale === 'en'">
                     I have been on this earth for about {{ new Date().getFullYear() - 1992 }} years and started my journey in Aleppo, Syria.
                 </p>
@@ -64,7 +42,7 @@ onMounted(() => {
                 </p>
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(2)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(2)">
                 <p class="text-[#a9b1b3]" v-if="selectableLocale === 'en'">
                     I have been living in my second home Xanten, Germany for {{ new Date().getFullYear() - 2016  }} years now.
                 </p>
@@ -73,7 +51,7 @@ onMounted(() => {
                 </p>
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(2)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(2)">
                 <p class="text-[#a9b1b3]" v-if="selectableLocale === 'en'">
                     I am one of the lucky ones who turned their hobby and passion into a profession.
                 </p>
@@ -82,7 +60,7 @@ onMounted(() => {
                 </p>
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(2)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(2)">
                 <p class="text-[#a9b1b3]" v-if="selectableLocale === 'en'">
                     I love structure and order and I also stand for quality.
                 </p>
@@ -91,7 +69,7 @@ onMounted(() => {
                 </p>
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(2)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(2)">
                 <p class="text-[#a9b1b3]" v-if="selectableLocale === 'en'">
                     I also like to work in a team, where I learn a lot and quickly.
                 </p>
@@ -100,7 +78,7 @@ onMounted(() => {
                 </p>
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(2)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(2)">
                 <p class="text-[#a9b1b3]" v-if="selectableLocale === 'en'">
                     As the german saying goes: "Alone you are strong, together unbeatable".
                 </p>
@@ -110,10 +88,10 @@ onMounted(() => {
                 <p class="text-[#dfc087]">&lt;/br&gt;</p>
             </div>
 
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap" :class="paddingLevel(1)">
+            <div class="flex flex-nowrap md:flex-wrap" :class="paddingLevel(1)">
                 <p class="text-[#dfc087]">&lt;/p&gt;</p>
             </div>
-            <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
+            <div class="flex flex-nowrap md:flex-wrap">
                 <p class="text-[#dfc087]">&lt;/x-layout</p>
                 <p class="text-[#dfc087]">&gt;</p>
             </div>

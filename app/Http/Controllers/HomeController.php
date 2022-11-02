@@ -69,7 +69,7 @@ class HomeController extends Controller
                 [
                     'title'     => __('Training as IT Specialist For Application Development / Junior Software Developer'),
                     'workplace' => 'Meier AG / Wesel',
-                    'date'      => __('from 2018 to 31.08.2021'),
+                    'date'      => __('from 2018 to 2021-08-31'),
                     'text'      => __('During my apprenticeship and employment, I implemented many one-pager websites for various clients from different industries. I also worked with the team on various custom online shops and platforms using Laravel and Vue. I was responsible for planning the database structure, implementation, web user interfaces of various API interfaces (Paypal - ImmoScout24 - Coinbase - etc.).'),
                 ],
                 [
@@ -82,7 +82,7 @@ class HomeController extends Controller
                     'title'     => __('Assistant (salesman)'),
                     'workplace' => 'Café Extrablatt, Wesel',
                     'date'      => __('From 2017 to 2018'),
-                    'text'      => __('While I was taking part in various German courses, I worked as a temporary as a temp at Extrablatt. My duties included the following activities: Responsible for the registration of the acceptance and recording of the goods in the warehouse. Safety measures for the equipment in the facility. Friendly service to customers. '),
+                    'text'      => __('While I was taking part in various German courses, I worked as a temp at Extrablatt. My duties included the following activities: Responsible for the registration of the acceptance and recording of the goods in the warehouse. Safety measures for the equipment in the facility. Friendly service to customers. '),
                 ],
             ],
             'skills'      => [

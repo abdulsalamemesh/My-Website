@@ -13,7 +13,7 @@ onMounted(() => {
             <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#c96f1b]">APP_NAME</p>
                 <p class="text-[#a9b1b3]">="</p>
-                <p class="text-[#576950]">Abdulsalam Emesh</p>
+                <p class="text-[#576950]">laravel</p>
                 <p class="text-[#a9b1b3]">"</p>
             </div>
             <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
@@ -24,7 +24,6 @@ onMounted(() => {
             <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#c96f1b]">APP_KEY</p>
                 <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">base64:r3lwHbEK2Rmp89B9QNQHoEeFvE7WNXhhUyeprZ/86uA=</p>
             </div>
             <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#c96f1b]">APP_DEBUG</p>
@@ -71,7 +70,7 @@ onMounted(() => {
             <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#c96f1b]">DB_DATABASE</p>
                 <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">me</p>
+                <p class="text-[#576950]">laravel</p>
             </div>
             <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#c96f1b]">DB_USERNAME</p>

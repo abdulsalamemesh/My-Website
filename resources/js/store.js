@@ -15,6 +15,22 @@ export function toggleDark() {
 }
 
 
+export function syncScroll(){
+    const elems = document.getElementsByClassName("scroll-js");
+
+    function foo() {
+        let top = this.scrollTop;
+
+        for (let i = 0; i < elems.length; i++) {
+            elems[i].scrollTop = top;
+        }
+    }
+
+    for (let i = 0; i < elems.length; i++) {
+        elems[i].addEventListener("scroll", foo);
+    }
+}
+
 
 
 

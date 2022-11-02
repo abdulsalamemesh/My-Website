@@ -19,84 +19,45 @@ class WorkExperienceController extends Controller
         return Inertia::render('Code/Work', [
             'experiences' => [
                 [
-                    'title'     => __('Software Developer'),
+                    'title'     => __('Mid-Level Software Developer'),
                     'workplace' => 'LASE PeCo Systemtechnik GmbH',
                     'date'      => __('From 2021-09-01 until today'),
-                    'text'      => [],
-                    'pointBullets' => []
+                    'text'      => __('My area of responsibility is: Test driven development (TDD), planing, implementation and maintenance of two (Laravel und Vue) cloud based platforms as well as connecting and implementing the API of various types of new and old laser-counting devices to the clouds. Configuration and installation of a local server on a local PC for a laser scanner device and connecting it to the Internet. Aggregating and saving the data of the laser scanner devices and generating statistics from the data and displaying it in various implementations in the clouds (Excel, diagrams, pivot tables)')
+                ],
+                [
+                    'title'     => __('Minijob Software Developer'),
+                    'workplace' => __('Meier AG / Wesel'),
+                    'date'      => __('From 2021-09-01 until today'),
+                    'text'      => __('In addition to my main job at LASE PeCo, I support and consult my old colleague at Meier AG with the planning and organisation of several projects.'),
                 ],
                 [
                     'title'     => __('Freelancer'),
                     'workplace' => null,
                     'date'      => __('From 2019 until today'),
-                    'text'      => [
-                        __('In addition to my education, I have been freelancing in the field'),
-                        __('of website development and online hosting,'),
-                        __('for a couple of restaurants in Wesel.'),
-                        __('I also created a program for ordering and storage, with the employees.'),
-                    ],
-                    'pointBullets' => []
+                    'text'      => __('In addition to my education, I have been freelancing in the field of website development and online hosting, for a couple of restaurants and small start-up companies in Wesel. I also created a program for ordering and storage, with the employees.'),
+                ],
+                [
+                    'title'     => __('Training as IT Specialist For Application Development / Junior Software Developer'),
+                    'workplace' => __('Meier AG / Wesel'),
+                    'date'      => __('from 2018 to 2021-08-31'),
+                    'text'      => __('During my apprenticeship and employment, I implemented many one-pager websites for various clients from different industries. I also worked with the team on various custom online shops and platforms using Laravel and Vue. I was responsible for planning the database structure, implementation, web user interfaces of various API interfaces (Paypal - ImmoScout24 - Coinbase - etc.).'),
                 ],
                 [
                     'title'     => __('Assistant (salesman)'),
                     'workplace' => 'Kochlöffel, Wesel',
                     'date'      => __('From 2018 to 2019'),
-                    'text'      => [
-                        __('In the first year of my apprenticeship as an IT specialist'),
-                        __('for development, I worked as a temp at the Kochlöffel worked'),
-                    ],
-                    'pointBullets' =>[
-                        __('Responsible for the registration of the acceptance and recording of the goods in the warehouse.'),
-                        __('Purchase orders for goods.'),
-                        __('Cashier and friendly customer service'),
-                    ]
+                    'text'      => __('In my first year of apprenticeship as an IT specialist for application development, I worked as a temp at Kochlöffel. And I was responsible for entering the data and admission of the goods in the warehouse. Also ordering goods and help on the cashier and be friendly service of the customers.'),
+
                 ],
                 [
                     'title'     => __('Assistant (salesman)'),
                     'workplace' => 'Café Extrablatt, Wesel',
                     'date'      => __('From 2017 to 2018'),
-                    'text'      => [
-                        __('While I was taking part in various German courses,'),
-                        __('I worked as a temporary as a temp at Extrablatt.'),
-                        __('My duties included the following activities:'),
-                    ],
-                    'pointBullets' =>[
-                        __('Responsible for the registration of the acceptance and recording of the goods in the warehouse.'),
-                        __('Safety measures for the equipment in the facility.'),
-                        __('Friendly service to customers.'),
-                    ]
-                ],
-                [
-                    'title'     => __('Project Management'),
-                    'workplace' => 'Datasoft, Kairo, Ägypten',
-                    'date'      => __('From 2013 to 2015'),
-                    'text'      => [
-                        __('In the last two years of my business studies I was employed by'),
-                        __('Datasoft as a part-time project manager.'),
-                        __('Thereby my my scope of duties expanded to the following:'),
-                    ],
-                    'pointBullets' =>[
-                        __('Leading a team consisting of three people.'),
-                        __('Planning and organizing projects.'),
-                        __('Supervision during project implementation.'),
-                    ]
-                ],
-                [
-                    'title'     => __('Assistant'),
-                    'workplace' => 'Syriansoft, Aleppo',
-                    'date'      => __('From 2013 to 2015'), //
-                    'text'      => [
-                        __('During the first two years of my business studies,'), //
-                        __('I had a part-time part-time job as a temp at Syriansoft.'), //
-                        __('My area of responsibility included the following tasks:'), //
-                    ],
-                    'pointBullets' =>[
-                        __('Establish contact with the various customers.'), //
-                        __('Responsible for gathering necessary information for projects.'), //
-                        __('Analysis of the collected information.'), //
-                    ]
+                    'text'      => __('While I was taking part in various German courses, I worked as a temp at Extrablatt. My duties included the following activities: Responsible for the registration of the acceptance and recording of the goods in the warehouse. Safety measures for the equipment in the facility. Friendly service to customers.'),
+
                 ],
             ]
         ]);
     }
 }
+

@@ -1,38 +1,16 @@
 <script setup>
 import SimpleLayout from '@/Layouts/SimpleLayout.vue';
-import {ref, onMounted} from "vue";
-
-let count = ref(  [])
+import {onMounted} from "vue";
+import {syncScroll} from "../../store";
 
 onMounted(() => {
-    count.value = Array.from(Array(document.getElementById('count')?.childElementCount + 1).keys());
-    const elems = document.getElementsByClassName("scroll-js");
-
-    function foo() {
-        let top = this.scrollTop;
-
-        for (let i = 0; i < elems.length; i++) {
-            elems[i].scrollTop = top;
-        }
-    }
-
-    for (let i = 0; i < elems.length; i++) {
-        elems[i].addEventListener("scroll", foo);
-    }
-
+    syncScroll()
 })
 </script>
 
 <template>
     <SimpleLayout title="Abdulsalam Emesh">
-        <template #header>
-                <template  v-for="(number, key) in count">
-                    <div class="text-[#5f6364]" v-if="key !== 0">{{ number }}</div>
-                </template>
-        </template>
-
-        <div class="pl-1 pt-1 grow space-y-0.5 overflow-y-scroll custom-scrollbar scroll-js pb-2" id="count">
-
+        <div class="pl-1 py-1 grow leading-5 overflow-y-scroll custom-scrollbar scroll-js" id="count">
             <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
                 <p class="text-[#c96f1b]">&lt;?php</p>
             </div>

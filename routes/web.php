@@ -21,6 +21,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
 Route::post('contact-form', [HomeController::class, 'contactForm'])->name('contact');
 Route::get('loading', fn() => Inertia::render('Code/Loading'))->name('loading');
 Route::get('index', fn() => Inertia::render('Code/Index'))->name('index');
@@ -32,6 +33,10 @@ Route::get('other-information', OtherInformationController::class)->name('other-
 Route::get('web', fn() => Inertia::render('Code/Web'))->name('web');
 Route::get('layout', fn() => Inertia::render('Code/Layout'))->name('layout');
 Route::get('env', fn() => Inertia::render('Code/Env'))->name('env');
+Route::get('env-example', fn() => Inertia::render('Code/EnvExample'))->name('env-example');
+
+
+
 Route::get('language/{language}', function ($language) {
     Session()->put('locale', $language);
     return redirect()->back();

@@ -80,6 +80,9 @@ const name = computed(() => {
         case "env":
             icon.value = DotFile
             return '.env'
+        case "env-example":
+            icon.value = DotFile
+            return '.env.example'
     }
 })
 
@@ -91,7 +94,7 @@ function message() {
 <template>
     <div>
         <Head title="Abdulsalam Emesh"/>
-        <div class="md:h-screen w-screen bg-[#2b2b2b] font-custom text-sm flex flex-col md:flex-row overflow-hidden">
+        <div class="md:h-screen md:w-screen bg-[#2b2b2b] font-custom text-sm flex flex-col md:flex-row overflow-hidden">
             <div class="bg-[#3c3f41] min-w-[250px] border-r-[1px] border-black/30 text-xs flex flex-col">
                 <div class="h-7 flex items-center border-b-[1px] border-black/30 px-2">
                     <p class="text-[#adb5b8]">Project</p>
@@ -237,10 +240,10 @@ function message() {
                         <span>.env</span>
                     </Link>
                     <!--         Fakes           -->
-                    <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <Link :href="route('env-example')" :class="[route().current('env-example') ? 'bg-[#4b6eaf]' : '']" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <DotFile classes="h-4 w-4"/>
                         <span>.env.example</span>
-                    </div>
+                    </Link>
                     <div @click="message()" class="cursor-pointer pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <DotFile classes="h-4 w-4"/>
                         <span>.gitignore</span>
@@ -300,9 +303,11 @@ function message() {
                 </div>
                 <div class="flex grow md:overflow-x-hidden md:overflow-y-auto bg-[#2b2b2b]">
                     <!-- Page Heading -->
-                    <header v-if="$slots.header"
-                            class="bg-[#313335] pl-2 pr-4 pt-1 space-y-0.5 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-2 text-xs">
-                        <slot name="header"/>
+                    <header
+                            class="bg-[#313335] pl-2 pr-4 pt-1 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-2 text-xs">
+                        <template v-for="number in 150">
+                            <div class="text-[#5f6364] leading-5">{{ number }}</div>
+                        </template>
                     </header>
 
                     <!-- Page Content -->
