@@ -16,7 +16,7 @@ import ChevronRight from '@/Icons/ChevronRight.vue';
 import ChevronDown from '@/Icons/ChevronDown.vue';
 
 import LangaugeSelector from '@/Layouts/LangaugeSelector.vue'
-import {setActiveFiles, activeFilesList, removeFromActiveFilesList, toggleFolder, openedFolders} from "../store";
+import {setActiveFiles, activeFilesList, removeFromActiveFilesList, toggleFolder, openedFolders, rowsCount} from "../store";
 
 
 function message() {
@@ -242,17 +242,30 @@ function message() {
                         <Folder classes="h-4 w-4"/>
                         <span>routs</span>
                     </div>
-                    <Link v-show="openedFolders.includes('routes')" :href="route('web')" :class="[route().current('web') ? 'bg-[#4b6eaf]' : '']"
-                          @click="setActiveFiles('web')"
+
+                    <Link v-show="openedFolders.includes('routes')" :href="route('api')" :class="[route().current('api') ? 'bg-[#4b6eaf]' : '']"
+                          @click="setActiveFiles('api')"
                           class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <PHP/>
-                        <span>web.php</span>
+                        <span>api.php</span>
+                    </Link>
+                    <Link v-show="openedFolders.includes('routes')" :href="route('channels')" :class="[route().current('channels') ? 'bg-[#4b6eaf]' : '']"
+                          @click="setActiveFiles('channels')"
+                          class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                        <PHP/>
+                        <span>channels.php</span>
                     </Link>
                     <Link v-show="openedFolders.includes('routes')" :href="route('console-route')" :class="[route().current('console-route') ? 'bg-[#4b6eaf]' : '']"
                           @click="setActiveFiles('console-route')"
                           class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <PHP/>
                         <span>console.php</span>
+                    </Link>
+                    <Link v-show="openedFolders.includes('routes')" :href="route('web')" :class="[route().current('web') ? 'bg-[#4b6eaf]' : '']"
+                          @click="setActiveFiles('web')"
+                          class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                        <PHP/>
+                        <span>web.php</span>
                     </Link>
                     <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
@@ -348,7 +361,7 @@ function message() {
                     <!-- Page Heading -->
                     <header
                         class="bg-[#313335] pl-2 pr-4 pt-1 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-2 text-xs">
-                        <template v-for="number in 150">
+                        <template v-for="number in rowsCount">
                             <div class="text-[#5f6364] leading-5">{{ number }}</div>
                         </template>
                     </header>

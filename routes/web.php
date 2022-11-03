@@ -46,6 +46,8 @@ Route::get('gitignore-root', fn() => Inertia::render('Code/Root/GitignoreRoot'))
 //ROUTS
 Route::get('web', fn() => Inertia::render('Code/Routes/Web'))->name('web');
 Route::get('console-route', fn() => Inertia::render('Code/Routes/ConsoleRoute'))->name('console-route');
+Route::get('channels', fn() => Inertia::render('Code/Routes/Channels'))->name('channels');
+Route::get('api', fn() => Inertia::render('Code/Routes/API'))->name('api');
 
 
 

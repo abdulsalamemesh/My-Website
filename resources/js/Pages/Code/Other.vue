@@ -1,13 +1,17 @@
 <script setup>
 import SimpleLayout from '@/Layouts/SimpleLayout.vue';
-import {onMounted} from "vue";
-import {syncScroll} from "../../store";
+import {onMounted,onBeforeUnmount} from "vue";
+import {syncScroll,setRowsCountFromWindowListener,removeRowsCountFromWindowListener} from "../../store";
 
 defineProps({
     information: Object
 })
 onMounted(() => {
     syncScroll()
+    setRowsCountFromWindowListener(80, 50)
+})
+onBeforeUnmount(() => {
+    removeRowsCountFromWindowListener()
 })
 </script>
 

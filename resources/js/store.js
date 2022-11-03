@@ -20,6 +20,7 @@ import {value} from "lodash/seq";
 
 export const isDark = useDark()
 export const currentLocation = ref('home')
+export const rowsCount = ref(150)
 export const showNav = ref(false)
 export const selectableLocale = computed(() => {
     return usePage().props.value.locale;
@@ -150,6 +151,16 @@ const filesList = shallowRef([
         'link': 'console-route',
         'icon': PHP
     },
+    {
+        'name': 'channels.php',
+        'link': 'channels',
+        'icon': PHP
+    },
+    {
+        'name': 'api.php',
+        'link': 'api',
+        'icon': PHP
+    },
 ])
 
 export function toggleFolder(folderName, open) {
@@ -203,3 +214,20 @@ export const foldersStructure = ref([
 
 export const openedFolders = ref(['resources', 'views'])
 
+export function setRowsCountFromWindowListener(mobile, desktop){
+    if (window.innerWidth < 950) {
+        rowsCount.value = mobile
+    } else {
+        rowsCount.value = desktop
+    }
+    window.addEventListener('resize', function () {
+        if (window.innerWidth < 950) {
+            rowsCount.value = mobile
+        } else {
+            rowsCount.value = desktop
+        }
+    })
+}
+export function removeRowsCountFromWindowListener(){
+    window.removeEventListener('resize', () => rowsCount.value = 150);
+}

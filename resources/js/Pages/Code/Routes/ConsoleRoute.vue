@@ -1,10 +1,14 @@
 <script setup>
 import SimpleLayout from '@/Layouts/SimpleLayout.vue';
-import {onMounted} from "vue";
-import {syncScroll} from "../../../store";
+import {onBeforeUnmount, onMounted} from "vue";
+import {syncScroll, setRowsCountFromWindowListener, removeRowsCountFromWindowListener} from "../../../store";
 
 onMounted(() => {
     syncScroll()
+    setRowsCountFromWindowListener(30, 20)
+})
+onBeforeUnmount(() => {
+    removeRowsCountFromWindowListener()
 })
 </script>
 
@@ -16,13 +20,13 @@ onMounted(() => {
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
-                <p class="text-[#c96f1b]">&lt;use&nbsp;</p>
+                <p class="text-[#c96f1b]">use&nbsp;</p>
                 <p class="text-[#a9b1b3]">Illuminate\Foundation\Inspiring</p>
                 <p class="text-[#c96f1b]">;</p>
                 <div>&nbsp;</div>
             </div>
             <div class="flex flex-nowrap whitespace-nowrap md:flex-wrap">
-                <p class="text-[#c96f1b]">&lt;use&nbsp;</p>
+                <p class="text-[#c96f1b]">use&nbsp;</p>
                 <p class="text-[#a9b1b3]">Illuminate\Support\Facades\Artisan</p>
                 <p class="text-[#c96f1b]">;</p>
                 <div>&nbsp;</div>
