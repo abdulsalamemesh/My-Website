@@ -299,10 +299,11 @@ function message() {
                         <DotFile classes="h-4 w-4"/>
                         <span>.gitignore</span>
                     </Link>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <Link :href="route('artisan')" :class="[route().current('artisan') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('artisan')"
+                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <PHP classes="h-4 w-4"/>
                         <span>artisan</span>
-                    </div>
+                    </Link>
                     <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <JSONFile classes="h-4 w-4"/>
                         <span>composer.json</span>
