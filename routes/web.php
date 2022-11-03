@@ -43,6 +43,8 @@ Route::get('env-example', fn() => Inertia::render('Code/Root/EnvExample'))->name
 Route::get('empty', fn() => Inertia::render('Code/Root/Empty'))->name('empty');
 Route::get('gitignore-root', fn() => Inertia::render('Code/Root/GitignoreRoot'))->name('gitignore-root');
 Route::get('artisan', fn() => Inertia::render('Code/Root/Artisan'))->name('artisan');
+Route::get('composer', fn() => Inertia::render('Code/Root/Composer'))->name('composer');
+Route::get('package', fn() => Inertia::render('Code/Root/Package'))->name('package');
 
 //ROUTS
 Route::get('web', fn() => Inertia::render('Code/Routes/Web'))->name('web');

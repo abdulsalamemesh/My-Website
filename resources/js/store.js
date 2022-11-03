@@ -166,6 +166,16 @@ const filesList = shallowRef([
         'link': 'artisan',
         'icon': PHP
     },
+    {
+        'name': 'composer.json',
+        'link': 'composer',
+        'icon': JSONFile
+    },
+    {
+        'name': 'package.json',
+        'link': 'package',
+        'icon': JSONFile
+    },
 ])
 
 export function toggleFolder(folderName, open) {

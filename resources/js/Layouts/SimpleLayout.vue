@@ -304,18 +304,20 @@ function message() {
                         <PHP classes="h-4 w-4"/>
                         <span>artisan</span>
                     </Link>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <JSONFile classes="h-4 w-4"/>
+                    <Link :href="route('composer')" :class="[route().current('composer') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('composer')"
+                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <JSONFile classes="h-4 w-4"/>
                         <span>composer.json</span>
-                    </div>
+                    </Link>
                     <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <JSONFile classes="h-4 w-4"/>
                         <span>composer.lock</span>
                     </div>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <Link :href="route('package')" :class="[route().current('package') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('package')"
+                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <JSONFile classes="h-4 w-4"/>
                         <span>package.json</span>
-                    </div>
+                    </Link>
                     <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
                         <JSONFile classes="h-4 w-4"/>
                         <span>package-lock.json</span>
