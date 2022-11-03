@@ -1,5 +1,5 @@
 import {useDark, useToggle} from "@vueuse/core/index";
-import {computed, ref} from "vue";
+import {computed, ref, shallowRef} from "vue";
 import {usePage} from "@inertiajs/inertia-vue3";
 
 
@@ -15,6 +15,8 @@ import JSONFile from '@/Icons/JSONFile.vue';
 import TestUnitFile from '@/Icons/TestUnitFile.vue';
 import JSFile from '@/Icons/JSFile.vue';
 import Markdown from '@/Icons/Markdown.vue';
+import {Inertia} from "@inertiajs/inertia";
+import {value} from "lodash/seq";
 
 export const isDark = useDark()
 export const currentLocation = ref('home')
@@ -45,63 +47,52 @@ export function syncScroll() {
     }
 }
 
-export const activeFilesList = ref([
+export const activeFilesList = shallowRef([
     {
         'name': 'index.blade.php',
         'link': 'index',
         'icon': Blade
     },
-    {
-        'name': 'me.blade.php',
-        'link': 'me',
-        'icon': Blade
-    },
-    {
-        'name': 'work.blade.php',
-        'link': 'work',
-        'icon': Blade
-    },
-    {
-        'name': 'education.blade.php',
-        'link': 'education',
-        'icon': Blade
-    },
 ])
 
 export function setActiveFiles(link) {
-    let selectedFile = filesList.filter(file => file.link === link)
+    let selectedFile = filesList.value.filter(file => file.link === link)
     if (activeFilesList.value.filter(file => file.link === selectedFile[0].link).length === 0) {
         activeFilesList.value.push(selectedFile[0])
     }
-    if (activeFilesList.value.length > 5){
+    if (activeFilesList.value.length > 5) {
         activeFilesList.value.shift()
     }
 }
 
 
 export function removeFromActiveFilesList(link) {
-    activeFilesList.value =  activeFilesList.value.filter(file => file.link !== link)
+    activeFilesList.value = activeFilesList.value.filter(file => file.link !== link)
+
+    if (activeFilesList.value.length === 0 && route().current(link) !== 'empty') {
+        Inertia.get('empty')
+        return
+    }
+    if (route().current(link)) {
+        Inertia.get(activeFilesList.value[0].link)
+    }
+
 }
 
-const filesList = [
+const filesList = shallowRef([
     {
         'name': 'index.blade.php',
         'link': 'index',
         'icon': Blade
     },
     {
-        'name': '.env',
-        'link': 'env',
-        'icon': DotFile
+        'name': 'me.blade.php',
+        'link': 'me',
+        'icon': Blade
     },
     {
         'name': 'work.blade.php',
         'link': 'work',
-        'icon': Blade
-    },
-    {
-        'name': 'me.blade.php',
-        'link': 'me',
         'icon': Blade
     },
     {
@@ -114,8 +105,101 @@ const filesList = [
         'link': 'skill',
         'icon': Blade
     },
+    {
+        'name': 'other-information.blade.php',
+        'link': 'other-information',
+        'icon': Blade
+    },
+    {
+        'name': 'project.blade.php',
+        'link': 'project',
+        'icon': Blade
+    },
+    {
+        'name': 'layout.blade.php',
+        'link': 'layout',
+        'icon': Blade
+    },
+    {
+        'name': 'web.php',
+        'link': 'web',
+        'icon': PHP
+    },
+    {
+        'name': '.env',
+        'link': 'env',
+        'icon': DotFile
+    },
+    {
+        'name': '.env.example',
+        'link': 'env-example',
+        'icon': DotFile
+    },
+    {
+        'name': '.gitignore',
+        'link': 'gitignore-root',
+        'icon': DotFile
+    },
+    {
+        'name': 'web.php',
+        'link': 'web',
+        'icon': PHP
+    },
+    {
+        'name': 'console.php',
+        'link': 'console-route',
+        'icon': PHP
+    },
+])
 
-]
+export function toggleFolder(folderName, open) {
+    let clickedFolder = foldersStructure.value.find(folder => folder.name === folderName)
 
+    if (open) {
+        openedFolders.value.push(clickedFolder.name)
+    } else {
 
+        if (clickedFolder.children) {
+            clickedFolder.children.forEach(function (child) {
+                const childIndex = openedFolders.value.indexOf(child)
+                if (childIndex > -1) {
+                    openedFolders.value.splice(childIndex,1)
+                }
+            })
+        }
+        let clickedFolderIndex = openedFolders.value.indexOf(clickedFolder.name)
+        if (clickedFolderIndex > -1) {
+            openedFolders.value.splice(clickedFolderIndex,1)
+        }
+    }
+}
+
+export const foldersStructure = ref([
+    {
+        'name': 'app',
+        'topLevel': true,
+        'parent': null,
+        'children': null
+    },
+    {
+        'name': 'resources',
+        'topLevel': true,
+        'parent': null,
+        'children': ['css', 'js', 'markdown', 'views']
+    },
+    {
+        'name': 'routes',
+        'topLevel': true,
+        'parent': null,
+        'children': null
+    },
+    {
+        'name': 'views',
+        'topLevel': false,
+        'parent': 'resources',
+        'children': null
+    },
+])
+
+export const openedFolders = ref(['resources', 'views'])
 

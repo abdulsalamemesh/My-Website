@@ -1,0 +1,11 @@
+<script setup>
+defineProps({classes:String});
+</script>
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" :class="classes">
+        <path d="M8.00004 11.91L2.29004 6.20998L3.71004 4.78998L8.00004 9.08998L12.29 4.78998L13.71 6.20998L8.00004 11.91Z"
+        />
+    </svg>
+
+</template>
+

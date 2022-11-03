@@ -1,7 +1,7 @@
 <script setup>
 import SimpleLayout from '@/Layouts/SimpleLayout.vue';
 import {onMounted} from "vue";
-import {syncScroll} from "../../store";
+import {syncScroll} from "../../../store";
 
 onMounted(() => {
     syncScroll()
