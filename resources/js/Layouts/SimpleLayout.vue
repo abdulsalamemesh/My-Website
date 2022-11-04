@@ -327,10 +327,11 @@ function message() {
                         <TestUnitFile classes="h-4 w-4"/>
                         <span>phpunit.xml</span>
                     </Link>
-                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                    <Link :href="route('postcss')" :class="[route().current('postcss') ? 'bg-default-blue' : '']" @click="setActiveFiles('postcss')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <JSFile classes="h-4 w-4"/>
                         <span>postcss.config.js</span>
-                    </div>
+                    </Link>
                     <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <Markdown classes="h-4 w-4"/>
                         <span>README.md</span>

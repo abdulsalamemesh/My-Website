@@ -181,6 +181,11 @@ const filesList = shallowRef([
         'link': 'phpunit',
         'icon': TestUnitFile
     },
+    {
+        'name': 'postcss.config.js',
+        'link': 'postcss',
+        'icon': JSFile
+    },
 ])
 
 export function toggleFolder(folderName, open) {

@@ -46,6 +46,7 @@ Route::get('artisan', fn() => Inertia::render('Code/Root/Artisan'))->name('artis
 Route::get('composer', fn() => Inertia::render('Code/Root/Composer'))->name('composer');
 Route::get('package', fn() => Inertia::render('Code/Root/Package'))->name('package');
 Route::get('phpunit', fn() => Inertia::render('Code/Root/PHPUnit'))->name('phpunit');
+Route::get('postcss', fn() => Inertia::render('Code/Root/Postcss'))->name('postcss');
 
 //ROUTS
 Route::get('web', fn() => Inertia::render('Code/Routes/Web'))->name('web');
