@@ -50,9 +50,9 @@ export function syncScroll() {
 
 export const activeFilesList = shallowRef([
     {
-        'name': 'index.blade.php',
-        'link': 'index',
-        'icon': Blade
+        'name': 'README.md',
+        'link': 'readme',
+        'icon': Markdown
     },
 ])
 
@@ -81,11 +81,6 @@ export function removeFromActiveFilesList(link) {
 }
 
 const filesList = shallowRef([
-    {
-        'name': 'index.blade.php',
-        'link': 'index',
-        'icon': Blade
-    },
     {
         'name': 'me.blade.php',
         'link': 'me',
@@ -185,6 +180,11 @@ const filesList = shallowRef([
         'name': 'postcss.config.js',
         'link': 'postcss',
         'icon': JSFile
+    },
+    {
+        'name': 'README.md',
+        'link': 'readme',
+        'icon': Markdown
     },
 ])
 

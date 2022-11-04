@@ -27,13 +27,14 @@ class OtherInformationController extends Controller
                     ],
                     'achievements' => [
                         [
-                            'title'    => __('Graduation project'),
-                            'subtitle' => __('Trainee management system'),
-                            'text'     => [
-                                __('Trainees in different training areas can use the system'),
-                                __('to keep and manage their training-report portfolio.'),
-                                __('The report books can be checked and signed by trainers.'),
-                            ],
+                            'title'    => __('Training as IT Specialist For Application Development'),
+                            'subtitle' => 2021,
+                            'text'     => [],
+                        ],
+                        [
+                            'title'    => __('German courses from A1 to C1'),
+                            'subtitle' => 2017 - 2018,
+                            'text'     => [],
                         ],
                         [
                             'title'    => __('Driving license'),

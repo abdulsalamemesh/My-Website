@@ -28,7 +28,6 @@ Route::post('contact-form', [HomeController::class, 'contactForm'])->name('conta
 Route::get('loading', fn() => Inertia::render('Code/Loading'))->name('loading');
 
 // BLADE
-Route::get('index', fn() => Inertia::render('Code/Index'))->name('index');
 Route::get('me', fn() => Inertia::render('Code/Me'))->name('me');
 Route::get('work', WorkExperienceController::class)->name('work');
 Route::get('education', EducationController::class)->name('education');
@@ -38,6 +37,7 @@ Route::get('layout', fn() => Inertia::render('Code/Layout'))->name('layout');
 Route::get('project', ProjectController::class)->name('project');
 
 // ROOT
+Route::get('readme', fn() => Inertia::render('Code/Root/Readme'))->name('readme');
 Route::get('env', fn() => Inertia::render('Code/Root/Env'))->name('env');
 Route::get('env-example', fn() => Inertia::render('Code/Root/EnvExample'))->name('env-example');
 Route::get('empty', fn() => Inertia::render('Code/Root/Empty'))->name('empty');

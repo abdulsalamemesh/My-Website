@@ -20,7 +20,7 @@ import {setActiveFiles, activeFilesList, removeFromActiveFilesList, toggleFolder
 
 
 function message() {
-    alert('I know you are programmer but this is still a website and not and IDE 😉')
+    alert('I know you want to open the file but this is still a website and not and IDE 😉')
 }
 </script>
 
@@ -188,11 +188,6 @@ function message() {
                         <Folder classes="h-4 w-4"/>
                         <span>views</span>
                     </div>
-                    <Link v-show="openedFolders.includes('views')" :href="route('index')" :class="[route().current('index') ? 'bg-default-blue' : '']" @click="setActiveFiles('index')"
-                          class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
-                        <Blade classes="h-4 w-4"/>
-                        <span>index.blade.php</span>
-                    </Link>
                     <Link v-show="openedFolders.includes('views')" :href="route('me')" :class="[route().current('me') ? 'bg-default-blue' : '']" @click="setActiveFiles('me')"
                           class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Blade classes="h-4 w-4"/>
@@ -332,10 +327,11 @@ function message() {
                         <JSFile classes="h-4 w-4"/>
                         <span>postcss.config.js</span>
                     </Link>
-                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                    <Link :href="route('readme')" :class="[route().current('readme') ? 'bg-default-blue' : '']" @click="setActiveFiles('readme')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Markdown classes="h-4 w-4"/>
                         <span>README.md</span>
-                    </div>
+                    </Link>
                     <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <JSFile classes="h-4 w-4"/>
                         <span>tailwind.config.js</span>
@@ -348,12 +344,12 @@ function message() {
             </div>
             <div class="flex flex-col grow text-xs">
                 <div class="bg-menu-bg border-b-[1px] border-black/30 min-h-[1.75rem] text-xs flex items-center justify-between max-w-full">
-                    <div class="flex">
+                    <div class="flex h-full">
                         <template v-for="file in activeFilesList">
-                            <div class="w-max h-full flex justify-center items-center text-menu-font p-1"
+                            <div class="w-max h-full flex justify-center items-center text-menu-font px-1 space-x-1"
                                  :class="[route().current(file.link) ? 'bg-[#4e5254] border-b-2 border-blue-400':'border-b-2 border-transparent' ]">
-                                <component :is="file.icon" :classes="'h-3 w-3 mr-0.5'"/>
-                                <Link :href="route(file.link)" class="mr-1 text-[0.6rem] tracking-tight">{{ file.name }}</Link>
+                                <component :is="file.icon" :classes="'h-3.5 w-3.5'"/>
+                                <Link :href="route(file.link)" class="text-[0.65rem] tracking-tight">{{ file.name }}</Link>
                                 <div @click.self="removeFromActiveFilesList(file.link)" class="cursor-pointer text-gray-500">x</div>
                             </div>
                         </template>
