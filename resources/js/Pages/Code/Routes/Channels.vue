@@ -16,18 +16,18 @@ onBeforeUnmount(() => {
     <SimpleLayout title="Abdulsalam Emesh">
         <div class="pl-1 py-1 grow leading-5 overflow-y-scroll custom-scrollbar scroll-js" id="count">
             <div class="flex flex-wrap ">
-                <p class="text-[#c96f1b]">&lt;?php</p>
+                <p class="text-code-fire">&lt;?php</p>
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">use&nbsp;</p>
-                <p class="text-[#a9b1b3]">Illuminate\Support\Facades\Broadcast</p>
-                <p class="text-[#c96f1b]">;</p>
+                <p class="text-code-fire">use&nbsp;</p>
+                <p class="text-code-white">Illuminate\Support\Facades\Broadcast</p>
+                <p class="text-code-fire">;</p>
                 <div>&nbsp;</div>
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-wrap">
-                <p class="text-[#5f6364]">
+                <p class="text-muted-gray">
                     /* <br>
                     |-------------------------------------------------------------------------- <br>
                     | Broadcast Channels <br>
@@ -42,36 +42,36 @@ onBeforeUnmount(() => {
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-wrap">
-                <p class="text-[#a9b1b3]">Broadcast::</p>
-                <p class="text-[#c96f1b]">channel</p>
-                <p class="text-[#a9b1b3]">(</p>
-                <p class="text-[#576950]">'App.Models.User.{id}'</p>
-                <p class="text-[#c96f1b]">, function&nbsp;</p>
-                <p class="text-[#a9b1b3]">(</p>
-                <p class="text-[#8D7D97]">$user</p>
-                <p class="text-[#c96f1b]">,&nbsp;</p>
-                <p class="text-[#8D7D97]">$id</p>
-                <p class="text-[#a9b1b3]">) {</p>
+                <p class="text-code-white">Broadcast::</p>
+                <p class="text-code-fire">channel</p>
+                <p class="text-code-white">(</p>
+                <p class="text-code-green">'App.Models.User.{id}'</p>
+                <p class="text-code-fire">, function&nbsp;</p>
+                <p class="text-code-white">(</p>
+                <p class="text-code-purple">$user</p>
+                <p class="text-code-fire">,&nbsp;</p>
+                <p class="text-code-purple">$id</p>
+                <p class="text-code-white">) {</p>
                 <div>&nbsp;</div>
             </div>
             <div class="flex flex-wrap" :class="paddingLevel(1)">
-                <p class="text-[#c96f1b]">return&nbsp;</p>
-                <p class="text-[#a9b1b3]">(</p>
-                <p class="text-[#c96f1b]">int</p>
-                <p class="text-[#a9b1b3]">)&nbsp;</p>
-                <p class="text-[#8D7D97]">$user</p>
-                <p class="text-[#a9b1b3]">-></p>
-                <p class="text-[#8D7D97]">id</p>
-                <p class="text-[#a9b1b3]">&nbsp;===&nbsp;</p>
-                <p class="text-[#a9b1b3]">(</p>
-                <p class="text-[#c96f1b]">int</p>
-                <p class="text-[#a9b1b3]">)&nbsp;</p>
-                <p class="text-[#8D7D97]">id</p>
-                <p class="text-[#c96f1b]">;</p>
+                <p class="text-code-fire">return&nbsp;</p>
+                <p class="text-code-white">(</p>
+                <p class="text-code-fire">int</p>
+                <p class="text-code-white">)&nbsp;</p>
+                <p class="text-code-purple">$user</p>
+                <p class="text-code-white">-></p>
+                <p class="text-code-purple">id</p>
+                <p class="text-code-white">&nbsp;===&nbsp;</p>
+                <p class="text-code-white">(</p>
+                <p class="text-code-fire">int</p>
+                <p class="text-code-white">)&nbsp;</p>
+                <p class="text-code-purple">id</p>
+                <p class="text-code-fire">;</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#a9b1b3]">})</p>
-                <p class="text-[#c96f1b]">;</p>
+                <p class="text-code-white">})</p>
+                <p class="text-code-fire">;</p>
                 <div>&nbsp;</div>
             </div>
         </div>

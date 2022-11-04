@@ -141,7 +141,7 @@ const logout = () => {
 @media only screen and (max-width: 450px) {
     .scrollbar {
         -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+        scrollbar-width: none; /* code-firefox */
     }
 
     .scrollbar::-webkit-scrollbar {

@@ -10,10 +10,10 @@ onMounted(() =>{
 </script>
 
 <template>
-    <div class="h-screen w-screen bg-[#3c3f41] flex justify-center items-center">
+    <div class="h-screen w-screen bg-menu-bg flex justify-center items-center">
         <div class="max-w-xl">
             <img src="/phpstorm.PNG" alt="phpstrom" class="object-center mb-2">
-            <p class="text-center text-[#a9b1b3]">Loading your IDE</p>
+            <p class="text-center text-code-white">Loading your IDE</p>
         </div>
     </div>
 </template>

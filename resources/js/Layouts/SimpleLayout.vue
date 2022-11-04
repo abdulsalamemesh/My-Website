@@ -27,328 +27,329 @@ function message() {
 <template>
     <div class="font-custom">
         <Head title="Abdulsalam Emesh"/>
-        <div class="md:h-screen md:w-screen bg-[#2b2b2b] font-custom text-sm flex flex-col md:flex-row overflow-hidden">
-            <div class="bg-[#3c3f41] min-w-[250px] border-r-[1px] border-black/30 text-[0.7rem] flex flex-col">
+        <div class="md:h-screen md:w-screen bg-primary-bg font-custom text-sm flex flex-col md:flex-row overflow-hidden">
+            <div class="bg-menu-bg min-w-[250px] border-r-[1px] border-black/30 text-[0.7rem] flex flex-col">
                 <div class="h-7 flex items-center border-b-[1px] border-black/30 px-2">
-                    <p class="text-[#adb5b8]">Project</p>
+                    <p class="text-menu-font">Project</p>
                 </div>
                 <div class="grow border-b-[1px] border-black/30 overflow-x-hidden overflow-y-auto custom-folders-scrollbar py-2 sm:pt-0 cursor-default font-sans font-semibold">
-                    <div class="text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronDown classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div class="text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronDown classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>me</span>
                     </div>
                     <!--APP-->
                     <div @click="toggleFolder('app',!openedFolders.includes('app'))"
-                         class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                         class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <div>
-                            <ChevronDown v-show="openedFolders.includes('app')" classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
-                            <ChevronRight v-show="!openedFolders.includes('app')" classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                            <ChevronDown v-show="openedFolders.includes('app')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
+                            <ChevronRight v-show="!openedFolders.includes('app')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         </div>
                         <SourceRoot classes="h-4 w-4"/>
                         <span>app</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Actions</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Console</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Exceptions</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Http</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Models</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Exceptions</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Http</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Models</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Exceptions</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Http</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Models</span>
                     </div>
                     <div v-show="openedFolders.includes('app')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>Providers</span>
                     </div>
                     <!--APP-->
-                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>bootstrap</span>
                     </div>
-                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>config</span>
                     </div>
-                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <ResourceRoot classes="h-4 w-4"/>
                         <span>database</span>
                     </div>
-                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>lang</span>
                     </div>
-                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <ExcludeRoot classes="h-4 w-4"/>
                         <span>node_modules</span>
                     </div>
-                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <ExcludeRoot classes="h-4 w-4"/>
                         <span>public</span>
                     </div>
                     <div @click="toggleFolder('resources',!openedFolders.includes('resources'))"
-                         class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                         class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <div>
-                            <ChevronDown v-show="openedFolders.includes('resources')" classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
-                            <ChevronRight v-show="!openedFolders.includes('resources')" classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                            <ChevronDown v-show="openedFolders.includes('resources')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
+                            <ChevronRight v-show="!openedFolders.includes('resources')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         </div>
                         <ResourceRoot classes="h-4 w-4"/>
                         <span>resources</span>
                     </div>
                     <div v-show="openedFolders.includes('resources')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>css</span>
                     </div>
                     <div v-show="openedFolders.includes('resources')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>js</span>
                     </div>
                     <div v-show="openedFolders.includes('resources')" @click="message()"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>markdown</span>
                     </div>
                     <!--         Views           -->
                     <div v-show="openedFolders.includes('resources')" @click="toggleFolder('views',!openedFolders.includes('views'))"
-                         class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                         class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <div>
-                            <ChevronDown v-show="openedFolders.includes('views')" classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
-                            <ChevronRight v-show="!openedFolders.includes('views')" classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                            <ChevronDown v-show="openedFolders.includes('views')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
+                            <ChevronRight v-show="!openedFolders.includes('views')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         </div>
                         <Folder classes="h-4 w-4"/>
                         <span>views</span>
                     </div>
-                    <Link v-show="openedFolders.includes('views')" :href="route('index')" :class="[route().current('index') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('index')"
-                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link v-show="openedFolders.includes('views')" :href="route('index')" :class="[route().current('index') ? 'bg-default-blue' : '']" @click="setActiveFiles('index')"
+                          class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Blade classes="h-4 w-4"/>
                         <span>index.blade.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('views')" :href="route('me')" :class="[route().current('me') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('me')"
-                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link v-show="openedFolders.includes('views')" :href="route('me')" :class="[route().current('me') ? 'bg-default-blue' : '']" @click="setActiveFiles('me')"
+                          class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Blade classes="h-4 w-4"/>
                         <span>me.blade.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('views')" :href="route('work')" :class="[route().current('work') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('work')"
-                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link v-show="openedFolders.includes('views')" :href="route('work')" :class="[route().current('work') ? 'bg-default-blue' : '']" @click="setActiveFiles('work')"
+                          class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Blade classes="h-4 w-4"/>
                         <span>work.blade.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('views')" :href="route('education')" :class="[route().current('education') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="openedFolders.includes('views')" :href="route('education')" :class="[route().current('education') ? 'bg-default-blue' : '']"
                           @click="setActiveFiles('education')"
-                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                          class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Blade classes="h-4 w-4"/>
                         <span>education.blade.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('views')" :href="route('skill')" :class="[route().current('skill') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('skill')"
-                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link v-show="openedFolders.includes('views')" :href="route('skill')" :class="[route().current('skill') ? 'bg-default-blue' : '']" @click="setActiveFiles('skill')"
+                          class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Blade classes="h-4 w-4"/>
                         <span>skill.blade.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('views')" :href="route('project')" :class="[route().current('project') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="openedFolders.includes('views')" :href="route('project')" :class="[route().current('project') ? 'bg-default-blue' : '']"
                           @click="setActiveFiles('project')"
-                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                          class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Blade classes="h-4 w-4"/>
                         <span>project.blade.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('views')" :href="route('other-information')" :class="[route().current('other-information') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="openedFolders.includes('views')" :href="route('other-information')" :class="[route().current('other-information') ? 'bg-default-blue' : '']"
                           @click="setActiveFiles('other-information')"
-                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-max cursor-default">
+                          class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-max cursor-default">
                         <Blade classes="h-4 w-4"/>
                         <span>other-information.blade.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('views')" :href="route('layout')" :class="[route().current('layout') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="openedFolders.includes('views')" :href="route('layout')" :class="[route().current('layout') ? 'bg-default-blue' : '']"
                           @click="setActiveFiles('layout')"
-                          class="pl-20 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                          class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Blade classes="h-4 w-4"/>
                         <span>layout.blade.php</span>
                     </Link>
                     <!--         Routes           -->
                     <div @click="toggleFolder('routes',!openedFolders.includes('routes'))"
-                         class=" pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 w-full cursor-default">
+                         class=" pl-8 text-menu-font flex justify-start items-center space-x-1 w-full cursor-default">
                         <div>
-                            <ChevronDown v-show="openedFolders.includes('routes')" classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
-                            <ChevronRight v-show="!openedFolders.includes('routes')" classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                            <ChevronDown v-show="openedFolders.includes('routes')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
+                            <ChevronRight v-show="!openedFolders.includes('routes')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         </div>
                         <Folder classes="h-4 w-4"/>
                         <span>routs</span>
                     </div>
 
-                    <Link v-show="openedFolders.includes('routes')" :href="route('api')" :class="[route().current('api') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="openedFolders.includes('routes')" :href="route('api')" :class="[route().current('api') ? 'bg-default-blue' : '']"
                           @click="setActiveFiles('api')"
-                          class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                          class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <PHP/>
                         <span>api.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('routes')" :href="route('channels')" :class="[route().current('channels') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="openedFolders.includes('routes')" :href="route('channels')" :class="[route().current('channels') ? 'bg-default-blue' : '']"
                           @click="setActiveFiles('channels')"
-                          class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                          class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <PHP/>
                         <span>channels.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('routes')" :href="route('console-route')" :class="[route().current('console-route') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="openedFolders.includes('routes')" :href="route('console-route')" :class="[route().current('console-route') ? 'bg-default-blue' : '']"
                           @click="setActiveFiles('console-route')"
-                          class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                          class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <PHP/>
                         <span>console.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('routes')" :href="route('web')" :class="[route().current('web') ? 'bg-[#4b6eaf]' : '']"
+                    <Link v-show="openedFolders.includes('routes')" :href="route('web')" :class="[route().current('web') ? 'bg-default-blue' : '']"
                           @click="setActiveFiles('web')"
-                          class="pl-14 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                          class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <PHP/>
                         <span>web.php</span>
                     </Link>
-                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <ExcludeRoot classes="h-4 w-4"/>
                         <span>storage</span>
                     </div>
-                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <TestRoot classes="h-4 w-4"/>
                         <span>tests</span>
                     </div>
-                    <div @click="message()" class="pl-8 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-[#adb5b8] fill-current"/>
+                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>
                         <span>vendor</span>
                     </div>
                     <!--         .env           -->
-                    <Link :href="route('env')" :class="[route().current('env') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('env')"
-                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link :href="route('env')" :class="[route().current('env') ? 'bg-default-blue' : '']" @click="setActiveFiles('env')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <DotFile classes="h-4 w-4"/>
                         <span>.env</span>
                     </Link>
                     <!--         Fakes           -->
-                    <Link :href="route('env-example')" :class="[route().current('env-example') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('env-example')"
-                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link :href="route('env-example')" :class="[route().current('env-example') ? 'bg-default-blue' : '']" @click="setActiveFiles('env-example')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <DotFile classes="h-4 w-4"/>
                         <span>.env.example</span>
                     </Link>
-                    <Link :href="route('gitignore-root')" :class="[route().current('gitignore-root') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('gitignore-root')"
-                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link :href="route('gitignore-root')" :class="[route().current('gitignore-root') ? 'bg-default-blue' : '']" @click="setActiveFiles('gitignore-root')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <DotFile classes="h-4 w-4"/>
                         <span>.gitignore</span>
                     </Link>
-                    <Link :href="route('artisan')" :class="[route().current('artisan') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('artisan')"
-                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link :href="route('artisan')" :class="[route().current('artisan') ? 'bg-default-blue' : '']" @click="setActiveFiles('artisan')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <PHP classes="h-4 w-4"/>
                         <span>artisan</span>
                     </Link>
-                    <Link :href="route('composer')" :class="[route().current('composer') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('composer')"
-                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link :href="route('composer')" :class="[route().current('composer') ? 'bg-default-blue' : '']" @click="setActiveFiles('composer')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                     <JSONFile classes="h-4 w-4"/>
                         <span>composer.json</span>
                     </Link>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <JSONFile classes="h-4 w-4"/>
                         <span>composer.lock</span>
                     </div>
-                    <Link :href="route('package')" :class="[route().current('package') ? 'bg-[#4b6eaf]' : '']" @click="setActiveFiles('package')"
-                          class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                    <Link :href="route('package')" :class="[route().current('package') ? 'bg-default-blue' : '']" @click="setActiveFiles('package')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <JSONFile classes="h-4 w-4"/>
                         <span>package.json</span>
                     </Link>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <JSONFile classes="h-4 w-4"/>
                         <span>package-lock.json</span>
                     </div>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <Link :href="route('phpunit')" :class="[route().current('phpunit') ? 'bg-default-blue' : '']" @click="setActiveFiles('phpunit')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <TestUnitFile classes="h-4 w-4"/>
                         <span>phpunit.xml</span>
-                    </div>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    </Link>
+                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <JSFile classes="h-4 w-4"/>
                         <span>postcss.config.js</span>
                     </div>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <Markdown classes="h-4 w-4"/>
                         <span>README.md</span>
                     </div>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <JSFile classes="h-4 w-4"/>
                         <span>tailwind.config.js</span>
                     </div>
-                    <div @click="message()" class="pl-11 text-[#adb5b8] flex justify-start items-center space-x-1 px-2 w-full">
+                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <JSFile classes="h-4 w-4"/>
                         <span>vite.config.js</span>
                     </div>
                 </div>
             </div>
             <div class="flex flex-col grow text-xs">
-                <div class="bg-[#3c3f41] border-b-[1px] border-black/30 min-h-[1.75rem] text-xs flex items-center justify-between max-w-full">
+                <div class="bg-menu-bg border-b-[1px] border-black/30 min-h-[1.75rem] text-xs flex items-center justify-between max-w-full">
                     <div class="flex">
                         <template v-for="file in activeFilesList">
-                            <div class="w-max h-full flex justify-center items-center text-[#adb5b8] p-1"
+                            <div class="w-max h-full flex justify-center items-center text-menu-font p-1"
                                  :class="[route().current(file.link) ? 'bg-[#4e5254] border-b-2 border-blue-400':'border-b-2 border-transparent' ]">
                                 <component :is="file.icon" :classes="'h-3 w-3 mr-0.5'"/>
                                 <Link :href="route(file.link)" class="mr-1 text-[0.6rem] tracking-tight">{{ file.name }}</Link>
@@ -360,12 +361,12 @@ function message() {
                         <LangaugeSelector/>
                     </div>
                 </div>
-                <div class="flex grow overflow-x-hidden md:overflow-y-auto bg-[#2b2b2b]">
+                <div class="flex grow overflow-x-hidden md:overflow-y-auto bg-primary-bg">
                     <!-- Page Heading -->
                     <header
-                        class="bg-[#313335] pl-2 pr-4 pt-1 border-r-[1px] border-[#5f6364] overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-2 text-xs">
+                        class="bg-secondary-bg pl-2 pr-4 pt-1 border-r-[1px] border-muted-gray overflow-y-scroll hidde-scrollbar scroll-js md:h-full grow md:grow-0 pb-2 text-xs">
                         <template v-for="number in rowsCount">
-                            <div class="text-[#5f6364] leading-5">{{ number }}</div>
+                            <div class="text-muted-gray leading-5">{{ number }}</div>
                         </template>
                     </header>
 

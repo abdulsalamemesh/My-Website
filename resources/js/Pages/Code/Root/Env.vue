@@ -15,276 +15,276 @@ onBeforeUnmount(() => {
     <SimpleLayout title="Abdulsalam Emesh">
         <div class="pl-1 py-1 grow leading-5 overflow-y-scroll custom-scrollbar scroll-js" id="count">
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">APP_NAME</p>
-                <p class="text-[#a9b1b3]">="</p>
-                <p class="text-[#576950]">Abdulsalam Emesh</p>
-                <p class="text-[#a9b1b3]">"</p>
+                <p class="text-code-fire">APP_NAME</p>
+                <p class="text-code-white">="</p>
+                <p class="text-code-green">Abdulsalam Emesh</p>
+                <p class="text-code-white">"</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">APP_ENV</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">local</p>
+                <p class="text-code-fire">APP_ENV</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">local</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">APP_KEY</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">base64:r3lwHbEK2Rmp89B9QNQHoEeFvE7WNXhhUyeprZ/86uA=</p>
+                <p class="text-code-fire">APP_KEY</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">base64:r3lwHbEK2Rmp89B9QNQHoEeFvE7WNXhhUyeprZ/86uA=</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">APP_DEBUG</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">true</p>
+                <p class="text-code-fire">APP_DEBUG</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">true</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">APP_URL</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">http://me.test</p>
-            </div>
-            <div>&nbsp;</div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">LOG_CHANNEL</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">stack</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">LOG_DEPRECATIONS_CHANNEL</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">null</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">LOG_LEVEL</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">debug</p>
+                <p class="text-code-fire">APP_URL</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">http://me.test</p>
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">DB_CONNECTION</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">mysql</p>
+                <p class="text-code-fire">LOG_CHANNEL</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">stack</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">DB_HOST</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">127.0.0.1</p>
+                <p class="text-code-fire">LOG_DEPRECATIONS_CHANNEL</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">null</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">DB_PORT</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">3306</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">DB_DATABASE</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">me</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">DB_USERNAME</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">root</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">DB_PASSWORD</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]"></p>
+                <p class="text-code-fire">LOG_LEVEL</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">debug</p>
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">BROADCAST_DRIVER</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">log</p>
+                <p class="text-code-fire">DB_CONNECTION</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">mysql</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">^CACHE_DRIVER</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">file</p>
+                <p class="text-code-fire">DB_HOST</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">127.0.0.1</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">FILESYSTEM_DISK</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">local</p>
+                <p class="text-code-fire">DB_PORT</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">3306</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">QUEUE_CONNECTION</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">sync</p>
+                <p class="text-code-fire">DB_DATABASE</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">me</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">SESSION_DRIVER</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">database</p>
+                <p class="text-code-fire">DB_USERNAME</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">root</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">SESSION_LIFETIME</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">120</p>
+                <p class="text-code-fire">DB_PASSWORD</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green"></p>
+            </div>
+            <div>&nbsp;</div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">BROADCAST_DRIVER</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">log</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">^CACHE_DRIVER</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">file</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">FILESYSTEM_DISK</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">local</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">QUEUE_CONNECTION</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">sync</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">SESSION_DRIVER</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">database</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">SESSION_LIFETIME</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">120</p>
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">MEMCACHED_HOST</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">127.0.0.1</p>
-            </div>
-            <div>&nbsp;</div>
-
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">REDIS_HOST</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">127.0.0.1</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">REDIS_PASSWORD</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">null</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">REDIS_PORT</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">6379</p>
+                <p class="text-code-fire">MEMCACHED_HOST</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">127.0.0.1</p>
             </div>
             <div>&nbsp;</div>
 
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">MAIL_MAILER</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">smtp</p>
+                <p class="text-code-fire">REDIS_HOST</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">127.0.0.1</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">MAIL_HOST</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">mailhog</p>
+                <p class="text-code-fire">REDIS_PASSWORD</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">null</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">MAIL_PORT</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">1025</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">MAIL_USERNAME</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">null</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">MAIL_PASSWORD</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">null</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">MAIL_ENCRYPTION</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">null</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">MAIL_FROM_ADDRESS</p>
-                <p class="text-[#a9b1b3]">="</p>
-                <p class="text-[#576950]">hello@example.com"</p>
-                <p class="text-[#a9b1b3]">"</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">MAIL_FROM_NAME</p>
-                <p class="text-[#a9b1b3]">="</p>
-                <p class="text-[#576950]">${APP_NAME}"</p>
-                <p class="text-[#a9b1b3]">"</p>
+                <p class="text-code-fire">REDIS_PORT</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">6379</p>
             </div>
             <div>&nbsp;</div>
 
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">AWS_ACCESS_KEY_ID</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]"></p>
+                <p class="text-code-fire">MAIL_MAILER</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">smtp</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">AWS_SECRET_ACCESS_KEY</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]"></p>
+                <p class="text-code-fire">MAIL_HOST</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">mailhog</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">AWS_DEFAULT_REGION</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">us-east-1</p>
+                <p class="text-code-fire">MAIL_PORT</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">1025</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">AWS_BUCKET</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]"></p>
+                <p class="text-code-fire">MAIL_USERNAME</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">null</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">AWS_USE_PATH_STYLE_ENDPOINT</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">false</p>
-            </div>
-            <div>&nbsp;</div>
-
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">PUSHER_APP_ID</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]"></p>
+                <p class="text-code-fire">MAIL_PASSWORD</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">null</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">PUSHER_APP_KEY</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]"></p>
+                <p class="text-code-fire">MAIL_ENCRYPTION</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">null</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">PUSHER_APP_SECRET</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]"></p>
+                <p class="text-code-fire">MAIL_FROM_ADDRESS</p>
+                <p class="text-code-white">="</p>
+                <p class="text-code-green">hello@example.com"</p>
+                <p class="text-code-white">"</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">PUSHER_HOST</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]"></p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">PUSHER_PORT</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">443</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">PUSHER_SCHEME</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">https</p>
-            </div>
-            <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]"></p>
-                <p class="text-[#c96f1b]">PUSHER_APP_CLUSTER</p>
-                <p class="text-[#a9b1b3]">=</p>
-                <p class="text-[#576950]">mt1</p>
+                <p class="text-code-fire">MAIL_FROM_NAME</p>
+                <p class="text-code-white">="</p>
+                <p class="text-code-green">${APP_NAME}"</p>
+                <p class="text-code-white">"</p>
             </div>
             <div>&nbsp;</div>
 
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">VITE_PUSHER_APP_KEY</p>
-                <p class="text-[#a9b1b3]">="</p>
-                <p class="text-[#576950]">${PUSHER_APP_KEY}"</p>
-                <p class="text-[#a9b1b3]">"</p>
+                <p class="text-code-fire">AWS_ACCESS_KEY_ID</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green"></p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">AWS_SECRET_ACCESS_KEY</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green"></p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">AWS_DEFAULT_REGION</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">us-east-1</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">AWS_BUCKET</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green"></p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">AWS_USE_PATH_STYLE_ENDPOINT</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">false</p>
+            </div>
+            <div>&nbsp;</div>
+
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">PUSHER_APP_ID</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green"></p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">PUSHER_APP_KEY</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green"></p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">PUSHER_APP_SECRET</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green"></p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">PUSHER_HOST</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green"></p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">PUSHER_PORT</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">443</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">PUSHER_SCHEME</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">https</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire"></p>
+                <p class="text-code-fire">PUSHER_APP_CLUSTER</p>
+                <p class="text-code-white">=</p>
+                <p class="text-code-green">mt1</p>
+            </div>
+            <div>&nbsp;</div>
+
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">VITE_PUSHER_APP_KEY</p>
+                <p class="text-code-white">="</p>
+                <p class="text-code-green">${PUSHER_APP_KEY}"</p>
+                <p class="text-code-white">"</p>
             </div>
 
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">VITE_PUSHER_HOST</p>
-                <p class="text-[#a9b1b3]">="</p>
-                <p class="text-[#576950]">${PUSHER_HOST}"</p>
-                <p class="text-[#a9b1b3]">"</p>
+                <p class="text-code-fire">VITE_PUSHER_HOST</p>
+                <p class="text-code-white">="</p>
+                <p class="text-code-green">${PUSHER_HOST}"</p>
+                <p class="text-code-white">"</p>
             </div>
 
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">VITE_PUSHER_PORT</p>
-                <p class="text-[#a9b1b3]">="</p>
-                <p class="text-[#576950]">${PUSHER_PORT}"</p>
-                <p class="text-[#a9b1b3]">"</p>
+                <p class="text-code-fire">VITE_PUSHER_PORT</p>
+                <p class="text-code-white">="</p>
+                <p class="text-code-green">${PUSHER_PORT}"</p>
+                <p class="text-code-white">"</p>
             </div>
 
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">VITE_PUSHER_SCHEME</p>
-                <p class="text-[#a9b1b3]">="</p>
-                <p class="text-[#576950]">${PUSHER_SCHEME}"</p>
-                <p class="text-[#a9b1b3]">"</p>
+                <p class="text-code-fire">VITE_PUSHER_SCHEME</p>
+                <p class="text-code-white">="</p>
+                <p class="text-code-green">${PUSHER_SCHEME}"</p>
+                <p class="text-code-white">"</p>
             </div>
 
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">VITE_PUSHER_APP_CLUSTER</p>
-                <p class="text-[#a9b1b3]">="</p>
-                <p class="text-[#576950]">${PUSHER_APP_CLUSTER}"</p>
-                <p class="text-[#a9b1b3]">"</p>
+                <p class="text-code-fire">VITE_PUSHER_APP_CLUSTER</p>
+                <p class="text-code-white">="</p>
+                <p class="text-code-green">${PUSHER_APP_CLUSTER}"</p>
+                <p class="text-code-white">"</p>
             </div>
 
         </div>

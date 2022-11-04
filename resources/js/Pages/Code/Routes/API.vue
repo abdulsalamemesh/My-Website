@@ -16,24 +16,24 @@ onBeforeUnmount(() => {
     <SimpleLayout title="Abdulsalam Emesh">
         <div class="pl-1 py-1 grow leading-5 overflow-y-scroll custom-scrollbar scroll-js" id="count">
             <div class="flex flex-wrap ">
-                <p class="text-[#c96f1b]">&lt;?php</p>
+                <p class="text-code-fire">&lt;?php</p>
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">use&nbsp;</p>
-                <p class="text-[#a9b1b3]">Illuminate\Http\Request</p>
-                <p class="text-[#c96f1b]">;</p>
+                <p class="text-code-fire">use&nbsp;</p>
+                <p class="text-code-white">Illuminate\Http\Request</p>
+                <p class="text-code-fire">;</p>
                 <div>&nbsp;</div>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#c96f1b]">use&nbsp;</p>
-                <p class="text-[#a9b1b3]">Illuminate\Support\Facades\Route</p>
-                <p class="text-[#c96f1b]">;</p>
+                <p class="text-code-fire">use&nbsp;</p>
+                <p class="text-code-white">Illuminate\Support\Facades\Route</p>
+                <p class="text-code-fire">;</p>
                 <div>&nbsp;</div>
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-wrap">
-                <p class="text-[#5f6364]">
+                <p class="text-muted-gray">
                     /* <br>
                     |-------------------------------------------------------------------------- <br>
                     | API Routes <br>
@@ -48,31 +48,31 @@ onBeforeUnmount(() => {
             </div>
             <div>&nbsp;</div>
             <div class="flex flex-wrap">
-                <p class="text-[#a9b1b3]">Route::</p>
-                <p class="text-[#c96f1b]">middleware</p>
-                <p class="text-[#a9b1b3]">(</p>
-                <p class="text-[#576950]">'auth:sanctum'</p>
-                <p class="text-[#a9b1b3]">)-></p>
-                <p class="text-[#c96f1b]">get</p>
-                <p class="text-[#a9b1b3]">(</p>
-                <p class="text-[#576950]">'/user'</p>
-                <p class="text-[#c96f1b]">, function&nbsp;</p>
-                <p class="text-[#a9b1b3]">(Request&nbsp;</p>
-                <p class="text-[#8D7D97]">$request</p>
-                <p class="text-[#a9b1b3]">) {</p>
+                <p class="text-code-white">Route::</p>
+                <p class="text-code-fire">middleware</p>
+                <p class="text-code-white">(</p>
+                <p class="text-code-green">'auth:sanctum'</p>
+                <p class="text-code-white">)-></p>
+                <p class="text-code-fire">get</p>
+                <p class="text-code-white">(</p>
+                <p class="text-code-green">'/user'</p>
+                <p class="text-code-fire">, function&nbsp;</p>
+                <p class="text-code-white">(Request&nbsp;</p>
+                <p class="text-code-purple">$request</p>
+                <p class="text-code-white">) {</p>
             </div>
             <div class="flex flex-wrap" :class="paddingLevel(1)">
-                <p class="text-[#c96f1b]">return&nbsp;</p>
+                <p class="text-code-fire">return&nbsp;</p>
 
-                <p class="text-[#8D7D97]">$request</p>
-                <p class="text-[#a9b1b3]">-></p>
-                <p class="text-[#dfc087]">user</p>
-                <p class="text-[#a9b1b3]">()</p>
-                <p class="text-[#c96f1b]">;</p>
+                <p class="text-code-purple">$request</p>
+                <p class="text-code-white">-></p>
+                <p class="text-code-gold">user</p>
+                <p class="text-code-white">()</p>
+                <p class="text-code-fire">;</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-[#a9b1b3]">})</p>
-                <p class="text-[#c96f1b]">;</p>
+                <p class="text-code-white">})</p>
+                <p class="text-code-fire">;</p>
                 <div>&nbsp;</div>
             </div>
         </div>

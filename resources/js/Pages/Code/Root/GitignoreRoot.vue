@@ -15,7 +15,7 @@ onBeforeUnmount(() => {
 <template>
     <SimpleLayout title="Abdulsalam Emesh">
         <div class="pl-1 py-1 grow leading-5 overflow-y-scroll custom-scrollbar scroll-js" id="count">
-            <p class="text-[#a9b1b3]">
+            <p class="text-code-white">
                 /node_modules <br>
                 /public/build <br>
                 /public/hot <br>

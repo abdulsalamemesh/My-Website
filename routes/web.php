@@ -45,6 +45,7 @@ Route::get('gitignore-root', fn() => Inertia::render('Code/Root/GitignoreRoot'))
 Route::get('artisan', fn() => Inertia::render('Code/Root/Artisan'))->name('artisan');
 Route::get('composer', fn() => Inertia::render('Code/Root/Composer'))->name('composer');
 Route::get('package', fn() => Inertia::render('Code/Root/Package'))->name('package');
+Route::get('phpunit', fn() => Inertia::render('Code/Root/PHPUnit'))->name('phpunit');
 
 //ROUTS
 Route::get('web', fn() => Inertia::render('Code/Routes/Web'))->name('web');

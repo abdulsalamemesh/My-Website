@@ -176,6 +176,11 @@ const filesList = shallowRef([
         'link': 'package',
         'icon': JSONFile
     },
+    {
+        'name': 'phpunit.xml',
+        'link': 'phpunit',
+        'icon': TestUnitFile
+    },
 ])
 
 export function toggleFolder(folderName, open) {
