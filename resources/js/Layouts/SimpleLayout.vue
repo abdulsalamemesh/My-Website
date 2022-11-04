@@ -14,6 +14,8 @@ import JSFile from '@/Icons/JSFile.vue';
 import Markdown from '@/Icons/Markdown.vue';
 import ChevronRight from '@/Icons/ChevronRight.vue';
 import ChevronDown from '@/Icons/ChevronDown.vue';
+import Trait from '@/Icons/Trait.vue';
+import AbstractClass from '@/Icons/AbstractClass.vue';
 
 import LangaugeSelector from '@/Layouts/LangaugeSelector.vue'
 import {setActiveFiles, activeFilesList, removeFromActiveFilesList, toggleFolder, openedFolders, rowsCount} from "../store";
@@ -268,11 +270,37 @@ function message() {
                         <ExcludeRoot classes="h-4 w-4"/>
                         <span>storage</span>
                     </div>
-                    <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
-                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
+                    <!--                    Tests-->
+                    <div @click="toggleFolder('tests',!openedFolders.includes('tests'))" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <div>
+                            <ChevronDown v-show="openedFolders.includes('tests')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
+                            <ChevronRight v-show="!openedFolders.includes('tests')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
+                        </div>
                         <TestRoot classes="h-4 w-4"/>
                         <span>tests</span>
                     </div>
+                    <div @click="message()" v-show="openedFolders.includes('tests')" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
+                        <TestRoot classes="h-4 w-4"/>
+                        <span>Feature</span>
+                    </div>
+                    <div @click="message()" v-show="openedFolders.includes('tests')" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                        <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
+                        <TestRoot classes="h-4 w-4"/>
+                        <span>Unit</span>
+                    </div>
+                    <Link v-show="openedFolders.includes('tests')" :href="route('creates-application')" :class="[route().current('creates-application') ? 'bg-default-blue' : '']"
+                          @click="setActiveFiles('creates-application')"
+                          class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                        <Trait classes="h-4 w-4"/>
+                        <span>CreatesApplication.php</span>
+                    </Link>
+                    <Link v-show="openedFolders.includes('tests')" :href="route('test-case')" :class="[route().current('test-case') ? 'bg-default-blue' : '']"
+                          @click="setActiveFiles('test-case')"
+                          class="pl-14 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
+                        <AbstractClass classes="h-4 w-4"/>
+                        <span>TestCase.php</span>
+                    </Link>
                     <div @click="message()" class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
                         <ChevronRight classes="h-2.5 w-2.5 text-menu-font fill-current"/>
                         <Folder classes="h-4 w-4"/>

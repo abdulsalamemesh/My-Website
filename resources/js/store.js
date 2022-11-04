@@ -6,8 +6,8 @@ import {usePage} from "@inertiajs/inertia-vue3";
 import SourceRoot from '@/Icons/SourceRoot.vue';
 import ResourceRoot from '@/Icons/ResourceRoot.vue';
 import TestRoot from '@/Icons/TestRoot.vue';
-import ExcludeRoot from '@/Icons/ExcludeRoot.vue';
-import Folder from '@/Icons/Folder.vue';
+import AbstractClass from '@/Icons/AbstractClass.vue';
+import Trait from '@/Icons/Trait.vue';
 import Blade from '@/Icons/Blade.vue';
 import DotFile from '@/Icons/DotFile.vue';
 import PHP from '@/Icons/PHP.vue';
@@ -196,6 +196,16 @@ const filesList = shallowRef([
         'link': 'vite',
         'icon': JSFile
     },
+    {
+        'name': 'CreatesApplication.php',
+        'link': 'creates-application',
+        'icon': Trait
+    },
+    {
+        'name': 'TestCase.php',
+        'link': 'test-case',
+        'icon': AbstractClass
+    },
 ])
 
 export function toggleFolder(folderName, open) {
@@ -235,6 +245,12 @@ export const foldersStructure = ref([
     },
     {
         'name': 'routes',
+        'topLevel': true,
+        'parent': null,
+        'children': ['Feature', 'Unit']
+    },
+    {
+        'name': 'tests',
         'topLevel': true,
         'parent': null,
         'children': null
