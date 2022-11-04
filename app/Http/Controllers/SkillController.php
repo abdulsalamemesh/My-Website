@@ -15,7 +15,7 @@ class SkillController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return Inertia::render('Code/Skill', [
+        return Inertia::render('Code/Blade/Skill', [
             'skills' =>
                 [
                     'PHP',

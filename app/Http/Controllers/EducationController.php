@@ -16,7 +16,7 @@ class EducationController extends Controller
     public function __invoke(Request $request)
     {
 
-        return Inertia::render('Code/Education', [
+        return Inertia::render('Code/Blade/Education', [
             'educations' => [
                 [
                     'title'     => __('Training as IT Specialist For Application Development'),

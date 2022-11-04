@@ -44,6 +44,9 @@ module.exports = {
                 "code-class": {
                     DEFAULT: '#a7bb7c',
                 },
+                "code-green-comment": {
+                    DEFAULT: '#69914a',
+                },
                 "code-purple": {
                     DEFAULT: '#8D7D97',
                 },

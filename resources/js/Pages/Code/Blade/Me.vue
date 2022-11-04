@@ -1,7 +1,7 @@
 <script setup>
 import SimpleLayout from '@/Layouts/SimpleLayout.vue';
 import {onBeforeUnmount, onMounted} from "vue";
-import {removeRowsCountFromWindowListener, selectableLocale, setRowsCountFromWindowListener, syncScroll} from '../../store.js'
+import {removeRowsCountFromWindowListener, selectableLocale, setRowsCountFromWindowListener, syncScroll} from '../../../store.js'
 onMounted(() => {
     syncScroll()
     setRowsCountFromWindowListener(33, 18)
@@ -13,7 +13,7 @@ onBeforeUnmount(() => {
 
 <template>
     <SimpleLayout title="Abdulsalam Emesh">
-        <div class="pl-1 py-1 grow leading-5 overflow-y-scroll custom-scrollbar scroll-js">
+        <div class="pl-1 py-1 grow leading-5 overflow-x-hidden overflow-y-scroll custom-scrollbar scroll-js">
             <div class="flex flex-wrap">
                 <p class="text-code-gold">&lt;x-layout</p>
                 <p class="text-code-gold">&gt;</p>

@@ -204,7 +204,8 @@ function message() {
                         <Blade classes="h-4 w-4"/>
                         <span>education.blade.php</span>
                     </Link>
-                    <Link v-show="openedFolders.includes('views')" :href="route('skill')" :class="[route().current('skill') ? 'bg-default-blue' : '']" @click="setActiveFiles('skill')"
+                    <Link v-show="openedFolders.includes('views')" :href="route('skill')" :class="[route().current('skill') ? 'bg-default-blue' : '']"
+                          @click="setActiveFiles('skill')"
                           class="pl-20 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <Blade classes="h-4 w-4"/>
                         <span>skill.blade.php</span>
@@ -301,7 +302,7 @@ function message() {
                     </Link>
                     <Link :href="route('composer')" :class="[route().current('composer') ? 'bg-default-blue' : '']" @click="setActiveFiles('composer')"
                           class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
-                    <JSONFile classes="h-4 w-4"/>
+                        <JSONFile classes="h-4 w-4"/>
                         <span>composer.json</span>
                     </Link>
                     <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
@@ -332,14 +333,16 @@ function message() {
                         <Markdown classes="h-4 w-4"/>
                         <span>README.md</span>
                     </Link>
-                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                    <Link :href="route('tailwind-config')" :class="[route().current('tailwind-config') ? 'bg-default-blue' : '']" @click="setActiveFiles('tailwind-config')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <JSFile classes="h-4 w-4"/>
                         <span>tailwind.config.js</span>
-                    </div>
-                    <div @click="message()" class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                    </Link>
+                    <Link :href="route('vite')" :class="[route().current('vite') ? 'bg-default-blue' : '']" @click="setActiveFiles('vite')"
+                          class="pl-11 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-default">
                         <JSFile classes="h-4 w-4"/>
                         <span>vite.config.js</span>
-                    </div>
+                    </Link>
                 </div>
             </div>
             <div class="flex flex-col grow text-xs">

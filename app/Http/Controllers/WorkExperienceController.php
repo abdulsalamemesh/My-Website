@@ -16,7 +16,7 @@ class WorkExperienceController extends Controller
     public function __invoke(Request $request)
     {
 
-        return Inertia::render('Code/Work', [
+        return Inertia::render('Code/Blade/Work', [
             'experiences' => [
                 [
                     'title'     => __('Mid-Level Software Developer'),

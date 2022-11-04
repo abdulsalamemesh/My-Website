@@ -186,6 +186,16 @@ const filesList = shallowRef([
         'link': 'readme',
         'icon': Markdown
     },
+    {
+        'name': 'tailwind.config.js',
+        'link': 'tailwind-config',
+        'icon': JSFile
+    },
+    {
+        'name': 'vite.config.js',
+        'link': 'vite',
+        'icon': JSFile
+    },
 ])
 
 export function toggleFolder(folderName, open) {

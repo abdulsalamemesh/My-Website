@@ -15,7 +15,7 @@ class ProjectController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return Inertia::render('Code/Project', [
+        return Inertia::render('Code/Blade/Project', [
             'projects' =>
                 [
                     [

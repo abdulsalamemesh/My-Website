@@ -15,7 +15,7 @@ class OtherInformationController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return Inertia::render('Code/Other', [
+        return Inertia::render('Code/Blade/Other', [
             'information' =>
                 [
                     'hobbies'      => [

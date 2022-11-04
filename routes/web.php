@@ -28,12 +28,12 @@ Route::post('contact-form', [HomeController::class, 'contactForm'])->name('conta
 Route::get('loading', fn() => Inertia::render('Code/Loading'))->name('loading');
 
 // BLADE
-Route::get('me', fn() => Inertia::render('Code/Me'))->name('me');
+Route::get('me', fn() => Inertia::render('Code/Blade/Me'))->name('me');
 Route::get('work', WorkExperienceController::class)->name('work');
 Route::get('education', EducationController::class)->name('education');
 Route::get('skill', SkillController::class)->name('skill');
 Route::get('other-information', OtherInformationController::class)->name('other-information');
-Route::get('layout', fn() => Inertia::render('Code/Layout'))->name('layout');
+Route::get('layout', fn() => Inertia::render('Code/Blade/Layout'))->name('layout');
 Route::get('project', ProjectController::class)->name('project');
 
 // ROOT
@@ -47,6 +47,8 @@ Route::get('composer', fn() => Inertia::render('Code/Root/Composer'))->name('com
 Route::get('package', fn() => Inertia::render('Code/Root/Package'))->name('package');
 Route::get('phpunit', fn() => Inertia::render('Code/Root/PHPUnit'))->name('phpunit');
 Route::get('postcss', fn() => Inertia::render('Code/Root/Postcss'))->name('postcss');
+Route::get('tailwind-config', fn() => Inertia::render('Code/Root/TailwindConfig'))->name('tailwind-config');
+Route::get('vite', fn() => Inertia::render('Code/Root/Vite'))->name('vite');
 
 //ROUTS
 Route::get('web', fn() => Inertia::render('Code/Routes/Web'))->name('web');
