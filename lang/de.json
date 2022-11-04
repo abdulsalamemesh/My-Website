@@ -7,7 +7,7 @@
     "As the saying goes, „Alone you are strong, together you are unbeatable.“": "Wie das Sprichwort schon sagt: „Allein ist man stark, gemeinsam unschlagbar“.",
     "Hallo dear programmer": "Hallo liebe/r Programmierer/in",
     "I just wanted to have some fun and create the website in your well-known environment": "Ich wollte nur ein bisschen Spaß haben und die Website in deiner bekannten Umgebung erstellen",
-    "This is made for you. Have fun!!": "Das ist für dich gemacht. Viel Spaß!!",
+    "**This is made for you to get to know me. Have fun!!**": "**Dies ist für dich gemacht, damit du mich kennenlernst. Viel Spaß!!!",
     "Start with resources/views/me.blade.php to get to know me.": "Beginne mit resources/views/me.blade.php, um mich kennen zu lernen.",
     "In resources/views/work.blade.php you can read about my work experience.": "In resources/views/work.blade.php kannst du über meine Berufserfahrung lesen.",
     "In resources/views/education.blade.php you can read about my education.": "In resources/views/education.blade.php kannst du über meine Bildung lesen.",
@@ -144,5 +144,7 @@
     "I built my portfolio with the following technologies: latest Laravel version and PHP version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss.": "Ich habe mein Portfolio mit den folgenden Technologien gebaut: aktuellsten Laravel Version und PHP Version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss",
     "Custom": "Individuell",
     "My portfolio": "Mein Portfolio",
-    "Permissions": "Berechtigungen"
+    "Permissions": "Berechtigungen",
+    "What you see is based on the Laravel 9 and Tailwindcss 3": "Was du siehst, basiert auf Laravel 9 und Tailwindcss 3",
+    "All application folders and files can be seen... but to some limit": "Alle Anwendungsordner und -dateien können eingesehen werden... aber nur bis zu einer gewissen Grenze"
 }

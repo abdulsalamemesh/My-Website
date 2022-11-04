@@ -24,10 +24,13 @@ onBeforeUnmount(() => {
                 <p class="text-code-fire">##&nbsp;</p>
                 <p class="text-code-purple">{{ __('I just wanted to have some fun and create the website in your well-known environment') + ' 😉' }}</p>
             </div>
-            <div class="flex flex-wrap">
-                <p class="text-code-fire">##&nbsp;</p>
-                <p class="text-code-purple">{{ __('This is made for you. Have fun!!') }}</p>
-            </div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <p class="text-code-white">{{ __('What you see is based on the Laravel 9 and Tailwindcss 3 ') }}</p>
+            <p class="text-code-white">{{ __('All application folders and files can be seen... but to some limit') + ' 😉' }}</p>
+            <div>&nbsp;</div>
+            <p class="text-code-white">{{ __('**This is made for you to get to know me. Have fun!!**') }}</p>
+            <div>&nbsp;</div>
             <div>&nbsp;</div>
             <p class="text-code-white">{{ __('Start with resources/views/me.blade.php to get to know me.') }}</p>
             <div>&nbsp;</div>
