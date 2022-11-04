@@ -15,147 +15,206 @@ onBeforeUnmount(() => {
 <template>
     <SimpleLayout title="Abdulsalam Emesh">
         <div class="pl-1 py-1 grow leading-5 overflow-y-scroll custom-scrollbar scroll-js" id="count">
-            <div class="flex flex-wrap">
-                <p class="text-code-white">
-                    #!/usr/bin/env php
-                </p>
-            </div>
-            <div class="flex flex-wrap ">
-                <p class="text-code-fire">&lt;?php</p>
-            </div>
-            <div>&nbsp;</div>
-            <div class="flex flex-wrap">
-                <p class="text-code-white">define(</p>
-                <p class="text-code-green">'LARAVEL_START'</p>
-                <p class="text-code-fire">,&nbsp;</p>
-                <p class="text-code-white">microtime(</p>
-                <p class="text-code-fire">true</p>
-                <p class="text-code-white">))</p>
-                <p class="text-code-fire">;</p>
-                <div>&nbsp;</div>
-            </div>
-            <div>&nbsp;</div>
-            <div class="flex flex-wrap">
-                <p class="text-muted-gray">
-                    /* <br>
-                    |-------------------------------------------------------------------------- <br>
-                    | Register The Auto Loader <br>
-                    |-------------------------------------------------------------------------- <br>
-                    | <br>
-                    | Composer provides a convenient, automatically generated class loader <br>
-                    | for our application. We just need to utilize it! We'll require it <br>
-                    | into the script here so that we do not have to worry about the <br>
-                    | loading of any of our classes manually. It's great to relax. <br>
-                    | <br>
-                    */ <br>
-                </p>
-            </div>
-            <div>&nbsp;</div>
-            <div class="flex flex-wrap">
-                <p class="text-code-fire">require&nbsp;</p>
-                <p class="text-code-purple">__DIR__</p>
-                <p class="text-code-white">.</p>
-                <p class="text-code-green">'/vendor/autoload.php'</p>
-                <p class="text-code-fire">;</p>
-            </div>
-            <div>&nbsp;</div>
 
             <div class="flex flex-wrap">
-                <p class="text-code-purple">$app</p>
-                <p class="text-code-white">&nbsp;=&nbsp;</p>
-                <p class="text-code-fire">require_once&nbsp;</p>
-                <p class="text-code-purple">__DIR__</p>
-                <p class="text-code-white">.</p>
-                <p class="text-code-green">'/bootstrap/app.php'</p>
-                <p class="text-code-fire">;</p>
-            </div>
-            <div>&nbsp;</div>
-            <div class="flex flex-wrap">
-                <p class="text-muted-gray">
-                    /* <br>
-                    |-------------------------------------------------------------------------- <br>
-                    | Run The Artisan Application <br>
-                    |-------------------------------------------------------------------------- <br>
-                    | <br>
-                    | When we run the console application, the current CLI command will be <br>
-                    | executed in this console and the response sent back to a terminal <br>
-                    | or another output device for the developers. Here goes nothing! <br>
-                    | <br>
-                    */ <br>
-                </p>
-            </div>
-            <div>&nbsp;</div>
-            <div class="flex flex-wrap">
-                <p class="text-code-purple">$kernel</p>
-                <p class="text-code-white">&nbsp;=&nbsp;</p>
-                <p class="text-code-purple">$app</p>
-                <p class="text-code-white">-></p>
-                <p class="text-code-gold">make</p>
-                <p class="text-code-white">(Illuminate\Contracts\Console\Kernel::</p>
-                <p class="text-code-fire">class</p>
-                <p class="text-code-white">)</p>
-                <p class="text-code-fire">;</p>
-            </div>
-            <div>&nbsp;</div>
-            <div class="flex flex-wrap">
-                <p class="text-code-purple">$status</p>
-                <p class="text-code-white">&nbsp;=&nbsp;</p>
-                <p class="text-code-purple">$kernel</p>
-                <p class="text-code-white">-></p>
-                <p class="text-code-gold">handle</p>
-                <p class="text-code-white">(</p>
-            </div>
-            <div class="flex flex-wrap" :class="paddingLevel(1)">
-                <p class="text-code-purple">$input</p>
-                <p class="text-code-white">&nbsp;=&nbsp;</p>
-                <p class="text-code-fire">new&nbsp;</p>
-                <p class="text-code-white">Symfony\Component\Console\Input\ArgvInput</p>
-                <p class="text-code-fire">,</p>
-            </div>
-            <div class="flex flex-wrap" :class="paddingLevel(1)">
-                <p class="text-code-fire">new&nbsp;</p>
-                <p class="text-code-white">Symfony\Component\Console\Output\ConsoleOutput</p>
-                <p class="text-code-fire">,</p>
+                <p class="text-code-gold">&lt;? </p>
+                <p class="text-code-white">xml version</p>
+                <p class="text-code-green">="1.0"&nbsp;</p>
+                <p class="text-code-white">encoding</p>
+                <p class="text-code-green">="UTF-8"</p>
+                <p class="text-code-gold">?> </p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-code-white">)</p>
-                <p class="text-code-fire">;</p>
+                <p class="text-code-gold">&lt;phpunit&nbsp;</p>
+                <p class="text-code-white">xmlns:</p>
+                <p class="text-code-purple">xsi</p>
+                <p class="text-code-green">"http://www.w3.org/2001/XMLSchema-instance"</p>
             </div>
-            <div>&nbsp;</div>
-            <div class="flex flex-wrap">
-                <p class="text-muted-gray">
-                    /* <br>
-                    |-------------------------------------------------------------------------- <br>
-                    | Shutdown The Application <br>
-                    |-------------------------------------------------------------------------- <br>
-                    | <br>
-                    | Once Artisan has finished running, we will code-fire off the shutdown events <br>
-                    | so that any final work may be done by the application before we shut <br>
-                    | down the process. This is the last thing to happen to the request. <br>
-                    | <br>
-                    */ <br>
-                </p>
+            <div class="flex flex-wrap" :class="paddingLevel(3)">
+                <p class="text-code-purple">xsi</p>
+                <p class="text-code-white">:noNamespaceSchemaLocation:</p>
+                <p class="text-code-green">="./vendor/phpunit/phpunit/phpunit.xsd"</p>
             </div>
-            <div>&nbsp;</div>
-            <div class="flex flex-wrap">
-                <p class="text-code-purple">$kernel</p>
-                <p class="text-code-white">-></p>
-                <p class="text-code-gold">terminate</p>
-                <p class="text-code-white">(</p>
-                <p class="text-code-purple">$input</p>
-                <p class="text-code-fire">,&nbsp;</p>
-                <p class="text-code-purple">$status</p>
-                <p class="text-code-white">)</p>
-                <p class="text-code-fire">;</p>
+            <div class="flex flex-wrap" :class="paddingLevel(3)">
+                <p class="text-code-white">bootstrap</p>
+                <p class="text-code-green">="vendor/autoload.php"</p>
             </div>
-            <div>&nbsp;</div>
+            <div class="flex flex-wrap" :class="paddingLevel(3)">
+                <p class="text-code-white">colors</p>
+                <p class="text-code-green">="true"</p>
+            </div>
             <div class="flex flex-wrap">
+                <p class="text-code-gold">></p>
+            </div>
 
-                <p class="text-code-fire">exit</p>
-                <p class="text-code-white">(</p>
-                <p class="text-code-purple">$status</p>
-                <p class="text-code-white">)</p>
+            <div class="flex flex-wrap" :class="paddingLevel(1)">
+                <p class="text-code-gold">&lt;testsuites> </p>
             </div>
+
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;testsuite&nbsp;</p>
+                <p class="text-code-white">name</p>
+                <p class="text-code-green">="Unit"</p>
+                <p class="text-code-gold">> </p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(3)">
+                <p class="text-code-gold">&lt;directory&nbsp;</p>
+                <p class="text-code-white">suffix</p>
+                <p class="text-muted-gray">="Test.php"</p>
+                <p class="text-code-gold">> </p>
+                <p class="text-code-white">./tests/Unit</p>
+                <p class="text-code-gold">&lt;/directory></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;/testsuite> </p>
+            </div>
+
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;testsuite&nbsp;</p>
+                <p class="text-code-white">name</p>
+                <p class="text-code-green">="Feature"</p>
+                <p class="text-code-gold">> </p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(3)">
+                <p class="text-code-gold">&lt;directory&nbsp;</p>
+                <p class="text-code-white">suffix</p>
+                <p class="text-muted-gray">="Test.php"</p>
+                <p class="text-code-gold">> </p>
+                <p class="text-code-white">./tests/Feature</p>
+                <p class="text-code-gold">&lt;/directory></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;/testsuite> </p>
+            </div>
+
+            <div class="flex flex-wrap" :class="paddingLevel(1)">
+                <p class="text-code-gold">&lt;/testsuites> </p>
+            </div>
+
+
+
+
+            <div class="flex flex-wrap" :class="paddingLevel(1)">
+                <p class="text-code-gold">&lt;coverage&nbsp;</p>
+                <p class="text-code-white">processUncoveredFiles</p>
+                <p class="text-code-green">="true"</p>
+                <p class="text-code-gold">> </p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;include</p>
+                <p class="text-code-gold">> </p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(3)">
+                <p class="text-code-gold">&lt;directory&nbsp;</p>
+                <p class="text-code-white">suffix</p>
+                <p class="text-code-green">=".php"</p>
+                <p class="text-code-gold">> </p>
+                <p class="text-code-white">./app</p>
+                <p class="text-code-gold">&lt;/directory></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;/include> </p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(1)">
+                <p class="text-code-gold">&lt;/coverage> </p>
+            </div>
+
+
+
+
+            <div class="flex flex-wrap" :class="paddingLevel(1)">
+                <p class="text-code-gold">&lt;php> </p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;env&nbsp;</p>
+                <p class="text-code-white">name</p>
+                <p class="text-code-green">="APP_ENV"&nbsp;</p>
+                <p class="text-code-white">value</p>
+                <p class="text-code-green">="testing"</p>
+                <p class="text-code-gold"> /></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;env&nbsp;</p>
+                <p class="text-code-white">name</p>
+                <p class="text-code-green">="BCRYPT_ROUNDS"&nbsp;</p>
+                <p class="text-code-white">value</p>
+                <p class="text-code-green">="4"</p>
+                <p class="text-code-gold"> /></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;env&nbsp;</p>
+                <p class="text-code-white">name</p>
+                <p class="text-code-green">="CACHE_DRIVER"&nbsp;</p>
+                <p class="text-code-white">value</p>
+                <p class="text-code-green">="array"</p>
+                <p class="text-code-gold"> /></p>
+            </div>
+            <div class="flex flex-wrap text-muted-gray" :class="paddingLevel(2)">
+                <p>&lt;!</p>
+                <p>--&nbsp;</p>
+                <p>&lt;env&nbsp;</p>
+                <p>name</p>
+                <p>="DB_CONNECTION"&nbsp;</p>
+                <p>value</p>
+                <p>="sqlite"</p>
+                <p> /></p>
+                <p>&nbsp;--</p>
+                <p>!></p>
+            </div>
+            <div class="flex flex-wrap text-muted-gray" :class="paddingLevel(2)">
+                <p>&lt;!</p>
+                <p>--&nbsp;</p>
+                <p>&lt;env&nbsp;</p>
+                <p>name</p>
+                <p>="DB_DATABASE"&nbsp;</p>
+                <p>value</p>
+                <p>=":memory:"</p>
+                <p> /></p>
+                <p>&nbsp;--</p>
+                <p>!></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;env&nbsp;</p>
+                <p class="text-code-white">name</p>
+                <p class="text-code-green">="MAIL_MAILER"&nbsp;</p>
+                <p class="text-code-white">value</p>
+                <p class="text-code-green">="array"</p>
+                <p class="text-code-gold"> /></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;env&nbsp;</p>
+                <p class="text-code-white">name</p>
+                <p class="text-code-green">="QUEUE_CONNECTION"&nbsp;</p>
+                <p class="text-code-white">value</p>
+                <p class="text-code-green">="sync"</p>
+                <p class="text-code-gold"> /></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;env&nbsp;</p>
+                <p class="text-code-white">name</p>
+                <p class="text-code-green">="SESSION_DRIVER"&nbsp;</p>
+                <p class="text-code-white">value</p>
+                <p class="text-code-green">="array"</p>
+                <p class="text-code-gold"> /></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(2)">
+                <p class="text-code-gold">&lt;env&nbsp;</p>
+                <p class="text-code-white">name</p>
+                <p class="text-code-green">="TELESCOPE_ENABLED"&nbsp;</p>
+                <p class="text-code-white">value</p>
+                <p class="text-code-green">="false"</p>
+                <p class="text-code-gold"> /></p>
+            </div>
+            <div class="flex flex-wrap" :class="paddingLevel(1)">
+                <p class="text-code-gold">&lt;/php> </p>
+            </div>
+
+
+
+            <div class="flex flex-wrap">
+                <p class="text-code-gold">&lt;/phpunit> </p>
+            </div>
+
 
         </div>
     </SimpleLayout>
