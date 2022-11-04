@@ -5,7 +5,7 @@ import {usePage} from "@inertiajs/inertia-vue3";
 
 import SourceRoot from '@/Icons/SourceRoot.vue';
 import ResourceRoot from '@/Icons/ResourceRoot.vue';
-import TestRoot from '@/Icons/TestRoot.vue';
+import PHPClass from '@/Icons/PHPClass.vue';
 import AbstractClass from '@/Icons/AbstractClass.vue';
 import Trait from '@/Icons/Trait.vue';
 import Blade from '@/Icons/Blade.vue';
@@ -206,6 +206,11 @@ const filesList = shallowRef([
         'link': 'test-case',
         'icon': AbstractClass
     },
+    {
+        'name': 'UnitTest.php',
+        'link': 'unit-test',
+        'icon': PHPClass
+    },
 ])
 
 export function toggleFolder(folderName, open) {
@@ -247,7 +252,7 @@ export const foldersStructure = ref([
         'name': 'routes',
         'topLevel': true,
         'parent': null,
-        'children': ['Feature', 'Unit']
+        'children': ['feature', 'unit']
     },
     {
         'name': 'tests',
@@ -259,6 +264,12 @@ export const foldersStructure = ref([
         'name': 'views',
         'topLevel': false,
         'parent': 'resources',
+        'children': null
+    },
+    {
+        'name': 'unit',
+        'topLevel': false,
+        'parent': 'tests',
         'children': null
     },
 ])

@@ -5,7 +5,7 @@ import {removeRowsCountFromWindowListener, setRowsCountFromWindowListener, syncS
 
 onMounted(() => {
     syncScroll()
-    setRowsCountFromWindowListener(35, 18)
+    setRowsCountFromWindowListener(35, 28)
 })
 onBeforeUnmount(() => {
     removeRowsCountFromWindowListener()

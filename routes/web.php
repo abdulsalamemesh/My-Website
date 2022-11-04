@@ -59,6 +59,7 @@ Route::get('api', fn() => Inertia::render('Code/Routes/API'))->name('api');
 //TESTS
 Route::get('creates-application', fn() => Inertia::render('Code/Tests/CreatesApplication'))->name('creates-application');
 Route::get('test-case', fn() => Inertia::render('Code/Tests/TestCase'))->name('test-case');
+Route::get('unit-test', fn() => Inertia::render('Code/Tests/UnitTest'))->name('unit-test');
 
 Route::get('language/{language}', function ($language) {
     Session()->put('locale', $language);
