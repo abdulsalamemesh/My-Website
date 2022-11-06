@@ -5,11 +5,6 @@ import SideNav from '@/Pages/Code/Partials/SideNav.vue'
 import Footer from '@/Pages/Code/Partials/Footer.vue'
 import Main from '@/Pages/Code/Partials/Main.vue'
 import MainNav from '@/Pages/Code/Partials/MainNav.vue'
-
-
-function message() {
-    alert('I know you want to open the file but this is still a website and not and IDE 😉')
-}
 </script>
 
 <template>
