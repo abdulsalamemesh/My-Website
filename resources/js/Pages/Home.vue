@@ -2,15 +2,71 @@
 import WebsiteLayout from '@/Layouts/WebsiteLayout.vue';
 import VueWriter from 'vue-writer'
 import ScrollArrow from "@/Components/ScrollArrow.vue";
-import {computed, defineProps, onMounted, ref} from "vue";
+import {computed, defineProps, onMounted, ref, shallowRef} from "vue";
 import {usePage, useForm} from "@inertiajs/inertia-vue3";
 import {currentLocation, isDark} from "../store";
-import {Inertia} from "@inertiajs/inertia";
+
+
+import Laravel from "@/Icons/Laravel.vue";
+import PHPIcon from "@/Icons/PHPIcon.vue";
+import OOP from "@/Icons/OOP.vue";
+import JavaScript from "@/Icons/JavaScript.vue";
+import CSS from "@/Icons/CSS.vue";
+import PHPStrom from "@/Icons/PHPStrom.vue";
+import Vue from "@/Icons/Vue.vue";
+import Livewire from "@/Icons/Livewire.vue";
+import Alpine from "@/Icons/Alpine.vue";
+import Tailwindcss from "@/Icons/Tailwindcss.vue";
+import Bootstrap from "@/Icons/Bootstrap.vue";
+import Git from "@/Icons/Git.vue";
+import Github from "@/Icons/Github.vue";
+import Bitbucket from "@/Icons/Bitbucket.vue";
+import Jira from "@/Icons/Jira.vue";
+import PHPUnitIcon from "@/Icons/PHPUnitIcon.vue";
+import MySQL from "@/Icons/MySQL.vue";
+import Datagrip from "@/Icons/Datagrip.vue";
+import NPMIcon from "@/Icons/NPMIcon.vue";
+import Yarn from "@/Icons/Yarn.vue";
+import Webpack from "@/Icons/Webpack.vue";
+import Vite from "@/Icons/Vite.vue";
+import SSH from "@/Icons/SSH.vue";
+import SFTP from "@/Icons/SFTP.vue";
+import JSON from "@/Icons/JSON.vue";
+import Language from "@/Icons/Language.vue";
+import Drive from "@/Icons/Drive.vue";
 
 const selectableLocale = computed(() => {
     return usePage().props.value.locale
 })
-
+const SkillsLogos = shallowRef({
+    'Laravel': Laravel,
+    'PHPIcon': PHPIcon,
+    'OOP': OOP,
+    'JavaScript': JavaScript,
+    'CSS': CSS,
+    'PHPStrom': PHPStrom,
+    'Vue': Vue,
+    'Alpine': Alpine,
+    'Livewire': Livewire,
+    'Tailwindcss': Tailwindcss,
+    'Bootstrap': Bootstrap,
+    'Git': Git,
+    'Github': Github,
+    'Bitbucket': Bitbucket,
+    'Drive': Drive,
+    'Language': Language,
+    'JSON': JSON,
+    'SFTP': SFTP,
+    'SSH': SSH,
+    'Vite': Vite,
+    'Webpack': Webpack,
+    'Yarn': Yarn,
+    'NPMIcon': NPMIcon,
+    'Datagrip': Datagrip,
+    'MySQL': MySQL,
+    'PHPUnitIcon': PHPUnitIcon,
+    'Jira': Jira,
+})
 const {educations, experiences, skills, errors} = defineProps({
     educations: Object,
     experiences: Object,
@@ -176,20 +232,18 @@ onMounted(() => {
                             <template v-for="skill in skillGroup.skills">
                                 <div class="col-span-1 flex items-center space-x-2">
                                     <div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-current text-blue-500 dark:text-indigo-600">
-                                            <path
-                                                d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
-                                        </svg>
+                                        <!--                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-current text-blue-500 dark:text-indigo-600">-->
+                                        <!--                                            <path-->
+                                        <!--                                                d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>-->
+                                        <!--                                        </svg>-->
+                                        <component :is="SkillsLogos[skill.logo]" :key="skill.logo" class="h-7 w-7"></component>
                                     </div>
-                                    <p class="dark:text-white font-medium text-sm md:text-base">{{ skill }}</p>
+                                    <p class="dark:text-white font-medium text-sm md:text-base">{{ skill.name }}</p>
                                 </div>
                             </template>
                         </div>
                     </div>
-
-
                 </template>
-
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/section></p>
             </div>
             <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
@@ -372,7 +426,8 @@ onMounted(() => {
 
                 <div class="ml-2 flex flex-wrap flex-row w-full justify-center">
                     <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
-                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                        <div
+                            class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
                             <div>
                                 <h2 class="text-xl">
                                     {{ __('Dipos online shop') }}
@@ -391,7 +446,8 @@ onMounted(() => {
                         </div>
                     </div>
                     <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
-                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                        <div
+                            class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
                             <div>
                                 <h2 class="text-xl">
                                     {{ __('Apprentices Management System') }}
@@ -410,7 +466,8 @@ onMounted(() => {
                         </div>
                     </div>
                     <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
-                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                        <div
+                            class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
                             <div>
                                 <h2 class="text-xl">
                                     Cloud LASE
@@ -420,7 +477,8 @@ onMounted(() => {
                                     }}</p>
                             </div>
                             <div class="border-t border-slate-400 pt-2">
-                                <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Data-aggregation') }} #{{ __('Multi-Tenancy') }} #{{ __('Statistics') }} #{{ __('Permissions') }}</p>
+                                <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Data-aggregation') }} #{{ __('Multi-Tenancy') }} #{{ __('Statistics') }}
+                                    #{{ __('Permissions') }}</p>
                                 <a href="https://cloud-lase.com" target="_blank"
                                    class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
                                     cloud-lase.com
@@ -429,13 +487,16 @@ onMounted(() => {
                         </div>
                     </div>
                     <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
-                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                        <div
+                            class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
                             <div>
                                 <h2 class="text-xl">
                                     {{ __('My portfolio') }}
                                 </h2>
                                 <p class="mt-2">
-                                    {{ __('I built my portfolio with the following technologies: latest Laravel version and PHP version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss.') }}
+                                    {{
+                                        __('I built my portfolio with the following technologies: latest Laravel version and PHP version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss.')
+                                    }}
                                 </p>
                             </div>
                             <div class="border-t border-slate-400 pt-2">
@@ -448,7 +509,8 @@ onMounted(() => {
                         </div>
                     </div>
                     <div class="p-2 w-full lg:w-1/2 xl:w-1/3 flex">
-                        <div class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
+                        <div
+                            class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
                             <div>
                                 <h2 class="text-xl">
                                     Rottbeck Immobilien
