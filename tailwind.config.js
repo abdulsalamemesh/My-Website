@@ -51,7 +51,10 @@ module.exports = {
                     DEFAULT: '#8D7D97',
                 },
                 "code-gold": {
-                    DEFAULT: '#dfc087',
+                    DEFAULT: '#e0c451',
+                },
+                "code-banner": {
+                    DEFAULT: '#405060',
                 },
             }
         },

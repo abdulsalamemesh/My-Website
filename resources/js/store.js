@@ -18,6 +18,7 @@ import Markdown from '@/Icons/Markdown.vue';
 import {Inertia} from "@inertiajs/inertia";
 import {value} from "lodash/seq";
 
+export const showTestTerminal = ref(false)
 export const isDark = useDark()
 export const currentLocation = ref('home')
 export const rowsCount = ref(150)
