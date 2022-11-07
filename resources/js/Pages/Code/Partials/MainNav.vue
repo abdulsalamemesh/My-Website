@@ -185,6 +185,7 @@ import {setActiveFiles, toggleFolder, openedFolders} from "../../../store";
                 <ExcludeRoot classes="h-4 w-4"/>
                 <span>node_modules</span>
             </div>
+            <!--         public           -->
             <div @click="toggleFolder('public',!openedFolders.includes('public'))"
                  class="pl-5 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
                 <div>
@@ -194,7 +195,13 @@ import {setActiveFiles, toggleFolder, openedFolders} from "../../../store";
                 <ExcludeRoot classes="h-4 w-4"/>
                 <span>public</span>
             </div>
-
+            <Link v-show="openedFolders.includes('public')" :href="route('index-public')" :class="[route().current('index-public') ? '!bg-default-blue' : '']"
+                  @click="setActiveFiles('index-public')"
+                  class="pl-12 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                <PHP classes="h-4 w-4"/>
+                <span>index.php</span>
+            </Link>
+            <!--         end public           -->
             <!--         resources           -->
             <div @click="toggleFolder('resources',!openedFolders.includes('resources'))"
                  class="pl-5 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">

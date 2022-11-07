@@ -218,6 +218,11 @@ const filesList = shallowRef([
         'link': 'bootstrap.js',
         'icon': JSFile
     },
+    {
+        'name': 'index.php',
+        'link': 'index-public',
+        'icon': PHP
+    },
 ])
 
 export function toggleFolder(folderName, open) {
@@ -379,6 +384,12 @@ export const foldersStructure = ref([
         'name': 'public',
         'topLevel': true,
         'parent': null,
+        'children': ['index-public']
+    },
+    {
+        'name': 'index-public',
+        'topLevel': false,
+        'parent': 'public',
         'children': null
     },
     {

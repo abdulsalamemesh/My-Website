@@ -39,6 +39,8 @@ Route::get('project', ProjectController::class)->name('project');
 // JS
 Route::get('app.js', fn() => Inertia::render('Code/JS/App'))->name('app.js');
 Route::get('bootstrap.js', fn() => Inertia::render('Code/JS/Bootstrap'))->name('bootstrap.js');
+// PUBLIC
+Route::get('index-public', fn() => Inertia::render('Code/PUBLIC/Index'))->name('index-public');
 
 // CSS
 Route::get('app.css', fn() => Inertia::render('Code/CSS/App'))->name('app.css');
