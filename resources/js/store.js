@@ -2,9 +2,7 @@ import {useDark, useToggle} from "@vueuse/core/index";
 import {computed, ref, shallowRef} from "vue";
 import {usePage} from "@inertiajs/inertia-vue3";
 
-
-import SourceRoot from '@/Icons/SourceRoot.vue';
-import ResourceRoot from '@/Icons/ResourceRoot.vue';
+import CSSFile from '@/Icons/CSSFile.vue';
 import PHPClass from '@/Icons/PHPClass.vue';
 import AbstractClass from '@/Icons/AbstractClass.vue';
 import Trait from '@/Icons/Trait.vue';
@@ -16,7 +14,6 @@ import TestUnitFile from '@/Icons/TestUnitFile.vue';
 import JSFile from '@/Icons/JSFile.vue';
 import Markdown from '@/Icons/Markdown.vue';
 import {Inertia} from "@inertiajs/inertia";
-import {value} from "lodash/seq";
 
 export const showTestTerminal = ref(false)
 export const isDark = useDark()
@@ -213,6 +210,11 @@ const filesList = shallowRef([
         'icon': PHPClass
     },
     {
+        'name': 'app.css',
+        'link': 'app.css',
+        'icon': CSSFile
+    },
+    {
         'name': 'app.js',
         'link': 'app.js',
         'icon': JSFile
@@ -293,7 +295,7 @@ export const foldersStructure = ref([
         'name': 'resources',
         'topLevel': true,
         'parent': null,
-        'children': ['css', 'js', 'markdown', 'views']
+        'children': ['css', 'js', 'views']
     },
     {
         'name': 'css',
@@ -303,12 +305,6 @@ export const foldersStructure = ref([
     },
     {
         'name': 'js',
-        'topLevel': false,
-        'parent': 'resources',
-        'children': null
-    },
-    {
-        'name': 'markdown',
         'topLevel': false,
         'parent': 'resources',
         'children': null

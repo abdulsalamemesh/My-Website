@@ -18,6 +18,7 @@ import Trait from '@/Icons/Trait.vue';
 import AbstractClass from '@/Icons/AbstractClass.vue';
 import PHPClass from '@/Icons/PHPClass.vue';
 import Project from '@/Icons/Project.vue';
+import CSSFile from '@/Icons/CSSFile.vue';
 import {setActiveFiles, toggleFolder, openedFolders} from "../../../store";
 
 </script>
@@ -214,6 +215,12 @@ import {setActiveFiles, toggleFolder, openedFolders} from "../../../store";
                 <Folder classes="h-4 w-4"/>
                 <span>css</span>
             </div>
+            <Link
+                v-show="openedFolders.includes('css')" :href="route('app.css')" :class="[route().current('app.css') ? '!bg-default-blue' : '']" @click="setActiveFiles('app.css')"
+                class="pl-12 text-menu-font flex justify-start items-center space-x-1 px-2 w-full">
+                <CSSFile classes="h-4 w-4"/>
+                <span>app.css</span>
+            </Link>
             <div @click="toggleFolder('js',!openedFolders.includes('js'))"
                  v-show="openedFolders.includes('resources')"
                  class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
@@ -236,16 +243,6 @@ import {setActiveFiles, toggleFolder, openedFolders} from "../../../store";
                 <JSFile classes="h-4 w-4"/>
                 <span>bootstrap.js</span>
             </Link>
-            <div @click="toggleFolder('markdown',!openedFolders.includes('markdown'))"
-                 v-show="openedFolders.includes('resources')"
-                 class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">
-                <div>
-                    <ChevronDown v-show="openedFolders.includes('markdown')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
-                    <ChevronRight v-show="!openedFolders.includes('markdown')" classes="h-2.5 w-2.5 text-menu-font fill-current"/>
-                </div>
-                <Folder classes="h-4 w-4"/>
-                <span>markdown</span>
-            </div>
             <!--         Views           -->
             <div v-show="openedFolders.includes('resources')" @click="toggleFolder('views',!openedFolders.includes('views'))"
                  class="pl-8 text-menu-font flex justify-start items-center space-x-1 px-2 w-full cursor-pointer">

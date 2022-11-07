@@ -5,7 +5,7 @@ import {removeRowsCountFromWindowListener, setRowsCountFromWindowListener, syncS
 
 onMounted(() => {
     syncScroll()
-    setRowsCountFromWindowListener(2, 2)
+    setRowsCountFromWindowListener(4, 4)
 })
 onBeforeUnmount(() => {
     removeRowsCountFromWindowListener()
@@ -16,8 +16,18 @@ onBeforeUnmount(() => {
     <SimpleLayout title="Abdulsalam Emesh">
         <div class="pl-1 py-1 grow leading-5 overflow-x-hidden overflow-y-scroll custom-scrollbar scroll-js" id="count">
             <div class="flex flex-wrap">
-                <p class="text-code-fire">import&nbsp;</p>
-                <p class="text-code-green">'./bootstrap'</p>
+                <p class="text-code-fire">@tailwind&nbsp;</p>
+                <p class="text-code-gold">base</p>
+                <p class="text-code-fire">;</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">@tailwind&nbsp;</p>
+                <p class="text-code-gold">components</p>
+                <p class="text-code-fire">;</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-code-fire">@tailwind&nbsp;</p>
+                <p class="text-code-gold">utilities</p>
                 <p class="text-code-fire">;</p>
             </div>
         </div>

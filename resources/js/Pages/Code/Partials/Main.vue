@@ -23,15 +23,15 @@ import {activeFilesList, removeFromActiveFilesList,rowsCount, showTestTerminal} 
                 </template>
             </div>
             <div class="mr-4 grow justify-end items-center flex min-w-fit space-x-2">
-                <div class="flex items-center border border-muted-gray rounded px-2 cursor-pointer" @click="showTestTerminal = true">
+                <div class="hidden md:flex items-center border border-muted-gray rounded px-2 cursor-pointer" @click="showTestTerminal = true">
                     <PHPUnit class="w-3 h-3 mr-0.5"/>
                     <p class="text-code-white text-[0.7rem] inline-block">phpunit.xml</p>
                 </div>
-                <Run class="w-4 h-4 text-green-500 fill-current cursor-pointer" @click="showTestTerminal = true"/>
-                <Bug class="w-4 h-4"/>
-                <Coverage class="w-4 h-4"/>
-                <DebugListen class="w-4 h-4"/>
-                <Stop class="w-4 h-4"/>
+                <Run class="hidden md:block w-4 h-4 text-green-500 fill-current cursor-pointer" @click="showTestTerminal = true"/>
+                <Bug class="hidden md:block w-4 h-4"/>
+                <Coverage class="hidden md:block w-4 h-4"/>
+                <DebugListen class="hidden md:block w-4 h-4"/>
+                <Stop class="hidden md:block w-4 h-4"/>
                 <LangaugeSelector/>
             </div>
         </div>
