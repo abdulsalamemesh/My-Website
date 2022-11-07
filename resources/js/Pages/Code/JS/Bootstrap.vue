@@ -87,20 +87,64 @@ onBeforeUnmount(() => {
             <br>
 
             <div class="flex flex-wrap">
+                <p class="text-muted-gray">// import&nbsp;</p>
+                <p class="text-muted-gray">Echo from&nbsp;</p>
+                <p class="text-muted-gray">'laravel-echo';</p>
+            </div>
+            <br>
+            <div class="flex flex-wrap">
+                <p class="text-muted-gray">// import&nbsp;</p>
+                <p class="text-muted-gray">Pusher from&nbsp;</p>
+                <p class="text-muted-gray">'pusher-js';</p>
+            </div>
+            <br>
+            <div class="flex flex-wrap">
+                <p class="text-muted-gray">// window.Echo</p>
+                <p class="text-muted-gray">&nbsp;=&nbsp; </p>
+                <p class="text-muted-gray">new&nbsp;</p>
+                <p class="text-muted-gray">Echo({</p>
+            </div>
+            <div class="flex flex-wrap">
                 <p class="text-muted-gray">
-                    // import Echo from 'laravel-echo'; <br>
-                    <br>
-                    // import Pusher from 'pusher-js'; <br>
-                    // window.Pusher = Pusher; <br>
-                    <br>
-                    // window.Echo = new Echo({ <br>
-                    //     broadcaster: 'pusher', <br>
-                    //     key: import.meta.env.VITE_PUSHER_APP_KEY, <br>
-                    //     wsHost: import.meta.env.VITE_PUSHER_HOST ?? `ws-${import.meta.env.VITE_PUSHER_APP_CLUSTER}.pusher.com`, <br>
-                    //     wsPort: import.meta.env.VITE_PUSHER_PORT ?? 80, <br>
-                    //     wssPort: import.meta.env.VITE_PUSHER_PORT ?? 443, <br>
-                    //     forceTLS: (import.meta.env.VITE_PUSHER_SCHEME ?? 'https') === 'https', <br>
-                    //     enabledTransports: ['ws', 'wss'], <br>
+                    // broadcaster: 'pusher',
+                </p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-muted-gray">// key: import</p>
+                <p class="text-muted-gray">.meta.</p>
+                <p class="text-muted-gray">env.</p>
+                <p class="text-muted-gray">VITE_PUSHER_APP_KEY,</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-muted-gray">// wsHost: import.</p>
+                <p class="text-muted-gray">meta.</p>
+                <p class="text-muted-gray">env.</p>
+                <p class="text-muted-gray">VITE_PUSHER_HOST ?</p>
+                <p class="text-muted-gray">? `ws-${</p>
+                <p class="text-muted-gray">import.</p>
+                <p class="text-muted-gray">meta.env.</p>
+                <p class="text-muted-gray">VITE_PUSHER_APP_CLUSTER}</p>
+                <p class="text-muted-gray">.pusher.com`,</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-muted-gray">// wsPort: import.</p>
+                <p class="text-muted-gray">meta.env.</p>
+                <p class="text-muted-gray">VITE_PUSHER_PORT ?? 80,</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-muted-gray">// wssPort: import.</p>
+                <p class="text-muted-gray">meta.env.</p>
+                <p class="text-muted-gray">VITE_PUSHER_PORT ?? 443,</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-muted-gray">// forceTLS: (import.</p>
+                <p class="text-muted-gray">meta.env.</p>
+                <p class="text-muted-gray">VITE_PUSHER_SCHEME ?</p>
+                <p class="text-muted-gray">? 'https') === 'https',</p>
+            </div>
+            <div class="flex flex-wrap">
+                <p class="text-muted-gray">
+                    // enabledTransports: ['ws', 'wss'], <br>
                     // }); <br>
                 </p>
             </div>
