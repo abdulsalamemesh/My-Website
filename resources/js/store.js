@@ -395,7 +395,7 @@ export const foldersStructure = ref([
     },
 ])
 
-export const openedFolders = ref(['resources', 'views'])
+export const openedFolders = ref([])
 
 export function setRowsCountFromWindowListener(mobile, desktop){
     if (window.innerWidth < 950) {
