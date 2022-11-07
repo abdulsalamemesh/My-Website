@@ -212,6 +212,16 @@ const filesList = shallowRef([
         'link': 'unit-test',
         'icon': PHPClass
     },
+    {
+        'name': 'app.js',
+        'link': 'app.js',
+        'icon': JSFile
+    },
+    {
+        'name': 'bootstrap.js',
+        'link': 'bootstrap.js',
+        'icon': JSFile
+    },
 ])
 
 export function toggleFolder(folderName, open) {
@@ -241,6 +251,42 @@ export const foldersStructure = ref([
         'name': 'app',
         'topLevel': true,
         'parent': null,
+        'children': ['Actions','Console','Exceptions','Http','Models','Providers']
+    },
+    {
+        'name': 'Actions',
+        'topLevel': false,
+        'parent': 'app',
+        'children': null
+    },
+    {
+        'name': 'Console',
+        'topLevel': false,
+        'parent': 'app',
+        'children': null
+    },
+    {
+        'name': 'Exceptions',
+        'topLevel': false,
+        'parent': 'app',
+        'children': null
+    },
+    {
+        'name': 'Http',
+        'topLevel': false,
+        'parent': 'app',
+        'children': null
+    },
+    {
+        'name': 'Models',
+        'topLevel': false,
+        'parent': 'app',
+        'children': null
+    },
+    {
+        'name': 'Providers',
+        'topLevel': false,
+        'parent': 'app',
         'children': null
     },
     {
@@ -248,6 +294,30 @@ export const foldersStructure = ref([
         'topLevel': true,
         'parent': null,
         'children': ['css', 'js', 'markdown', 'views']
+    },
+    {
+        'name': 'css',
+        'topLevel': false,
+        'parent': 'resources',
+        'children': null
+    },
+    {
+        'name': 'js',
+        'topLevel': false,
+        'parent': 'resources',
+        'children': null
+    },
+    {
+        'name': 'markdown',
+        'topLevel': false,
+        'parent': 'resources',
+        'children': null
+    },
+    {
+        'name': 'views',
+        'topLevel': false,
+        'parent': 'resources',
+        'children': null
     },
     {
         'name': 'routes',
@@ -262,15 +332,75 @@ export const foldersStructure = ref([
         'children': null
     },
     {
-        'name': 'views',
-        'topLevel': false,
-        'parent': 'resources',
-        'children': null
-    },
-    {
         'name': 'unit',
         'topLevel': false,
         'parent': 'tests',
+        'children': null
+    },
+    {
+        'name': 'database',
+        'topLevel': true,
+        'parent': null,
+        'children': ['factories', 'seeders', 'migrations']
+    },
+    {
+        'name': 'factories',
+        'topLevel': false,
+        'parent': 'database',
+        'children': null
+    },
+    {
+        'name': 'seeders',
+        'topLevel': false,
+        'parent': 'database',
+        'children': null
+    },
+    {
+        'name': 'migrations',
+        'topLevel': false,
+        'parent': 'database',
+        'children': null
+    },
+    {
+        'name': 'bootstrap',
+        'topLevel': true,
+        'parent': null,
+        'children': null
+    },
+    {
+        'name': 'config',
+        'topLevel': true,
+        'parent': null,
+        'children': null
+    },
+    {
+        'name': 'lang',
+        'topLevel': true,
+        'parent': null,
+        'children': null
+    },
+    {
+        'name': 'node_modules',
+        'topLevel': true,
+        'parent': null,
+        'children': null
+    },
+    {
+        'name': 'public',
+        'topLevel': true,
+        'parent': null,
+        'children': null
+    },
+    {
+        'name': 'storage',
+        'topLevel': true,
+        'parent': null,
+        'children': null
+    },
+    {
+        'name': 'vendor',
+        'topLevel': true,
+        'parent': null,
         'children': null
     },
 ])

@@ -36,6 +36,10 @@ Route::get('other-information', OtherInformationController::class)->name('other-
 Route::get('layout', fn() => Inertia::render('Code/Blade/Layout'))->name('layout');
 Route::get('project', ProjectController::class)->name('project');
 
+// JS
+Route::get('app.js', fn() => Inertia::render('Code/JS/App'))->name('app.js');
+Route::get('bootstrap.js', fn() => Inertia::render('Code/JS/Bootstrap'))->name('bootstrap.js');
+
 // ROOT
 Route::get('readme', fn() => Inertia::render('Code/Root/Readme'))->name('readme');
 Route::get('env', fn() => Inertia::render('Code/Root/Env'))->name('env');
