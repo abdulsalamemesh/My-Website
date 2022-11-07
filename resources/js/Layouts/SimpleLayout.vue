@@ -5,6 +5,12 @@ import SideNav from '@/Pages/Code/Partials/SideNav.vue'
 import Footer from '@/Pages/Code/Partials/Footer.vue'
 import Main from '@/Pages/Code/Partials/Main.vue'
 import MainNav from '@/Pages/Code/Partials/MainNav.vue'
+import {onMounted} from "vue";
+import {setActiveFiles} from "../store";
+
+onMounted(()=>{
+    setActiveFiles(route().current())
+})
 </script>
 
 <template>

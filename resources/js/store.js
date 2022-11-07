@@ -46,13 +46,7 @@ export function syncScroll() {
     }
 }
 
-export const activeFilesList = shallowRef([
-    {
-        'name': 'README.md',
-        'link': 'readme',
-        'icon': Markdown
-    },
-])
+export const activeFilesList = shallowRef([])
 
 export function setActiveFiles(link) {
     let selectedFile = filesList.value.filter(file => file.link === link)
