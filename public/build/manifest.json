@@ -74,7 +74,7 @@
       "resources/js/Pages/Welcome.vue"
     ],
     "css": [
-      "assets/app.c2cde706.css"
+      "assets/app.1d18082b.css"
     ],
     "assets": [
       "assets/Montserrat-Italic-VariableFont_wght.57015d2c.ttf",
@@ -1143,15 +1143,15 @@
     ]
   },
   "resources/js/app.css": {
-    "file": "assets/app.c2cde706.css",
+    "file": "assets/app.1d18082b.css",
     "src": "resources/js/app.css"
-  },
-  "AppLayout.css": {
-    "file": "assets/AppLayout.f050b069.css",
-    "src": "AppLayout.css"
   },
   "resources/js/Pages/Home.css": {
     "file": "assets/Home.a739fe66.css",
     "src": "resources/js/Pages/Home.css"
+  },
+  "AppLayout.css": {
+    "file": "assets/AppLayout.f050b069.css",
+    "src": "AppLayout.css"
   }
 }

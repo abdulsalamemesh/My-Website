@@ -51,7 +51,7 @@ module.exports = {
                     DEFAULT: '#8D7D97',
                 },
                 "code-gold": {
-                    DEFAULT: '#e0c451',
+                    DEFAULT: 'rgba(224,179,81,0.91)',
                 },
                 "code-banner": {
                     DEFAULT: '#405060',
