@@ -93,7 +93,7 @@ onBeforeUnmount(() => {
                 <p class="text-code-green">log</p>
             </div>
             <div class="flex flex-wrap">
-                <p class="text-code-fire">^CACHE_DRIVER</p>
+                <p class="text-code-fire">CACHE_DRIVER</p>
                 <p class="text-code-white">=</p>
                 <p class="text-code-green">file</p>
             </div>
