@@ -7,12 +7,12 @@ import DebugListen from '@/Icons/DebugListen.vue';
 import Stop from '@/Icons/Stop.vue';
 import LangaugeSelector from '@/Layouts/LangaugeSelector.vue'
 import Run from '@/Icons/Run.vue';
-import {activeFilesList, removeFromActiveFilesList,rowsCount, showTestTerminal} from "../../../store";
+import {activeFilesList, removeFromActiveFilesList, rowsCount, showTestTerminal} from "../../../store";
 </script>
 <template>
     <div class="flex flex-col grow text-xs">
         <div class="bg-menu-bg border-b-[1px] border-black/30 min-h-[1.75rem] text-xs flex items-center justify-between max-w-full">
-            <div class="flex h-full">
+            <div class="flex h-full" v-if="activeFilesList.length > 0">
                 <template v-for="file in activeFilesList">
                     <div class="w-max h-full flex justify-center items-center text-menu-font px-1 space-x-1"
                          :class="[route().current(file.link) ? 'bg-[#4e5254] border-b-2 border-blue-400':'border-b-2 border-transparent' ]">
@@ -47,7 +47,7 @@ import {activeFilesList, removeFromActiveFilesList,rowsCount, showTestTerminal} 
             <!-- Page Content -->
             <slot/>
         </div>
-        <div class="bg-secondary-bg border-t-[1px] border-gray-500/20 text-code-white text-[0.6rem] leading-5 pl-10 hidden md:block">
+        <div v-if="activeFilesList.length > 0" class="bg-secondary-bg border-t-[1px] border-gray-500/20 text-code-white text-[0.6rem] leading-5 pl-10 hidden md:block">
             <template v-for="file in activeFilesList">
                 <template v-if="file.link === route().current()">
                     {{ file.name }}

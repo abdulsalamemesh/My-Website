@@ -9,7 +9,9 @@ import {onMounted} from "vue";
 import {setActiveFiles} from "../store";
 
 onMounted(()=>{
-    setActiveFiles(route().current())
+    if (route().current() !== 'empty'){
+        setActiveFiles(route().current())
+    }
 })
 </script>
 

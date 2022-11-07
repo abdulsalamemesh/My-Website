@@ -61,7 +61,6 @@ export function setActiveFiles(link) {
 
 export function removeFromActiveFilesList(link) {
     activeFilesList.value = activeFilesList.value.filter(file => file.link !== link)
-
     if (activeFilesList.value.length === 0 && route().current(link) !== 'empty') {
         Inertia.get('empty')
         return
