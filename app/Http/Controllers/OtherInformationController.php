@@ -19,11 +19,9 @@ class OtherInformationController extends Controller
             'information' =>
                 [
                     'hobbies'      => [
-                        __('Swimming'),
                         __('Music'),
                         __('Programming'),
                         __('Cycling'),
-                        __('Archery'),
                     ],
                     'achievements' => [
                         [
@@ -33,7 +31,7 @@ class OtherInformationController extends Controller
                         ],
                         [
                             'title'    => __('German courses from A1 to C1'),
-                            'subtitle' => 2017 - 2018,
+                            'subtitle' => '2017 - 2018',
                             'text'     => [],
                         ],
                         [

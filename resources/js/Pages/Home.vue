@@ -74,13 +74,13 @@ const {educations, experiences, skills, errors} = defineProps({
     errors: Object,
 })
 const enTitles = [
-    ' am a Fullstack Developer.',
+    ' am a Software Developer.',
     ' build things for the web.',
     ' enjoy solving problems.',
     ' love to work in team.',
 ];
 const deTitles = [
-    ' bin Fullstack-Entwickler.',
+    ' bin Software Entwickler.',
     ' entwickle Dinge für das Internet.',
     ' löse gerne Probleme.',
     ' arbeite gerne im Team.',
@@ -271,12 +271,18 @@ onMounted(() => {
             </div>
             <div class="max-w-7xl w-full mx-auto flex flex-col justify-center">
                 <div>
-                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;a download></p>
-                    <a href=""
-                       class="inline-block py-2 px-4 my-2 rounded text-sm font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 hover:dark:bg-indigo-700 focus:bg-blue-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white"
-                       download
+                    <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;a download> &lt;!-- {{ __('My Resume') }} --></p>
+                    <a href="/Abdulsalam_Emesh_Lebenslauf_2023_DE.pdf"
+                       class="inline-block border-r border-white py-2 px-4 my-2 rounded-l text-sm font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 hover:dark:bg-indigo-700 focus:bg-blue-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white"
+                       target="_blank"
                     >
-                        {{ __('My Resume') }}
+                        {{ __('German') }}
+                    </a>
+                    <a href="/Abdulsalam_Emesh_Resume_2023_EN.pdf"
+                       class="inline-block py-2 px-4 my-2 rounded-r text-sm font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 hover:dark:bg-indigo-700 focus:bg-blue-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white"
+                       target="_blank"
+                    >
+                        {{ __('English') }}
                     </a>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/a></p>
                 </div>
