@@ -81,37 +81,37 @@ const selectableLocale = computed(() => {
                 class="hidden md:flex flex-col">
                 <a href="#home"
                    :class="[currentLocation === 'home' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2 px-2 text-md font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Home') }}
                 </a>
                 <a href="#about"
                    :class="[currentLocation === 'about' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2 px-2 text-md font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('About') }}
                 </a>
                 <a href="#skills"
                    :class="[currentLocation === 'skills' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2 px-2 text-md font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Skills
                 </a>
                 <a href="#resume"
                    :class="[currentLocation === 'resume' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2 px-2 text-md font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Resume') }}
                 </a>
                 <a href="#projects"
                    :class="[currentLocation === 'projects' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2 px-2 text-md font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Projects') }}
                 </a>
                 <a href="#contact"
                    :class="[currentLocation === 'contact' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2 px-2 text-md font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Contact') }}
                 </a>
                 <Link :href="route('loading')"
                       :class="[currentLocation === 'loading' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                      class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                      class="py-2 px-2 text-md font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('For Programmers') }}
                 </Link>
             </div>
