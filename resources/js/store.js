@@ -53,7 +53,23 @@ export function setActiveFiles(link) {
     if (activeFilesList.value.filter(file => file.link === selectedFile[0].link).length === 0) {
         activeFilesList.value.push(selectedFile[0])
     }
-    if (activeFilesList.value.length > 5) {
+
+    if (activeFilesList.value.length > 2 && window.innerWidth < 550) {
+        activeFilesList.value.shift()
+    }
+    if (activeFilesList.value.length > 3 && window.innerWidth > 500 && window.innerWidth < 760) {
+        activeFilesList.value.shift()
+    }
+    if (activeFilesList.value.length > 1 && window.innerWidth > 760 && window.innerWidth < 950) {
+        activeFilesList.value.shift()
+    }
+    if (activeFilesList.value.length > 2 && window.innerWidth > 950 && window.innerWidth < 1100) {
+        activeFilesList.value.shift()
+    }
+    if (activeFilesList.value.length > 4 && window.innerWidth > 1100 && window.innerWidth < 1300) {
+        activeFilesList.value.shift()
+    }
+    if (activeFilesList.value.length > 5 && window.innerWidth > 1300) {
         activeFilesList.value.shift()
     }
 }
@@ -235,13 +251,13 @@ export function toggleFolder(folderName, open) {
             clickedFolder.children.forEach(function (child) {
                 const childIndex = openedFolders.value.indexOf(child)
                 if (childIndex > -1) {
-                    openedFolders.value.splice(childIndex,1)
+                    openedFolders.value.splice(childIndex, 1)
                 }
             })
         }
         let clickedFolderIndex = openedFolders.value.indexOf(clickedFolder.name)
         if (clickedFolderIndex > -1) {
-            openedFolders.value.splice(clickedFolderIndex,1)
+            openedFolders.value.splice(clickedFolderIndex, 1)
         }
     }
 }
@@ -251,7 +267,7 @@ export const foldersStructure = ref([
         'name': 'app',
         'topLevel': true,
         'parent': null,
-        'children': ['Actions','Console','Exceptions','Http','Models','Providers']
+        'children': ['Actions', 'Console', 'Exceptions', 'Http', 'Models', 'Providers']
     },
     {
         'name': 'Actions',
@@ -407,7 +423,7 @@ export const foldersStructure = ref([
 
 export const openedFolders = ref([])
 
-export function setRowsCountFromWindowListener(mobile, desktop){
+export function setRowsCountFromWindowListener(mobile, desktop) {
     if (window.innerWidth < 950) {
         rowsCount.value = mobile
     } else {
@@ -421,6 +437,7 @@ export function setRowsCountFromWindowListener(mobile, desktop){
         }
     })
 }
-export function removeRowsCountFromWindowListener(){
+
+export function removeRowsCountFromWindowListener() {
     window.removeEventListener('resize', () => rowsCount.value = 150);
 }
