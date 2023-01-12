@@ -27,7 +27,7 @@ onBeforeUnmount(() => {
                 <p class="text-code-white">&nbsp;class</p>
                 <p class="text-code-class">="font-bold text-lg text-indigo-500 uppercase"</p>
                 <p class="text-code-gold">&gt;</p>
-                <p class="text-code-white">{{ __('Projects') }}</p>
+                <p class="text-code-white">{{ __('Projects & Packages') }}</p>
                 <p class="text-code-gold">&lt;/h1&gt;</p>
             </div>
             <div :class="paddingLevel(1)" class="flex flex-wrap">

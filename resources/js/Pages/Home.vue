@@ -405,7 +405,7 @@ onMounted(() => {
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full mt-6">&lt;/section></p>
             </div>
             <div class="px-6 md:px-12 w-full flex justify-center items-center space-x-12 md:justify-end">
-                <p class="text-blue-500 dark:text-indigo-600 font-medium">{{ __('Projects') }}</p>
+                <p class="text-blue-500 dark:text-indigo-600 font-medium">{{ __('Projects & Packages') }}</p>
                 <ScrollArrow id="projects"/>
             </div>
         </section>
@@ -422,7 +422,7 @@ onMounted(() => {
                 <div>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
                     <h2 class="ml-2 text-2xl md:text-4xl lg:text-5xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
-                        {{ __('Projects') }}
+                        {{ __('Projects & Packages') }}
                     </h2>
                     <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full">&lt;/h2></p>
                 </div>
@@ -443,7 +443,7 @@ onMounted(() => {
                                     }}</p>
                             </div>
                             <div class="border-t border-slate-400 pt-2">
-                                <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Export') }} #{{ __('Import') }} #{{ __('Orders') }}</p>
+                                <p class="text-xs">#{{ __('Teamwork') }} #{{ __('API') }} #{{ __('Export') }} #{{ __('Import') }} #{{ __('Orders') }}</p>
                                 <a href="https://shop.dipos.de/en" target="_blank"
                                    class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
                                     shop.dipos.de
@@ -483,7 +483,7 @@ onMounted(() => {
                                     }}</p>
                             </div>
                             <div class="border-t border-slate-400 pt-2">
-                                <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }} #{{ __('Data-aggregation') }} #{{ __('Multi-Tenancy') }} #{{ __('Statistics') }}
+                                <p class="text-xs">#{{ __('Teamwork') }} #{{ __('API') }} #{{ __('Data-aggregation') }} #{{ __('Multi-Tenancy') }} #{{ __('Statistics') }}
                                     #{{ __('Permissions') }}</p>
                                 <a href="https://cloud-lase.com" target="_blank"
                                    class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
@@ -519,17 +519,17 @@ onMounted(() => {
                             class="grow p-4 flex flex-col justify-between rounded dark:text-slate-300 font-medium space-y-3 bg-slate-200 dark:bg-slate-800 border border-slate-400 dark:border-slate-600">
                             <div>
                                 <h2 class="text-xl">
-                                    Rottbeck Immobilien
+                                    What to do API
                                 </h2>
                                 <p class="mt-2"> {{
-                                        __('An online real estate agent with a real estate filters. The API from ImmoScout24 was implemented to get the latest available real estate.')
+                                        __('A small API that gives you random tasks when you don\'t know what to do. The website uses DeepL.com API interface to translate the tasks into different languages. It has a user interface to add new tasks.')
                                     }}</p>
                             </div>
                             <div class="border-t border-slate-400 pt-2">
-                                <p class="text-xs">#{{ __('Teamarbeit') }} #{{ __('API') }}</p>
-                                <a href="https://rottbeck-immobilien.de" target="_blank"
+                                <p class="text-xs">#{{ __('Individual-work') }} #{{ __('API') }}</p>
+                                <a href="https://what-to-do-api.com" target="_blank"
                                    class="block text-sm md:text-base text-blue-500 hover:text-blue-600 dark:text-indigo-600 dark:hover:text-indigo-700 transition duration-150">
-                                    rottbeck-immobilien.de
+                                    what-to-do-api.com
                                 </a>
                             </div>
                         </div>
@@ -573,8 +573,9 @@ onMounted(() => {
                             <a href="tel:+491726081149" class="block text-sm md:text-base">
                                 {{ __('Phone') }}: <span class="hover:text-blue-500 dark:hover:text-indigo-600 transition duration-150 encrypt-email">94 118 06 271 94+</span>
                             </a>
-                            <a href="javascript:linkTo_UnCryptMailto('nbjmup;bcevmtbmbn/fnfti/xpslAhnbjm/dpn');" class="block text-sm md:text-base">
-                                {{ __('Email') }}: <span class="hover:text-blue-500 dark:hover:text-indigo-600 transition duration-150 encrypt-email">moc.liamg@krow.hseme.malasludba</span>
+                            <a href="javascript:linkTo_UnCryptMailto('nbjmup;dpoubduAbcevmtbmbn.fnfti/nf');" class="block text-sm md:text-base">
+                                {{ __('Email') }}: <span
+                                class="hover:text-blue-500 dark:hover:text-indigo-600 transition duration-150 encrypt-email">em.hseme-malasludba@tcatnoc</span>
                             </a>
                         </div>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full ">&lt;/div></p>

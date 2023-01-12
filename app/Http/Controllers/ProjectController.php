@@ -21,7 +21,7 @@ class ProjectController extends Controller
                     [
                         'title' => __('Dipos online shop'),
                         'text' => __('A custom-made multilingual online Shop where you can shop for your next screen protection foils for any device. The system has an admin area where the admin can upload weekly an over 500 MB CSV file with the new products and export the new orders.'),
-                        'hashtags' => '#'. __('Teamarbeit') .' #'. __('API') .' #'. __('Export') .' #'. __('Import') .' #'. __('Orders') ,
+                        'hashtags' => '#'. __('Teamwork') .' #'. __('API') .' #'. __('Export') .' #'. __('Import') .' #'. __('Orders') ,
                         'link' => 'shop.dipos.de'
                     ],
                     [
@@ -33,7 +33,7 @@ class ProjectController extends Controller
                     [
                         'title' => 'Cloud LASE',
                         'text' =>__('A Laravel multi tenancy cloud based platform with supervision area, where the Clients can connect their own Laser counting devices in an automated process. The platform is also responsible for the aggregation of the data and generating statistic.'),
-                        'hashtags' =>'#'. __('Teamarbeit').' #'. __('API').' #'. __('Data-aggregation').' #'. __('Multi-Tenancy').' #'. __('Statistics').' #'. __('Permissions'),
+                        'hashtags' =>'#'. __('Teamwork').' #'. __('API').' #'. __('Data-aggregation').' #'. __('Multi-Tenancy').' #'. __('Statistics').' #'. __('Permissions'),
                         'link' =>'cloud-lase.com',
                     ],
                     [
@@ -43,10 +43,10 @@ class ProjectController extends Controller
                         'link' =>'abdulsalam-emesh.me',
                     ],
                     [
-                        'title' =>' Rottbeck Immobilien',
-                        'text' =>__('An online real estate agent with a real estate filters. The API from ImmoScout24 was implemented to get the latest available real estate.'),
-                        'hashtags' =>'#'. __('Teamarbeit') .' #'. __('API'),
-                        'link' =>'rottbeck-immobilien.de',
+                        'title' =>'What to do API',
+                        'text' =>__('A small API that gives you random tasks when you don\'t know what to do. The website uses DeepL.com API interface to translate the tasks into different languages. It has a user interface to add new tasks.'),
+                        'hashtags' =>'#'. __('Individual-work') .' #'. __('API'),
+                        'link' =>'what-to-do-api.com',
                     ],
                 ]
         ]);

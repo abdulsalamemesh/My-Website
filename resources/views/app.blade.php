@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" style="border-radius: 50%" sizes="144x144" href="{{asset('favicon/apple-icon-144x144.png')}}">
     <link rel="apple-touch-icon" style="border-radius: 50%" sizes="152x152" href="{{asset('favicon/apple-icon-152x152.png')}}">
     <link rel="apple-touch-icon" style="border-radius: 50%" sizes="180x180" href="{{asset('favicon/apple-icon-180x180.png')}}">
-    <link rel="icon" type="image/png" style="border-radius: 50%" sizes="192x192"  href="{{asset('favicon/android-icon-192x192.png')}}">
+    <link rel="icon" type="image/png" style="border-radius: 50%" sizes="192x192" href="{{asset('favicon/android-icon-192x192.png')}}">
     <link rel="icon" type="image/png" style="border-radius: 50%" sizes="32x32" href="{{asset('favicon/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" style="border-radius: 50%" sizes="96x96" href="{{asset('favicon/favicon-96x96.png')}}">
     <link rel="icon" type="image/png" style="border-radius: 50%" sizes="16x16" href="{{asset('favicon/favicon-16x16.png')}}">
@@ -21,21 +21,25 @@
     <meta name="msapplication-TileImage" content="{{asset('favicon/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
+    <script type="text/javascript">
 
-    <script>
         function UnCryptMailto(s) {
-            var n=0;
-            var r="";
-            for(var i=0; i < s.length; i++) {
-                n=s.charCodeAt(i);
-                if (n>=8364) {n = 128;}
-                r += String.fromCharCode(n-(1));
+            var n = 0;
+            var r = "";
+            for (var i = 0; i < s.length; i++) {
+                n = s.charCodeAt(i);
+                if (n >= 8364) {
+                    n = 128;
+                }
+                r += String.fromCharCode(n - (1));
             }
             return r;
         }
-        function linkTo_UnCryptMailto(s)	{
-            location.href=UnCryptMailto(s);
+
+        function linkTo_UnCryptMailto(s) {
+            location.href = UnCryptMailto(s);
         }
+
     </script>
     <!-- Scripts -->
     @routes

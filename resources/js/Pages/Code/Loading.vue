@@ -5,7 +5,7 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 onMounted(() =>{
-    delay(5000).then(() => { Inertia.get(route('readme')) });
+    delay(3000).then(() => { Inertia.get(route('readme')) });
 })
 </script>
 

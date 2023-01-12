@@ -132,7 +132,7 @@
     "Multi-Tenancy": "Multi-Tenancy",
     "Statistics": "Statistik",
     "Individual-work": "Einzelarbeit",
-    "Projects": "Projekte",
+    "Projects & Packages": "Projekte & Packages",
     "I built my portfolio with the following technologies: latest Laravel version and PHP version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss.": "Ich habe mein Portfolio mit den folgenden Technologien gebaut: aktuellsten Laravel Version und PHP Version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss",
     "Custom": "Individuell",
     "My portfolio": "Mein Portfolio",
@@ -145,5 +145,6 @@
     "English": "Englisch",
     "Germany": "Deutschland",
     "Other information": "Andere Informationen",
-    "Cairo Uni / Cairo": "Kairo Uni / Kairo"
+    "Cairo Uni / Cairo": "Kairo Uni / Kairo",
+    "A small API that gives you random tasks when you don't know what to do. The website uses DeepL.com API interface to translate the tasks into different languages. It has a user interface to add new tasks.": "Eine kleine API, die zufällige Aufgaben gibt, wenn man nicht mehr weißt, was zu tun. Die Website nutzt die DeepL.com API-Schnittstelle, um die Aufgaben in verschiedene Sprachen zu übersetzen. Sie verfügt über eine Benutzeroberfläche zum Hinzufügen neuer Aufgaben."
 }
