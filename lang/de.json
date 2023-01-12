@@ -118,7 +118,7 @@
     "In addition to my main job at LASE PeCo, I support and consult my old colleague at Meier AG with the planning and organization of several projects.": "Neben meiner Haupttätigkeit bei LASE PeCo unterstütze und berate ich meine alte Arbeitskollegin bei der Meier AG bei der Planung und Organisation von verschiedenen Projekten.",
     "My area of responsibility is: Test driven development (TDD), planing, implementation and maintenance of two (Laravel and Vue) cloud based platforms as well as connecting and implementing the API of various types of new and old laser-counting devices to the clouds. Configuration and installation of a local server on a local PC for a laser scanner device and connecting it to the Internet. Aggregating and saving the data of the laser scanner devices and generating statistics from the data and displaying it in various implementations in the clouds (Excel, diagrams, pivot tables)": "Mein Aufgabenbereich ist: Testorientierte Entwicklung (TDD), Planung, Implementierung und Pflege von zwei (Laravel und Vue) cloudbasierten Plattformen sowie die Anbindung und Implementierung der API von verschiedenen Typen neuer und alter Laserzählgeräte an die Clouds. Konfiguration und Installation eines lokalen Servers auf einem lokalen PC für ein Laserscanner-Gerät und dessen Anbindung an das Internet. Aggregieren und Speichern der Daten der Laserscanner-Geräte und Erstellen von Statistiken aus den Daten und deren Darstellung in verschiedenen Implementierungen in den Clouds (Excel, Diagramme, Pivot-Tabellen).",
     "Software Developer": "Software Entwickler",
-    "Apprentices Management System": "Azubis Verwaltungssystem",
+    "Apprentices management system": "Azubis Verwaltungssystem",
     "Dipos online shop": "Dipos-Onlineshop",
     "A custom-made multilingual online Shop where you can shop for your next screen protection foils for any device. The system has an admin area where the admin can upload weekly an over 500 MB CSV file with the new products and export the new orders.": "Ein kundenspezifischer mehrsprachiger Online Shop, in dem Sie Ihre nächsten Displayschutzfolien für jedes Gerät kaufen können. Das System hat einen Admin-Bereich, wo der Admin wöchentlich eine über 500 MB große CSV-Datei mit den neuen Produkten hochladen und die neuen Bestellungen exportieren kann.",
     "Teamwork": "Teamarbeit",
@@ -133,6 +133,7 @@
     "Statistics": "Statistik",
     "Individual-work": "Einzelarbeit",
     "Projects & Packages": "Projekte & Packages",
+    "Project": "Projekt",
     "I built my portfolio with the following technologies: latest Laravel version and PHP version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss.": "Ich habe mein Portfolio mit den folgenden Technologien gebaut: aktuellsten Laravel Version und PHP Version - Inertiajs - Vue - Vite - Tauilwindcss - PostCss",
     "Custom": "Individuell",
     "My portfolio": "Mein Portfolio",
@@ -146,5 +147,7 @@
     "Germany": "Deutschland",
     "Other information": "Andere Informationen",
     "Cairo Uni / Cairo": "Kairo Uni / Kairo",
-    "A small API that gives you random tasks when you don't know what to do. The website uses DeepL.com API interface to translate the tasks into different languages. It has a user interface to add new tasks.": "Eine kleine API, die zufällige Aufgaben gibt, wenn man nicht mehr weißt, was zu tun. Die Website nutzt die DeepL.com API-Schnittstelle, um die Aufgaben in verschiedene Sprachen zu übersetzen. Sie verfügt über eine Benutzeroberfläche zum Hinzufügen neuer Aufgaben."
+    "A small API that gives you random tasks when you don't know what to do. The website uses DeepL.com API interface to translate the tasks into different languages. It has a user interface to add new tasks.": "Eine kleine API, die zufällige Aufgaben gibt, wenn man nicht mehr weißt, was zu tun. Die Website nutzt die DeepL.com API-Schnittstelle, um die Aufgaben in verschiedene Sprachen zu übersetzen. Sie verfügt über eine Benutzeroberfläche zum Hinzufügen neuer Aufgaben.",
+    "Package-development": "Package-Entwicklung",
+    "A Laravel client package for the website what-to-do-api.com. The package make it easy to communicate with the API and create new tasks": "Ein Laravel-Client-Paket für die Website what-to-do-api.com. Das Paket macht es einfach, mit der API zu kommunizieren und neue Aufgaben zu erstellen"
 }
