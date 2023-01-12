@@ -26,7 +26,7 @@ onBeforeUnmount(() => {
             </div>
             <div>&nbsp;</div>
             <div>&nbsp;</div>
-            <p class="text-code-white">{{ __('What you see is based on the Laravel 9 and Tailwindcss 3 ') }}</p>
+            <p class="text-code-white">{{ __('What you see is based on the Laravel 9 and Tailwindcss 3') }}</p>
             <p class="text-code-white">{{ __('All application folders and files can be seen... but to some limit') + ' 😉' }}</p>
             <div>&nbsp;</div>
             <p class="text-code-white">{{ __('**This is made for you to get to know me. Have fun!!**') }}</p>
