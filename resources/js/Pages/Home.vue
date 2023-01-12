@@ -599,7 +599,7 @@ onMounted(() => {
                             <div>
                                 <div class="flex space-x-2 items-start justify-between">
                                     <h2 class="text-xl">
-                                        {{ __('My ortfolio') }}
+                                        {{ __('My portfolio') }}
                                     </h2>
                                     <div class="text-xs px-2 py-1 text-white dark:bg-indigo-600 bg-blue-500 font-medium rounded">
                                         <span class="uppercase tracking-wider">{{ __('Project') }}</span>
