@@ -421,10 +421,10 @@ onMounted(() => {
                             <div class="border-r-2 border-blue-500 dark:border-indigo-600 grow"></div>
                         </div>
                         <div class="w-full  flex flex-col justify-end items-start dark:text-white py-6 lg:py-4">
-                            <p class="text-xl md:text-2xl font-semibold w-full">{{ experience.title }}</p>
-                            <p v-if="experience.workplace" class="text-md md:text-xl font-medium w-full">{{ experience.workplace }}</p>
-                            <p v-if="experience.date" class="text-sm md:text-base font-medium w-full">{{ experience.date }}</p>
-                            <p v-if="experience.text" class="text-sm md:text-base dark:text-slate-300 w-full">{{ experience.text }}</p>
+                            <p class="text-xl md:text-2xl font-semibold w-full break-all">{{ experience.title }}</p>
+                            <p v-if="experience.workplace" class="text-md md:text-xl font-medium w-full break-all">{{ experience.workplace }}</p>
+                            <p v-if="experience.date" class="text-sm md:text-base font-medium w-full break-all">{{ experience.date }}</p>
+                            <p v-if="experience.text" class="text-sm md:text-base dark:text-slate-300 w-full break-all">{{ experience.text }}</p>
                         </div>
                     </div>
                 </template>
@@ -482,9 +482,9 @@ onMounted(() => {
                             </div>
                         </div>
                         <div class="w-full  flex flex-col justify-end items-start dark:text-white py-6 lg:py-4">
-                            <p class="text-xl md:text-2xl font-semibold w-full">{{ education.title }}</p>
-                            <p v-if="education.ort" class="text-md md:text-xl font-medium w-full">{{ education.ort }}</p>
-                            <p v-if="education.date" class="text-sm md:text-base font-medium w-full">{{ education.date }}</p>
+                            <p class="text-xl md:text-2xl font-semibold w-full break-all">{{ education.title }}</p>
+                            <p v-if="education.ort" class="text-md md:text-xl font-medium w-full break-all">{{ education.ort }}</p>
+                            <p v-if="education.date" class="text-sm md:text-base font-medium w-full break-all">{{ education.date }}</p>
                         </div>
                     </div>
                 </template>
