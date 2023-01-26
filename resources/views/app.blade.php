@@ -20,7 +20,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{asset('favicon/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Abdulsalam Emesh is a Software Developer - Fullstack Developer - PHP Developer.">
+    <meta name="description" content="My name is Abdulsalam Emesh and I am a Software Developer - Fullstack Developer - PHP Developer - Laravel Developer. I love what i do and i love to work in Team. ">
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
     <script type="text/javascript">
 
