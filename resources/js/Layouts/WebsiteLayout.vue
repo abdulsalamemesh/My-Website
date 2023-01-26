@@ -17,14 +17,14 @@ const selectableLocale = computed(() => {
     <div class="h-screen font-montserrat flex flex-col md:flex-row relative">
         <!--Desktop Menu-->
         <nav
-            class="md:border-r md:border-slate-300 md:dark:border-slate-600 bg-slate-200 dark:bg-slate-900 md:py-4 h-16 md:h-full flex md:flex-col justify-end md:justify-between md:items-center lg:min-w-[250px]">
+            class="md:border-r md:border-slate-300 md:dark:border-slate-600 bg-slate-200 dark:bg-slate-700 dark:md:bg-slate-900 md:py-4 h-16 md:h-full flex md:flex-col justify-end md:justify-between md:items-center lg:min-w-[250px]">
             <!--Desktop buttons-->
             <div class="hidden md:flex justify-between space-x-4">
                 <button @click="toggleDark()">
                     <template v-if="isDark">
                         <!--Sun-->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                             class="h-5 w-5 text-white hover:text-indigo-600 transition-all delay-75 duration-300 fill-current">
+                             class="h-6 w-6 text-white hover:text-indigo-600 transition-all delay-75 duration-300 fill-current">
                             <path d="M256 144C194.1 144 144 194.1 144 256c0 61.86 50.14 112 112 112s112-50.14 112-112C368 194.1 317.9 144 256 144z"/>
                             <path class="opacity-40"
                                   d="M108.9 74.97c-9.344-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94l45.25 45.28c4.672 4.688 10.83 7.031 16.97 7.031S149.5 158.9 154.2 154.2c9.375-9.375 9.375-24.56 0-33.93L108.9 74.97zM256 0C242.8 0 232 10.75 232 24v64C232 101.3 242.8 112 256 112s24-10.75 24-24v-64C280 10.75 269.3 0 256 0zM112 256c0-13.25-10.75-24-24-24h-64C10.75 232 0 242.8 0 256s10.75 24 24 24h64C101.3 280 112 269.3 112 256zM374.8 161.2c6.141 0 12.3-2.344 16.97-7.031l45.25-45.28c9.375-9.375 9.375-24.56 0-33.94s-24.59-9.375-33.94 0l-45.25 45.28c-9.375 9.375-9.375 24.56 0 33.93C362.5 158.9 368.7 161.2 374.8 161.2zM256 400c-13.25 0-24 10.75-24 24v64C232 501.3 242.8 512 256 512s24-10.75 24-24v-64C280 410.8 269.3 400 256 400zM120.2 357.8l-45.25 45.28c-9.375 9.375-9.375 24.56 0 33.94c4.688 4.688 10.83 7.031 16.97 7.031s12.3-2.344 16.97-7.031l45.25-45.28c9.375-9.375 9.375-24.56 0-33.93S129.6 348.4 120.2 357.8zM488 232h-64c-13.25 0-24 10.75-24 24s10.75 24 24 24h64C501.3 280 512 269.3 512 256S501.3 232 488 232zM391.8 357.8c-9.344-9.375-24.56-9.372-33.94 .0031s-9.375 24.56 0 33.93l45.25 45.28c4.672 4.688 10.83 7.031 16.97 7.031s12.28-2.344 16.97-7.031c9.375-9.375 9.375-24.56 0-33.94L391.8 357.8z"/>
@@ -33,7 +33,7 @@ const selectableLocale = computed(() => {
                     <template v-else>
                         <!--Moon-->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                             class="h-5 w-5 text-black hover:text-blue-500 transition-all delay-75 duration-300 fill-current">
+                             class="h-6 w-6 text-black hover:text-blue-500 transition-all delay-75 duration-300 fill-current">
                             <path
                                 d="M421.6 379.9c-.6641 0-1.35 .0625-2.049 .1953c-11.24 2.143-22.37 3.17-33.32 3.17c-94.81 0-174.1-77.14-174.1-175.5c0-63.19 33.79-121.3 88.73-152.6c8.467-4.812 6.339-17.66-3.279-19.44c-11.2-2.078-29.53-3.746-40.9-3.746C132.3 31.1 32 132.2 32 256c0 123.6 100.1 224 223.8 224c69.04 0 132.1-31.45 173.8-82.93C435.3 389.1 429.1 379.9 421.6 379.9zM255.8 432C158.9 432 80 353 80 256c0-76.32 48.77-141.4 116.7-165.8C175.2 125 163.2 165.6 163.2 207.8c0 99.44 65.13 183.9 154.9 212.8C298.5 428.1 277.4 432 255.8 432z"/>
                         </svg>
@@ -41,7 +41,7 @@ const selectableLocale = computed(() => {
                 </button>
                 <Link :href="route('language', [selectableLocale])" class="rounded-full" preserve-scroll>
                     <template v-if="selectableLocale === 'de'">
-                        <svg viewBox="0 0 512 512" class="h-5 w-5"
+                        <svg viewBox="0 0 512 512" class="h-6 w-6"
                              xmlns="http://www.w3.org/2000/svg">
                             <circle cx="256" cy="256" r="256" fill="#F0F0F0"/>
                             <g fill="#0052B4">
@@ -65,7 +65,7 @@ const selectableLocale = computed(() => {
                         </svg>
                     </template>
                     <template v-else-if="selectableLocale === 'en'">
-                        <svg viewBox="0 0 512 512" class="h-5 w-5"
+                        <svg viewBox="0 0 512 512" class="h-6 w-6"
                              xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.923,345.043C52.094,442.527,145.929,512,256,512s203.906-69.473,240.077-166.957L256,322.783  L15.923,345.043z" fill="#FFDA44"/>
                             <path d="M256,0C145.929,0,52.094,69.472,15.923,166.957L256,189.217l240.077-22.261C459.906,69.472,366.071,0,256,0z"/>
@@ -81,42 +81,49 @@ const selectableLocale = computed(() => {
                 class="hidden md:flex flex-col">
                 <a href="#home"
                    :class="[currentLocation === 'home' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Home') }}
                 </a>
                 <a href="#about"
                    :class="[currentLocation === 'about' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('About') }}
                 </a>
                 <a href="#skills"
                    :class="[currentLocation === 'skills' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Skills
                 </a>
                 <a href="#resume"
                    :class="[currentLocation === 'resume' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Resume') }}
                 </a>
                 <a href="#projects"
                    :class="[currentLocation === 'projects' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Projects & Packages') }}
                 </a>
                 <a href="#contact"
                    :class="[currentLocation === 'contact' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Contact') }}
                 </a>
                 <Link :href="route('loading')"
                       :class="[currentLocation === 'loading' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                      class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-500 dark:hover:bg-slate-800 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
+                      class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('For Programmers') }}
                 </Link>
             </div>
-            <div class="flex justify-between items-center w-full">
-                <div class="flex justify-center items-center  md:hidden">
+            <div
+                class="hidden md:block">
+                <a :href="'/Abdulsalam_Emesh_Lebenslauf_2023_'+ usePage().props.value.locale +'.pdf'" target="_blank"
+                   class="py-2.5 px-3 text-sm rounded font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 dark:hover:bg-indigo-700 hover:transition hover:duration-150 text-center whitespace-nowrap">
+                    <span>{{ __('Download resume') }}</span>
+                </a>
+            </div>
+            <div class="flex justify-between items-center w-full md:hidden">
+                <div class="flex justify-center items-center md:hidden">
                     <button class="p-3" @click="toggleDark()">
                         <template v-if="isDark">
                             <!--Sun-->
@@ -172,8 +179,15 @@ const selectableLocale = computed(() => {
                             </svg>
                         </template>
                     </Link>
+                    <a :href="'/Abdulsalam_Emesh_Lebenslauf_2023_'+ usePage().props.value.locale +'.pdf'" target="_blank"
+                       class="p-3 flex space-x-2 items-center rounded text-blue-500 hover:text-blue-600 dark:hover:text-indigo-700 font-bold dark:text-indigo-600  hover:transition hover:duration-150 text-center whitespace-nowrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="h-5 w-auto fill-current">
+                            <path
+                                d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/>
+                        </svg>
+                        <span>{{ __('Resume') }}</span>
+                    </a>
                 </div>
-
                 <button @click="showNav = !showNav" class="p-3 md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-7 w-7 text-blue-500 dark:text-indigo-600 fill-current">
                         <path
@@ -258,6 +272,8 @@ const selectableLocale = computed(() => {
                 {{ __('All rights reserved.') }}
             </div>
         </main>
+
+
     </div>
 
 </template>

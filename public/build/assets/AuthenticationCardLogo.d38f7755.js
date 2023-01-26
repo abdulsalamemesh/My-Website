@@ -1,0 +1,1 @@
+import{o as e,c as t,w as a,g as s,L as o,a as c}from"./app.594fa853.js";const r=c("p",{class:"text-white text-3xl"},"Abdulsalam Emesh",-1),l={__name:"AuthenticationCardLogo",setup(_){return(n,i)=>(e(),t(s(o),{href:"/"},{default:a(()=>[r]),_:1}))}};export{l as _};
