@@ -1,11 +1,13 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import {Inertia} from "@inertiajs/inertia";
+import { Head } from '@inertiajs/inertia-vue3';
 
 defineProps({contacts: Object});
 </script>
 
 <template>
+    <Head title="Dashboard"/>
     <AppLayout>
         <div class="w-full text-center py-6 dark:text-white border-b border-slate-300 dark:border-slate-600 font-medium">
            Contacts

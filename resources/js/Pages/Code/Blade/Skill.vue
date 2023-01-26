@@ -16,7 +16,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <SimpleLayout title="Abdulsalam Emesh">
+    <SimpleLayout title="Skill">
         <div class="pl-1 py-1 grow leading-5 overflow-x-hidden overflow-y-scroll custom-scrollbar scroll-js" id="count">
             <div class="flex flex-wrap">
                 <p class="text-code-gold">&lt;x-layout</p>

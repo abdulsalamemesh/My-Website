@@ -13,11 +13,17 @@ onMounted(()=>{
         setActiveFiles(route().current())
     }
 })
+defineProps({
+    title:{
+        type:String,
+        default:'Abdulsalam Emesh'
+    }
+});
 </script>
 
 <template>
     <div class="font-custom">
-        <Head title="Abdulsalam Emesh"/>
+        <Head :title="title"/>
         <div class="md:h-screen max-h-screen md:w-screen bg-primary-bg font-custom text-sm flex flex-col">
             <div class="grow flex flex-col md:flex-row overflow-y-auto">
                 <SideNav/>

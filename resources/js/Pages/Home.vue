@@ -5,6 +5,7 @@ import ScrollArrow from "@/Components/ScrollArrow.vue";
 import {computed, defineProps, onMounted, ref, shallowRef} from "vue";
 import {usePage, useForm} from "@inertiajs/inertia-vue3";
 import {currentLocation, isDark} from "../store";
+import { Head } from '@inertiajs/inertia-vue3';
 
 
 import Laravel from "@/Icons/Laravel.vue";
@@ -122,9 +123,11 @@ onMounted(() => {
         }
     });
 })
+
 </script>
 
 <template>
+    <Head title="Homepage"/>
     <WebsiteLayout>
         <!--Home-->
         <section class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center px-4 md:px-6 py-6" id="home">
@@ -135,11 +138,11 @@ onMounted(() => {
                     <div>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore  -mb-2">&lt;h1></p>
 
-                        <p class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
+                        <h1 class="ml-2 text-3xl md:text-5xl lg:text-6xl dark:text-white font-semibold lg:leading-tight cursor-default text-shadow transition-all duration-150">
                             {{ __('Hi') }} <span class="wave">&#128075;</span>, {{ __("I'm") }}
                             <br>
                             Abdulsalam Emesh
-                        </p>
+                        </h1>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;br></p>
                         <VueWriter :array="selectableLocale === 'en'? enTitles : deTitles" :start="2000" :eraseSpeed="25" :typeSpeed="100">{{ __('I') }}</VueWriter>
 
@@ -313,15 +316,11 @@ onMounted(() => {
                 <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;section></p>
                 <template v-for="skillGroup in skills">
                     <div class="ml-2 my-6">
-                        <div class="col-span-1 md:col-span-2 lg:col-span-3 dark:text-white text-lg md:text-xl font-bold">{{ skillGroup.name }}</div>
+                        <h3 class="col-span-1 md:col-span-2 lg:col-span-3 dark:text-white text-lg md:text-xl font-bold">{{ skillGroup.name }}</h3>
                         <div class="grid gap-y-6 gap-x-4 grid-cols-2 md:grid-cols-3 mt-2 bg-slate-200 dark:bg-slate-800 p-4 border border-slate-400 dark:border-slate-600 rounded">
                             <template v-for="skill in skillGroup.skills">
                                 <div class="col-span-1 flex items-center space-x-2">
                                     <div>
-                                        <!--                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-current text-blue-500 dark:text-indigo-600">-->
-                                        <!--                                            <path-->
-                                        <!--                                                d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>-->
-                                        <!--                                        </svg>-->
                                         <component :is="SkillsLogos[skill.logo]" :key="skill.logo" class="h-7 w-7"></component>
                                     </div>
                                     <p class="dark:text-white font-medium text-sm md:text-base">{{ skill.name }}</p>
@@ -390,9 +389,9 @@ onMounted(() => {
                     <!--index odd-->
                     <div v-if="index % 2 > 0" class="max-w-7xl mx-auto flex flex-row-reverse lg:flex-row flex-nowrap justify-center">
                         <div class="w-full flex flex-col justify-center items-start lg:items-end dark:text-white py-6 lg:py-4">
-                            <p class="text-xl md:text-2xl font-semibold lg:text-right">{{ experience.title }}</p>
-                            <p v-if="experience.workplace" class="text-md md:text-xl font-medium lg:text-right">{{ experience.workplace }}</p>
-                            <p v-if="experience.date" class="text-sm md:text-base font-medium lg:text-right">{{ experience.date }}</p>
+                            <h4 class="text-xl md:text-2xl font-semibold lg:text-right">{{ experience.title }}</h4>
+                            <h5 v-if="experience.workplace" class="text-md md:text-xl font-medium lg:text-right">{{ experience.workplace }}</h5>
+                            <h6 v-if="experience.date" class="text-sm md:text-base font-medium lg:text-right">{{ experience.date }}</h6>
                             <p v-if="experience.text" class="text-sm md:text-base dark:text-slate-300 lg:text-right">{{ experience.text }}</p>
                         </div>
                         <div class="flex flex-col justify-center items-center pr-6 lg:px-6">
@@ -421,9 +420,9 @@ onMounted(() => {
                             <div class="border-r-2 border-blue-500 dark:border-indigo-600 grow"></div>
                         </div>
                         <div class="w-full  flex flex-col justify-end items-start dark:text-white py-6 lg:py-4">
-                            <p class="text-xl md:text-2xl font-semibold w-full break-all">{{ experience.title }}</p>
-                            <p v-if="experience.workplace" class="text-md md:text-xl font-medium w-full break-all">{{ experience.workplace }}</p>
-                            <p v-if="experience.date" class="text-sm md:text-base font-medium w-full break-all">{{ experience.date }}</p>
+                            <h4 class="text-xl md:text-2xl font-semibold w-full break-all">{{ experience.title }}</h4>
+                            <h5 v-if="experience.workplace" class="text-md md:text-xl font-medium w-full break-all">{{ experience.workplace }}</h5>
+                            <h6 v-if="experience.date" class="text-sm md:text-base font-medium w-full break-all">{{ experience.date }}</h6>
                             <p v-if="experience.text" class="text-sm md:text-base dark:text-slate-300 w-full break-all">{{ experience.text }}</p>
                         </div>
                     </div>
@@ -445,9 +444,9 @@ onMounted(() => {
                     <!--index odd-->
                     <div v-if="index % 2 > 0" class="max-w-7xl mx-auto flex flex-row-reverse lg:flex-row flex-nowrap justify-center">
                         <div class="w-full flex flex-col justify-center items-start lg:items-end dark:text-white py-6 lg:py-4">
-                            <p class="text-xl md:text-2xl font-semibold lg:text-right">{{ education.title }}</p>
-                            <p v-if="education.ort" class="text-md md:text-xl font-medium lg:text-right">{{ education.ort }}</p>
-                            <p v-if="education.date" class="text-sm md:text-base font-medium lg:text-right">{{ education.date }}</p>
+                            <h3 class="text-xl md:text-2xl font-semibold lg:text-right">{{ education.title }}</h3>
+                            <h4 v-if="education.ort" class="text-md md:text-xl font-medium lg:text-right">{{ education.ort }}</h4>
+                            <h5 v-if="education.date" class="text-sm md:text-base font-medium lg:text-right">{{ education.date }}</h5>
                         </div>
                         <div class="flex flex-col justify-center items-center pr-6 lg:px-6">
                             <div class="border-r-2 border-blue-500 dark:border-indigo-600 grow">
@@ -482,9 +481,9 @@ onMounted(() => {
                             </div>
                         </div>
                         <div class="w-full  flex flex-col justify-end items-start dark:text-white py-6 lg:py-4">
-                            <p class="text-xl md:text-2xl font-semibold w-full break-all">{{ education.title }}</p>
-                            <p v-if="education.ort" class="text-md md:text-xl font-medium w-full break-all">{{ education.ort }}</p>
-                            <p v-if="education.date" class="text-sm md:text-base font-medium w-full break-all">{{ education.date }}</p>
+                            <h3 class="text-xl md:text-2xl font-semibold w-full break-all">{{ education.title }}</h3>
+                            <h4 v-if="education.ort" class="text-md md:text-xl font-medium w-full break-all">{{ education.ort }}</h4>
+                            <h5 v-if="education.date" class="text-sm md:text-base font-medium w-full break-all">{{ education.date }}</h5>
                         </div>
                     </div>
                 </template>
@@ -704,9 +703,9 @@ onMounted(() => {
                     <div class="w-full lg:w-5/12 h-full">
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full ">&lt;div></p>
                         <div class="ml-2 lg:pr-6 dark:text-slate-300 font-medium space-y-3 mb-2">
-                            <h2 class="text-lg">
+                            <h3 class="text-lg">
                                 {{ __('I enjoy discussing new opportunities. Please share as much info, as possible, so we can get the most out of our first catch-up.') }}
-                            </h2>
+                            </h3>
                             <a href="tel:+491726081149" class="block text-sm md:text-base">
                                 {{ __('Phone') }}: <span class="hover:text-blue-500 dark:hover:text-indigo-600 transition duration-150 encrypt-email">94 118 06 271 94+</span>
                             </a>
