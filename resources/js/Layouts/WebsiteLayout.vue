@@ -11,6 +11,13 @@ const selectableLocale = computed(() => {
     return 'de'
 })
 
+const resumeLink = computed(() => {
+    if (usePage().props.value.locale == 'de'){
+        return 'Abdulsalam_Emesh_Lebenslauf_2023_DE.pdf';
+    }else{
+        return 'Abdulsalam_Emesh_Resume_2023_EN.pdf';
+    }
+})
 </script>
 
 <template>
@@ -117,7 +124,7 @@ const selectableLocale = computed(() => {
             </div>
             <div
                 class="hidden md:block">
-                <a :href="'/Abdulsalam_Emesh_Lebenslauf_2023_'+ usePage().props.value.locale.toUpperCase() +'.pdf'" target="_blank"
+                <a :href="resumeLink" target="_blank"
                    class="py-2.5 px-3 text-sm rounded font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 dark:hover:bg-indigo-700 hover:transition hover:duration-150 text-center whitespace-nowrap">
                     <span>{{ __('Download resume') }}</span>
                 </a>
@@ -179,7 +186,7 @@ const selectableLocale = computed(() => {
                             </svg>
                         </template>
                     </Link>
-                    <a :href="'/Abdulsalam_Emesh_Lebenslauf_2023_'+ usePage().props.value.locale.toUpperCase() +'.pdf'" target="_blank"
+                    <a :href="resumeLink" target="_blank"
                        class="p-3 flex space-x-2 items-center rounded text-blue-500 hover:text-blue-600 dark:hover:text-indigo-700 font-bold dark:text-indigo-600  hover:transition hover:duration-150 text-center whitespace-nowrap">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="h-5 w-auto fill-current">
                             <path
