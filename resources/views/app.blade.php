@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" style="border-radius: 50%" sizes="57x57" href="{{asset('favicon/apple-icon-57x57.png')}}">
     <link rel="apple-touch-icon" style="border-radius: 50%" sizes="60x60" href="{{asset('favicon/apple-icon-60x60.png')}}">
