@@ -1133,6 +1133,10 @@
       "_AuthenticationCardLogo.0a72e709.js"
     ]
   },
+  "resources/js/Pages/Home.css": {
+    "file": "assets/Home.2175dd08.css",
+    "src": "resources/js/Pages/Home.css"
+  },
   "AppLayout.css": {
     "file": "assets/AppLayout.6724a7fa.css",
     "src": "AppLayout.css"
@@ -1140,9 +1144,5 @@
   "resources/js/app.css": {
     "file": "assets/app.f667bda6.css",
     "src": "resources/js/app.css"
-  },
-  "resources/js/Pages/Home.css": {
-    "file": "assets/Home.2175dd08.css",
-    "src": "resources/js/Pages/Home.css"
   }
 }
