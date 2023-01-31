@@ -27,7 +27,7 @@ class WorkExperienceController extends Controller
                 [
                     'title'     => __('Minijob Software Developer'),
                     'workplace' => __('Meier AG / Wesel'),
-                    'date'      => __('From 2021-09-01 until today'),
+                    'date'      => __('From 2021-09-01 until 2023-01-31'),
                     'text'      => __('In addition to my main job at LASE PeCo, I support and consult my old colleague at Meier AG with the planning and organization of several projects.'),
                 ],
                 [
