@@ -24,51 +24,7 @@ use Inertia\Inertia;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('contact-form', [HomeController::class, 'contactForm'])->name('contact');
 
-// REDIRECT
-Route::get('loading', fn() => Inertia::render('Code/Loading'))->name('loading');
 
-// BLADE
-Route::get('me', fn() => Inertia::render('Code/Blade/Me'))->name('me');
-Route::get('work', WorkExperienceController::class)->name('work');
-Route::get('education', EducationController::class)->name('education');
-Route::get('skill', SkillController::class)->name('skill');
-Route::get('other-information', OtherInformationController::class)->name('other-information');
-Route::get('layout', fn() => Inertia::render('Code/Blade/Layout'))->name('layout');
-Route::get('project', ProjectController::class)->name('project');
-
-// JS
-Route::get('app.js', fn() => Inertia::render('Code/JS/App'))->name('app.js');
-Route::get('bootstrap.js', fn() => Inertia::render('Code/JS/Bootstrap'))->name('bootstrap.js');
-// PUBLIC
-Route::get('index-public', fn() => Inertia::render('Code/PUBLIC/Index'))->name('index-public');
-
-// CSS
-Route::get('app.css', fn() => Inertia::render('Code/CSS/App'))->name('app.css');
-
-// ROOT
-Route::get('readme', fn() => Inertia::render('Code/Root/Readme'))->name('readme');
-Route::get('env', fn() => Inertia::render('Code/Root/Env'))->name('env');
-Route::get('env-example', fn() => Inertia::render('Code/Root/EnvExample'))->name('env-example');
-Route::get('empty', fn() => Inertia::render('Code/Root/Empty'))->name('empty');
-Route::get('gitignore-root', fn() => Inertia::render('Code/Root/GitignoreRoot'))->name('gitignore-root');
-Route::get('artisan', fn() => Inertia::render('Code/Root/Artisan'))->name('artisan');
-Route::get('composer', fn() => Inertia::render('Code/Root/Composer'))->name('composer');
-Route::get('package', fn() => Inertia::render('Code/Root/Package'))->name('package');
-Route::get('phpunit', fn() => Inertia::render('Code/Root/PHPUnit'))->name('phpunit');
-Route::get('postcss', fn() => Inertia::render('Code/Root/Postcss'))->name('postcss');
-Route::get('tailwind-config', fn() => Inertia::render('Code/Root/TailwindConfig'))->name('tailwind-config');
-Route::get('vite', fn() => Inertia::render('Code/Root/Vite'))->name('vite');
-
-//ROUTS
-Route::get('web', fn() => Inertia::render('Code/Routes/Web'))->name('web');
-Route::get('console-route', fn() => Inertia::render('Code/Routes/ConsoleRoute'))->name('console-route');
-Route::get('channels', fn() => Inertia::render('Code/Routes/Channels'))->name('channels');
-Route::get('api', fn() => Inertia::render('Code/Routes/API'))->name('api');
-
-//TESTS
-Route::get('creates-application', fn() => Inertia::render('Code/Tests/CreatesApplication'))->name('creates-application');
-Route::get('test-case', fn() => Inertia::render('Code/Tests/TestCase'))->name('test-case');
-Route::get('unit-test', fn() => Inertia::render('Code/Tests/UnitTest'))->name('unit-test');
 
 Route::get('language/{language}', function ($language) {
     Session()->put('locale', $language);
