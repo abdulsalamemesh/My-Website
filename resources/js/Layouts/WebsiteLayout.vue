@@ -10,14 +10,6 @@ const selectableLocale = computed(() => {
     }
     return 'de'
 })
-
-const resumeLink = computed(() => {
-    if (usePage().props.value.locale == 'de'){
-        return 'Abdulsalam_Emesh_Lebenslauf_2023_DE.pdf';
-    }else{
-        return 'Abdulsalam_Emesh_Resume_2023_EN.pdf';
-    }
-})
 </script>
 
 <template>
@@ -101,33 +93,15 @@ const resumeLink = computed(() => {
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     Skills
                 </a>
-                <a href="#resume"
-                   :class="[currentLocation === 'resume' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    {{ __('Resume') }}
-                </a>
-                <a href="#projects"
-                   :class="[currentLocation === 'projects' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                   class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    {{ __('Projects & Packages') }}
-                </a>
                 <a href="#contact"
                    :class="[currentLocation === 'contact' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
                    class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
                     {{ __('Contact') }}
                 </a>
-                <Link :href="route('loading')"
-                      :class="[currentLocation === 'loading' ? 'text-white dark:text-indigo-600 bg-blue-500 dark:bg-slate-800': 'text-black dark:text-slate-200']"
-                      class="py-2.5 px-3 text-sm font-medium hover:text-white dark:hover:text-indigo-500 hover:bg-blue-600 dark:hover:bg-slate-700 hover:transition hover:delay-75 hover:duration-300 text-center whitespace-nowrap">
-                    {{ __('For Programmers') }}
-                </Link>
             </div>
             <div
                 class="hidden md:block">
-                <a :href="resumeLink" target="_blank"
-                   class="py-2.5 px-3 text-sm rounded font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 dark:hover:bg-indigo-700 hover:transition hover:duration-150 text-center whitespace-nowrap">
-                    <span>{{ __('Download resume') }}</span>
-                </a>
+             
             </div>
             <div class="flex justify-between items-center w-full md:hidden">
                 <div class="flex justify-center items-center md:hidden">
@@ -186,14 +160,6 @@ const resumeLink = computed(() => {
                             </svg>
                         </template>
                     </Link>
-                    <a :href="resumeLink" target="_blank"
-                       class="p-3 flex space-x-2 items-center rounded text-blue-500 hover:text-blue-600 dark:hover:text-indigo-700 font-bold dark:text-indigo-600  hover:transition hover:duration-150 text-center whitespace-nowrap">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="h-5 w-auto fill-current">
-                            <path
-                                d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/>
-                        </svg>
-                        <span>{{ __('Resume') }}</span>
-                    </a>
                 </div>
                 <button @click="showNav = !showNav" class="p-3 md:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-7 w-7 text-blue-500 dark:text-indigo-600 fill-current">
@@ -243,29 +209,12 @@ const resumeLink = computed(() => {
                     >
                         Skills
                     </a>
-                    <a href="#resume" @click="showNav = false"
-                       :class="[currentLocation === 'resume' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
-                    >
-                        {{ __('Resume') }}
-                    </a>
-                    <a href="#projects" @click="showNav = false"
-                       :class="[currentLocation === 'projects' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                       class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
-                    >
-                        {{ __('Projects & Packages') }}
-                    </a>
                     <a href="#contact" @click="showNav = false"
                        :class="[currentLocation === 'contact' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
                        class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap"
                     >
                         {{ __('Contact') }}
                     </a>
-                    <Link :href="route('loading')"
-                          :class="[currentLocation === 'loading' ? 'text-blue-500 dark:text-indigo-600': 'text-black dark:text-slate-200']"
-                          class="py-2.5 px-3 font-medium hover:text-blue-500 dark:hover:text-indigo-500 transition-all delay-75 duration-300 text-center whitespace-nowrap">
-                        {{ __('For Programmers') }}
-                    </Link>
                 </div>
             </nav>
         </transition>
