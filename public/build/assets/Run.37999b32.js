@@ -1,0 +1,1 @@
+import{o as e,e as o,n as t,a as n}from"./app.e573c44e.js";const a=n("polygon",{"fill-rule":"evenodd",points:"3 1 10 6 3 11"},null,-1),l=[a],_={__name:"Run",props:{classes:String},setup(s){return(c,r)=>(e(),o("svg",{xmlns:"http://www.w3.org/2000/svg",width:"12",height:"12",viewBox:"0 0 12 12",class:t(s.classes)},l,2))}};export{_};
