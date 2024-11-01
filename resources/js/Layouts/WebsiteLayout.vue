@@ -16,7 +16,7 @@ const selectableLocale = computed(() => {
     <div class="h-screen font-montserrat flex flex-col md:flex-row relative">
         <!--Desktop Menu-->
         <nav
-            class="md:border-r md:border-slate-300 md:dark:border-slate-600 bg-slate-200 dark:bg-slate-700 dark:md:bg-slate-900 md:py-4 h-16 md:h-full flex md:flex-col justify-end md:justify-between md:items-center lg:min-w-[250px]">
+            class="md:border-r md:border-slate-300 md:dark:border-slate-600 bg-slate-200 dark:bg-slate-700 dark:md:bg-slate-900 md:py-4 h-16 md:h-full flex md:flex-col justify-end md:justify-between md:items-center lg:min-w-[180px]">
             <!--Desktop buttons-->
             <div class="hidden md:flex justify-between space-x-4">
                 <button @click="toggleDark()">
