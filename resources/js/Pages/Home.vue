@@ -165,7 +165,7 @@ onMounted(() => {
                 <div class="max-w-7xl mx-auto grow flex flex-col lg:flex-row justify-center items-center lg:space-x-12">
                     <div
                         class="min-w-max rounded-full p-1 lg:p-2 bg-gradient-to-b from-blue-300 to-blue-500 dark:from-indigo-300 dark:to-indigo-600 mb-6">
-                        <img src="/me.png" class="rounded-full h-52 w-52 lg:h-72 lg:w-72 object-cover" alt="">
+                        <img src="/me.jpg" class="rounded-full h-52 w-52 lg:h-72 lg:w-72 object-cover" alt="">
                     </div>
                     <div>
                         <p class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore w-full -mb-2">&lt;h2></p>
