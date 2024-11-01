@@ -125,7 +125,7 @@ onMounted(() => {
     <Head title="Homepage" />
     <WebsiteLayout>
         <!--Home-->
-        <section class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center px-4 md:px-6 py-6" id="home">
+        <section class="h-[calc(100vh-3rem)] md:h-screen flex md:flex-col justify-center px-4 md:px-12 py-6" id="home">
             <div class="grow flex flex-col">
                 <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;html></div>
                 <div class="md:text-lg text-slate-400 dark:text-slate-600 font-aurore">&lt;body></div>
@@ -160,7 +160,7 @@ onMounted(() => {
 
 
         <!--About-->
-        <section class="min-h-screen flex flex-col justify-center px-4 md:px-6 py-6" id="about">
+        <section class="min-h-screen flex flex-col justify-center px-4 md:px-12 py-6" id="about">
             <div class="grow flex flex-col">
                 <div class="max-w-7xl mx-auto grow flex flex-col lg:flex-row justify-center items-center lg:space-x-12">
                     <div
@@ -325,7 +325,7 @@ onMounted(() => {
 
 
         <!--Skills-->
-        <section class="min-h-screen flex flex-col justify-center px-4 md:px-6 py-6" id="skills">
+        <section class="min-h-screen flex flex-col justify-center px-4 md:px-12 py-6" id="skills">
 
             <div class="max-w-7xl mx-auto w-full flex flex-col justify-center">
                 <div>
@@ -372,7 +372,7 @@ onMounted(() => {
         </div>
 
         <!--Contact-->
-        <section class="min-h-screen flex flex-col justify-center px-4 md:px-6 py-6" id="contact">
+        <section class="min-h-screen flex flex-col justify-center px-4 md:px-12 py-6" id="contact">
 
             <div class="max-w-7xl w-full mx-auto flex flex-col justify-center">
                 <div>
