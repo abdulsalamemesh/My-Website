@@ -1,6 +1,6 @@
 import {useDark, useToggle} from "@vueuse/core/index";
 import {computed, ref, shallowRef} from "vue";
-import {usePage} from "@inertiajs/inertia-vue3";
+import {usePage} from "@inertiajs/vue3";
 
 import CSSFile from '@/Icons/CSSFile.vue';
 import PHPClass from '@/Icons/PHPClass.vue';
@@ -13,7 +13,7 @@ import JSONFile from '@/Icons/JSONFile.vue';
 import TestUnitFile from '@/Icons/TestUnitFile.vue';
 import JSFile from '@/Icons/JSFile.vue';
 import Markdown from '@/Icons/Markdown.vue';
-import {Inertia} from "@inertiajs/inertia";
+import { router } from '@inertiajs/vue3'
 
 export const showTestTerminal = ref(false)
 export const isDark = useDark()
@@ -21,7 +21,7 @@ export const currentLocation = ref('home')
 export const rowsCount = ref(150)
 export const showNav = ref(false)
 export const selectableLocale = computed(() => {
-    return usePage().props.value.locale;
+    return usePage().props.locale;
 })
 
 export function toggleDark() {
@@ -78,11 +78,11 @@ export function setActiveFiles(link) {
 export function removeFromActiveFilesList(link) {
     activeFilesList.value = activeFilesList.value.filter(file => file.link !== link)
     if (activeFilesList.value.length === 0 && route().current(link) !== 'empty') {
-        Inertia.get('empty')
+        router.get('empty')
         return
     }
     if (route().current(link)) {
-        Inertia.get(activeFilesList.value[0].link)
+        router.get(activeFilesList.value[0].link)
     }
 
 }

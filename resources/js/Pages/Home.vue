@@ -2,10 +2,10 @@
 import WebsiteLayout from '@/Layouts/WebsiteLayout.vue';
 import VueWriter from 'vue-writer'
 import ScrollArrow from "@/Components/ScrollArrow.vue";
-import { computed, defineProps, onMounted, ref, shallowRef } from "vue";
-import { usePage, useForm } from "@inertiajs/inertia-vue3";
+import { computed, onMounted, ref, shallowRef } from "vue";
+import { usePage, useForm } from "@inertiajs/vue3";
 import { currentLocation, isDark } from "../store";
-import { Head } from '@inertiajs/inertia-vue3';
+import { Head } from '@inertiajs/vue3';
 
 
 import Laravel from "@/Icons/Laravel.vue";
@@ -37,7 +37,7 @@ import Language from "@/Icons/Language.vue";
 import Drive from "@/Icons/Drive.vue";
 
 const selectableLocale = computed(() => {
-    return usePage().props.value.locale
+    return usePage().props.locale
 })
 const SkillsLogos = shallowRef({
     'Laravel': Laravel,

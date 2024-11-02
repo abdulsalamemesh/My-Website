@@ -1,7 +1,7 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import {Inertia} from "@inertiajs/inertia";
-import { Head } from '@inertiajs/inertia-vue3';
+import { router } from '@inertiajs/vue3'
+import { Head } from '@inertiajs/vue3';
 
 defineProps({contacts: Object});
 </script>
@@ -75,7 +75,7 @@ defineProps({contacts: Object});
                                 <div class="text-left p-2 dark:bg-slate-700 dark:text-white w-full">
                                     <span v-if=" contact.read_at ">contact.read_at</span>
                                     <div v-else> not marked yet
-                                        <form @submit.prevent="Inertia.post(route('set-read'),contact)">
+                                        <form @submit.prevent="router.post(route('set-read'),contact)">
                                             <button type="submit"
                                                     class="inline-block p-1 rounded text-sm font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 hover:dark:bg-indigo-700 focus:bg-blue-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white disabled:bg-gray-600 disabled:dark:bg-gray-600">
                                                 set to now
@@ -129,7 +129,7 @@ defineProps({contacts: Object});
                                             {{ contact.read_at }}
                                         </td>
                                         <td class="py-1 px-6 text-center">
-                                            <form @submit.prevent="Inertia.post(route('set-read'),contact)">
+                                            <form @submit.prevent="router.post(route('set-read'),contact)">
                                                 <button type="submit"
                                                         class="inline-block py-2 px-4 my-2 rounded text-sm font-medium text-white bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 hover:dark:bg-indigo-700 focus:bg-blue-400 focus:dark:bg-indigo-800 focus:ring focus:dark:ring focus:ring-slate-400 focus:dark:ring-white disabled:bg-gray-600 disabled:dark:bg-gray-600">
                                                     Toggle read

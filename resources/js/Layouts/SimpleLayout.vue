@@ -1,40 +1,41 @@
 <script setup>
-import {Head} from '@inertiajs/inertia-vue3';
+import { Head } from '@inertiajs/vue3';
 import TestTerminal from '@/Pages/Code/Partials/TestTerminal.vue'
 import SideNav from '@/Pages/Code/Partials/SideNav.vue'
 import Footer from '@/Pages/Code/Partials/Footer.vue'
 import Main from '@/Pages/Code/Partials/Main.vue'
 import MainNav from '@/Pages/Code/Partials/MainNav.vue'
-import {onMounted} from "vue";
-import {setActiveFiles} from "../store";
+import { onMounted } from "vue";
+import { setActiveFiles } from "../store";
 
-onMounted(()=>{
-    if (route().current() !== 'empty'){
+onMounted(() => {
+    if (route().current() !== 'empty') {
         setActiveFiles(route().current())
     }
 })
 defineProps({
-    title:{
-        type:String,
-        default:'Abdulsalam Emesh'
+    title: {
+        type: String,
+        default: 'Abdulsalam Emesh'
     }
 });
 </script>
 
 <template>
     <div class="font-custom">
-        <Head :title="title"/>
+
+        <Head :title="title" />
         <div class="md:h-screen max-h-screen md:w-screen bg-primary-bg font-custom text-sm flex flex-col">
             <div class="grow flex flex-col md:flex-row overflow-y-auto">
-                <SideNav/>
-                <MainNav/>
+                <SideNav />
+                <MainNav />
                 <Main>
                     <!-- Page Content -->
-                    <slot/>
+                    <slot />
                 </Main>
             </div>
-            <TestTerminal/>
-            <Footer/>
+            <TestTerminal />
+            <Footer />
         </div>
     </div>
 </template>
