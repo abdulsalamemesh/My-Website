@@ -1,0 +1,1 @@
+import{o as t,c as a,w as s,a as o,u as r,j as n}from"./app.6e40ce75.js";const i={__name:"AuthenticationCardLogo",setup(c){return(u,e)=>(t(),a(r(n),{href:"/"},{default:s(()=>e[0]||(e[0]=[o("p",{class:"text-white text-3xl"},"Abdulsalam Emesh",-1)])),_:1}))}};export{i as _};
